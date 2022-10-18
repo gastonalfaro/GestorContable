@@ -1,0 +1,116 @@
+﻿<?xml version="1.0"?>
+<!--
+  Descripción: Archivo de configuración del conector de 
+	Enterprise Library v1.0.0
+	Autor: Oliver Amaya
+	Fecha: 18-08-2016
+-->
+<CommandDef>
+  <Command>
+    <BaseDatos>MSSQL</BaseDatos>
+    <DbInstance>ConexionBD</DbInstance>
+    <Type>CommandType.StoredProcedure</Type>
+    <Text>ma.uspEliminarTipoAsiento</Text>
+    <NumberOfParameters>41</NumberOfParameters>
+    <ReturnType>procedure</ReturnType>
+    <CommandTimeout>6000</CommandTimeout>
+  </Command>
+  <Parameters>
+    <Parameter>
+      <Name>@pIdModulo</Name>
+      <VariableMapeo>Lstr_IdModulo</VariableMapeo>
+      <Type>String</Type>
+      <Size>4</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+    <Parameter>
+      <Name>@pIdOperacion</Name>
+      <VariableMapeo>Lstr_IdOperacion</VariableMapeo>
+      <Type>String</Type>
+      <Size>10</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+    <Parameter>
+      <Name>@pCodigo</Name>
+      <VariableMapeo>Lstr_Codigo</VariableMapeo>
+      <Type>String</Type>
+      <Size>20</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+    <Parameter>
+      <Name>@pCodigoAuxiliar</Name>
+      <VariableMapeo>Lstr_CodigoAuxiliar</VariableMapeo>
+      <Type>String</Type>
+      <Size>20</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+    <Parameter>
+      <Name>@pCodigoAuxiliar2</Name>
+      <VariableMapeo>Lstr_CodigoAuxiliar2</VariableMapeo>
+      <Type>String</Type>
+      <Size>20</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+    <Parameter>
+      <Name>@pCodigoAuxiliar3</Name>
+      <VariableMapeo>Lstr_CodigoAuxiliar3</VariableMapeo>
+      <Type>String</Type>
+      <Size>20</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+    <Parameter>
+      <Name>@pCodigoAuxiliar4</Name>
+      <VariableMapeo>Lstr_CodigoAuxiliar4</VariableMapeo>
+      <Type>String</Type>
+      <Size>20</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pCodigoAuxiliar5</Name>
+      <VariableMapeo>Lstr_CodigoAuxiliar5</VariableMapeo>
+      <Type>String</Type>
+      <Size>20</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pCodigoAuxiliar6</Name>
+      <VariableMapeo>Lstr_CodigoAuxiliar6</VariableMapeo>
+      <Type>String</Type>
+      <Size>20</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pSecuencia</Name>
+      <VariableMapeo>Lint_Secuencia</VariableMapeo>
+      <Type>Int32</Type>
+      <Size>32</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pResultado</Name>
+      <Type>String</Type>
+      <Size>2</Size>
+      <Direction>Output</Direction>
+    </Parameter>
+    <Parameter>
+      <Name>@pMensaje</Name>
+      <Type>String</Type>
+      <Size>500</Size>
+      <Direction>Output</Direction>
+    </Parameter>
+  </Parameters>
+</CommandDef>

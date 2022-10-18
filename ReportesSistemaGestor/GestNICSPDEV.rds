@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="GestNICSPDEV">
+  <ConnectionProperties>
+    <Extension>OLEDB</Extension>
+    <ConnectString>Data Source=172.26.30.21\DMSS2014E01;Initial Catalog=GestNICSPDEV</ConnectString>
+  </ConnectionProperties>
+  <DataSourceID>aec49a9a-b955-4983-b68f-660f22f6678b</DataSourceID>
+</RptDataSource>

@@ -1,0 +1,30 @@
+﻿
+table{
+    margin-left: 0px;
+    margin-right: 5px;
+    font: 12px arial;
+    border: 1px solid #EBEBEB;
+    margin-bottom: 0px;
+    margin-top: 15px;
+    height: 95202px;
+    width: 1573px;
+}
+
+td{
+    border: 1px solid #EBEBEB;
+    }
+
+.titulotabla{
+    font: bold 14px arial;
+    color: #0088CC;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    table{
+        font: 10px arial;
+    }
+    .titulotabla{
+        font: bold 12px arial;
+    }
+}

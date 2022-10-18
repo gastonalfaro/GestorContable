@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\PublicacionesGestor\CA</_PublishTargetUrl>
+    <History>True|2022-10-11T16:34:10.3890401Z;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/log4net.dll">
+      <publishTime>09/18/2018 15:56:33</publishTime>
+    </File>
+    <File Include="bin/WebServiceContableAsientos.dll">
+      <publishTime>10/11/2022 10:34:06</publishTime>
+    </File>
+    <File Include="bin/WebServiceContableAsientos.pdb">
+      <publishTime>10/11/2022 10:34:06</publishTime>
+    </File>
+    <File Include="bin/WebServiceContableAsientos.XmlSerializers.dll">
+      <publishTime>10/11/2022 10:34:07</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>06/05/2019 14:09:27</publishTime>
+    </File>
+    <File Include="ServicioContable.asmx">
+      <publishTime>09/11/2018 10:19:31</publishTime>
+    </File>
+    <File Include="Web References/wsCC/ZFiCargaContableResponse.datasource">
+      <publishTime>10/03/2022 15:43:39</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>10/11/2022 10:34:07</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

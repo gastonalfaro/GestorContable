@@ -1,0 +1,124 @@
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebService CapturaIngresos\bin\WebService CapturaIngresos.dll.config
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebService CapturaIngresos\bin\WebService CapturaIngresos.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebService CapturaIngresos\bin\WebService CapturaIngresos.pdb
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebService CapturaIngresos\bin\log4net.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebService CapturaIngresos\bin\LogicaNegocio.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebService CapturaIngresos\bin\Seguridad.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebService CapturaIngresos\bin\Datos.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebService CapturaIngresos\bin\Microsoft.Office.Interop.Excel.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebService CapturaIngresos\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebService CapturaIngresos\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebService CapturaIngresos\bin\Microsoft.Practices.ServiceLocation.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebService CapturaIngresos\bin\Microsoft.Practices.Unity.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebService CapturaIngresos\bin\Microsoft.Practices.Unity.Interception.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebService CapturaIngresos\bin\LogicaNegocio.pdb
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebService CapturaIngresos\bin\Seguridad.pdb
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebService CapturaIngresos\bin\log4net.xml
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebService CapturaIngresos\bin\Datos.pdb
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebService CapturaIngresos\bin\Microsoft.Office.Interop.Excel.xml
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebService CapturaIngresos\bin\LogicaNegocio.XmlSerializers.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebService CapturaIngresos\obj\Release\WebService CapturaIngresos.csprojResolveAssemblyReference.cache
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebService CapturaIngresos\obj\Release\WebService CapturaIngresos.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebService CapturaIngresos\obj\Release\WebService CapturaIngresos.pdb
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebService CapturaIngresos\bin\WebService CapturaIngresos.dll.config
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebService CapturaIngresos\bin\WebService CapturaIngresos.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebService CapturaIngresos\bin\WebService CapturaIngresos.pdb
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebService CapturaIngresos\bin\log4net.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebService CapturaIngresos\bin\LogicaNegocio.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebService CapturaIngresos\bin\Seguridad.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebService CapturaIngresos\bin\Datos.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebService CapturaIngresos\bin\Microsoft.Office.Interop.Excel.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebService CapturaIngresos\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebService CapturaIngresos\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebService CapturaIngresos\bin\Microsoft.Practices.ServiceLocation.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebService CapturaIngresos\bin\Microsoft.Practices.Unity.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebService CapturaIngresos\bin\Microsoft.Practices.Unity.Interception.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebService CapturaIngresos\bin\LogicaNegocio.pdb
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebService CapturaIngresos\bin\Seguridad.pdb
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebService CapturaIngresos\bin\log4net.xml
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebService CapturaIngresos\bin\Datos.pdb
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebService CapturaIngresos\bin\Microsoft.Office.Interop.Excel.xml
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebService CapturaIngresos\bin\LogicaNegocio.XmlSerializers.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebService CapturaIngresos\obj\Release\WebService CapturaIngresos.csprojResolveAssemblyReference.cache
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebService CapturaIngresos\obj\Release\WebService CapturaIngresos.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebService CapturaIngresos\obj\Release\WebService CapturaIngresos.pdb
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebService CapturaIngresos\bin\WebService CapturaIngresos.dll.config
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebService CapturaIngresos\bin\WebService CapturaIngresos.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebService CapturaIngresos\bin\WebService CapturaIngresos.pdb
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebService CapturaIngresos\bin\log4net.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebService CapturaIngresos\bin\LogicaNegocio.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebService CapturaIngresos\bin\Seguridad.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebService CapturaIngresos\bin\Datos.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebService CapturaIngresos\bin\Microsoft.Office.Interop.Excel.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebService CapturaIngresos\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebService CapturaIngresos\bin\office.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebService CapturaIngresos\bin\Microsoft.Vbe.Interop.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebService CapturaIngresos\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebService CapturaIngresos\bin\Microsoft.Practices.ServiceLocation.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebService CapturaIngresos\bin\Microsoft.Practices.Unity.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebService CapturaIngresos\bin\stdole.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebService CapturaIngresos\bin\Microsoft.Practices.Unity.Interception.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebService CapturaIngresos\bin\LogicaNegocio.pdb
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebService CapturaIngresos\bin\LogicaNegocio.dll.config
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebService CapturaIngresos\bin\Seguridad.pdb
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebService CapturaIngresos\bin\log4net.xml
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebService CapturaIngresos\bin\Datos.pdb
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebService CapturaIngresos\bin\Datos.dll.config
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebService CapturaIngresos\bin\Microsoft.Office.Interop.Excel.xml
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebService CapturaIngresos\bin\office.xml
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebService CapturaIngresos\bin\LogicaNegocio.XmlSerializers.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebService CapturaIngresos\obj\Release\WebService CapturaIngresos.csprojAssemblyReference.cache
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebService CapturaIngresos\obj\Release\WebService CapturaIngresos.csproj.CoreCompileInputs.cache
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebService CapturaIngresos\obj\Release\WebService CapturaIngresos.csproj.CopyComplete
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebService CapturaIngresos\obj\Release\WebService CapturaIngresos.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebService CapturaIngresos\obj\Release\WebService CapturaIngresos.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebService CapturaIngresos\bin\WebService CapturaIngresos.dll.config
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebService CapturaIngresos\bin\WebService CapturaIngresos.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebService CapturaIngresos\bin\WebService CapturaIngresos.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebService CapturaIngresos\bin\log4net.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebService CapturaIngresos\bin\LogicaNegocio.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebService CapturaIngresos\bin\Seguridad.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebService CapturaIngresos\bin\Datos.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebService CapturaIngresos\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebService CapturaIngresos\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebService CapturaIngresos\bin\Microsoft.Practices.ServiceLocation.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebService CapturaIngresos\bin\Microsoft.Practices.Unity.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebService CapturaIngresos\bin\stdole.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebService CapturaIngresos\bin\Microsoft.Practices.Unity.Interception.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebService CapturaIngresos\bin\LogicaNegocio.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebService CapturaIngresos\bin\LogicaNegocio.dll.config
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebService CapturaIngresos\bin\Seguridad.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebService CapturaIngresos\bin\log4net.xml
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebService CapturaIngresos\bin\Datos.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebService CapturaIngresos\bin\Datos.dll.config
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebService CapturaIngresos\bin\LogicaNegocio.XmlSerializers.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebService CapturaIngresos\obj\Release\WebService CapturaIngresos.csprojAssemblyReference.cache
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebService CapturaIngresos\obj\Release\WebService CapturaIngresos.csproj.CoreCompileInputs.cache
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebService CapturaIngresos\obj\Release\WebService CapturaIngresos.csproj.CopyComplete
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebService CapturaIngresos\obj\Release\WebService CapturaIngresos.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebService CapturaIngresos\obj\Release\WebService CapturaIngresos.pdb
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebService CapturaIngresos\bin\WebService CapturaIngresos.dll.config
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebService CapturaIngresos\bin\WebService CapturaIngresos.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebService CapturaIngresos\bin\WebService CapturaIngresos.pdb
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebService CapturaIngresos\bin\log4net.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebService CapturaIngresos\bin\LogicaNegocio.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebService CapturaIngresos\bin\Seguridad.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebService CapturaIngresos\bin\Datos.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebService CapturaIngresos\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebService CapturaIngresos\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebService CapturaIngresos\bin\Microsoft.Practices.ServiceLocation.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebService CapturaIngresos\bin\Microsoft.Practices.Unity.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebService CapturaIngresos\bin\stdole.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebService CapturaIngresos\bin\Microsoft.Practices.Unity.Interception.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebService CapturaIngresos\bin\LogicaNegocio.pdb
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebService CapturaIngresos\bin\LogicaNegocio.dll.config
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebService CapturaIngresos\bin\Seguridad.pdb
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebService CapturaIngresos\bin\log4net.xml
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebService CapturaIngresos\bin\Datos.pdb
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebService CapturaIngresos\bin\Datos.dll.config
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebService CapturaIngresos\bin\LogicaNegocio.XmlSerializers.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebService CapturaIngresos\obj\Release\WebService CapturaIngresos.csproj.AssemblyReference.cache
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebService CapturaIngresos\obj\Release\WebService CapturaIngresos.csproj.CoreCompileInputs.cache
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebService CapturaIngresos\obj\Release\WebService CapturaIngresos.csproj.CopyComplete
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebService CapturaIngresos\obj\Release\WebService CapturaIngresos.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebService CapturaIngresos\obj\Release\WebService CapturaIngresos.pdb

@@ -1,0 +1,330 @@
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\Presentacion\bin\Presentacion.dll.config
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\Presentacion\bin\Presentacion.dll
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\Presentacion\bin\Presentacion.pdb
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\Presentacion\bin\AjaxControlToolkit.dll
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\Presentacion\bin\CKEditor.NET.dll
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\Presentacion\bin\eWorld.UI.Compatibility.dll
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\Presentacion\bin\eWorld.UI.dll
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\Presentacion\bin\log4net.dll
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\Presentacion\bin\LogicaNegocio.dll
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\Presentacion\bin\Seguridad.dll
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\Presentacion\bin\SGAsientosDeudaInterna.exe
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\Presentacion\bin\Datos.dll
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\Presentacion\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\Presentacion\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\Presentacion\bin\Microsoft.Practices.ServiceLocation.dll
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\Presentacion\bin\Microsoft.Practices.Unity.dll
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\Presentacion\bin\Microsoft.Practices.Unity.Interception.dll
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\Presentacion\bin\LogicaNegocio.pdb
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\Presentacion\bin\Seguridad.pdb
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\Presentacion\bin\SGAsientosDeudaInterna.pdb
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\Presentacion\bin\CKEditor.NET.pdb
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\Presentacion\bin\log4net.xml
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\Presentacion\bin\Datos.pdb
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\Presentacion\bin\LogicaNegocio.XmlSerializers.dll
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\Presentacion\obj\Debug\Portal Sistema Gestor.csprojResolveAssemblyReference.cache
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\Presentacion\obj\Debug\Presentacion.dll
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\Presentacion\obj\Debug\Presentacion.pdb
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\Presentacion\bin\Presentacion.dll.config
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\Presentacion\bin\Presentacion.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\Presentacion\bin\Presentacion.pdb
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\Presentacion\bin\AjaxControlToolkit.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\Presentacion\bin\CKEditor.NET.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\Presentacion\bin\eWorld.UI.Compatibility.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\Presentacion\bin\eWorld.UI.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\Presentacion\bin\log4net.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\Presentacion\bin\LogicaNegocio.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\Presentacion\bin\Seguridad.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\Presentacion\bin\SGAsientosDeudaInterna.exe
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\Presentacion\bin\Datos.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\Presentacion\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\Presentacion\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\Presentacion\bin\Microsoft.Practices.ServiceLocation.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\Presentacion\bin\Microsoft.Practices.Unity.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\Presentacion\bin\Microsoft.Practices.Unity.Interception.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\Presentacion\bin\LogicaNegocio.pdb
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\Presentacion\bin\Seguridad.pdb
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\Presentacion\bin\SGAsientosDeudaInterna.pdb
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\Presentacion\bin\CKEditor.NET.pdb
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\Presentacion\bin\log4net.xml
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\Presentacion\bin\Datos.pdb
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\Presentacion\bin\LogicaNegocio.XmlSerializers.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\Presentacion\obj\Debug\Portal Sistema Gestor.csprojResolveAssemblyReference.cache
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\Presentacion\obj\Debug\Presentacion.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\Presentacion\obj\Debug\Presentacion.pdb
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\Presentacion\bin\Presentacion.dll.config
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\Presentacion\bin\Presentacion.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\Presentacion\bin\Presentacion.pdb
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\Presentacion\bin\AjaxControlToolkit.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\Presentacion\bin\CKEditor.NET.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\Presentacion\bin\eWorld.UI.Compatibility.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\Presentacion\bin\eWorld.UI.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\Presentacion\bin\log4net.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\Presentacion\bin\LogicaNegocio.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\Presentacion\bin\Seguridad.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\Presentacion\bin\SGAsientosDeudaInterna.exe
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\Presentacion\bin\Datos.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\Presentacion\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\Presentacion\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\Presentacion\bin\Microsoft.Practices.ServiceLocation.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\Presentacion\bin\Microsoft.Practices.Unity.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\Presentacion\bin\Microsoft.Practices.Unity.Interception.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\Presentacion\bin\LogicaNegocio.pdb
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\Presentacion\bin\Seguridad.pdb
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\Presentacion\bin\SGAsientosDeudaInterna.pdb
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\Presentacion\bin\CKEditor.NET.pdb
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\Presentacion\bin\log4net.xml
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\Presentacion\bin\Datos.pdb
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\Presentacion\bin\LogicaNegocio.XmlSerializers.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\Presentacion\obj\Debug\Portal Sistema Gestor.csprojResolveAssemblyReference.cache
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\Presentacion\obj\Debug\Presentacion.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\Presentacion\obj\Debug\Presentacion.pdb
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\Presentacion.dll.config
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\Presentacion.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\Presentacion.pdb
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\AjaxControlToolkit.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\CKEditor.NET.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\eWorld.UI.Compatibility.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\eWorld.UI.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\log4net.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\LogicaNegocio.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\Microsoft.ReportViewer.Common.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\Microsoft.ReportViewer.WebForms.DLL
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\Seguridad.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\SGAsientosDeudaInterna.exe
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\Datos.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\office.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\Microsoft.Vbe.Interop.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\Microsoft.SqlServer.Types.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\Microsoft.Practices.ServiceLocation.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\Microsoft.Practices.Unity.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\stdole.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\Microsoft.Practices.Unity.Interception.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\LogicaNegocio.pdb
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\LogicaNegocio.dll.config
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\Seguridad.pdb
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\SGAsientosDeudaInterna.pdb
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\SGAsientosDeudaInterna.exe.config
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\CKEditor.NET.pdb
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\log4net.xml
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\Datos.pdb
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\Datos.dll.config
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\office.xml
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\LogicaNegocio.XmlSerializers.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\Presentacion\obj\Debug\Portal Sistema Gestor.csprojAssemblyReference.cache
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\Presentacion\obj\Debug\Portal Sistema Gestor.csproj.CoreCompileInputs.cache
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\Presentacion\obj\Debug\Portal Sistema Gestor.csproj.CopyComplete
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\Presentacion\obj\Debug\Presentacion.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\Presentacion\obj\Debug\Presentacion.pdb
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\Presentacion.dll.config
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\Presentacion.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\Presentacion.pdb
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\AjaxControlToolkit.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\CKEditor.NET.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\eWorld.UI.Compatibility.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\eWorld.UI.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\log4net.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\LogicaNegocio.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\Microsoft.ReportViewer.WebForms.DLL
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\Seguridad.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\SGAsientosDeudaInterna.exe
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\Datos.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\Microsoft.Practices.ServiceLocation.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\Microsoft.Practices.Unity.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\stdole.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\Microsoft.Practices.Unity.Interception.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\LogicaNegocio.pdb
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\LogicaNegocio.dll.config
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\Seguridad.pdb
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\SGAsientosDeudaInterna.pdb
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\SGAsientosDeudaInterna.exe.config
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\CKEditor.NET.pdb
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\log4net.xml
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\Datos.pdb
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\Datos.dll.config
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\Presentacion\bin\LogicaNegocio.XmlSerializers.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\Presentacion\obj\Debug\Portal Sistema Gestor.csprojAssemblyReference.cache
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\Presentacion\obj\Debug\Portal Sistema Gestor.csproj.ResolveComReference.cache
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\Presentacion\obj\Debug\Portal Sistema Gestor.csproj.CoreCompileInputs.cache
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\Presentacion\obj\Debug\Portal Sistema Gestor.csproj.CopyComplete
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\Presentacion\obj\Debug\Presentacion.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\Presentacion\obj\Debug\Presentacion.pdb
+D:\PaqueteGestorEmergencia\Fuente\Presentacion\bin\Presentacion.dll.config
+D:\PaqueteGestorEmergencia\Fuente\Presentacion\bin\Presentacion.dll
+D:\PaqueteGestorEmergencia\Fuente\Presentacion\bin\Presentacion.pdb
+D:\PaqueteGestorEmergencia\Fuente\Presentacion\bin\AjaxControlToolkit.dll
+D:\PaqueteGestorEmergencia\Fuente\Presentacion\bin\CKEditor.NET.dll
+D:\PaqueteGestorEmergencia\Fuente\Presentacion\bin\eWorld.UI.Compatibility.dll
+D:\PaqueteGestorEmergencia\Fuente\Presentacion\bin\eWorld.UI.dll
+D:\PaqueteGestorEmergencia\Fuente\Presentacion\bin\log4net.dll
+D:\PaqueteGestorEmergencia\Fuente\Presentacion\bin\LogicaNegocio.dll
+D:\PaqueteGestorEmergencia\Fuente\Presentacion\bin\Microsoft.ReportViewer.WebForms.DLL
+D:\PaqueteGestorEmergencia\Fuente\Presentacion\bin\Seguridad.dll
+D:\PaqueteGestorEmergencia\Fuente\Presentacion\bin\SGAsientosDeudaInterna.exe
+D:\PaqueteGestorEmergencia\Fuente\Presentacion\bin\Datos.dll
+D:\PaqueteGestorEmergencia\Fuente\Presentacion\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\PaqueteGestorEmergencia\Fuente\Presentacion\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\PaqueteGestorEmergencia\Fuente\Presentacion\bin\Microsoft.Practices.ServiceLocation.dll
+D:\PaqueteGestorEmergencia\Fuente\Presentacion\bin\Microsoft.Practices.Unity.dll
+D:\PaqueteGestorEmergencia\Fuente\Presentacion\bin\stdole.dll
+D:\PaqueteGestorEmergencia\Fuente\Presentacion\bin\Microsoft.Practices.Unity.Interception.dll
+D:\PaqueteGestorEmergencia\Fuente\Presentacion\bin\LogicaNegocio.pdb
+D:\PaqueteGestorEmergencia\Fuente\Presentacion\bin\LogicaNegocio.dll.config
+D:\PaqueteGestorEmergencia\Fuente\Presentacion\bin\Seguridad.pdb
+D:\PaqueteGestorEmergencia\Fuente\Presentacion\bin\SGAsientosDeudaInterna.pdb
+D:\PaqueteGestorEmergencia\Fuente\Presentacion\bin\SGAsientosDeudaInterna.exe.config
+D:\PaqueteGestorEmergencia\Fuente\Presentacion\bin\CKEditor.NET.pdb
+D:\PaqueteGestorEmergencia\Fuente\Presentacion\bin\log4net.xml
+D:\PaqueteGestorEmergencia\Fuente\Presentacion\bin\Datos.pdb
+D:\PaqueteGestorEmergencia\Fuente\Presentacion\bin\Datos.dll.config
+D:\PaqueteGestorEmergencia\Fuente\Presentacion\bin\LogicaNegocio.XmlSerializers.dll
+D:\PaqueteGestorEmergencia\Fuente\Presentacion\obj\Debug\Portal Sistema Gestor.csprojAssemblyReference.cache
+D:\PaqueteGestorEmergencia\Fuente\Presentacion\obj\Debug\Portal Sistema Gestor.csproj.ResolveComReference.cache
+D:\PaqueteGestorEmergencia\Fuente\Presentacion\obj\Debug\Portal Sistema Gestor.csproj.CoreCompileInputs.cache
+D:\PaqueteGestorEmergencia\Fuente\Presentacion\obj\Debug\Portal Sistema Gestor.csproj.CopyComplete
+D:\PaqueteGestorEmergencia\Fuente\Presentacion\obj\Debug\Presentacion.dll
+D:\PaqueteGestorEmergencia\Fuente\Presentacion\obj\Debug\Presentacion.pdb
+D:\CODIGOFUENTEGESTOR\PR\Fuente\Presentacion\bin\Presentacion.dll.config
+D:\CODIGOFUENTEGESTOR\PR\Fuente\Presentacion\bin\Presentacion.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\Presentacion\bin\Presentacion.pdb
+D:\CODIGOFUENTEGESTOR\PR\Fuente\Presentacion\bin\AjaxControlToolkit.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\Presentacion\bin\CKEditor.NET.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\Presentacion\bin\eWorld.UI.Compatibility.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\Presentacion\bin\eWorld.UI.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\Presentacion\bin\log4net.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\Presentacion\bin\LogicaNegocio.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\Presentacion\bin\Microsoft.ReportViewer.WebForms.DLL
+D:\CODIGOFUENTEGESTOR\PR\Fuente\Presentacion\bin\Seguridad.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\Presentacion\bin\SGAsientosDeudaInterna.exe
+D:\CODIGOFUENTEGESTOR\PR\Fuente\Presentacion\bin\Datos.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\Presentacion\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\Presentacion\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\Presentacion\bin\Microsoft.Practices.ServiceLocation.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\Presentacion\bin\Microsoft.Practices.Unity.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\Presentacion\bin\stdole.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\Presentacion\bin\Microsoft.Practices.Unity.Interception.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\Presentacion\bin\LogicaNegocio.pdb
+D:\CODIGOFUENTEGESTOR\PR\Fuente\Presentacion\bin\LogicaNegocio.dll.config
+D:\CODIGOFUENTEGESTOR\PR\Fuente\Presentacion\bin\Seguridad.pdb
+D:\CODIGOFUENTEGESTOR\PR\Fuente\Presentacion\bin\SGAsientosDeudaInterna.pdb
+D:\CODIGOFUENTEGESTOR\PR\Fuente\Presentacion\bin\SGAsientosDeudaInterna.exe.config
+D:\CODIGOFUENTEGESTOR\PR\Fuente\Presentacion\bin\CKEditor.NET.pdb
+D:\CODIGOFUENTEGESTOR\PR\Fuente\Presentacion\bin\log4net.xml
+D:\CODIGOFUENTEGESTOR\PR\Fuente\Presentacion\bin\Datos.pdb
+D:\CODIGOFUENTEGESTOR\PR\Fuente\Presentacion\bin\Datos.dll.config
+D:\CODIGOFUENTEGESTOR\PR\Fuente\Presentacion\bin\LogicaNegocio.XmlSerializers.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\Presentacion\obj\Debug\Portal Sistema Gestor.csprojAssemblyReference.cache
+D:\CODIGOFUENTEGESTOR\PR\Fuente\Presentacion\obj\Debug\Portal Sistema Gestor.csproj.ResolveComReference.cache
+D:\CODIGOFUENTEGESTOR\PR\Fuente\Presentacion\obj\Debug\Portal Sistema Gestor.csproj.CoreCompileInputs.cache
+D:\CODIGOFUENTEGESTOR\PR\Fuente\Presentacion\obj\Debug\Portal Sistema Gestor.csproj.CopyComplete
+D:\CODIGOFUENTEGESTOR\PR\Fuente\Presentacion\obj\Debug\Presentacion.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\Presentacion\obj\Debug\Presentacion.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\Presentacion\bin\Presentacion.dll.config
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\Presentacion\bin\Presentacion.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\Presentacion\bin\Presentacion.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\Presentacion\bin\AjaxControlToolkit.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\Presentacion\bin\CKEditor.NET.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\Presentacion\bin\eWorld.UI.Compatibility.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\Presentacion\bin\eWorld.UI.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\Presentacion\bin\log4net.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\Presentacion\bin\LogicaNegocio.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\Presentacion\bin\Microsoft.ReportViewer.WebForms.DLL
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\Presentacion\bin\Seguridad.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\Presentacion\bin\SGAsientosDeudaInterna.exe
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\Presentacion\bin\Datos.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\Presentacion\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\Presentacion\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\Presentacion\bin\Microsoft.Practices.ServiceLocation.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\Presentacion\bin\Microsoft.Practices.Unity.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\Presentacion\bin\stdole.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\Presentacion\bin\Microsoft.Practices.Unity.Interception.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\Presentacion\bin\LogicaNegocio.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\Presentacion\bin\LogicaNegocio.dll.config
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\Presentacion\bin\Seguridad.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\Presentacion\bin\SGAsientosDeudaInterna.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\Presentacion\bin\SGAsientosDeudaInterna.exe.config
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\Presentacion\bin\CKEditor.NET.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\Presentacion\bin\log4net.xml
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\Presentacion\bin\Datos.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\Presentacion\bin\Datos.dll.config
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\Presentacion\bin\LogicaNegocio.XmlSerializers.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\Presentacion\obj\Debug\Portal Sistema Gestor.csprojAssemblyReference.cache
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\Presentacion\obj\Debug\Portal Sistema Gestor.csproj.ResolveComReference.cache
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\Presentacion\obj\Debug\Portal Sistema Gestor.csproj.CoreCompileInputs.cache
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\Presentacion\obj\Debug\Portal Sistema Gestor.csproj.CopyComplete
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\Presentacion\obj\Debug\Presentacion.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\Presentacion\obj\Debug\Presentacion.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\bin\Presentacion.dll.config
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\bin\Presentacion.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\bin\Presentacion.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\bin\AjaxControlToolkit.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\bin\CKEditor.NET.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\bin\eWorld.UI.Compatibility.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\bin\eWorld.UI.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\bin\log4net.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\bin\LogicaNegocio.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\bin\Microsoft.ReportViewer.WebForms.DLL
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\bin\Seguridad.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\bin\SGAsientosDeudaInterna.exe
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\bin\Datos.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\bin\Microsoft.Practices.ServiceLocation.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\bin\Microsoft.Practices.Unity.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\bin\stdole.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\bin\Microsoft.Practices.Unity.Interception.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\bin\LogicaNegocio.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\bin\LogicaNegocio.dll.config
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\bin\Seguridad.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\bin\SGAsientosDeudaInterna.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\bin\SGAsientosDeudaInterna.exe.config
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\bin\CKEditor.NET.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\bin\log4net.xml
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\bin\Datos.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\bin\Datos.dll.config
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\bin\LogicaNegocio.XmlSerializers.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\obj\Debug\Portal Sistema Gestor.csprojAssemblyReference.cache
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\obj\Debug\Portal Sistema Gestor.csproj.ResolveComReference.cache
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\obj\Debug\Portal Sistema Gestor.csproj.CoreCompileInputs.cache
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\obj\Debug\Portal Sistema Gestor.csproj.CopyComplete
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\obj\Debug\Presentacion.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\obj\Debug\Presentacion.pdb
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\obj\Debug\Portal Sistema Gestor.csproj.AssemblyReference.cache
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\obj\Debug\Portal Sistema Gestor.csproj.ResolveComReference.cache
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\obj\Debug\Portal Sistema Gestor.csproj.CoreCompileInputs.cache
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\bin\Presentacion.dll.config
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\bin\Presentacion.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\bin\Presentacion.pdb
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\bin\AjaxControlToolkit.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\bin\CKEditor.NET.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\bin\eWorld.UI.Compatibility.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\bin\eWorld.UI.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\bin\log4net.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\bin\LogicaNegocio.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\bin\Microsoft.ReportViewer.WebForms.DLL
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\bin\Seguridad.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\bin\SGAsientosDeudaInterna.exe
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\bin\Datos.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\bin\Microsoft.Practices.ServiceLocation.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\bin\Microsoft.Practices.Unity.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\bin\stdole.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\bin\Microsoft.Practices.Unity.Interception.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\bin\LogicaNegocio.pdb
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\bin\LogicaNegocio.dll.config
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\bin\Seguridad.pdb
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\bin\SGAsientosDeudaInterna.pdb
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\bin\SGAsientosDeudaInterna.exe.config
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\bin\CKEditor.NET.pdb
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\bin\log4net.xml
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\bin\Datos.pdb
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\bin\Datos.dll.config
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\bin\LogicaNegocio.XmlSerializers.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\obj\Debug\Portal Sistema Gestor.csproj.CopyComplete
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\obj\Debug\Presentacion.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\Presentacion\obj\Debug\Presentacion.pdb

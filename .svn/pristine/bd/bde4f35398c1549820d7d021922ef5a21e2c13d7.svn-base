@@ -1,0 +1,61 @@
+﻿<?xml version="1.0"?>
+<!--
+  Descripción: Archivo de configuración del conector de 
+	Enterprise Library v1.0.0
+	Autor: Luis Vega Flores
+-->
+<CommandDef>
+  <Command>
+    <BaseDatos>MSSQL</BaseDatos>
+    <DbInstance>ConexionBD</DbInstance>
+    <Type>CommandType.StoredProcedure</Type>
+    <Text>cf.uspConsultarDevengosInteresesDE</Text>
+    <NumberOfParameters>5</NumberOfParameters>
+    <ReturnType>procedure</ReturnType>
+    <CommandTimeout>6000</CommandTimeout>
+  </Command>
+  <Parameters>
+
+	<Parameter>
+      <Name>@pIdPrestamo</Name>
+      <VariableMapeo>Lint_IdPrestamo</VariableMapeo>
+      <Type>String</Type>
+      <Size>20</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pIdTramo</Name>
+      <VariableMapeo>Lstr_IdTramo</VariableMapeo>
+      <Type>String</Type>
+      <Size>30</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pPeriodo</Name>
+      <VariableMapeo>Ldt_Anno</VariableMapeo>
+      <Type>String</Type>
+      <Size>30</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+      
+    <Parameter>
+      <Name>@pResultado</Name>
+      <Type>String</Type>
+      <Size>2</Size>
+      <Direction>Output</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pMensaje</Name>
+      <Type>String</Type>
+      <Size>500</Size>
+      <Direction>Output</Direction>
+    </Parameter>
+
+  </Parameters>
+</CommandDef>

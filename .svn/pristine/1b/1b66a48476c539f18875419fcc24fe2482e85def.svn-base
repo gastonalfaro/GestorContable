@@ -1,0 +1,133 @@
+﻿<?xml version="1.0"?>
+<!--
+  Descripción: Archivo de configuración del conector de 
+	Enterprise Library v1.0.0
+	Autor: Gabriel Garcia
+-->
+<CommandDef>
+  <Command>
+    <BaseDatos>MSSQL</BaseDatos>
+    <DbInstance>ConexionBD</DbInstance>
+    <Type>CommandType.StoredProcedure</Type>
+    <Text>ci.uspConsultarPagosPorFormulario</Text>
+    <NumberOfParameters>13</NumberOfParameters>
+    <ReturnType>procedure</ReturnType>
+    <CommandTimeout>6000</CommandTimeout>
+  </Command>
+  <Parameters>
+
+    <Parameter>
+      <Name>@pIdFormulario</Name>
+      <VariableMapeo>Lint_IdFormulario</VariableMapeo>
+      <Type>Int32</Type>
+      <Size>32</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pAnno</Name>
+      <VariableMapeo>Lint_Anno</VariableMapeo>
+      <Type>Int32</Type>
+      <Size>16</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pIdPago</Name>
+      <VariableMapeo>Lint_IdPago</VariableMapeo>
+      <Type>Int32</Type>
+      <Size>32</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pFchPagoDesde</Name>
+      <VariableMapeo>Ldt_FchPagoDesde</VariableMapeo>
+      <Type>Datetime</Type>
+      <Size>20</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pFchPagoHasta</Name>
+      <VariableMapeo>Ldt_FchPagoHasta</VariableMapeo>
+      <Type>Datetime</Type>
+      <Size>20</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pIdInstitucion</Name>
+      <VariableMapeo>Lstr_IdInstitucion</VariableMapeo>
+      <Type>String</Type>
+      <Size>10</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pIdOficina</Name>
+      <VariableMapeo>Lstr_IdOficina</VariableMapeo>
+      <Type>String</Type>
+      <Size>10</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pIdServicio</Name>
+      <VariableMapeo>Lstr_IdServicio</VariableMapeo>
+      <Type>String</Type>
+      <Size>10</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pIdMoneda</Name>
+      <VariableMapeo>Lstr_IdMoneda</VariableMapeo>
+      <Type>String</Type>
+      <Size>4</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+    
+    <Parameter>
+      <Name>@pPeriodo</Name>
+      <VariableMapeo>Lstr_Periodo</VariableMapeo>
+      <Type>String</Type>
+      <Size>6</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pEstado</Name>
+      <VariableMapeo>Lstr_Estado</VariableMapeo>
+      <Type>String</Type>
+      <Size>5</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+    
+    <Parameter>
+      <Name>@pResultado</Name>
+      <Type>String</Type>
+      <Size>2</Size>
+      <Direction>Output</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pMensaje</Name>
+      <Type>String</Type>
+      <Size>500</Size>
+      <Direction>Output</Direction>
+    </Parameter>
+
+  </Parameters>
+</CommandDef>

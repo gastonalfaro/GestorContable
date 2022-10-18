@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  For more information on how to configure your ASP.NET application, please visit
+  http://go.microsoft.com/fwlink/?LinkId=169433
+  -->
+<configuration>
+  
+  <configSections>
+    <sectionGroup name="applicationSettings" type="System.Configuration.ApplicationSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" >
+      <section name="WebServiceContableAsientos.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+    </sectionGroup>
+  </configSections>
+  <appSettings>
+    <add key="USER_SAP" value="WS_USER_INT" />
+    <add key="PASS_SAP" value="Hacienda2016" />
+  </appSettings>
+  <system.web>
+    <compilation debug="true" targetFramework="4.5" />
+    <httpRuntime targetFramework="4.5" />
+  </system.web>
+  
+  <system.webServer>
+      <directoryBrowse enabled="true" />
+    <security>
+      <requestFiltering>
+        <fileExtensions allowUnlisted="true">
+          <remove fileExtension="." />
+          <add fileExtension="." allowed="true" />
+        </fileExtensions>
+      </requestFiltering>
+    </security>
+  </system.webServer>
+  
+  <applicationSettings>
+      <WebServiceContableAsientos.Properties.Settings>
+          <setting name="WebServiceContableAsientos_wsCC_Z_FI_CARGA_CONTABLE"
+              serializeAs="String">
+              <value>http://CPD-APSG2:8000/sap/bc/srt/rfc/sap/z_fi_carga_contable/500/z_fi_carga_contable/zcarga</value>
+          </setting>
+          <setting name="USER_SAP" serializeAs="String">
+              <value>WS_USER_INT</value>
+          </setting>
+          <setting name="PASS_SAP" serializeAs="String">
+              <value>Hacienda2016</value>
+          </setting>
+      </WebServiceContableAsientos.Properties.Settings>
+  </applicationSettings>
+  
+  <system.serviceModel>
+    <bindings />
+    <client />
+  </system.serviceModel>
+</configuration>

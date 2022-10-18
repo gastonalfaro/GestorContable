@@ -1,0 +1,196 @@
+<?xml version="1.0"?>
+<!--
+  Descripción: Archivo de configuración del conector de 
+	Enterprise Library v1.0.0
+	Autor: Jose Gomez Silva
+-->
+<CommandDef>
+  <Command>
+    <BaseDatos>MSSQL</BaseDatos>
+    <DbInstance>ConexionBD</DbInstance>
+    <Type>CommandType.StoredProcedure</Type>
+    <Text>cf.uspModificarIntereses</Text>
+    <NumberOfParameters>19</NumberOfParameters>
+    <ReturnType>procedure</ReturnType>
+    <CommandTimeout>6000</CommandTimeout>
+  </Command>
+  <Parameters>
+    
+    <Parameter>
+      <Name>@pIdPrestamo</Name>
+      <VariableMapeo>Lstr_IdPrestamo</VariableMapeo>
+      <Type>String</Type>
+      <Size>15</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pIdTramo</Name>
+      <VariableMapeo>Lint_IdTramo</VariableMapeo>
+      <Type>Int32</Type>
+      <Size>32</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+    
+    <Parameter>
+      <Name>@pTasa</Name>
+      <VariableMapeo>Lstr_Tasa</VariableMapeo>
+      <Type>String</Type>
+      <Size>30</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+	
+    <Parameter>
+      <Name>@pFchTasaAPartir</Name>
+      <VariableMapeo>Ldt_FchTasaAPartir</VariableMapeo>
+      <Type>DateTime</Type>
+      <Size>20</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+	
+    <Parameter>
+      <Name>@pTasaMargen</Name>
+      <VariableMapeo>Ldec_TasaMargen</VariableMapeo>
+      <Type>Decimal</Type>
+      <Size>8</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+	
+    <Parameter>
+      <Name>@pAnno</Name>
+      <VariableMapeo>Ldec_Anno</VariableMapeo>
+      <Type>String</Type>
+      <Size>10</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+	
+    <Parameter>
+      <Name>@pMes</Name>
+      <VariableMapeo>Ldec_Mes</VariableMapeo>
+      <Type>String</Type>
+      <Size>50</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+	
+    <Parameter>
+      <Name>@pFactorConversion</Name>
+      <VariableMapeo>Lstr_FactorConversion</VariableMapeo>
+      <Type>String</Type>
+      <Size>30</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pFchPagoAPartir</Name>
+      <VariableMapeo>Ldt_FchPagoAPartir</VariableMapeo>
+      <Type>DateTime</Type>
+      <Size>20</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+	
+    <Parameter>
+      <Name>@pFchPagoHasta</Name>
+      <VariableMapeo>Ldt_FchPagoHasta</VariableMapeo>
+      <Type>DateTime</Type>
+      <Size>20</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+	
+    <Parameter>
+      <Name>@pPeriodo</Name>
+      <VariableMapeo>Ldec_Periodo</VariableMapeo>
+      <Type>String</Type>
+      <Size>30</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+    
+    <Parameter>
+      <Name>@pPeriodoDias</Name>
+      <VariableMapeo>Ldec_PeriodoDias</VariableMapeo>
+      <Type>Decimal</Type>
+      <Size>4</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+	
+    <Parameter>
+      <Name>@pMonto</Name>
+      <VariableMapeo>Ldec_Monto</VariableMapeo>
+      <Type>Decimal</Type>
+      <Size>20</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+	
+    <Parameter>
+      <Name>@pDiasGracia</Name>
+      <VariableMapeo>Ldec_DiasGracia</VariableMapeo>
+      <Type>Decimal</Type>
+      <Size>3</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+	
+    <Parameter>
+      <Name>@pTasaPunitiva</Name>
+      <VariableMapeo>Ldec_TasaPunitiva</VariableMapeo>
+      <Type>Decimal</Type>
+      <Size>5</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pSecuencia</Name>
+      <VariableMapeo>Lint_Secuencia</VariableMapeo>
+      <Type>Int32</Type>
+      <Size>32</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+    
+    <Parameter>
+      <Name>@pUsrModifica</Name>
+      <VariableMapeo>Lstr_UsrModifica</VariableMapeo>
+      <Type>String</Type>
+      <Size>15</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+    
+    <Parameter>
+      <Name>@pFchModifica</Name>
+      <VariableMapeo>Ldt_FchModifica</VariableMapeo>
+      <Type>DateTime</Type>
+      <Size>20</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pResultado</Name>
+      <Type>String</Type>
+      <Size>2</Size>
+      <Direction>Output</Direction>
+    </Parameter>
+    
+    <Parameter>
+      <Name>@pMensaje</Name>
+      <Type>String</Type>
+      <Size>500</Size>
+      <Direction>Output</Direction>
+    </Parameter>
+
+  </Parameters>
+</CommandDef>

@@ -1,0 +1,115 @@
+﻿<?xml version="1.0"?>
+<!--
+  Descripción: Archivo de configuración del conector de 
+	Enterprise Library v1.0.0
+	Autor: Jose Gomez Silva
+-->
+<CommandDef>
+  <Command>
+    <BaseDatos>MSSQL</BaseDatos>
+    <DbInstance>ConexionBD</DbInstance>
+    <Type>CommandType.StoredProcedure</Type>
+    <Text>cf.uspRegistrarDevengosInteresesDE</Text>
+    <NumberOfParameters>11</NumberOfParameters>
+    <ReturnType>procedure</ReturnType>
+    <CommandTimeout>6000</CommandTimeout>
+  </Command>
+  <Parameters>
+
+	<Parameter>
+      <Name>@@pIdPrestamo</Name>
+      <VariableMapeo>Lint_IdPrestamo</VariableMapeo>
+      <Type>Int32</Type>
+      <Size>20</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+	
+    <Parameter>
+      <Name>@pIdTramo</Name>
+      <VariableMapeo>Lstr_IdTramo</VariableMapeo>
+      <Type>String</Type>
+      <Size>30</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+	
+	<Parameter>
+      <Name>@pAnno</Name>
+      <VariableMapeo>Ldt_Anno</VariableMapeo>
+      <Type>Date</Type>
+      <Size>20</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+	
+	<Parameter>
+      <Name>@pCostoAmortizacionInicial</Name>
+      <VariableMapeo>Ldec_CostoAmortizacionInicial</VariableMapeo>
+      <Type>Decimal</Type>
+      <Size>20</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+	<Parameter>
+      <Name>@pIntereses</Name>
+      <VariableMapeo>Ldec_Intereses</VariableMapeo>
+      <Type>Decimal</Type>
+      <Size>20</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+	
+	<Parameter>
+      <Name>@pPago</Name>
+      <VariableMapeo>Ldec_Pago</VariableMapeo>
+      <Type>Decimal</Type>
+      <Size>20</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+	
+	<Parameter>
+      <Name>@pCostoAmortizacionFinal</Name>
+      <VariableMapeo>Ldec_CostoAmortizacionFinal</VariableMapeo>
+      <Type>Decimal</Type>
+      <Size>20</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+	
+	<Parameter>
+      <Name>@pDevengado</Name>
+      <VariableMapeo>Ldec_Devengado</VariableMapeo>
+      <Type>Decimal</Type>
+      <Size>20</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pUsrCreacion</Name>
+      <VariableMapeo>Lstr_UsrCreacion</VariableMapeo>
+      <Type>String</Type>
+      <Size>15</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pResultado</Name>
+      <Type>String</Type>
+      <Size>2</Size>
+      <Direction>Output</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pMensaje</Name>
+      <Type>String</Type>
+      <Size>500</Size>
+      <Direction>Output</Direction>
+    </Parameter>
+
+  </Parameters>
+</CommandDef>

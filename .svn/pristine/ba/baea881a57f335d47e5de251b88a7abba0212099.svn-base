@@ -1,0 +1,52 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PortalSistemaGestor2.Master.cs" Inherits="Presentacion.PaginaMaestra.PortalSistemaGestor" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link href="PortalSistemaGestor.css" rel="stylesheet" />
+    <link href="../Compartidas/rmm-css/responsivemobilemenu.css" rel="stylesheet" />
+    <script src="../Compartidas/rmm-js/jquery.min.js"></script>
+    <script src="../Compartidas/rmm-js/responsivemobilemenu.js"></script>
+    <script type="text/jscript"  src="../Compartidas/ValidaMontos.js"></script>
+    <script type="text/jscript"  src="../Compartidas/ValidadorPwC.js"></script>
+    <script type="text/jscript"  src="../Compartidas/DeshabilitaBoton.js"></script>
+    <title></title>
+</head>
+<body class="fondoprincipal">
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <asp:Image ID="Image1" runat="server" ImageUrl="~/PaginaMaestra/imagenes/banner-principal (1).png" class="imagenencabezado" />
+        <div class="separador">
+            <div class="contenidoseparador">               
+                <asp:LinkButton ID="lnkCerrarSesion" runat="server" OnClick="lnkCerrarSesion_Click">Cerrar Sesión</asp:LinkButton>
+            </div>
+        </div>
+        <div class="encabezado">
+            <asp:ContentPlaceHolder ID="encabezado" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="fondosecundario">
+            <!--<div class="contenido">-->
+                <asp:ContentPlaceHolder ID="Contenido" runat="server">
+                </asp:ContentPlaceHolder>
+            <!--</div>-->
+        </div>
+        <div class="piepagina">             
+            <div class="contacto">
+                <span>Ministerio de Hacienda <a title="Facebook Ministerio de Hacienda" href="https://www.facebook.com/ministeriodehaciendacr" target="_blank"><i class="icon-facebook-sign"></i></a><a title="Twitter Ministerio de Hacienda" href="https://twitter.com/HaciendaCR" target="_blank"><i class="icon-twitter"></i></a><a title="Canal YouTube Ministerio de Hacienda" href="http://www.youtube.com/user/HaciendaCR/" target="_blank"><i class="icon-youtube"></i></a><a class="tip" href="https://docs.google.com/forms/d/1prEnrcPX2LXGj6Q0SqeqGSkaecyeOjb9PElzDZQ5U54" target="_blank" data-toggle="tooltip" data-placement="right" title="" data-original-title="Evalúe nuestro sitio"><i class="icon-list"></i></a>
+                    <br>
+                    República de Costa Rica<br>
+                    San José, Avenida 2da<br>
+                    Calle 1 y 3, diagonal al Teatro Nacional<br>
+                    Correo electrónico: <a style="color: #fff; text-decoration: underline" href="mailto:comunicacionmh@hacienda.go.cr">comunicacionmh@hacienda.go.cr</a><br>
+                    Central telefónica: 2284-5000<br>
+                    Horario de atención: Lunes a viernes de 8:00 a.m. a 4:00 p.m.<br>
+                </span>
+            </div>
+            <div class="contenidopiepagina">
+                <asp:Image ID="Image2" runat="server" ImageUrl="~/PaginaMaestra/imagenes/piepagina.png" class="imagenpiepagina" />
+            </div>
+        </div>
+    </form>
+</body>
+</html>

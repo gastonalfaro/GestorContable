@@ -1,0 +1,286 @@
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGDiferencialCambiario\bin\Debug\SGDiferencialCambiario.exe.config
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGDiferencialCambiario\bin\Debug\SGDiferencialCambiario.exe.manifest
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGDiferencialCambiario\bin\Debug\SGDiferencialCambiario.application
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGDiferencialCambiario\bin\Debug\SGDiferencialCambiario.exe
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGDiferencialCambiario\bin\Debug\SGDiferencialCambiario.pdb
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGDiferencialCambiario\bin\Debug\LogicaNegocio.dll
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGDiferencialCambiario\bin\Debug\Seguridad.dll
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGDiferencialCambiario\bin\Debug\Datos.dll
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGDiferencialCambiario\bin\Debug\log4net.dll
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGDiferencialCambiario\bin\Debug\Microsoft.Office.Interop.Excel.dll
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGDiferencialCambiario\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGDiferencialCambiario\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGDiferencialCambiario\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGDiferencialCambiario\bin\Debug\Microsoft.Practices.Unity.dll
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGDiferencialCambiario\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGDiferencialCambiario\bin\Debug\LogicaNegocio.pdb
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGDiferencialCambiario\bin\Debug\Seguridad.pdb
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGDiferencialCambiario\bin\Debug\Datos.pdb
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGDiferencialCambiario\bin\Debug\log4net.xml
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGDiferencialCambiario\bin\Debug\Microsoft.Office.Interop.Excel.xml
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.csprojResolveAssemblyReference.cache
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.exe.manifest
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.application
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.exe
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.pdb
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGDiferencialCambiario\bin\Debug\LogicaNegocio.XmlSerializers.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGDiferencialCambiario\bin\Debug\SGDiferencialCambiario.exe.config
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGDiferencialCambiario\bin\Debug\SGDiferencialCambiario.exe.manifest
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGDiferencialCambiario\bin\Debug\SGDiferencialCambiario.application
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGDiferencialCambiario\bin\Debug\SGDiferencialCambiario.exe
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGDiferencialCambiario\bin\Debug\SGDiferencialCambiario.pdb
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGDiferencialCambiario\bin\Debug\LogicaNegocio.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGDiferencialCambiario\bin\Debug\Seguridad.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGDiferencialCambiario\bin\Debug\Datos.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGDiferencialCambiario\bin\Debug\log4net.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGDiferencialCambiario\bin\Debug\Microsoft.Office.Interop.Excel.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGDiferencialCambiario\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGDiferencialCambiario\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGDiferencialCambiario\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGDiferencialCambiario\bin\Debug\Microsoft.Practices.Unity.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGDiferencialCambiario\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGDiferencialCambiario\bin\Debug\LogicaNegocio.pdb
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGDiferencialCambiario\bin\Debug\Seguridad.pdb
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGDiferencialCambiario\bin\Debug\Datos.pdb
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGDiferencialCambiario\bin\Debug\log4net.xml
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGDiferencialCambiario\bin\Debug\Microsoft.Office.Interop.Excel.xml
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGDiferencialCambiario\bin\Debug\LogicaNegocio.XmlSerializers.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.csprojResolveAssemblyReference.cache
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.exe.manifest
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.application
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.exe
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.pdb
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGDiferencialCambiario\bin\Debug\SGDiferencialCambiario.exe.config
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGDiferencialCambiario\bin\Debug\SGDiferencialCambiario.exe.manifest
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGDiferencialCambiario\bin\Debug\SGDiferencialCambiario.application
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGDiferencialCambiario\bin\Debug\SGDiferencialCambiario.exe
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGDiferencialCambiario\bin\Debug\SGDiferencialCambiario.pdb
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGDiferencialCambiario\bin\Debug\LogicaNegocio.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGDiferencialCambiario\bin\Debug\Seguridad.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGDiferencialCambiario\bin\Debug\Datos.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGDiferencialCambiario\bin\Debug\log4net.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGDiferencialCambiario\bin\Debug\Microsoft.Office.Interop.Excel.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGDiferencialCambiario\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGDiferencialCambiario\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGDiferencialCambiario\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGDiferencialCambiario\bin\Debug\Microsoft.Practices.Unity.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGDiferencialCambiario\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGDiferencialCambiario\bin\Debug\LogicaNegocio.pdb
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGDiferencialCambiario\bin\Debug\Seguridad.pdb
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGDiferencialCambiario\bin\Debug\Datos.pdb
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGDiferencialCambiario\bin\Debug\log4net.xml
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGDiferencialCambiario\bin\Debug\Microsoft.Office.Interop.Excel.xml
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGDiferencialCambiario\bin\Debug\LogicaNegocio.XmlSerializers.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.csprojResolveAssemblyReference.cache
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.exe.manifest
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.application
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.exe
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.pdb
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\bin\Debug\SGDiferencialCambiario.exe.config
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\bin\Debug\SGDiferencialCambiario.exe.manifest
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\bin\Debug\SGDiferencialCambiario.application
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\bin\Debug\SGDiferencialCambiario.exe
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\bin\Debug\SGDiferencialCambiario.pdb
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\bin\Debug\LogicaNegocio.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\bin\Debug\Seguridad.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\bin\Debug\log4net.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\bin\Debug\Datos.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\bin\Debug\Microsoft.Office.Interop.Excel.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\bin\Debug\office.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\bin\Debug\Microsoft.Vbe.Interop.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\bin\Debug\Microsoft.Practices.Unity.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\bin\Debug\stdole.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\bin\Debug\LogicaNegocio.pdb
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\bin\Debug\LogicaNegocio.dll.config
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\bin\Debug\Seguridad.pdb
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\bin\Debug\log4net.xml
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\bin\Debug\Datos.pdb
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\bin\Debug\Datos.dll.config
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\bin\Debug\Microsoft.Office.Interop.Excel.xml
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\bin\Debug\office.xml
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\bin\Debug\LogicaNegocio.XmlSerializers.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.csprojAssemblyReference.cache
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.csproj.CoreCompileInputs.cache
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.exe.manifest
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.application
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.csproj.CopyComplete
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.exe
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.pdb
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\bin\Debug\SGDiferencialCambiario.exe.config
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\bin\Debug\SGDiferencialCambiario.exe.manifest
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\bin\Debug\SGDiferencialCambiario.application
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\bin\Debug\SGDiferencialCambiario.exe
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\bin\Debug\SGDiferencialCambiario.pdb
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\bin\Debug\LogicaNegocio.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\bin\Debug\Seguridad.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\bin\Debug\log4net.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\bin\Debug\Datos.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\bin\Debug\Microsoft.Practices.Unity.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\bin\Debug\stdole.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\bin\Debug\LogicaNegocio.pdb
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\bin\Debug\LogicaNegocio.dll.config
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\bin\Debug\Seguridad.pdb
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\bin\Debug\log4net.xml
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\bin\Debug\Datos.pdb
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\bin\Debug\Datos.dll.config
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\bin\Debug\LogicaNegocio.XmlSerializers.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.csprojAssemblyReference.cache
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.csproj.CoreCompileInputs.cache
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.exe.manifest
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.application
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.csproj.CopyComplete
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.exe
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.pdb
+D:\PaqueteGestorEmergencia\Fuente\SGDiferencialCambiario\bin\Debug\SGDiferencialCambiario.exe.config
+D:\PaqueteGestorEmergencia\Fuente\SGDiferencialCambiario\bin\Debug\SGDiferencialCambiario.exe.manifest
+D:\PaqueteGestorEmergencia\Fuente\SGDiferencialCambiario\bin\Debug\SGDiferencialCambiario.application
+D:\PaqueteGestorEmergencia\Fuente\SGDiferencialCambiario\bin\Debug\SGDiferencialCambiario.exe
+D:\PaqueteGestorEmergencia\Fuente\SGDiferencialCambiario\bin\Debug\SGDiferencialCambiario.pdb
+D:\PaqueteGestorEmergencia\Fuente\SGDiferencialCambiario\bin\Debug\LogicaNegocio.dll
+D:\PaqueteGestorEmergencia\Fuente\SGDiferencialCambiario\bin\Debug\Seguridad.dll
+D:\PaqueteGestorEmergencia\Fuente\SGDiferencialCambiario\bin\Debug\log4net.dll
+D:\PaqueteGestorEmergencia\Fuente\SGDiferencialCambiario\bin\Debug\Datos.dll
+D:\PaqueteGestorEmergencia\Fuente\SGDiferencialCambiario\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\PaqueteGestorEmergencia\Fuente\SGDiferencialCambiario\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\PaqueteGestorEmergencia\Fuente\SGDiferencialCambiario\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\PaqueteGestorEmergencia\Fuente\SGDiferencialCambiario\bin\Debug\Microsoft.Practices.Unity.dll
+D:\PaqueteGestorEmergencia\Fuente\SGDiferencialCambiario\bin\Debug\stdole.dll
+D:\PaqueteGestorEmergencia\Fuente\SGDiferencialCambiario\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+D:\PaqueteGestorEmergencia\Fuente\SGDiferencialCambiario\bin\Debug\LogicaNegocio.pdb
+D:\PaqueteGestorEmergencia\Fuente\SGDiferencialCambiario\bin\Debug\LogicaNegocio.dll.config
+D:\PaqueteGestorEmergencia\Fuente\SGDiferencialCambiario\bin\Debug\Seguridad.pdb
+D:\PaqueteGestorEmergencia\Fuente\SGDiferencialCambiario\bin\Debug\log4net.xml
+D:\PaqueteGestorEmergencia\Fuente\SGDiferencialCambiario\bin\Debug\Datos.pdb
+D:\PaqueteGestorEmergencia\Fuente\SGDiferencialCambiario\bin\Debug\Datos.dll.config
+D:\PaqueteGestorEmergencia\Fuente\SGDiferencialCambiario\bin\Debug\LogicaNegocio.XmlSerializers.dll
+D:\PaqueteGestorEmergencia\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.csprojAssemblyReference.cache
+D:\PaqueteGestorEmergencia\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.csproj.CoreCompileInputs.cache
+D:\PaqueteGestorEmergencia\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.exe.manifest
+D:\PaqueteGestorEmergencia\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.application
+D:\PaqueteGestorEmergencia\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.csproj.CopyComplete
+D:\PaqueteGestorEmergencia\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.exe
+D:\PaqueteGestorEmergencia\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.pdb
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGDiferencialCambiario\bin\Debug\SGDiferencialCambiario.exe.config
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGDiferencialCambiario\bin\Debug\SGDiferencialCambiario.exe.manifest
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGDiferencialCambiario\bin\Debug\SGDiferencialCambiario.application
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGDiferencialCambiario\bin\Debug\SGDiferencialCambiario.exe
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGDiferencialCambiario\bin\Debug\SGDiferencialCambiario.pdb
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGDiferencialCambiario\bin\Debug\LogicaNegocio.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGDiferencialCambiario\bin\Debug\Seguridad.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGDiferencialCambiario\bin\Debug\log4net.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGDiferencialCambiario\bin\Debug\Datos.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGDiferencialCambiario\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGDiferencialCambiario\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGDiferencialCambiario\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGDiferencialCambiario\bin\Debug\Microsoft.Practices.Unity.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGDiferencialCambiario\bin\Debug\stdole.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGDiferencialCambiario\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGDiferencialCambiario\bin\Debug\LogicaNegocio.pdb
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGDiferencialCambiario\bin\Debug\LogicaNegocio.dll.config
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGDiferencialCambiario\bin\Debug\Seguridad.pdb
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGDiferencialCambiario\bin\Debug\log4net.xml
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGDiferencialCambiario\bin\Debug\Datos.pdb
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGDiferencialCambiario\bin\Debug\Datos.dll.config
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGDiferencialCambiario\bin\Debug\LogicaNegocio.XmlSerializers.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.csprojAssemblyReference.cache
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.csproj.CoreCompileInputs.cache
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.exe.manifest
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.application
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.csproj.CopyComplete
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.exe
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGDiferencialCambiario\bin\Debug\SGDiferencialCambiario.exe.config
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGDiferencialCambiario\bin\Debug\SGDiferencialCambiario.exe.manifest
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGDiferencialCambiario\bin\Debug\SGDiferencialCambiario.application
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGDiferencialCambiario\bin\Debug\SGDiferencialCambiario.exe
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGDiferencialCambiario\bin\Debug\SGDiferencialCambiario.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGDiferencialCambiario\bin\Debug\LogicaNegocio.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGDiferencialCambiario\bin\Debug\Seguridad.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGDiferencialCambiario\bin\Debug\log4net.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGDiferencialCambiario\bin\Debug\Datos.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGDiferencialCambiario\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGDiferencialCambiario\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGDiferencialCambiario\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGDiferencialCambiario\bin\Debug\Microsoft.Practices.Unity.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGDiferencialCambiario\bin\Debug\stdole.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGDiferencialCambiario\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGDiferencialCambiario\bin\Debug\LogicaNegocio.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGDiferencialCambiario\bin\Debug\LogicaNegocio.dll.config
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGDiferencialCambiario\bin\Debug\Seguridad.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGDiferencialCambiario\bin\Debug\log4net.xml
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGDiferencialCambiario\bin\Debug\Datos.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGDiferencialCambiario\bin\Debug\Datos.dll.config
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGDiferencialCambiario\bin\Debug\LogicaNegocio.XmlSerializers.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.csprojAssemblyReference.cache
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.csproj.CoreCompileInputs.cache
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.exe.manifest
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.application
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.csproj.CopyComplete
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.exe
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGDiferencialCambiario\bin\Debug\SGDiferencialCambiario.exe.config
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGDiferencialCambiario\bin\Debug\SGDiferencialCambiario.exe.manifest
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGDiferencialCambiario\bin\Debug\SGDiferencialCambiario.application
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGDiferencialCambiario\bin\Debug\SGDiferencialCambiario.exe
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGDiferencialCambiario\bin\Debug\SGDiferencialCambiario.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGDiferencialCambiario\bin\Debug\LogicaNegocio.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGDiferencialCambiario\bin\Debug\Seguridad.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGDiferencialCambiario\bin\Debug\log4net.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGDiferencialCambiario\bin\Debug\Datos.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGDiferencialCambiario\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGDiferencialCambiario\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGDiferencialCambiario\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGDiferencialCambiario\bin\Debug\Microsoft.Practices.Unity.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGDiferencialCambiario\bin\Debug\stdole.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGDiferencialCambiario\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGDiferencialCambiario\bin\Debug\LogicaNegocio.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGDiferencialCambiario\bin\Debug\LogicaNegocio.dll.config
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGDiferencialCambiario\bin\Debug\Seguridad.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGDiferencialCambiario\bin\Debug\log4net.xml
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGDiferencialCambiario\bin\Debug\Datos.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGDiferencialCambiario\bin\Debug\Datos.dll.config
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGDiferencialCambiario\bin\Debug\LogicaNegocio.XmlSerializers.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.csprojAssemblyReference.cache
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.csproj.CoreCompileInputs.cache
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.exe.manifest
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.application
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.csproj.CopyComplete
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.exe
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.pdb
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.csproj.AssemblyReference.cache
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.csproj.CoreCompileInputs.cache
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGDiferencialCambiario\bin\Debug\SGDiferencialCambiario.exe.config
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGDiferencialCambiario\bin\Debug\SGDiferencialCambiario.exe.manifest
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGDiferencialCambiario\bin\Debug\SGDiferencialCambiario.application
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGDiferencialCambiario\bin\Debug\SGDiferencialCambiario.exe
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGDiferencialCambiario\bin\Debug\SGDiferencialCambiario.pdb
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGDiferencialCambiario\bin\Debug\LogicaNegocio.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGDiferencialCambiario\bin\Debug\Seguridad.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGDiferencialCambiario\bin\Debug\log4net.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGDiferencialCambiario\bin\Debug\Datos.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGDiferencialCambiario\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGDiferencialCambiario\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGDiferencialCambiario\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGDiferencialCambiario\bin\Debug\Microsoft.Practices.Unity.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGDiferencialCambiario\bin\Debug\stdole.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGDiferencialCambiario\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGDiferencialCambiario\bin\Debug\LogicaNegocio.pdb
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGDiferencialCambiario\bin\Debug\LogicaNegocio.dll.config
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGDiferencialCambiario\bin\Debug\Seguridad.pdb
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGDiferencialCambiario\bin\Debug\log4net.xml
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGDiferencialCambiario\bin\Debug\Datos.pdb
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGDiferencialCambiario\bin\Debug\Datos.dll.config
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGDiferencialCambiario\bin\Debug\LogicaNegocio.XmlSerializers.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.exe.manifest
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.application
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.csproj.CopyComplete
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.exe
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGDiferencialCambiario\obj\Debug\SGDiferencialCambiario.pdb

@@ -1,0 +1,749 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{25E7D851-290C-4B5F-A9C9-7B09E05EC9A3}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LogicaNegocio</RootNamespace>
+    <AssemblyName>LogicaNegocio</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Json">
+      <HintPath>..\packages\JSON.1.0.1\lib\net40\Json.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CalculosFinancieros\clsNotasCalculosFinancieros.cs" />
+    <Compile Include="CalculosFinancieros\ClsUtilitarios.cs" />
+    <Compile Include="CalculosFinancieros\DeudaExterna\clsDiferencialCamb.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CalculosFinancieros\DeudaExterna\clsDTSSIGADE.cs" />
+    <Compile Include="CalculosFinancieros\DeudaExterna\clsSaldoDeudaExt.cs" />
+    <Compile Include="CalculosFinancieros\DeudaExterna\clsAcreedor.cs" />
+    <Compile Include="CalculosFinancieros\DeudaExterna\clsAmortizacion.cs" />
+    <Compile Include="CalculosFinancieros\DeudaExterna\clsAsientoAjuste.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CalculosFinancieros\DeudaExterna\clsCalculoFlujoEfectivoDE.cs" />
+    <Compile Include="CalculosFinancieros\DeudaExterna\clsCalculosDeudaExterna.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CalculosFinancieros\DeudaExterna\clsComision.cs" />
+    <Compile Include="CalculosFinancieros\DeudaExterna\clsDesembolso.cs" />
+    <Compile Include="CalculosFinancieros\DeudaExterna\clsDevengoInteresDE.cs" />
+    <Compile Include="CalculosFinancieros\DeudaExterna\clsGiroEstimado.cs" />
+    <Compile Include="CalculosFinancieros\DeudaExterna\clsInteres.cs" />
+    <Compile Include="CalculosFinancieros\DeudaExterna\clsInteresPunitivo.cs" />
+    <Compile Include="CalculosFinancieros\DeudaExterna\clsPago.cs" />
+    <Compile Include="CalculosFinancieros\DeudaExterna\clsPrestamo.cs" />
+    <Compile Include="CalculosFinancieros\DeudaExterna\clsTasaFlotante.cs" />
+    <Compile Include="CalculosFinancieros\DeudaExterna\clsTramo.cs" />
+    <Compile Include="CalculosFinancieros\DeudaExterna\hora.aspx.cs">
+      <DependentUpon>hora.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CalculosFinancieros\DeudaExterna\hora.aspx.designer.cs">
+      <DependentUpon>hora.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CalculosFinancieros\DeudaInterna\clsCalculoFlujoEfectivo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CalculosFinancieros\DeudaInterna\clsCalculosDeudaInterna.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CalculosFinancieros\DeudaInterna\clsCalculosSubastaInversa.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CalculosFinancieros\DeudaInterna\clsCancelacion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CalculosFinancieros\DeudaInterna\clsContabilizaDifCambiario.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CalculosFinancieros\DeudaInterna\clsContabilizarCancelacionAnticipada.cs" />
+    <Compile Include="CalculosFinancieros\DeudaInterna\clsContabilizarCancelaciones.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CalculosFinancieros\DeudaInterna\clsContabilizarCCSS.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CalculosFinancieros\DeudaInterna\clsContabilizarColocaciones.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CalculosFinancieros\DeudaInterna\clsContabilizarCostoTransaccion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CalculosFinancieros\DeudaInterna\clsContabilizarDevengo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CalculosFinancieros\DeudaInterna\clsContabilizarDevengoInt.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CalculosFinancieros\DeudaInterna\clsContabilizarMagisterio.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CalculosFinancieros\DeudaInterna\clsContabilizarPagoCupones.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CalculosFinancieros\DeudaInterna\clsContabilizarPrescripciones.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CalculosFinancieros\DeudaInterna\clsCostoTransaccion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CalculosFinancieros\DeudaInterna\clsDevengoInteres.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CalculosFinancieros\DeudaInterna\clsDevengoMensual.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CalculosFinancieros\DeudaInterna\clsPagoCCSS.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CalculosFinancieros\DeudaInterna\clsReclasificacionLPCP.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CalculosFinancieros\DeudaInterna\clsSubastaCanje.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CalculosFinancieros\DeudaInterna\clsTituloReclasificado.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CalculosFinancieros\DeudaInterna\clsTituloValor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CalculosFinancieros\DeudaInterna\clsTrasladoMagisterio.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CalculosFinancieros\DeudaInterna\reclasificacionPlazos.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CapturaIngresos\clsCapturaIngresos.cs" />
+    <Compile Include="CapturaIngresos\clsComprobantesPagoPorFormulario.cs" />
+    <Compile Include="CapturaIngresos\clsSociedades.cs" />
+    <Compile Include="CapturaIngresos\clsFormulariosCapturaIngresos.cs" />
+    <Compile Include="CapturaIngresos\clsPagosPorFormulario.cs" />
+    <Compile Include="CapturaIngresos\clsNumALetras.cs" />
+    <Compile Include="Consolidacion\clsArchivoAnexoEstadoFinanciero.cs" />
+    <Compile Include="Consolidacion\clsArchivoEstadoFinanciero.cs" />
+    <Compile Include="Consolidacion\clsArchivoEstadoFinancieroSizeByte.cs" />
+    <Compile Include="Consolidacion\clsArchivoEstadoFinancieroTamanoByte.cs" />
+    <Compile Include="Consolidacion\clsArchivoPlantillaEstadoFinanciero.cs" />
+    <Compile Include="Consolidacion\clsBitacoraFlujoErroresDTSX.cs" />
+    <Compile Include="Consolidacion\clsCatalogoEtapaEstadoFinanciero.cs" />
+    <Compile Include="Consolidacion\clsCatalogoUnidadesTiempoPeriodo.cs" />
+    <Compile Include="Consolidacion\clsDTSX.cs" />
+    <Compile Include="Consolidacion\clsEliminarArchivoExcel.cs" />
+    <Compile Include="Consolidacion\clsEntidadesDeUnAmbito.cs" />
+    <Compile Include="Consolidacion\clsEnviarCorreoPC.cs" />
+    <Compile Include="Consolidacion\clsEstadoFinanciero.cs" />
+    <Compile Include="Consolidacion\clsEstadoFinancieroBalanceComprobacion.cs" />
+    <Compile Include="Consolidacion\clsEstadoFinancieroBalanceComprobacionParaSIGAF.cs" />
+    <Compile Include="Consolidacion\clsEstadoFinancieroCambioPatrimonioNeto.cs" />
+    <Compile Include="Consolidacion\clsEstadoFinancieroFlujoEfectivo.cs" />
+    <Compile Include="Consolidacion\clsEstadoFinancierosCargados.cs" />
+    <Compile Include="Consolidacion\clsEstadoFinancierosDeudaPublica.cs" />
+    <Compile Include="Consolidacion\clsEtapaEstadoFinanciero.cs" />
+    <Compile Include="Consolidacion\clsUnidadesTiempoPeriodoEnCursoPorFecha.cs" />
+    <Compile Include="Consolidacion\clsUnidadTiempoPeriodoCorrectoCorreoAutorizacion.cs" />
+    <Compile Include="Consolidacion\clsUsuario.cs" />
+    <Compile Include="Consolidacion\tBalanceComprobacionCabecera.cs" />
+    <Compile Include="Consolidacion\tBalanceComprobacionPosicion.cs" />
+    <Compile Include="Contingentes\BitacoraDeMovimientosCuentasExpedientes.cs" />
+    <Compile Include="Contingentes\clsAntiguedadDeSaldos.cs" />
+    <Compile Include="Contingentes\clsArchivos.cs" />
+    <Compile Include="Contingentes\clsCobrosPagos.cs" />
+    <Compile Include="Contingentes\clsEntidadesPersonas.cs" />
+    <Compile Include="Contingentes\clsEntidadPersonas.cs" />
+    <Compile Include="Contingentes\clsExpedientes.cs" />
+    <Compile Include="Contingentes\clsLiquidacion.cs" />
+    <Compile Include="Contingentes\clsResoluciones.cs" />
+    <Compile Include="Ejemplo\tEjemplo.cs" />
+    <Compile Include="Mantenimiento\clsAcreedores.cs" />
+    <Compile Include="Mantenimiento\clsBancos.cs" />
+    <Compile Include="Mantenimiento\clsCatalogosGenerales.cs" />
+    <Compile Include="Mantenimiento\clsConexionSAP.cs" />
+    <Compile Include="Mantenimiento\clsDinamico.cs" />
+    <Compile Include="Mantenimiento\clsDirecciones.cs" />
+    <Compile Include="Mantenimiento\clsEmpresas.cs" />
+    <Compile Include="Mantenimiento\clsEmpresasAutorizados.cs" />
+    <Compile Include="Mantenimiento\clsIndicadoresEconomicos.cs" />
+    <Compile Include="Mantenimiento\clsNemotecnicos.cs" />
+    <Compile Include="Mantenimiento\clsOficinas.cs" />
+    <Compile Include="Mantenimiento\clsOpcionesCatalogo.cs" />
+    <Compile Include="Mantenimiento\clsOperaciones.cs" />
+    <Compile Include="Mantenimiento\clsPaises.cs" />
+    <Compile Include="Mantenimiento\clsPrevisionesIncobrables.cs" />
+    <Compile Include="Mantenimiento\clsPropietarios.cs" />
+    <Compile Include="Mantenimiento\clsReservas.cs" />
+    <Compile Include="Mantenimiento\clsReservasDetalle.cs" />
+    <Compile Include="Mantenimiento\clsServicios.cs" />
+    <Compile Include="Mantenimiento\clsTiposAsiento.cs" />
+    <Compile Include="Mantenimiento\clsTiposCambio.cs" />
+    <Compile Include="Mantenimiento\clsValoresIndicadoresEco.cs" />
+    <Compile Include="Mantenimiento\tAmbitoConsolidacion.cs" />
+    <Compile Include="Mantenimiento\tAsignacionACUC.cs" />
+    <Compile Include="Mantenimiento\tCentroBeneficio.cs" />
+    <Compile Include="Mantenimiento\tAreaFuncional.cs" />
+    <Compile Include="Mantenimiento\tCentroCosto.cs" />
+    <Compile Include="Mantenimiento\tCentroGestor.cs" />
+    <Compile Include="Mantenimiento\tClaseDocumento.cs" />
+    <Compile Include="Mantenimiento\tCuentaConsolida.cs" />
+    <Compile Include="Mantenimiento\tCuentaContable.cs" />
+    <Compile Include="Mantenimiento\tElementoPEP.cs" />
+    <Compile Include="Mantenimiento\tEntidadCP.cs" />
+    <Compile Include="Mantenimiento\tFondo.cs" />
+    <Compile Include="Mantenimiento\tGrupoCuenta.cs" />
+    <Compile Include="Mantenimiento\tJerarquia.cs" />
+    <Compile Include="Mantenimiento\tJerarquiaPeriodo.cs" />
+    <Compile Include="Mantenimiento\tModulo.cs" />
+    <Compile Include="Mantenimiento\tMoneda.cs" />
+    <Compile Include="Mantenimiento\tParametro.cs" />
+    <Compile Include="Mantenimiento\tPlanCuenta.cs" />
+    <Compile Include="Mantenimiento\tPosicionPresupuestaria.cs" />
+    <Compile Include="Mantenimiento\tPrograma.cs" />
+    <Compile Include="Mantenimiento\tSociedadCosto.cs" />
+    <Compile Include="Mantenimiento\tSociedadFinanciera.cs" />
+    <Compile Include="Mantenimiento\tSociedadGL.cs" />
+    <Compile Include="Mantenimiento\tTipoCambio.cs" />
+    <Compile Include="Mantenimiento\tUnidadConsolidacion.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="RevelacionNotas\tRevelacionNotas.cs" />
+    <Compile Include="Seguridad\tBitacora.cs" />
+    <Compile Include="Seguridad\tObjeto.cs" />
+    <Compile Include="Seguridad\tPermisosObjeto.cs" />
+    <Compile Include="Seguridad\tPoliticas.cs" />
+    <Compile Include="Seguridad\tRol.cs" />
+    <Compile Include="Seguridad\tSeguridad.cs" />
+    <Compile Include="Seguridad\tUsuario.cs" />
+    <Compile Include="Service References\srBccrRds\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\srExisteReservaSAP\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\sr_rdi_rde\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="SubirArchivo\clsArchivoSubir.cs" />
+    <Compile Include="SubirArchivo\clsMailAttachment.cs" />
+    <Compile Include="tiras.cs" />
+    <Compile Include="tRespuestaSP.cs" />
+    <Compile Include="Web References\cr.fi.bccr.indicadoreseconomicos\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\wrServicioDTR\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\wrSigafAsientos\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\wrSigafReserva\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\wrTributacion\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\wr_rdi_rde\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\wsAsientos1\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\wsBccrRds1\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\wsDeudaInterna\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\wsSAPBC\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\wsSG\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Mantenimiento\Librerias\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <None Include="Properties\PublishProfiles\CapturaIngresos.pubxml" />
+    <None Include="Properties\PublishProfiles\fs.pubxml" />
+    <None Include="Properties\PublishProfiles\gestor.pubxml" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="CalculosFinancieros\DeudaExterna\hora.aspx" />
+    <Content Include="PlantillasCorreo\ConfirmacionRegistro.html" />
+    <None Include="Service References\srBccrRds\consultaRDS.wsdl" />
+    <Content Include="Service References\srBccrRds\LogicaNegocio.srBccrRds.ArrayOfCupon.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\srBccrRds\LogicaNegocio.srBccrRds.ArrayOfSaldo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\srBccrRds\LogicaNegocio.srBccrRds.ArrayOfValor.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\srBccrRds\LogicaNegocio.srBccrRds.ListarCuponesPorFechaCancelacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\srBccrRds\LogicaNegocio.srBccrRds.ListarCuponesPorFechaConstitucionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\srBccrRds\LogicaNegocio.srBccrRds.ListarCuponesPorFechaValorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\srBccrRds\LogicaNegocio.srBccrRds.ListarValoresPorFechaCancelacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\srBccrRds\LogicaNegocio.srBccrRds.ListarValoresPorFechaConstitucionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\srBccrRds\LogicaNegocio.srBccrRds.ListarValoresPorFechaValorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\srBccrRds\LogicaNegocio.srBccrRds.ResumenSaldosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\srExisteReservaSAP\binding.wsdl" />
+    <Content Include="PlantillasCorreo\EnvioClave.html" />
+    <None Include="Service References\srBccrRds\configuration91.svcinfo" />
+    <None Include="Service References\srBccrRds\configuration.svcinfo" />
+    <None Include="Service References\srBccrRds\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\srExisteReservaSAP\LogicaNegocio.srExisteReservaSAP.ZintConfExtistenciaReservaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\srExisteReservaSAP\LogicaNegocio.srExisteReservaSAP.ZintConfExtistenciaReservaResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\sr_rdi_rde\extractos.disco" />
+    <None Include="Service References\sr_rdi_rde\configuration91.svcinfo" />
+    <None Include="Service References\sr_rdi_rde\configuration.svcinfo" />
+    <None Include="Service References\srExisteReservaSAP\configuration91.svcinfo" />
+    <None Include="Service References\srExisteReservaSAP\configuration.svcinfo" />
+    <None Include="Service References\srExisteReservaSAP\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\sr_rdi_rde\LogicaNegocio.sr_rdi_rde.ArrayOfCupon.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\sr_rdi_rde\LogicaNegocio.sr_rdi_rde.ArrayOfSaldo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\sr_rdi_rde\LogicaNegocio.sr_rdi_rde.ArrayOfValor.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\sr_rdi_rde\LogicaNegocio.sr_rdi_rde.ListarCuponesPorFechaCancelacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\sr_rdi_rde\LogicaNegocio.sr_rdi_rde.ListarCuponesPorFechaConstitucionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\sr_rdi_rde\LogicaNegocio.sr_rdi_rde.ListarCuponesPorFechaValorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\sr_rdi_rde\LogicaNegocio.sr_rdi_rde.ListarValoresPorFechaCancelacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\sr_rdi_rde\LogicaNegocio.sr_rdi_rde.ListarValoresPorFechaConstitucionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\sr_rdi_rde\LogicaNegocio.sr_rdi_rde.ListarValoresPorFechaValorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\sr_rdi_rde\LogicaNegocio.sr_rdi_rde.ResumenSaldosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\sr_rdi_rde\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\cr.fi.bccr.indicadoreseconomicos\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\sr_rdi_rde\extractos.wsdl" />
+    <None Include="Web References\cr.fi.bccr.indicadoreseconomicos\wsIndicadoresEconomicos.wsdl" />
+    <Content Include="Web References\wrServicioDTR\CL_RespuestaTransaccion.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\wrServicioDTR\DebitoEnviado.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\wrServicioDTR\DTR.disco" />
+    <Content Include="Web References\wrTributacion\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <Content Include="Web References\wrSigafReserva\ZintConfMontoReservaResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\wrTributacion\Service1.disco" />
+    <None Include="Web References\wsAsientos1\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\wsAsientos1\ServicioContable.disco" />
+    <Content Include="Web References\wsBccrRds1\Cupon.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\wsBccrRds1\extractos.wsdl" />
+    <None Include="Web References\wsBccrRds1\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Web References\wsBccrRds1\Saldo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\wsBccrRds1\Valor.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\wsDeudaInterna\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\wsDeudaInterna\wsDeudaInterna.wsdl" />
+    <None Include="Web References\wsSAPBC\binding.wsdl" />
+    <Content Include="Web References\wsSAPBC\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <Content Include="Web References\wsSAPBC\ZINT_RECIBE_BALANCE_COMPROBAResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\wsSG\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\wsSG\wsSistemaGestor.disco" />
+    <Content Include="web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web References\wr_rdi_rde\Cupon.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\wrServicioDTR\DTR.wsdl" />
+    <Content Include="Web References\wrServicioDTR\InformacionCuenta.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\wrServicioDTR\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\wrSigafAsientos\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\wrSigafAsientos\zcarga.wsdl" />
+    <Content Include="Web References\wrSigafAsientos\ZFiCargaContableResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\wrSigafReserva\binding.wsdl" />
+    <None Include="Web References\wrSigafReserva\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\wrTributacion\Service1.wsdl" />
+    <None Include="Web References\wr_rdi_rde\extractos.wsdl" />
+    <None Include="Web References\wr_rdi_rde\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Web References\wr_rdi_rde\Saldo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\wr_rdi_rde\Valor.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\wsAsientos1\ServicioContable.wsdl" />
+    <None Include="Web References\wsSG\wsSistemaGestor.wsdl" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://10.3.10.48/CGPCanales/DTR.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\wrServicioDTR\</RelPath>
+      <UpdateFromURL>http://10.3.10.48/CGPCanales/DTR.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>LogicaNegocio_wrServicioDTR_DTR</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://172.16.56.119/WSSICxHACIENDA/Service1.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\wrTributacion\</RelPath>
+      <UpdateFromURL>http://172.16.56.119/WSSICxHACIENDA/Service1.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>LogicaNegocio_wrTributacion_Service1</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://cpd-qasg1.mh.hacienda.go.cr:8000/sap/bc/srt/wsdl/flv_10002A111AD1/bndg_url/sap/bc/srt/rfc/sap/zint_recibe_balance_comproba/350/zint_recibe_balance_comproba/binding%3fsap-client=350">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\wsSAPBC\</RelPath>
+      <UpdateFromURL>http://cpd-qasg1.mh.hacienda.go.cr:8000/sap/bc/srt/wsdl/flv_10002A111AD1/bndg_url/sap/bc/srt/rfc/sap/zint_recibe_balance_comproba/350/zint_recibe_balance_comproba/binding%3fsap-client=350</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>LogicaNegocio_wsSAPBC_ZINT_RECIBE_BALANCE_COMPROBA</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://mh-cpd-dnspap1:82/wsDeudaInterna.asmx%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\wsDeudaInterna\</RelPath>
+      <UpdateFromURL>http://mh-cpd-dnspap1:82/wsDeudaInterna.asmx%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>LogicaNegocio_wsDeudaInterna_wsDeudaInterna</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://172.19.20.99:94/extractos.asmx%3fWSDL">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\wsBccrRds1\</RelPath>
+      <UpdateFromURL>http://172.19.20.99:94/extractos.asmx%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>LogicaNegocio_wsBccrRds1_consultaRDS</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://veracruz.pruebas.local/webservices/Rds_2013_2017/InformacionDeuda.asmx%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\wr_rdi_rde\</RelPath>
+      <UpdateFromURL>http://veracruz.pruebas.local/webservices/Rds_2013_2017/InformacionDeuda.asmx%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>LogicaNegocio_wr_rdi_rde_Extractos</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://cpd-qasg1.mh.hacienda.go.cr:8000/sap/bc/srt/wsdl/flv_10002A111AD1/bndg_url/sap/bc/srt/rfc/sap/zws_zint_conf_monto_reserva/350/zws_monto_reserva/binding%3fsap-client=350">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\wrSigafReserva\</RelPath>
+      <UpdateFromURL>http://cpd-qasg1.mh.hacienda.go.cr:8000/sap/bc/srt/wsdl/flv_10002A111AD1/bndg_url/sap/bc/srt/rfc/sap/zws_zint_conf_monto_reserva/350/zws_monto_reserva/binding%3fsap-client=350</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>LogicaNegocio_wrSigafReserva_ZINT_CONF_EXTISTENCIA_RESERVA</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://cpd-qasg1.mh.hacienda.go.cr:8000/sap/bc/srt/wsdl/flv_10002A111AD1/bndg_url/sap/bc/srt/rfc/sap/z_fi_carga_contable/350/z_fi_carga_contable/zcarga%3fsap-client=350">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\wrSigafAsientos\</RelPath>
+      <UpdateFromURL>http://cpd-qasg1.mh.hacienda.go.cr:8000/sap/bc/srt/wsdl/flv_10002A111AD1/bndg_url/sap/bc/srt/rfc/sap/z_fi_carga_contable/350/z_fi_carga_contable/zcarga%3fsap-client=350</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>LogicaNegocio_wrSigafAsientos_Z_FI_CARGA_CONTABLE</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://indicadoreseconomicos.bccr.fi.cr/indicadoreseconomicos/WebServices/wsIndicadoresEconomicos.asmx%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\cr.fi.bccr.indicadoreseconomicos\</RelPath>
+      <UpdateFromURL>http://indicadoreseconomicos.bccr.fi.cr/indicadoreseconomicos/WebServices/wsIndicadoresEconomicos.asmx%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>LogicaNegocio_cr_fi_bccr_indicadoreseconomicos_wsIndicadoresEconomicos</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://mh-cpd-dnspap1:81/wsSistemaGestor.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\wsSG\</RelPath>
+      <UpdateFromURL>http://mh-cpd-dnspap1:81/wsSistemaGestor.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>LogicaNegocio_wsSG_wsSistemaGestor</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://mh-cpd-dnspap1:86/ServicioContable.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\wsAsientos1\</RelPath>
+      <UpdateFromURL>http://mh-cpd-dnspap1:86/ServicioContable.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>LogicaNegocio_wsAsientos_ServicioContable</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Datos\Componentes de Conexion.csproj">
+      <Project>{50f386ca-81ba-473c-9e93-8ad8e3c50a62}</Project>
+      <Name>Componentes de Conexion</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Seguridad\Seguridad.csproj">
+      <Project>{b674d833-b573-47fb-bc62-776a55f0375c}</Project>
+      <Name>Seguridad</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\srBccrRds\" />
+    <WCFMetadataStorage Include="Service References\srExisteReservaSAP\" />
+    <WCFMetadataStorage Include="Service References\sr_rdi_rde\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>58433</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:58433/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

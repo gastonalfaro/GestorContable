@@ -1,0 +1,388 @@
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGCierreContable\bin\Debug\SGCierreContable.exe.config
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGCierreContable\bin\Debug\SGCierreContable.exe.manifest
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGCierreContable\bin\Debug\SGCierreContable.application
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGCierreContable\bin\Debug\SGCierreContable.exe
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGCierreContable\bin\Debug\SGCierreContable.pdb
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGCierreContable\bin\Debug\log4net.dll
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGCierreContable\bin\Debug\LogicaNegocio.dll
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGCierreContable\bin\Debug\Datos.dll
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGCierreContable\bin\Debug\Microsoft.Office.Interop.Excel.dll
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGCierreContable\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGCierreContable\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGCierreContable\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGCierreContable\bin\Debug\Microsoft.Practices.Unity.dll
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGCierreContable\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGCierreContable\bin\Debug\LogicaNegocio.pdb
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGCierreContable\bin\Debug\log4net.xml
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGCierreContable\bin\Debug\Datos.pdb
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGCierreContable\bin\Debug\Microsoft.Office.Interop.Excel.xml
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGCierreContable\obj\Debug\SGCierreContable.csprojResolveAssemblyReference.cache
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGCierreContable\obj\Debug\SGCierreContable.exe.manifest
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGCierreContable\obj\Debug\SGCierreContable.application
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGCierreContable\obj\Debug\SGCierreContable.exe
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGCierreContable\obj\Debug\SGCierreContable.pdb
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGCierreContable\bin\Debug\LogicaNegocio.XmlSerializers.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGCierreContable\bin\Debug\SGCierreContable.exe.config
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGCierreContable\bin\Debug\SGCierreContable.exe.manifest
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGCierreContable\bin\Debug\SGCierreContable.application
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGCierreContable\bin\Debug\SGCierreContable.exe
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGCierreContable\bin\Debug\SGCierreContable.pdb
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGCierreContable\bin\Debug\LogicaNegocio.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGCierreContable\bin\Debug\Datos.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGCierreContable\bin\Debug\Microsoft.Office.Interop.Excel.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGCierreContable\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGCierreContable\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGCierreContable\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGCierreContable\bin\Debug\Microsoft.Practices.Unity.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGCierreContable\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGCierreContable\bin\Debug\LogicaNegocio.pdb
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGCierreContable\bin\Debug\Datos.pdb
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGCierreContable\bin\Debug\Microsoft.Office.Interop.Excel.xml
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGCierreContable\bin\Debug\LogicaNegocio.XmlSerializers.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGCierreContable\obj\Debug\SGCierreContable.csprojResolveAssemblyReference.cache
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGCierreContable\obj\Debug\SGCierreContable.exe.manifest
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGCierreContable\obj\Debug\SGCierreContable.application
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGCierreContable\obj\Debug\SGCierreContable.exe
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGCierreContable\obj\Debug\SGCierreContable.pdb
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGCierreContable\bin\Debug\SGCierreContable.exe.config
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGCierreContable\bin\Debug\SGCierreContable.exe.manifest
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGCierreContable\bin\Debug\SGCierreContable.application
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGCierreContable\bin\Debug\SGCierreContable.exe
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGCierreContable\bin\Debug\SGCierreContable.pdb
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGCierreContable\bin\Debug\LogicaNegocio.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGCierreContable\bin\Debug\Datos.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGCierreContable\bin\Debug\Microsoft.Office.Interop.Excel.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGCierreContable\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGCierreContable\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGCierreContable\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGCierreContable\bin\Debug\Microsoft.Practices.Unity.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGCierreContable\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGCierreContable\bin\Debug\LogicaNegocio.pdb
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGCierreContable\bin\Debug\Datos.pdb
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGCierreContable\bin\Debug\Microsoft.Office.Interop.Excel.xml
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGCierreContable\bin\Debug\LogicaNegocio.XmlSerializers.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGCierreContable\obj\Debug\SGCierreContable.csprojResolveAssemblyReference.cache
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGCierreContable\obj\Debug\SGCierreContable.exe.manifest
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGCierreContable\obj\Debug\SGCierreContable.application
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGCierreContable\obj\Debug\SGCierreContable.exe
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGCierreContable\obj\Debug\SGCierreContable.pdb
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGCierreContable\bin\Debug\SGCierreContable.exe.config
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGCierreContable\bin\Debug\SGCierreContable.exe.manifest
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGCierreContable\bin\Debug\SGCierreContable.application
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGCierreContable\bin\Debug\SGCierreContable.exe
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGCierreContable\bin\Debug\SGCierreContable.pdb
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGCierreContable\bin\Debug\LogicaNegocio.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGCierreContable\bin\Debug\Datos.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGCierreContable\bin\Debug\Microsoft.Office.Interop.Excel.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGCierreContable\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGCierreContable\bin\Debug\office.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGCierreContable\bin\Debug\Microsoft.Vbe.Interop.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGCierreContable\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGCierreContable\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGCierreContable\bin\Debug\Microsoft.Practices.Unity.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGCierreContable\bin\Debug\stdole.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGCierreContable\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGCierreContable\bin\Debug\LogicaNegocio.pdb
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGCierreContable\bin\Debug\LogicaNegocio.dll.config
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGCierreContable\bin\Debug\Datos.pdb
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGCierreContable\bin\Debug\Datos.dll.config
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGCierreContable\bin\Debug\Microsoft.Office.Interop.Excel.xml
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGCierreContable\bin\Debug\office.xml
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGCierreContable\bin\Debug\LogicaNegocio.XmlSerializers.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGCierreContable\obj\Debug\SGCierreContable.csproj.CoreCompileInputs.cache
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGCierreContable\obj\Debug\SGCierreContable.exe.manifest
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGCierreContable\obj\Debug\SGCierreContable.application
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGCierreContable\obj\Debug\SGCierreContable.csproj.CopyComplete
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGCierreContable\obj\Debug\SGCierreContable.exe
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGCierreContable\obj\Debug\SGCierreContable.pdb
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGCierreContable\obj\Debug\SGCierreContable.csprojAssemblyReference.cache
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGCierreContable\obj\Debug\SGCierreContable.csproj.CoreCompileInputs.cache
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGCierreContable\obj\Debug\SGCierreContable.exe
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGCierreContable\obj\Debug\SGCierreContable.pdb
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGCierreContable\obj\Debug\SGCierreContable.csprojFakesResolveAssemblyReference.cache
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGCierreContable\bin\Debug\SGCierreContable.exe.config
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGCierreContable\bin\Debug\SGCierreContable.exe.manifest
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGCierreContable\bin\Debug\SGCierreContable.application
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGCierreContable\bin\Debug\SGCierreContable.exe
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGCierreContable\bin\Debug\SGCierreContable.pdb
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGCierreContable\bin\Debug\log4net.Fakes.fakesconfig
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGCierreContable\bin\Debug\log4net.Fakes.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGCierreContable\bin\Debug\LogicaNegocio.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGCierreContable\bin\Debug\Microsoft.QualityTools.Testing.Fakes.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGCierreContable\bin\Debug\Datos.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGCierreContable\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGCierreContable\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGCierreContable\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGCierreContable\bin\Debug\Microsoft.Practices.Unity.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGCierreContable\bin\Debug\stdole.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGCierreContable\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGCierreContable\bin\Debug\LogicaNegocio.pdb
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGCierreContable\bin\Debug\LogicaNegocio.dll.config
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGCierreContable\bin\Debug\log4net.Fakes.xml
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGCierreContable\bin\Debug\Datos.pdb
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGCierreContable\bin\Debug\Datos.dll.config
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGCierreContable\bin\Debug\cs\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGCierreContable\bin\Debug\de\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGCierreContable\bin\Debug\es\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGCierreContable\bin\Debug\fr\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGCierreContable\bin\Debug\it\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGCierreContable\bin\Debug\ja\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGCierreContable\bin\Debug\ko\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGCierreContable\bin\Debug\pl\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGCierreContable\bin\Debug\pt-BR\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGCierreContable\bin\Debug\ru\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGCierreContable\bin\Debug\tr\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGCierreContable\bin\Debug\zh-Hans\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGCierreContable\bin\Debug\zh-Hant\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGCierreContable\bin\Debug\LogicaNegocio.XmlSerializers.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGCierreContable\obj\Debug\SGCierreContable.exe.manifest
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGCierreContable\obj\Debug\SGCierreContable.application
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\SGCierreContable\obj\Debug\SGCierreContable.csproj.CopyComplete
+D:\PaqueteGestorEmergencia\Fuente\SGCierreContable\bin\Debug\SGCierreContable.exe.config
+D:\PaqueteGestorEmergencia\Fuente\SGCierreContable\bin\Debug\SGCierreContable.exe.manifest
+D:\PaqueteGestorEmergencia\Fuente\SGCierreContable\bin\Debug\SGCierreContable.application
+D:\PaqueteGestorEmergencia\Fuente\SGCierreContable\bin\Debug\SGCierreContable.exe
+D:\PaqueteGestorEmergencia\Fuente\SGCierreContable\bin\Debug\SGCierreContable.pdb
+D:\PaqueteGestorEmergencia\Fuente\SGCierreContable\bin\Debug\log4net.Fakes.fakesconfig
+D:\PaqueteGestorEmergencia\Fuente\SGCierreContable\bin\Debug\log4net.Fakes.dll
+D:\PaqueteGestorEmergencia\Fuente\SGCierreContable\bin\Debug\LogicaNegocio.dll
+D:\PaqueteGestorEmergencia\Fuente\SGCierreContable\bin\Debug\Microsoft.QualityTools.Testing.Fakes.dll
+D:\PaqueteGestorEmergencia\Fuente\SGCierreContable\bin\Debug\Datos.dll
+D:\PaqueteGestorEmergencia\Fuente\SGCierreContable\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\PaqueteGestorEmergencia\Fuente\SGCierreContable\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\PaqueteGestorEmergencia\Fuente\SGCierreContable\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\PaqueteGestorEmergencia\Fuente\SGCierreContable\bin\Debug\Microsoft.Practices.Unity.dll
+D:\PaqueteGestorEmergencia\Fuente\SGCierreContable\bin\Debug\stdole.dll
+D:\PaqueteGestorEmergencia\Fuente\SGCierreContable\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+D:\PaqueteGestorEmergencia\Fuente\SGCierreContable\bin\Debug\LogicaNegocio.pdb
+D:\PaqueteGestorEmergencia\Fuente\SGCierreContable\bin\Debug\LogicaNegocio.dll.config
+D:\PaqueteGestorEmergencia\Fuente\SGCierreContable\bin\Debug\log4net.Fakes.xml
+D:\PaqueteGestorEmergencia\Fuente\SGCierreContable\bin\Debug\Datos.pdb
+D:\PaqueteGestorEmergencia\Fuente\SGCierreContable\bin\Debug\Datos.dll.config
+D:\PaqueteGestorEmergencia\Fuente\SGCierreContable\bin\Debug\cs\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\PaqueteGestorEmergencia\Fuente\SGCierreContable\bin\Debug\de\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\PaqueteGestorEmergencia\Fuente\SGCierreContable\bin\Debug\es\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\PaqueteGestorEmergencia\Fuente\SGCierreContable\bin\Debug\fr\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\PaqueteGestorEmergencia\Fuente\SGCierreContable\bin\Debug\it\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\PaqueteGestorEmergencia\Fuente\SGCierreContable\bin\Debug\ja\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\PaqueteGestorEmergencia\Fuente\SGCierreContable\bin\Debug\ko\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\PaqueteGestorEmergencia\Fuente\SGCierreContable\bin\Debug\pl\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\PaqueteGestorEmergencia\Fuente\SGCierreContable\bin\Debug\pt-BR\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\PaqueteGestorEmergencia\Fuente\SGCierreContable\bin\Debug\ru\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\PaqueteGestorEmergencia\Fuente\SGCierreContable\bin\Debug\tr\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\PaqueteGestorEmergencia\Fuente\SGCierreContable\bin\Debug\zh-Hans\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\PaqueteGestorEmergencia\Fuente\SGCierreContable\bin\Debug\zh-Hant\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\PaqueteGestorEmergencia\Fuente\SGCierreContable\bin\Debug\LogicaNegocio.XmlSerializers.dll
+D:\PaqueteGestorEmergencia\Fuente\SGCierreContable\obj\Debug\SGCierreContable.csprojFakesResolveAssemblyReference.cache
+D:\PaqueteGestorEmergencia\Fuente\SGCierreContable\obj\Debug\SGCierreContable.csprojAssemblyReference.cache
+D:\PaqueteGestorEmergencia\Fuente\SGCierreContable\obj\Debug\SGCierreContable.csproj.CoreCompileInputs.cache
+D:\PaqueteGestorEmergencia\Fuente\SGCierreContable\obj\Debug\SGCierreContable.exe.manifest
+D:\PaqueteGestorEmergencia\Fuente\SGCierreContable\obj\Debug\SGCierreContable.application
+D:\PaqueteGestorEmergencia\Fuente\SGCierreContable\obj\Debug\SGCierreContable.csproj.CopyComplete
+D:\PaqueteGestorEmergencia\Fuente\SGCierreContable\obj\Debug\SGCierreContable.exe
+D:\PaqueteGestorEmergencia\Fuente\SGCierreContable\obj\Debug\SGCierreContable.pdb
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGCierreContable\bin\Debug\SGCierreContable.exe.config
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGCierreContable\bin\Debug\SGCierreContable.exe.manifest
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGCierreContable\bin\Debug\SGCierreContable.application
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGCierreContable\bin\Debug\SGCierreContable.exe
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGCierreContable\bin\Debug\SGCierreContable.pdb
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGCierreContable\bin\Debug\log4net.Fakes.fakesconfig
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGCierreContable\bin\Debug\log4net.Fakes.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGCierreContable\bin\Debug\LogicaNegocio.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGCierreContable\bin\Debug\Microsoft.QualityTools.Testing.Fakes.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGCierreContable\bin\Debug\Datos.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGCierreContable\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGCierreContable\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGCierreContable\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGCierreContable\bin\Debug\Microsoft.Practices.Unity.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGCierreContable\bin\Debug\stdole.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGCierreContable\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGCierreContable\bin\Debug\LogicaNegocio.pdb
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGCierreContable\bin\Debug\LogicaNegocio.dll.config
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGCierreContable\bin\Debug\log4net.Fakes.xml
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGCierreContable\bin\Debug\Datos.pdb
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGCierreContable\bin\Debug\Datos.dll.config
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGCierreContable\bin\Debug\cs\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGCierreContable\bin\Debug\de\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGCierreContable\bin\Debug\es\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGCierreContable\bin\Debug\fr\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGCierreContable\bin\Debug\it\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGCierreContable\bin\Debug\ja\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGCierreContable\bin\Debug\ko\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGCierreContable\bin\Debug\pl\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGCierreContable\bin\Debug\pt-BR\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGCierreContable\bin\Debug\ru\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGCierreContable\bin\Debug\tr\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGCierreContable\bin\Debug\zh-Hans\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGCierreContable\bin\Debug\zh-Hant\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGCierreContable\bin\Debug\LogicaNegocio.XmlSerializers.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGCierreContable\obj\Debug\SGCierreContable.csproj.CoreCompileInputs.cache
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGCierreContable\obj\Debug\SGCierreContable.exe.manifest
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGCierreContable\obj\Debug\SGCierreContable.application
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGCierreContable\obj\Debug\SGCierreContable.csproj.CopyComplete
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGCierreContable\obj\Debug\SGCierreContable.exe
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGCierreContable\obj\Debug\SGCierreContable.pdb
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGCierreContable\obj\Debug\SGCierreContable.csprojFakesResolveAssemblyReference.cache
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\bin\Debug\SGCierreContable.exe.config
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\bin\Debug\SGCierreContable.exe.manifest
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\bin\Debug\SGCierreContable.application
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\bin\Debug\SGCierreContable.exe
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\bin\Debug\SGCierreContable.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\bin\Debug\log4net.Fakes.fakesconfig
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\bin\Debug\log4net.Fakes.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\bin\Debug\LogicaNegocio.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\bin\Debug\Microsoft.QualityTools.Testing.Fakes.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\bin\Debug\Datos.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\bin\Debug\Microsoft.Practices.Unity.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\bin\Debug\stdole.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\bin\Debug\LogicaNegocio.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\bin\Debug\LogicaNegocio.dll.config
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\bin\Debug\log4net.Fakes.xml
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\bin\Debug\Datos.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\bin\Debug\Datos.dll.config
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\bin\Debug\cs\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\bin\Debug\de\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\bin\Debug\es\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\bin\Debug\fr\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\bin\Debug\it\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\bin\Debug\ja\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\bin\Debug\ko\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\bin\Debug\pl\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\bin\Debug\pt-BR\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\bin\Debug\ru\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\bin\Debug\tr\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\bin\Debug\zh-Hans\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\bin\Debug\zh-Hant\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\bin\Debug\LogicaNegocio.XmlSerializers.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\obj\Debug\SGCierreContable.csprojFakesResolveAssemblyReference.cache
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\obj\Debug\Fakes\fakes.args
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\obj\Debug\Fakes\l4\b\cs\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\obj\Debug\Fakes\l4\b\Datos.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\obj\Debug\Fakes\l4\b\Datos.dll.config
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\obj\Debug\Fakes\l4\b\Datos.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\obj\Debug\Fakes\l4\b\de\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\obj\Debug\Fakes\l4\b\es\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\obj\Debug\Fakes\l4\b\fr\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\obj\Debug\Fakes\l4\b\it\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\obj\Debug\Fakes\l4\b\ja\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\obj\Debug\Fakes\l4\b\ko\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\obj\Debug\Fakes\l4\b\log4net.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\obj\Debug\Fakes\l4\b\log4net.Fakes.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\obj\Debug\Fakes\l4\b\log4net.Fakes.fakesconfig
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\obj\Debug\Fakes\l4\b\log4net.Fakes.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\obj\Debug\Fakes\l4\b\log4net.Fakes.xml
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\obj\Debug\Fakes\l4\b\log4net.xml
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\obj\Debug\Fakes\l4\b\LogicaNegocio.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\obj\Debug\Fakes\l4\b\LogicaNegocio.dll.config
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\obj\Debug\Fakes\l4\b\LogicaNegocio.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\obj\Debug\Fakes\l4\b\LogicaNegocio.XmlSerializers.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\obj\Debug\Fakes\l4\b\Microsoft.Office.Interop.Excel.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\obj\Debug\Fakes\l4\b\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\obj\Debug\Fakes\l4\b\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\obj\Debug\Fakes\l4\b\Microsoft.Practices.ServiceLocation.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\obj\Debug\Fakes\l4\b\Microsoft.Practices.Unity.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\obj\Debug\Fakes\l4\b\Microsoft.Practices.Unity.Interception.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\obj\Debug\Fakes\l4\b\Microsoft.QualityTools.Testing.Fakes.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\obj\Debug\Fakes\l4\b\Microsoft.Vbe.Interop.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\obj\Debug\Fakes\l4\b\office.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\obj\Debug\Fakes\l4\b\pl\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\obj\Debug\Fakes\l4\b\pt-BR\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\obj\Debug\Fakes\l4\b\ru\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\obj\Debug\Fakes\l4\b\stdole.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\obj\Debug\Fakes\l4\b\tr\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\obj\Debug\Fakes\l4\b\zh-Hans\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\obj\Debug\Fakes\l4\b\zh-Hant\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\obj\Debug\Fakes\l4\f.ah
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\obj\Debug\Fakes\l4\f.ch
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\obj\Debug\Fakes\l4\f.cs
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\obj\Debug\Fakes\l4\f.csproj
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\obj\Debug\Fakes\l4\f.fakes
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\obj\Debug\Fakes\l4\f.fakesconfig
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\obj\Debug\Fakes\l4\f.snk
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\obj\Debug\Fakes\l4\o\.NETFramework,Version=v4.5.AssemblyAttributes.cs
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\obj\Debug\Fakes\l4\o\f.csproj.CopyComplete
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\obj\Debug\Fakes\l4\o\f.csproj.CoreCompileInputs.cache
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\obj\Debug\Fakes\l4\o\f.csproj.FileListAbsolute.txt
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\obj\Debug\Fakes\l4\o\f.csprojAssemblyReference.cache
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\obj\Debug\Fakes\l4\o\log4net.Fakes.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\obj\Debug\Fakes\l4\o\log4net.Fakes.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\obj\Debug\SGCierreContable.csprojAssemblyReference.cache
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\obj\Debug\SGCierreContable.csproj.CoreCompileInputs.cache
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\obj\Debug\SGCierreContable.exe.manifest
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\obj\Debug\SGCierreContable.application
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\obj\Debug\SGCierreContable.csproj.CopyComplete
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\obj\Debug\SGCierreContable.exe
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\SGCierreContable\obj\Debug\SGCierreContable.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\bin\Debug\SGCierreContable.exe.config
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\bin\Debug\SGCierreContable.exe.manifest
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\bin\Debug\SGCierreContable.application
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\bin\Debug\SGCierreContable.exe
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\bin\Debug\SGCierreContable.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\bin\Debug\log4net.Fakes.fakesconfig
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\bin\Debug\log4net.Fakes.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\bin\Debug\LogicaNegocio.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\bin\Debug\Microsoft.QualityTools.Testing.Fakes.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\bin\Debug\Datos.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\bin\Debug\Microsoft.Practices.Unity.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\bin\Debug\stdole.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\bin\Debug\LogicaNegocio.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\bin\Debug\LogicaNegocio.dll.config
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\bin\Debug\log4net.Fakes.xml
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\bin\Debug\Datos.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\bin\Debug\Datos.dll.config
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\bin\Debug\cs\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\bin\Debug\de\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\bin\Debug\es\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\bin\Debug\fr\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\bin\Debug\it\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\bin\Debug\ja\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\bin\Debug\ko\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\bin\Debug\pl\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\bin\Debug\pt-BR\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\bin\Debug\ru\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\bin\Debug\tr\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\bin\Debug\zh-Hans\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\bin\Debug\zh-Hant\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\bin\Debug\LogicaNegocio.XmlSerializers.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\obj\Debug\SGCierreContable.csprojFakesResolveAssemblyReference.cache
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\obj\Debug\SGCierreContable.csproj.CoreCompileInputs.cache
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\obj\Debug\SGCierreContable.exe.manifest
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\obj\Debug\SGCierreContable.application
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\obj\Debug\SGCierreContable.csproj.CopyComplete
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\obj\Debug\SGCierreContable.exe
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\obj\Debug\SGCierreContable.pdb
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\obj\Debug\SGCierreContable.csproj.CoreCompileInputs.cache
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\bin\Debug\SGCierreContable.exe.config
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\bin\Debug\SGCierreContable.exe.manifest
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\bin\Debug\SGCierreContable.application
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\bin\Debug\SGCierreContable.exe
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\bin\Debug\SGCierreContable.pdb
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\bin\Debug\log4net.Fakes.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\bin\Debug\LogicaNegocio.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\bin\Debug\Datos.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\bin\Debug\Microsoft.Practices.Unity.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\bin\Debug\stdole.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\bin\Debug\LogicaNegocio.pdb
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\bin\Debug\LogicaNegocio.dll.config
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\bin\Debug\log4net.Fakes.xml
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\bin\Debug\Datos.pdb
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\bin\Debug\Datos.dll.config
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\bin\Debug\LogicaNegocio.XmlSerializers.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\obj\Debug\SGCierreContable.csproj.AssemblyReference.cache
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\obj\Debug\SGCierreContable.exe.manifest
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\obj\Debug\SGCierreContable.application
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\obj\Debug\SGCierreContable.csproj.CopyComplete
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\obj\Debug\SGCierreContable.exe
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGCierreContable\obj\Debug\SGCierreContable.pdb

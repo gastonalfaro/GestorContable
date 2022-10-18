@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="WebServiceContableAsientos.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="WebServiceContableAsientos_wsCC_Z_FI_CARGA_CONTABLE" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://APQ-SGF01.mh.hacienda.go.cr:8000/sap/bc/srt/rfc/sap/z_fi_carga_contable/350/z_fi_carga_contable/zcarga</Value>
+    </Setting>
+    <Setting Name="USER_SAP" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">WS_USER_INT</Value>
+    </Setting>
+    <Setting Name="PASS_SAP" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">NICSPGestor2016*</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

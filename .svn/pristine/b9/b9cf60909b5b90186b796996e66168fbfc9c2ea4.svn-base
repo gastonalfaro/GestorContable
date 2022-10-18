@@ -1,0 +1,2390 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="9/30/2015 2:56:32 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="ATESA-ULTIMUS"
+  DTS:CreatorName="ATESA-ULTIMUS\Steven"
+  DTS:DTSID="{3B77A6F1-AAE2-4A8A-A145-8788608F3E9F}"
+  DTS:EnableConfig="True"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="12.0.2430.0"
+  DTS:LocaleID="5130"
+  DTS:ObjectName="CargaEstadoFinancieroBalanceComprobacion_OLD"
+  DTS:PackageType="5"
+  DTS:ProtectionLevel="0"
+  DTS:VersionBuild="48"
+  DTS:VersionGUID="{0AABDE17-83DE-4DC9-B141-43D7EF3BFA63}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{6939AECA-B63D-427F-891F-B1CE49A9FC25}"
+      DTS:ObjectName="Excel Connection Manager">
+      <DTS:PropertyExpression
+        DTS:Name="ExcelFilePath">@[User::PathExcelFile]+ @[User::NameExcelFile]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\SistemaGestor\\Archivos_SistemaGestor\\21103T32018_ESTADO_BALANCE_COMPROBACION.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SistemaGestor_OLEDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{288FC08A-C3BF-4543-B005-A7999F3CD46F}"
+      DTS:ObjectName="SistemaGestor_OLEDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=172.26.30.21\DMSS2014E01;User ID=GestNICSPDEV;Initial Catalog=GestNICSPDEV;Provider=SQLOLEDB.1;Persist Security Info=True;Application Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"></DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Configurations>
+    <DTS:Configuration
+      DTS:ConfigurationString="C:\SistemaGestor\Config_DTSX\SistemaGestor_OLEDB.dtsConfig"
+      DTS:ConfigurationType="1"
+      DTS:CreationName=""
+      DTS:DTSID="{608DEE09-A910-43D0-A273-65635DE8485E}"
+      DTS:ObjectName="SistemaGestor_OLEDB" />
+  </DTS:Configurations>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{ED6FEFF3-0D2C-4706-8063-6610FEBA69CD}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="IdEstadoFinanciero">
+      <DTS:VariableValue
+        DTS:DataType="8">5</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{1DF830A8-84DA-48A9-AAD7-03C89C6147C2}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="NameExcelFile">
+      <DTS:VariableValue
+        DTS:DataType="8">21103T32018_ESTADO_BALANCE_COMPROBACION.xlsx</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{56CB4FB9-15F0-49DA-A983-DD8454100AC4}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="PathExcelFile">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\\SistemaGestor\\Archivos_SistemaGestor\\</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{240A8845-5D1F-482B-8F96-93336BEF0FC2}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="&quot;SELECT IDEntidad, UnidadTiempoPeriodo, Periodo,&#xA;IdEstadoFinanciero,&#xA;0 AS NumConsecutivo, CodigoSegmento,&#xA;NumCuenta,&#xA;CuentaConcepto,&#xA;SaldoInicial,&#xA;DebitosPeriodo,&#xA;CreditosPeriodo,&#xA;SaldoFinal,&#xA;UsuarioCarga, &#xA;FechaDeCarga&#xA;FROM&#xA;(SELECT 1 AS IdJoin,&#xA;IDEntidad, UnidadTiempoPeriodo, Periodo&#xA;FROM [Data$B1:D2]) As Data&#xA;INNER JOIN &#xA;(SELECT &#xA;1 AS IdJoin,&#xA;&quot; + @[User::IdEstadoFinanciero] + &quot; AS IdEstadoFinanciero,&#xA;[CODIGO SEGMENTO] AS CodigoSegmento,&#xA;[CUENTA (REPORTAR MÁXIMO A NIVEL 8)] AS NumCuenta,&#xA;[NOMBRE CUENTA] AS CuentaConcepto,&#xA;[SALDO INICIAL] AS SaldoInicial,&#xA;[DEBITOS PERIODO] AS DebitosPeriodo,&#xA;[CREDITOS PERIODO] AS CreditosPeriodo,&#xA;[SALDO FINAL] AS SaldoFinal,&#xA;'&quot; + @[User::UsuarioCarga] +&quot;' AS UsuarioCarga, &#xA;NOW() AS FechaDeCarga&#xA;FROM [BalanceComprobacion$A9:P]&#xA;WHERE [SALDO INICIAL] IS NOT NULL) AS BalanceComprobacion&#xA;ON Data.IdJoin = BalanceComprobacion.IdJoin&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="SQL_Carga">
+      <DTS:VariableValue
+        DTS:DataType="8">SELECT IDEntidad, UnidadTiempoPeriodo, Periodo,
+IdEstadoFinanciero,
+0 AS NumConsecutivo, CodigoSegmento,
+NumCuenta,
+CuentaConcepto,
+SaldoInicial,
+DebitosPeriodo,
+CreditosPeriodo,
+SaldoFinal,
+UsuarioCarga, 
+FechaDeCarga
+FROM
+(SELECT 1 AS IdJoin,
+IDEntidad, UnidadTiempoPeriodo, Periodo
+FROM [Data$B1:D2]) As Data
+INNER JOIN 
+(SELECT 
+1 AS IdJoin,
+5 AS IdEstadoFinanciero,
+[CODIGO SEGMENTO] AS CodigoSegmento,
+[CUENTA (REPORTAR MÁXIMO A NIVEL 8)] AS NumCuenta,
+[NOMBRE CUENTA] AS CuentaConcepto,
+[SALDO INICIAL] AS SaldoInicial,
+[DEBITOS PERIODO] AS DebitosPeriodo,
+[CREDITOS PERIODO] AS CreditosPeriodo,
+[SALDO FINAL] AS SaldoFinal,
+'SistemaCargaDTSX' AS UsuarioCarga, 
+NOW() AS FechaDeCarga
+FROM [BalanceComprobacion$A9:P]
+WHERE [SALDO INICIAL] IS NOT NULL) AS BalanceComprobacion
+ON Data.IdJoin = BalanceComprobacion.IdJoin</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{8F702517-1F2A-4270-BD2B-97649BCD3466}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="UsuarioCarga">
+      <DTS:VariableValue
+        DTS:DataType="8">SistemaCargaDTSX</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{2028A24F-3227-4B83-A0C0-4733BC90E168}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[IdEstadoFinanciero]"
+                      cachedDataType="i4"
+                      cachedName="IdEstadoFinanciero"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[IdEstadoFinanciero]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[UnidadTiempoPeriodo]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="UnidadTiempoPeriodo"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[UnidadTiempoPeriodo]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Periodo]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Periodo"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[Periodo]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[NumCuenta]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="NumCuenta"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[NumCuenta]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[CuentaConcepto]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="CuentaConcepto"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[CuentaConcepto]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[UsuarioCarga]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="UsuarioCarga"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[UsuarioCarga]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[CodigoSegmento]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="CodigoSegmento"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[CodigoSegmento]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[IDEntidad]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="IDEntidad"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[IDEntidad]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ConvIdEstadoFinanciero]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ConvIdEstadoFinanciero]"
+                      name="ConvIdEstadoFinanciero"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[IdEstadoFinanciero]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ConvUnidadTiempoPeriodo]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="2"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ConvUnidadTiempoPeriodo]"
+                      name="ConvUnidadTiempoPeriodo"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[UnidadTiempoPeriodo]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ConvPeriodo]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ConvPeriodo]"
+                      name="ConvPeriodo"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[Periodo]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ConvNumCuenta]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ConvNumCuenta]"
+                      name="ConvNumCuenta"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[NumCuenta]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ConvCuentaConcepto]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="250"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ConvCuentaConcepto]"
+                      name="ConvCuentaConcepto"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[CuentaConcepto]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ConvUsuarioCarga]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ConvUsuarioCarga]"
+                      name="ConvUsuarioCarga"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[UsuarioCarga]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ConvCodigoSegmento]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ConvCodigoSegmento]"
+                      name="ConvCodigoSegmento"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[CodigoSegmento]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ConvIDEntidad]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ConvIDEntidad]"
+                      name="ConvIDEntidad"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[IDEntidad]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\EstadoFinancieroBalanceComprobacion"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="EstadoFinancieroBalanceComprobacion"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[pc].[EstadoFinancieroBalanceComprobacion]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\EstadoFinancieroBalanceComprobacion.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SistemaGestor_OLEDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[SistemaGestor_OLEDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\EstadoFinancieroBalanceComprobacion.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\EstadoFinancieroBalanceComprobacion.Inputs[OLE DB Destination Input].Columns[SaldoInicial]"
+                      cachedDataType="r8"
+                      cachedName="SaldoInicial"
+                      externalMetadataColumnId="Package\Data Flow Task\EstadoFinancieroBalanceComprobacion.Inputs[OLE DB Destination Input].ExternalColumns[SaldoInicial]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[SaldoInicial]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\EstadoFinancieroBalanceComprobacion.Inputs[OLE DB Destination Input].Columns[DebitosPeriodo]"
+                      cachedDataType="r8"
+                      cachedName="DebitosPeriodo"
+                      externalMetadataColumnId="Package\Data Flow Task\EstadoFinancieroBalanceComprobacion.Inputs[OLE DB Destination Input].ExternalColumns[DebitosPeriodo]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[DebitosPeriodo]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\EstadoFinancieroBalanceComprobacion.Inputs[OLE DB Destination Input].Columns[CreditosPeriodo]"
+                      cachedDataType="r8"
+                      cachedName="CreditosPeriodo"
+                      externalMetadataColumnId="Package\Data Flow Task\EstadoFinancieroBalanceComprobacion.Inputs[OLE DB Destination Input].ExternalColumns[CreditosPeriodo]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[CreditosPeriodo]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\EstadoFinancieroBalanceComprobacion.Inputs[OLE DB Destination Input].Columns[SaldoFinal]"
+                      cachedDataType="r8"
+                      cachedName="SaldoFinal"
+                      externalMetadataColumnId="Package\Data Flow Task\EstadoFinancieroBalanceComprobacion.Inputs[OLE DB Destination Input].ExternalColumns[SaldoFinal]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[SaldoFinal]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\EstadoFinancieroBalanceComprobacion.Inputs[OLE DB Destination Input].Columns[FechaDeCarga]"
+                      cachedDataType="date"
+                      cachedName="FechaDeCarga"
+                      externalMetadataColumnId="Package\Data Flow Task\EstadoFinancieroBalanceComprobacion.Inputs[OLE DB Destination Input].ExternalColumns[FechaDeCarga]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[FechaDeCarga]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\EstadoFinancieroBalanceComprobacion.Inputs[OLE DB Destination Input].Columns[ConvIdEstadoFinanciero]"
+                      cachedDataType="ui1"
+                      cachedName="ConvIdEstadoFinanciero"
+                      externalMetadataColumnId="Package\Data Flow Task\EstadoFinancieroBalanceComprobacion.Inputs[OLE DB Destination Input].ExternalColumns[IdEstadoFinanciero]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ConvIdEstadoFinanciero]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\EstadoFinancieroBalanceComprobacion.Inputs[OLE DB Destination Input].Columns[ConvUnidadTiempoPeriodo]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="2"
+                      cachedName="ConvUnidadTiempoPeriodo"
+                      externalMetadataColumnId="Package\Data Flow Task\EstadoFinancieroBalanceComprobacion.Inputs[OLE DB Destination Input].ExternalColumns[UnidadTiempoPeriodo]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ConvUnidadTiempoPeriodo]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\EstadoFinancieroBalanceComprobacion.Inputs[OLE DB Destination Input].Columns[ConvPeriodo]"
+                      cachedDataType="i4"
+                      cachedName="ConvPeriodo"
+                      externalMetadataColumnId="Package\Data Flow Task\EstadoFinancieroBalanceComprobacion.Inputs[OLE DB Destination Input].ExternalColumns[Periodo]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ConvPeriodo]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\EstadoFinancieroBalanceComprobacion.Inputs[OLE DB Destination Input].Columns[ConvNumCuenta]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ConvNumCuenta"
+                      externalMetadataColumnId="Package\Data Flow Task\EstadoFinancieroBalanceComprobacion.Inputs[OLE DB Destination Input].ExternalColumns[NumCuenta]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ConvNumCuenta]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\EstadoFinancieroBalanceComprobacion.Inputs[OLE DB Destination Input].Columns[ConvCuentaConcepto]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="250"
+                      cachedName="ConvCuentaConcepto"
+                      externalMetadataColumnId="Package\Data Flow Task\EstadoFinancieroBalanceComprobacion.Inputs[OLE DB Destination Input].ExternalColumns[CuentaConcepto]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ConvCuentaConcepto]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\EstadoFinancieroBalanceComprobacion.Inputs[OLE DB Destination Input].Columns[ConvUsuarioCarga]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ConvUsuarioCarga"
+                      externalMetadataColumnId="Package\Data Flow Task\EstadoFinancieroBalanceComprobacion.Inputs[OLE DB Destination Input].ExternalColumns[UsuarioCarga]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ConvUsuarioCarga]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\EstadoFinancieroBalanceComprobacion.Inputs[OLE DB Destination Input].Columns[ConvCodigoSegmento]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ConvCodigoSegmento"
+                      externalMetadataColumnId="Package\Data Flow Task\EstadoFinancieroBalanceComprobacion.Inputs[OLE DB Destination Input].ExternalColumns[CodigoSegmento]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ConvCodigoSegmento]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\EstadoFinancieroBalanceComprobacion.Inputs[OLE DB Destination Input].Columns[NumConsecutivo]"
+                      cachedDataType="i4"
+                      cachedName="NumConsecutivo"
+                      externalMetadataColumnId="Package\Data Flow Task\EstadoFinancieroBalanceComprobacion.Inputs[OLE DB Destination Input].ExternalColumns[NumConsecutivo]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[NumConsecutivo]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\EstadoFinancieroBalanceComprobacion.Inputs[OLE DB Destination Input].Columns[ConvIDEntidad]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="ConvIDEntidad"
+                      externalMetadataColumnId="Package\Data Flow Task\EstadoFinancieroBalanceComprobacion.Inputs[OLE DB Destination Input].ExternalColumns[IdEntidad]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ConvIDEntidad]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\EstadoFinancieroBalanceComprobacion.Inputs[OLE DB Destination Input].ExternalColumns[IdEstadoFinanciero]"
+                      dataType="ui1"
+                      name="IdEstadoFinanciero" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\EstadoFinancieroBalanceComprobacion.Inputs[OLE DB Destination Input].ExternalColumns[IdEntidad]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="IdEntidad" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\EstadoFinancieroBalanceComprobacion.Inputs[OLE DB Destination Input].ExternalColumns[Periodo]"
+                      dataType="i4"
+                      name="Periodo" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\EstadoFinancieroBalanceComprobacion.Inputs[OLE DB Destination Input].ExternalColumns[UnidadTiempoPeriodo]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="UnidadTiempoPeriodo" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\EstadoFinancieroBalanceComprobacion.Inputs[OLE DB Destination Input].ExternalColumns[NumConsecutivo]"
+                      dataType="i4"
+                      name="NumConsecutivo" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\EstadoFinancieroBalanceComprobacion.Inputs[OLE DB Destination Input].ExternalColumns[NumCuenta]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NumCuenta" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\EstadoFinancieroBalanceComprobacion.Inputs[OLE DB Destination Input].ExternalColumns[CuentaConcepto]"
+                      codePage="1252"
+                      dataType="str"
+                      length="250"
+                      name="CuentaConcepto" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\EstadoFinancieroBalanceComprobacion.Inputs[OLE DB Destination Input].ExternalColumns[SaldoInicial]"
+                      dataType="numeric"
+                      name="SaldoInicial"
+                      precision="20"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\EstadoFinancieroBalanceComprobacion.Inputs[OLE DB Destination Input].ExternalColumns[DebitosPeriodo]"
+                      dataType="numeric"
+                      name="DebitosPeriodo"
+                      precision="20"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\EstadoFinancieroBalanceComprobacion.Inputs[OLE DB Destination Input].ExternalColumns[CreditosPeriodo]"
+                      dataType="numeric"
+                      name="CreditosPeriodo"
+                      precision="20"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\EstadoFinancieroBalanceComprobacion.Inputs[OLE DB Destination Input].ExternalColumns[SaldoFinal]"
+                      dataType="numeric"
+                      name="SaldoFinal"
+                      precision="20"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\EstadoFinancieroBalanceComprobacion.Inputs[OLE DB Destination Input].ExternalColumns[UsuarioCarga]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="UsuarioCarga" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\EstadoFinancieroBalanceComprobacion.Inputs[OLE DB Destination Input].ExternalColumns[FechaDeCarga]"
+                      dataType="dbTimeStamp"
+                      name="FechaDeCarga" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\EstadoFinancieroBalanceComprobacion.Inputs[OLE DB Destination Input].ExternalColumns[CodigoSegmento]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CodigoSegmento" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\EstadoFinancieroBalanceComprobacion.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\EstadoFinancieroBalanceComprobacion.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\EstadoFinancieroBalanceComprobacion.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\EstadoFinancieroBalanceComprobacion.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\EstadoFinancieroBalanceComprobacion.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\EstadoFinancieroBalanceComprobacion.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Excel Source"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Excel Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable">User::SQL_Carga</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Excel Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[IDEntidad]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[IDEntidad]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[IDEntidad]"
+                      name="IDEntidad"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[UnidadTiempoPeriodo]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[UnidadTiempoPeriodo]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[UnidadTiempoPeriodo]"
+                      name="UnidadTiempoPeriodo"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[Periodo]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[Periodo]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[Periodo]"
+                      name="Periodo"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[IdEstadoFinanciero]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[IdEstadoFinanciero]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[IdEstadoFinanciero]"
+                      name="IdEstadoFinanciero"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[CodigoSegmento]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[CodigoSegmento]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[CodigoSegmento]"
+                      name="CodigoSegmento"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[NumCuenta]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[NumCuenta]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[NumCuenta]"
+                      name="NumCuenta"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[CuentaConcepto]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[CuentaConcepto]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[CuentaConcepto]"
+                      name="CuentaConcepto"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[SaldoInicial]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[SaldoInicial]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[SaldoInicial]"
+                      name="SaldoInicial"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[DebitosPeriodo]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[DebitosPeriodo]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[DebitosPeriodo]"
+                      name="DebitosPeriodo"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[CreditosPeriodo]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[CreditosPeriodo]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[CreditosPeriodo]"
+                      name="CreditosPeriodo"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[SaldoFinal]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[SaldoFinal]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[SaldoFinal]"
+                      name="SaldoFinal"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[UsuarioCarga]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[UsuarioCarga]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[UsuarioCarga]"
+                      name="UsuarioCarga"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[FechaDeCarga]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[FechaDeCarga]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[FechaDeCarga]"
+                      name="FechaDeCarga"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[NumConsecutivo]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[NumConsecutivo]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[NumConsecutivo]"
+                      name="NumConsecutivo"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[IDEntidad]"
+                      dataType="wstr"
+                      length="255"
+                      name="IDEntidad" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[UnidadTiempoPeriodo]"
+                      dataType="wstr"
+                      length="255"
+                      name="UnidadTiempoPeriodo" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[Periodo]"
+                      dataType="wstr"
+                      length="255"
+                      name="Periodo" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[IdEstadoFinanciero]"
+                      dataType="i4"
+                      name="IdEstadoFinanciero" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[CodigoSegmento]"
+                      dataType="wstr"
+                      length="255"
+                      name="CodigoSegmento" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[NumCuenta]"
+                      dataType="wstr"
+                      length="255"
+                      name="NumCuenta" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[CuentaConcepto]"
+                      dataType="wstr"
+                      length="255"
+                      name="CuentaConcepto" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[SaldoInicial]"
+                      dataType="r8"
+                      name="SaldoInicial" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[DebitosPeriodo]"
+                      dataType="r8"
+                      name="DebitosPeriodo" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[CreditosPeriodo]"
+                      dataType="r8"
+                      name="CreditosPeriodo" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[SaldoFinal]"
+                      dataType="r8"
+                      name="SaldoFinal" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[UsuarioCarga]"
+                      dataType="wstr"
+                      length="255"
+                      name="UsuarioCarga" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[FechaDeCarga]"
+                      dataType="date"
+                      name="FechaDeCarga" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[NumConsecutivo]"
+                      dataType="i4"
+                      name="NumConsecutivo" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[IDEntidad]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[IDEntidad]"
+                      name="IDEntidad" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[UnidadTiempoPeriodo]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[UnidadTiempoPeriodo]"
+                      name="UnidadTiempoPeriodo" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[Periodo]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[Periodo]"
+                      name="Periodo" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[IdEstadoFinanciero]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[IdEstadoFinanciero]"
+                      name="IdEstadoFinanciero" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[NumConsecutivo]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[NumConsecutivo]"
+                      name="NumConsecutivo" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[CodigoSegmento]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[CodigoSegmento]"
+                      name="CodigoSegmento" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[NumCuenta]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[NumCuenta]"
+                      name="NumCuenta" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[CuentaConcepto]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[CuentaConcepto]"
+                      name="CuentaConcepto" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[SaldoInicial]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[SaldoInicial]"
+                      name="SaldoInicial" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[DebitosPeriodo]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[DebitosPeriodo]"
+                      name="DebitosPeriodo" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[CreditosPeriodo]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[CreditosPeriodo]"
+                      name="CreditosPeriodo" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[SaldoFinal]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[SaldoFinal]"
+                      name="SaldoFinal" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[UsuarioCarga]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[UsuarioCarga]"
+                      name="UsuarioCarga" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[FechaDeCarga]"
+                      dataType="date"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[FechaDeCarga]"
+                      name="FechaDeCarga" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Script Component"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum.;Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;9"
+              description="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum."
+              name="Script Component"
+              version="9">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Stores the source code of the component"
+                  isArray="true"
+                  name="SourceCode"
+                  state="cdata">
+                  <arrayElements
+                    arrayElementCount="30">
+                    <arrayElement
+                      dataType="System.String"><![CDATA[ComponentWrapper.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+*  Microsoft SQL Server Integration Services component wrapper
+*  This module defines the base class for your component
+*  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
+
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+using Microsoft.SqlServer.Dts.Runtime.Wrapper;
+
+public class UserComponent: ScriptComponent
+{
+    public Connections Connections;
+    public Variables Variables;
+    public UserComponent()
+    {
+        Connections = new Connections(this);
+        Variables = new Variables(this);
+    }
+
+    public override void ProcessInput(int InputID, string InputName, PipelineBuffer Buffer, OutputNameMap OutputMap)
+    {
+
+        if (InputName.Equals(@"Input 0", StringComparison.Ordinal))
+        {
+            Input0_ProcessInput(new Input0Buffer(Buffer, GetColumnIndexes(InputID), OutputMap));
+        }
+
+    }
+
+    public virtual void Input0_ProcessInput(Input0Buffer Buffer)
+    {
+        while (Buffer.NextRow())
+        {
+            Input0_ProcessInputRow(Buffer);
+        }
+    }
+
+    public virtual void Input0_ProcessInputRow(Input0Buffer Row)
+    {
+    }
+
+}
+
+public class Connections
+{
+    ScriptComponent ParentComponent;
+
+    public Connections(ScriptComponent Component)
+    {
+        ParentComponent = Component;
+    }
+
+}
+
+public class Variables
+{
+    ScriptComponent ParentComponent;
+
+    public Variables(ScriptComponent Component)
+    {
+        ParentComponent = Component;
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Resources.resx]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+</root>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[main.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[#region Help:  Introduction to the Script Component
+/* The Script Component allows you to perform virtually any operation that can be accomplished in
+ * a .Net application within the context of an Integration Services data flow.
+ *
+ * Expand the other regions which have "Help" prefixes for examples of specific ways to use
+ * Integration Services features within this script component. */
+#endregion
+
+#region Namespaces
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+using Microsoft.SqlServer.Dts.Runtime.Wrapper;
+#endregion
+
+/// <summary>
+/// This is the class to which to add your code.  Do not change the name, attributes, or parent
+/// of this class.
+/// </summary>
+[Microsoft.SqlServer.Dts.Pipeline.SSISScriptComponentEntryPointAttribute]
+public class ScriptMain : UserComponent
+{
+    #region Help:  Using Integration Services variables and parameters
+    /* To use a variable in this script, first ensure that the variable has been added to
+     * either the list contained in the ReadOnlyVariables property or the list contained in
+     * the ReadWriteVariables property of this script component, according to whether or not your
+     * code needs to write into the variable.  To do so, save this script, close this instance of
+     * Visual Studio, and update the ReadOnlyVariables and ReadWriteVariables properties in the
+     * Script Transformation Editor window.
+     * To use a parameter in this script, follow the same steps. Parameters are always read-only.
+     *
+     * Example of reading from a variable or parameter:
+     *  DateTime startTime = Variables.MyStartTime;
+     *
+     * Example of writing to a variable:
+     *  Variables.myStringVariable = "new value";
+     */
+    #endregion
+
+    #region Help:  Using Integration Services Connnection Managers
+    /* Some types of connection managers can be used in this script component.  See the help topic
+     * "Working with Connection Managers Programatically" for details.
+     *
+     * To use a connection manager in this script, first ensure that the connection manager has
+     * been added to either the list of connection managers on the Connection Managers page of the
+     * script component editor.  To add the connection manager, save this script, close this instance of
+     * Visual Studio, and add the Connection Manager to the list.
+     *
+     * If the component needs to hold a connection open while processing rows, override the
+     * AcquireConnections and ReleaseConnections methods.
+     * 
+     * Example of using an ADO.Net connection manager to acquire a SqlConnection:
+     *  object rawConnection = Connections.SalesDB.AcquireConnection(transaction);
+     *  SqlConnection salesDBConn = (SqlConnection)rawConnection;
+     *
+     * Example of using a File connection manager to acquire a file path:
+     *  object rawConnection = Connections.Prices_zip.AcquireConnection(transaction);
+     *  string filePath = (string)rawConnection;
+     *
+     * Example of releasing a connection manager:
+     *  Connections.SalesDB.ReleaseConnection(rawConnection);
+     */
+    #endregion
+
+    #region Help:  Firing Integration Services Events
+    /* This script component can fire events.
+     *
+     * Example of firing an error event:
+     *  ComponentMetaData.FireError(10, "Process Values", "Bad value", "", 0, out cancel);
+     *
+     * Example of firing an information event:
+     *  ComponentMetaData.FireInformation(10, "Process Values", "Processing has started", "", 0, fireAgain);
+     *
+     * Example of firing a warning event:
+     *  ComponentMetaData.FireWarning(10, "Process Values", "No rows were received", "", 0);
+     */
+    #endregion
+
+    /// <summary>
+    /// This method is called once, before rows begin to be processed in the data flow.
+    ///
+    /// You can remove this method if you don't need to do anything here.
+    /// </summary>
+    public override void PreExecute()
+    {
+        base.PreExecute();
+        /*
+         * Add your code here
+         */
+    }
+
+    /// <summary>
+    /// This method is called after all the rows have passed through this component.
+    ///
+    /// You can delete this method if you don't need to do anything here.
+    /// </summary>
+    public override void PostExecute()
+    {
+        base.PostExecute();
+        /*
+         * Add your code here
+         */
+    }
+
+    /// <summary>
+    /// This method is called once for every row that passes through the component from Input0.
+    ///
+    /// Example of reading a value from a column in the the row:
+    ///  string zipCode = Row.ZipCode
+    ///
+    /// Example of writing a value to a column in the row:
+    ///  Row.ZipCode = zipCode
+    /// </summary>
+    /// <param name="Row">The row that is currently passing through the component</param>
+    /// 
+
+    int rowNumber = 1;
+    public override void Input0_ProcessInputRow(Input0Buffer Row)
+    {
+        Row.NumConsecutivo = rowNumber;
+        rowNumber = rowNumber + 1;
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[BufferWrapper.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+*  Microsoft SQL Server Integration Services buffer wrappers
+*  This module defines classes for accessing data flow buffers
+*  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
+
+
+
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+
+public class Input0Buffer: ScriptBuffer
+
+{
+    public Input0Buffer(PipelineBuffer Buffer, int[] BufferColumnIndexes, OutputNameMap OutputMap)
+        : base(Buffer, BufferColumnIndexes, OutputMap)
+    {
+    }
+
+    public String IDEntidad
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[0]);
+        }
+    }
+    public bool IDEntidad_IsNull
+    {
+        get
+        {
+            return IsNull(0);
+        }
+    }
+
+    public String UnidadTiempoPeriodo
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[1]);
+        }
+    }
+    public bool UnidadTiempoPeriodo_IsNull
+    {
+        get
+        {
+            return IsNull(1);
+        }
+    }
+
+    public String Periodo
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[2]);
+        }
+    }
+    public bool Periodo_IsNull
+    {
+        get
+        {
+            return IsNull(2);
+        }
+    }
+
+    public Int32 IdEstadoFinanciero
+    {
+        get
+        {
+            return Buffer.GetInt32(BufferColumnIndexes[3]);
+        }
+    }
+    public bool IdEstadoFinanciero_IsNull
+    {
+        get
+        {
+            return IsNull(3);
+        }
+    }
+
+    public String CodigoSegmento
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[4]);
+        }
+    }
+    public bool CodigoSegmento_IsNull
+    {
+        get
+        {
+            return IsNull(4);
+        }
+    }
+
+    public String NumCuenta
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[5]);
+        }
+    }
+    public bool NumCuenta_IsNull
+    {
+        get
+        {
+            return IsNull(5);
+        }
+    }
+
+    public String CuentaConcepto
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[6]);
+        }
+    }
+    public bool CuentaConcepto_IsNull
+    {
+        get
+        {
+            return IsNull(6);
+        }
+    }
+
+    public Double SaldoInicial
+    {
+        get
+        {
+            return Buffer.GetDouble(BufferColumnIndexes[7]);
+        }
+    }
+    public bool SaldoInicial_IsNull
+    {
+        get
+        {
+            return IsNull(7);
+        }
+    }
+
+    public Double DebitosPeriodo
+    {
+        get
+        {
+            return Buffer.GetDouble(BufferColumnIndexes[8]);
+        }
+    }
+    public bool DebitosPeriodo_IsNull
+    {
+        get
+        {
+            return IsNull(8);
+        }
+    }
+
+    public Double CreditosPeriodo
+    {
+        get
+        {
+            return Buffer.GetDouble(BufferColumnIndexes[9]);
+        }
+    }
+    public bool CreditosPeriodo_IsNull
+    {
+        get
+        {
+            return IsNull(9);
+        }
+    }
+
+    public Double SaldoFinal
+    {
+        get
+        {
+            return Buffer.GetDouble(BufferColumnIndexes[10]);
+        }
+    }
+    public bool SaldoFinal_IsNull
+    {
+        get
+        {
+            return IsNull(10);
+        }
+    }
+
+    public String UsuarioCarga
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[11]);
+        }
+    }
+    public bool UsuarioCarga_IsNull
+    {
+        get
+        {
+            return IsNull(11);
+        }
+    }
+
+    public DateTime FechaDeCarga
+    {
+        get
+        {
+            return Buffer.GetDateTime(BufferColumnIndexes[12]);
+        }
+    }
+    public bool FechaDeCarga_IsNull
+    {
+        get
+        {
+            return IsNull(12);
+        }
+    }
+
+    public Int32 NumConsecutivo
+    {
+        get
+        {
+            return Buffer.GetInt32(BufferColumnIndexes[13]);
+        }
+        set
+        {
+            this[13] = value;
+        }
+    }
+    public bool NumConsecutivo_IsNull
+    {
+        get
+        {
+            return IsNull(13);
+        }
+        set
+        {
+            if (value)
+            {
+                SetNull(13);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    new public bool NextRow()
+    {
+        return base.NextRow();
+    }
+
+    new public bool EndOfRowset()
+    {
+        return base.EndOfRowset();
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Settings.Designer.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_00b2b16a3a1f4d23af58d13cf8e1cf34.Properties.Settings.get_Default():SC_00b2b16a3a1f4d23af58d13cf8e1cf34.Properties.Sett" +
+    "ings")]
+
+namespace SC_00b2b16a3a1f4d23af58d13cf8e1cf34.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Resources.Designer.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_00b2b16a3a1f4d23af58d13cf8e1cf34.Properties.Resources.get_ResourceManager():System.Resources.Resou" +
+    "rceManager")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_00b2b16a3a1f4d23af58d13cf8e1cf34.Properties.Resources.get_Culture():System.Globalization.CultureIn" +
+    "fo")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_00b2b16a3a1f4d23af58d13cf8e1cf34.Properties.Resources.set_Culture(System.Globalization.CultureInfo" +
+    "):Void")]
+
+namespace SC_00b2b16a3a1f4d23af58d13cf8e1cf34.Properties {
+    
+    
+    /// <summary>
+    ///   A strongly-typed resource class, for looking up localized strings, etc.
+    /// </summary>
+    // This class was auto-generated by the StronglyTypedResourceBuilder
+    // class via a tool like ResGen or Visual Studio.
+    // To add or remove a member, edit your .ResX file then rerun ResGen
+    // with the /str option, or rebuild your VS project.
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    internal class Resources {
+        
+        private static global::System.Resources.ResourceManager resourceMan;
+        
+        private static global::System.Globalization.CultureInfo resourceCulture;
+        
+        [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
+        internal Resources() {
+        }
+        
+        /// <summary>
+        ///   Returns the cached ResourceManager instance used by this class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if ((resourceMan == null)) {
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SC_00b2b16a3a1f4d23af58d13cf8e1cf34.Properties.Resources", typeof(Resources).Assembly);
+                    resourceMan = temp;
+                }
+                return resourceMan;
+            }
+        }
+        
+        /// <summary>
+        ///   Overrides the current thread's CurrentUICulture property for all
+        ///   resource lookups using this strongly typed resource class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Globalization.CultureInfo Culture {
+            get {
+                return resourceCulture;
+            }
+            set {
+                resourceCulture = value;
+            }
+        }
+    }
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Project]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF16LE]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="3.0" schemaVersion="1.0">
+	<msb:PropertyGroup>
+		<msb:Language>msBuild</msb:Language>
+		<msb:CodeName>SC_00b2b16a3a1f4d23af58d13cf8e1cf34</msb:CodeName>
+		<msb:DisplayName>SC_00b2b16a3a1f4d23af58d13cf8e1cf34</msb:DisplayName>
+		<msb:ProjectId>{8A3077C2-3D77-4D18-A5A4-6847A74CDDBA}</msb:ProjectId>
+	</msb:PropertyGroup>
+	<msb:ItemGroup>
+		<msb:Project Include="SC_00b2b16a3a1f4d23af58d13cf8e1cf34.csproj"/>
+		<msb:File Include="Properties\Settings.settings"/>
+		<msb:File Include="Properties\AssemblyInfo.cs"/>
+		<msb:File Include="Properties\Resources.resx"/>
+		<msb:File Include="Properties\Resources.Designer.cs"/>
+		<msb:File Include="BufferWrapper.cs"/>
+		<msb:File Include="main.cs"/>
+		<msb:File Include="Properties\Settings.Designer.cs"/>
+		<msb:File Include="ComponentWrapper.cs"/>
+	</msb:ItemGroup>
+</c:Project>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\AssemblyInfo.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("SC_00b2b16a3a1f4d23af58d13cf8e1cf34")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("SC_00b2b16a3a1f4d23af58d13cf8e1cf34")]
+[assembly: AssemblyCopyright("Copyright @  2015")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Settings.settings]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[SC_00b2b16a3a1f4d23af58d13cf8e1cf34.csproj]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ac46262f-be95-47b3-99f7-46d43e5b4fa2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SC_00b2b16a3a1f4d23af58d13cf8e1cf34</RootNamespace>
+    <AssemblyName>SC_00b2b16a3a1f4d23af58d13cf8e1cf34</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.SqlServer.TxScript, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSRuntimeWrap, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSPipelineWrap, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.PipelineHost, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Compile Include="main.cs" />
+    <Compile Include="BufferWrapper.cs" />
+    <Compile Include="ComponentWrapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <!-- Include the build rules for a C# project.-->
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- This section defines VSTA properties that describe the host-changable project properties. -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
+        <ProjectProperties HostName="ScriptComponent" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" DebugInfoExeName="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" />
+        <Host Name="ScriptComponent" GeneratedNamespace="SC_00b2b16a3a1f4d23af58d13cf8e1cf34" IconIndex="0"></Host>
+        <ProjectClient>
+          <HostIdentifier>SSIS_SC120</HostIdentifier>
+        </ProjectClient>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>]]></arrayElement>
+                  </arrayElements>
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Stores the binary representation of the component"
+                  isArray="true"
+                  name="BinaryCode"
+                  state="cdata">
+                  <arrayElements
+                    arrayElementCount="2">
+                    <arrayElement
+                      dataType="System.String"><![CDATA[SC_00b2b16a3a1f4d23af58d13cf8e1cf34.dll]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAJQiHVYAAAAAAAAAAOAAAiELAQsAABwAAAAIAAAAAAAA/joA
+AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAEAAAAAAAAAACAAAAAAgAAAAAAAAMAQIUAABAA
+ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAKw6AABPAAAAAEAAAAgEAAAAAAAAAAAAAAAAAAAA
+AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAABBsAAAAgAAAAHAAAAAIA
+AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAAgEAAAAQAAAAAYAAAAeAAAAAAAAAAAAAAAAAABAAABA
+LnJlbG9jAAAMAAAAAGAAAAACAAAAJAAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAADg
+OgAAAAAAAEgAAAACAAUAGCQAAJQWAAABAAAAAAAAAGAjAAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAH4CKA0AAAoCAnMqAAAGfQEAAAQCAnMrAAAGfQIAAAQqkgRy
+AQAAcBpvDgAACiwVAgUCAygPAAAKDgRzCQAABm8DAAAGKkorBwIDbwQAAAYDbygAAAYt8SoGKh4C
+KBEAAAoqHgIoEgAACipuAwJ7AwAABG8lAAAGAgJ7AwAABBdYfQMAAAQqOgIXfQMAAAQCKAEAAAYq
+KgIDBAUoEwAACipSAnsUAAAKAnsVAAAKFpRvFgAACioiAhYoFwAACipSAnsUAAAKAnsVAAAKF5Rv
+FgAACioiAhcoFwAACipSAnsUAAAKAnsVAAAKGJRvFgAACioiAhgoFwAACipSAnsUAAAKAnsVAAAK
+GZRvGAAACioiAhkoFwAACipSAnsUAAAKAnsVAAAKGpRvFgAACioiAhooFwAACipSAnsUAAAKAnsV
+AAAKG5RvFgAACioiAhsoFwAACipSAnsUAAAKAnsVAAAKHJRvFgAACioiAhwoFwAACipSAnsUAAAK
+AnsVAAAKHZRvGQAACioiAh0oFwAACipSAnsUAAAKAnsVAAAKHpRvGQAACioiAh4oFwAACipWAnsU
+AAAKAnsVAAAKHwmUbxkAAAoqJgIfCSgXAAAKKlYCexQAAAoCexUAAAofCpRvGQAACiomAh8KKBcA
+AAoqVgJ7FAAACgJ7FQAACh8LlG8WAAAKKiYCHwsoFwAACipWAnsUAAAKAnsVAAAKHwyUbxoAAAoq
+JgIfDCgXAAAKKlYCexQAAAoCexUAAAofDZRvGAAACio+Ah8NA4wZAAABKBsAAAoqJgIfDSgXAAAK
+Kl4DLAkCHw0oHAAACipyEQAAcHMdAAAKeh4CKB4AAAoqHgIoHwAACio6AiggAAAKAgN9BAAABCo6
+AiggAAAKAgN9BQAABCoeAiggAAAKKhMwAgAtAAAAAQAAEX4GAAAELSByrgAAcNAHAAACKCIAAApv
+IwAACnMkAAAKCgaABgAABH4GAAAEKhp+BwAABCoeAoAHAAAEKhp+CAAABCouczEAAAaACAAABCoe
+AignAAAKKgC0AAAAzsrvvgEAAACRAAAAbFN5c3RlbS5SZXNvdXJjZXMuUmVzb3VyY2VSZWFkZXIs
+IG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9r
+ZW49Yjc3YTVjNTYxOTM0ZTA4OSNTeXN0ZW0uUmVzb3VyY2VzLlJ1bnRpbWVSZXNvdXJjZVNldAIA
+AAAAAAAAAAAAAFBBRFBBRFC0AAAAQlNKQgEAAQAAAAAADAAAAHY0LjAuMzAzMTkAAAAABQBsAAAA
+KAgAACN+AACUCAAABAsAACNTdHJpbmdzAAAAAJgTAAAgAQAAI1VTALgUAAAQAAAAI0dVSUQAAADI
+FAAAzAEAACNCbG9iAAAAAAAAAAIAAAFXFaIBCQEAAAD6JTMAFgAAAQAAACEAAAAIAAAACAAAADIA
+AAAPAAAAJwAAAA8AAAABAAAAAwAAAB8AAAAiAAAAAQAAAAQAAAABAAAAAAAKAAEAAAAAAAYA7gDN
+AAYA/gDNAAoAGwEUAQ4ANwEiARIAdgHNAAYAhQHNAAoA6gMUAQoAjwZ+BgoAwAarBgoAmQd/BwoA
+xAeyBwoA2weyBwoA+AeyBwoAFwiyBwoAMAiyBwoASQiyBwoAZAiyBwoAfwiyBwoAmAiyBwoA0Qix
+CAoA8QixCAoAMwkUAQoAOgkUAQYAYwnNAAoAugkUAQoA0QkUAQoA/gnrCQoAGwoUAQoAIAoUAQoA
+RAqyBw4AcApaCg4AiQpaCgoAngqxCAAAAAABAAAAAAABAAEAAQAQADIAAAAFAAEAAQABABAAQAAA
+AAgAAwAFAAEAEABLAAAACQAEAAkAAQAQAFgAAAANAAQAKgABABAAZAAAAA0ABQArAAAAEABuAHgA
+DQAGACwAAAEQAKcAeAARAAgAMAAGAFgAEwAGAGQAFwABAOIBLwABAG4GcAABAG4GcAARAJ8GegAR
+AMwGfgARABAHnABQIAAAAACGGE8BGwABAHAgAAAAAMYAkwEfAAEAlSAAAAAAxgGgASkABQCoIAAA
+AADGAbQBKQAGAKogAAAAAMYAywEbAAcAsiAAAAAAxgDWARsABwC6IAAAAADGALQBKQAHANYgAAAA
+AIYYTwEbAAgA5SAAAAAAhhhPATIACADwIAAAAACGCOwBPAALAAUhAAAAAIYI+gFAAAsADiEAAAAA
+hggPAjwACwAjIQAAAACGCCcCQAALACwhAAAAAIYIRgI8AAsAQSEAAAAAhghSAkAACwBKIQAAAACG
+CGUCRAALAF8hAAAAAIYIfAJAAAsAaCEAAAAAhgiaAjwACwB9IQAAAACGCK0CQAALAIYhAAAAAIYI
+xwI8AAsAmyEAAAAAhgjVAkAACwCkIQAAAACGCOoCPAALALkhAAAAAIYI/QJAAAsAwiEAAAAAhggX
+A0gACwDXIQAAAACGCCgDQAALAOAhAAAAAIYIQANIAAsA9SEAAAAAhghTA0AACwD+IQAAAACGCG0D
+SAALABQiAAAAAIYIgQNAAAsAHiIAAAAAhgicA0gACwA0IgAAAACGCKsDQAALAD4iAAAAAIYIwQM8
+AAsAVCIAAAAAhgjSA0AACwBeIgAAAACGCPMDTAALAHQiAAAAAIYIBARAAAsAfiIAAAAAhggcBEQA
+CwCUIgAAAACGCC8EUQALAKQiAAAAAIYIQgRAAAwAriIAAAAAhghcBFYADADGIgAAAACGAHYEQAAN
+AM4iAAAAAIYAfgRAAA0A1iIAAAAAhhhPAXQADQDlIgAAAACGGE8BdAAOAPQiAAAAAIMYTwEbAA8A
+/CIAAAAAkwjcBoIADwA1IwAAAACTCPAGhwAPADwjAAAAAJMI/AaMAA8ARCMAAAAAlgggB6AAEABX
+IwAAAACGGE8BGwAQAEsjAAAAAJEYuQoRARAAAAABADQHAAACADwHAAADAEYHAAAEAE0HAAABAEYH
+AAABAFcHAAABAFcHAAABAEYHAAACAFsHAAADAE0HAAABAG8HAAABAG8HAAABAHUHAAABAHUHAAAB
+AG8HUQBPAaoAWQBPAaoAYQBPAaoAaQBPAaoAcQBPAaoAeQBPAaoAgQBPAaoAiQBPAaoAkQBPAaoA
+mQBPAaoAoQBPAVEAqQBPARsACQBPARsAsQBLCa8ACQBSCbYAwQBPARsACQDLARsACQDWARsAEQBP
+ATIAEQBGB8EAEQBbB8UAKQCKCckAEQCUCc4AKQCbCdMAKQCkCdgAKQCuCd0AEQDACeMAEQDJCVEA
+0QBPAaoAEQB2BEAAEQB+BEAAGQBPARsA2QBPARsA4QAyCukA4QBNCvAAQQBPAfUA+QBPAQEBCQFP
+ARsAIQBPARsALgAbAIYBLgBjAKwBLgALABUBLgATAF0BLgAjAIYBLgArAIYBLgAzAF0BLgA7AIwB
+LgBDAIYBLgBbAKMBYwCDALwA4wALAbwAAQEzAbwAqQMrAQgByQMrAQgB/AAEAAEABwAdAAgAHwAA
+AIoEWwAAAJQEXwAAAKUEWwAAALkEXwAAANQEWwAAANwEXwAAAOsEYwAAAP4EXwAAABgFWwAAACcF
+XwAAAD0FWwAAAEcFXwAAAFgFWwAAAGcFXwAAAH0FZwAAAIoFXwAAAJ4FZwAAAK0FXwAAAMMFZwAA
+ANMFXwAAAOoFZwAAAPUFXwAAAAcGWwAAABQGXwAAACgGawAAADUGXwAAAEkGYwAAAFgGXwAAAI8G
+kgAAAAgHlwAAACwHpQACAAoAAwACAAsABQACAAwABwACAA0ACQACAA4ACwACAA8ADQACABAADwAC
+ABEAEQACABIAEwACABMAFQACABQAFwACABUAGQACABYAGwACABcAHQACABgAHwACABkAIQACABoA
+IwACABsAJQACABwAJwACAB0AKQACAB4AKwACAB8ALQACACAALwACACEAMQACACIAMwACACMANQAC
+ACQANwABACUANwABACcAOQACACYAOQACAC0AOwACAC4APQABAC8APQACADAAPwAEgAAAAQAAAIQW
+WkIAAAAAAAAPCQAADAAAAAAAAAAAAAAAAQCwAAAAAAAEAAAAAAAAAAAAAAAKAAsBAAAAAAQAAAAA
+AAAAAAAAAAoAFAEAAAAADAAAAAAAAAAAAAAAAQBVAQAAAAAAAAAAAQAAAMAKAAAAAAAAADxNb2R1
+bGU+AFNDXzAwYjJiMTZhM2ExZjRkMjNhZjU4ZDEzY2Y4ZTFjZjM0LmRsbABVc2VyQ29tcG9uZW50
+AFNjcmlwdE1haW4ASW5wdXQwQnVmZmVyAENvbm5lY3Rpb25zAFZhcmlhYmxlcwBSZXNvdXJjZXMA
+U0NfMDBiMmIxNmEzYTFmNGQyM2FmNThkMTNjZjhlMWNmMzQuUHJvcGVydGllcwBTZXR0aW5ncwBN
+aWNyb3NvZnQuU3FsU2VydmVyLlR4U2NyaXB0AE1pY3Jvc29mdC5TcWxTZXJ2ZXIuRHRzLlBpcGVs
+aW5lAFNjcmlwdENvbXBvbmVudABTY3JpcHRCdWZmZXIAbXNjb3JsaWIAU3lzdGVtAE9iamVjdABT
+eXN0ZW0uQ29uZmlndXJhdGlvbgBBcHBsaWNhdGlvblNldHRpbmdzQmFzZQAuY3RvcgBNaWNyb3Nv
+ZnQuU3FsU2VydmVyLlBpcGVsaW5lSG9zdABQaXBlbGluZUJ1ZmZlcgBPdXRwdXROYW1lTWFwAFBy
+b2Nlc3NJbnB1dABJbnB1dDBfUHJvY2Vzc0lucHV0AElucHV0MF9Qcm9jZXNzSW5wdXRSb3cAUHJl
+RXhlY3V0ZQBQb3N0RXhlY3V0ZQByb3dOdW1iZXIAZ2V0X0lERW50aWRhZABnZXRfSURFbnRpZGFk
+X0lzTnVsbABnZXRfVW5pZGFkVGllbXBvUGVyaW9kbwBnZXRfVW5pZGFkVGllbXBvUGVyaW9kb19J
+c051bGwAZ2V0X1BlcmlvZG8AZ2V0X1BlcmlvZG9fSXNOdWxsAGdldF9JZEVzdGFkb0ZpbmFuY2ll
+cm8AZ2V0X0lkRXN0YWRvRmluYW5jaWVyb19Jc051bGwAZ2V0X0NvZGlnb1NlZ21lbnRvAGdldF9D
+b2RpZ29TZWdtZW50b19Jc051bGwAZ2V0X051bUN1ZW50YQBnZXRfTnVtQ3VlbnRhX0lzTnVsbABn
+ZXRfQ3VlbnRhQ29uY2VwdG8AZ2V0X0N1ZW50YUNvbmNlcHRvX0lzTnVsbABnZXRfU2FsZG9Jbmlj
+aWFsAGdldF9TYWxkb0luaWNpYWxfSXNOdWxsAGdldF9EZWJpdG9zUGVyaW9kbwBnZXRfRGViaXRv
+c1BlcmlvZG9fSXNOdWxsAGdldF9DcmVkaXRvc1BlcmlvZG8AZ2V0X0NyZWRpdG9zUGVyaW9kb19J
+c051bGwAZ2V0X1NhbGRvRmluYWwAZ2V0X1NhbGRvRmluYWxfSXNOdWxsAGdldF9Vc3VhcmlvQ2Fy
+Z2EAZ2V0X1VzdWFyaW9DYXJnYV9Jc051bGwARGF0ZVRpbWUAZ2V0X0ZlY2hhRGVDYXJnYQBnZXRf
+RmVjaGFEZUNhcmdhX0lzTnVsbABnZXRfTnVtQ29uc2VjdXRpdm8Ac2V0X051bUNvbnNlY3V0aXZv
+AGdldF9OdW1Db25zZWN1dGl2b19Jc051bGwAc2V0X051bUNvbnNlY3V0aXZvX0lzTnVsbABOZXh0
+Um93AEVuZE9mUm93c2V0AElERW50aWRhZABJREVudGlkYWRfSXNOdWxsAFVuaWRhZFRpZW1wb1Bl
+cmlvZG8AVW5pZGFkVGllbXBvUGVyaW9kb19Jc051bGwAUGVyaW9kbwBQZXJpb2RvX0lzTnVsbABJ
+ZEVzdGFkb0ZpbmFuY2llcm8ASWRFc3RhZG9GaW5hbmNpZXJvX0lzTnVsbABDb2RpZ29TZWdtZW50
+bwBDb2RpZ29TZWdtZW50b19Jc051bGwATnVtQ3VlbnRhAE51bUN1ZW50YV9Jc051bGwAQ3VlbnRh
+Q29uY2VwdG8AQ3VlbnRhQ29uY2VwdG9fSXNOdWxsAFNhbGRvSW5pY2lhbABTYWxkb0luaWNpYWxf
+SXNOdWxsAERlYml0b3NQZXJpb2RvAERlYml0b3NQZXJpb2RvX0lzTnVsbABDcmVkaXRvc1Blcmlv
+ZG8AQ3JlZGl0b3NQZXJpb2RvX0lzTnVsbABTYWxkb0ZpbmFsAFNhbGRvRmluYWxfSXNOdWxsAFVz
+dWFyaW9DYXJnYQBVc3VhcmlvQ2FyZ2FfSXNOdWxsAEZlY2hhRGVDYXJnYQBGZWNoYURlQ2FyZ2Ff
+SXNOdWxsAE51bUNvbnNlY3V0aXZvAE51bUNvbnNlY3V0aXZvX0lzTnVsbABQYXJlbnRDb21wb25l
+bnQAU3lzdGVtLlJlc291cmNlcwBSZXNvdXJjZU1hbmFnZXIAcmVzb3VyY2VNYW4AU3lzdGVtLkds
+b2JhbGl6YXRpb24AQ3VsdHVyZUluZm8AcmVzb3VyY2VDdWx0dXJlAGdldF9SZXNvdXJjZU1hbmFn
+ZXIAZ2V0X0N1bHR1cmUAc2V0X0N1bHR1cmUAQ3VsdHVyZQBkZWZhdWx0SW5zdGFuY2UAZ2V0X0Rl
+ZmF1bHQARGVmYXVsdABJbnB1dElEAElucHV0TmFtZQBCdWZmZXIAT3V0cHV0TWFwAFJvdwBCdWZm
+ZXJDb2x1bW5JbmRleGVzAHZhbHVlAENvbXBvbmVudABTeXN0ZW0uUnVudGltZS5WZXJzaW9uaW5n
+AFRhcmdldEZyYW1ld29ya0F0dHJpYnV0ZQBTeXN0ZW0uUmVmbGVjdGlvbgBBc3NlbWJseVRpdGxl
+QXR0cmlidXRlAEFzc2VtYmx5RGVzY3JpcHRpb25BdHRyaWJ1dGUAQXNzZW1ibHlDb25maWd1cmF0
+aW9uQXR0cmlidXRlAEFzc2VtYmx5Q29tcGFueUF0dHJpYnV0ZQBBc3NlbWJseVByb2R1Y3RBdHRy
+aWJ1dGUAQXNzZW1ibHlDb3B5cmlnaHRBdHRyaWJ1dGUAQXNzZW1ibHlUcmFkZW1hcmtBdHRyaWJ1
+dGUAQXNzZW1ibHlDdWx0dXJlQXR0cmlidXRlAEFzc2VtYmx5VmVyc2lvbkF0dHJpYnV0ZQBTeXN0
+ZW0uUnVudGltZS5Db21waWxlclNlcnZpY2VzAENvbXBpbGF0aW9uUmVsYXhhdGlvbnNBdHRyaWJ1
+dGUAUnVudGltZUNvbXBhdGliaWxpdHlBdHRyaWJ1dGUAU0NfMDBiMmIxNmEzYTFmNGQyM2FmNThk
+MTNjZjhlMWNmMzQAU3RyaW5nAFN0cmluZ0NvbXBhcmlzb24ARXF1YWxzAEdldENvbHVtbkluZGV4
+ZXMAU1NJU1NjcmlwdENvbXBvbmVudEVudHJ5UG9pbnRBdHRyaWJ1dGUAR2V0U3RyaW5nAElzTnVs
+bABHZXRJbnQzMgBHZXREb3VibGUAR2V0RGF0ZVRpbWUASW50MzIAc2V0X0l0ZW0AU2V0TnVsbABJ
+bnZhbGlkT3BlcmF0aW9uRXhjZXB0aW9uAFN5c3RlbS5EaWFnbm9zdGljcwBEZWJ1Z2dlck5vblVz
+ZXJDb2RlQXR0cmlidXRlAFR5cGUAUnVudGltZVR5cGVIYW5kbGUAR2V0VHlwZUZyb21IYW5kbGUA
+QXNzZW1ibHkAZ2V0X0Fzc2VtYmx5AFN5c3RlbS5Db21wb25lbnRNb2RlbABFZGl0b3JCcm93c2Fi
+bGVBdHRyaWJ1dGUARWRpdG9yQnJvd3NhYmxlU3RhdGUAQ29tcGlsZXJHZW5lcmF0ZWRBdHRyaWJ1
+dGUALmNjdG9yAFNDXzAwYjJiMTZhM2ExZjRkMjNhZjU4ZDEzY2Y4ZTFjZjM0LlByb3BlcnRpZXMu
+UmVzb3VyY2VzLnJlc291cmNlcwAAAA9JAG4AcAB1AHQAIAAwAACAm0kAcwBOAHUAbABsACAAcABy
+AG8AcABlAHIAdAB5ACAAYwBhAG4AbgBvAHQAIABiAGUAIABzAGUAdAAgAHQAbwAgAEYAYQBsAHMA
+ZQAuACAAQQBzAHMAaQBnAG4AIABhACAAdgBhAGwAdQBlACAAdABvACAAdABoAGUAIABjAG8AbAB1
+AG0AbgAgAGkAbgBzAHQAZQBhAGQALgAAcVMAQwBfADAAMABiADIAYgAxADYAYQAzAGEAMQBmADQA
+ZAAyADMAYQBmADUAOABkADEAMwBjAGYAOABlADEAYwBmADMANAAuAFAAcgBvAHAAZQByAHQAaQBl
+AHMALgBSAGUAcwBvAHUAcgBjAGUAcwAASryW6FtSMEOKgUSPDpz77gAIiYRdzYCAzJEIt3pcVhk0
+4IkDBhIUAwYSGAMgAAEJIAQBCA4SFRIZBSABARIQAgYICSADARIVHQgSGQMgAA4DIAACAyAACAMg
+AA0EIAARHQQgAQEIBCABAQIDKAAOAygAAgMoAAgDKAANBCgAER0DBhIFBSABARIFAwYSIQMGEiUE
+AAASIQQAABIlBQABARIlBAgAEiEECAASJQMGEiAEAAASIAQIABIgBCABAQ4GIAICDhFdBSABHQgI
+BAEAAAADBhIVAwYdCAQgAQ4IBCABAggEIAEICAQgAQ0IBSABER0IBSACAQgcBgABEnERdQQgABJ5
+BiACAQ4SeQQHARIhBiABARGAgQgBAAIAAAAAAAMAAAFHAQAaLk5FVEZyYW1ld29yayxWZXJzaW9u
+PXY0LjABAFQOFEZyYW1ld29ya0Rpc3BsYXlOYW1lEC5ORVQgRnJhbWV3b3JrIDQoAQAjU0NfMDBi
+MmIxNmEzYTFmNGQyM2FmNThkMTNjZjhlMWNmMzQAAAUBAAAAABYBABFDb3B5cmlnaHQgQCAgMjAx
+NQAACAEACAAAAAAAHgEAAQBUAhZXcmFwTm9uRXhjZXB0aW9uVGhyb3dzAQDUOgAAAAAAAAAAAADu
+OgAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4DoAAAAAAAAAAAAAAABfQ29yRGxsTWFpbgBtc2Nv
+cmVlLmRsbAAAAAAA/yUAIAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB
+ABAAAAAYAACAAAAAAAAAAAAAAAAAAAABAAEAAAAwAACAAAAAAAAAAAAAAAAAAAABAAAAAABIAAAA
+WEAAALADAAAAAAAAAAAAALADNAAAAFYAUwBfAFYARQBSAFMASQBPAE4AXwBJAE4ARgBPAAAAAAC9
+BO/+AAABAAAAAQBaQoQWAAABAFpChBY/AAAAAAAAAAQAAAACAAAAAAAAAAAAAAAAAAAARAAAAAEA
+VgBhAHIARgBpAGwAZQBJAG4AZgBvAAAAAAAkAAQAAABUAHIAYQBuAHMAbABhAHQAaQBvAG4AAAAA
+AAAAsAQQAwAAAQBTAHQAcgBpAG4AZwBGAGkAbABlAEkAbgBmAG8AAADsAgAAAQAwADAAMAAwADAA
+NABiADAAAABwACQAAQBGAGkAbABlAEQAZQBzAGMAcgBpAHAAdABpAG8AbgAAAAAAUwBDAF8AMAAw
+AGIAMgBiADEANgBhADMAYQAxAGYANABkADIAMwBhAGYANQA4AGQAMQAzAGMAZgA4AGUAMQBjAGYA
+MwA0AAAAQAAPAAEARgBpAGwAZQBWAGUAcgBzAGkAbwBuAAAAAAAxAC4AMAAuADUANwA2ADQALgAx
+ADYAOQA4ADYAAAAAAHAAKAABAEkAbgB0AGUAcgBuAGEAbABOAGEAbQBlAAAAUwBDAF8AMAAwAGIA
+MgBiADEANgBhADMAYQAxAGYANABkADIAMwBhAGYANQA4AGQAMQAzAGMAZgA4AGUAMQBjAGYAMwA0
+AC4AZABsAGwAAABIABIAAQBMAGUAZwBhAGwAQwBvAHAAeQByAGkAZwBoAHQAAABDAG8AcAB5AHIA
+aQBnAGgAdAAgAEAAIAAgADIAMAAxADUAAAB4ACgAAQBPAHIAaQBnAGkAbgBhAGwARgBpAGwAZQBu
+AGEAbQBlAAAAUwBDAF8AMAAwAGIAMgBiADEANgBhADMAYQAxAGYANABkADIAMwBhAGYANQA4AGQA
+MQAzAGMAZgA4AGUAMQBjAGYAMwA0AC4AZABsAGwAAABoACQAAQBQAHIAbwBkAHUAYwB0AE4AYQBt
+AGUAAAAAAFMAQwBfADAAMABiADIAYgAxADYAYQAzAGEAMQBmADQAZAAyADMAYQBmADUAOABkADEA
+MwBjAGYAOABlADEAYwBmADMANAAAAEQADwABAFAAcgBvAGQAdQBjAHQAVgBlAHIAcwBpAG8AbgAA
+ADEALgAwAC4ANQA3ADYANAAuADEANgA5ADgANgAAAAAASAAPAAEAQQBzAHMAZQBtAGIAbAB5ACAA
+VgBlAHIAcwBpAG8AbgAAADEALgAwAC4ANQA3ADYANAAuADEANgA5ADgANgAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAAwAAAAAOwAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
+                  </arrayElements>
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the Microsoft Visual Studio Tools for Applications project. Project names must be unique within a package."
+                  name="VSTAProjectName"
+                  typeConverter="NOTBROWSABLE">SC_00b2b16a3a1f4d23af58d13cf8e1cf34</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the programming language used by the script."
+                  name="ScriptLanguage"
+                  typeConverter="Microsoft.SqlServer.VSTAHosting.ScriptingLanguages">CSharp</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a comma-separated list of read-only variables."
+                  name="ReadOnlyVariables"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIVariablePickerDlg"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a comma-separated list of read/write variables."
+                  name="ReadWriteVariables"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIWriteableVariablePickerDlg"></property>
+                <property
+                  dataType="System.String"
+                  description="List of breakpoints present on the script."
+                  isArray="true"
+                  name="BreakpointCollection"
+                  typeConverter="NOTBROWSABLE">
+                  <arrayElements
+                    arrayElementCount="0" />
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Checksum to match component metedata against compiled codes."
+                  name="MetadataChecksum"
+                  typeConverter="NOTBROWSABLE">e822854242ea6808fd90635ce483fe4f</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ScriptComponentHost</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Script Component.Inputs[Input 0]"
+                  hasSideEffects="true"
+                  name="Input 0">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Script Component.Inputs[Input 0].Columns[IDEntidad]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="IDEntidad"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[IDEntidad]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Script Component.Inputs[Input 0].Columns[UnidadTiempoPeriodo]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="UnidadTiempoPeriodo"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[UnidadTiempoPeriodo]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Script Component.Inputs[Input 0].Columns[Periodo]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Periodo"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[Periodo]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Script Component.Inputs[Input 0].Columns[IdEstadoFinanciero]"
+                      cachedDataType="i4"
+                      cachedName="IdEstadoFinanciero"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[IdEstadoFinanciero]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Script Component.Inputs[Input 0].Columns[CodigoSegmento]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="CodigoSegmento"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[CodigoSegmento]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Script Component.Inputs[Input 0].Columns[NumCuenta]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="NumCuenta"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[NumCuenta]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Script Component.Inputs[Input 0].Columns[CuentaConcepto]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="CuentaConcepto"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[CuentaConcepto]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Script Component.Inputs[Input 0].Columns[SaldoInicial]"
+                      cachedDataType="r8"
+                      cachedName="SaldoInicial"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[SaldoInicial]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Script Component.Inputs[Input 0].Columns[DebitosPeriodo]"
+                      cachedDataType="r8"
+                      cachedName="DebitosPeriodo"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[DebitosPeriodo]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Script Component.Inputs[Input 0].Columns[CreditosPeriodo]"
+                      cachedDataType="r8"
+                      cachedName="CreditosPeriodo"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[CreditosPeriodo]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Script Component.Inputs[Input 0].Columns[SaldoFinal]"
+                      cachedDataType="r8"
+                      cachedName="SaldoFinal"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[SaldoFinal]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Script Component.Inputs[Input 0].Columns[UsuarioCarga]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="UsuarioCarga"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[UsuarioCarga]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Script Component.Inputs[Input 0].Columns[FechaDeCarga]"
+                      cachedDataType="date"
+                      cachedName="FechaDeCarga"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[FechaDeCarga]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Script Component.Inputs[Input 0].Columns[NumConsecutivo]"
+                      cachedDataType="i4"
+                      cachedName="NumConsecutivo"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[NumConsecutivo]"
+                      usageType="readWrite" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Script Component.Outputs[Output 0]"
+                  name="Output 0"
+                  synchronousInputId="Package\Data Flow Task\Script Component.Inputs[Input 0]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[Data Conversion Output]"
+              endId="Package\Data Flow Task\EstadoFinancieroBalanceComprobacion.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Excel Source Output]"
+              endId="Package\Data Flow Task\Script Component.Inputs[Input 0]"
+              name="Excel Source Output"
+              startId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Output 0]"
+              endId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
+              name="Output 0"
+              startId="Package\Data Flow Task\Script Component.Outputs[Output 0]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="sql12">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Data Flow Task"
+          TopLeft="192,83" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Data Flow Task\Excel Source"
+          TopLeft="15,124" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Data Flow Task\Script Component"
+          TopLeft="195,123" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Data Flow Task\Data Conversion"
+          TopLeft="399,123" />
+        <NodeLayout
+          Size="262,42"
+          Id="Package\Data Flow Task\EstadoFinancieroBalanceComprobacion"
+          TopLeft="604,121" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Output 0]"
+          TopLeft="358,144">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="41,0"
+              Start="0,0"
+              End="33.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="33.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Excel Source Output]"
+          TopLeft="154,144.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="41,0"
+              Start="0,0"
+              End="33.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="33.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Data Conversion Output]"
+          TopLeft="555,143">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="49,0"
+              Start="0,0"
+              End="41.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="41.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\EstadoFinancieroBalanceComprobacion">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

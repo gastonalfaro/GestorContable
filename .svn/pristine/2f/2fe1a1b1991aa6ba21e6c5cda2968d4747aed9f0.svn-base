@@ -1,0 +1,44 @@
+﻿<?xml version="1.0"?>
+<!--
+  Descripción: Archivo de configuración del conector de 
+	Enterprise Library v1.0.0
+	Autor: Jeison Gomez Maertinez
+	Fecha: 22-09-2015
+-->
+<CommandDef>
+  <Command> 
+    <BaseDatos>MSSQL</BaseDatos>
+    <DbInstance>ConexionBD</DbInstance>
+    <Type>CommandType.StoredProcedure</Type>
+    <Text>pc.uspBuscarArchivoAnexoEstadoFinanciero</Text>
+    <NumberOfParameters>3</NumberOfParameters>
+    <ReturnType>procedure</ReturnType>
+    <CommandTimeout>6000</CommandTimeout>
+  </Command>
+  <Parameters>
+    <Parameter>
+      <Name>@pIdEstadoFinancieroArchivoAnexo</Name>
+      <VariableMapeo>Lstr_IdEstadoFinancieroArchivoAnexo</VariableMapeo>
+      <Type>String</Type>
+      <Size>50</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pResultado</Name>
+      <Type>String</Type>
+      <Size>2</Size>
+      <Nullable>True</Nullable>
+      <Direction>Output</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pMensaje</Name>
+      <Type>String</Type>
+      <Size>500</Size>
+      <Direction>Output</Direction>
+    </Parameter>
+
+  </Parameters>
+</CommandDef>

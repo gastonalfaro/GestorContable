@@ -1,0 +1,111 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PortalPrincipal.master.cs" Inherits="Presentacion.PaginaMaestra.PortalPrincipal" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ 
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ipp="">
+<head runat="server">     
+    
+    <title>Ministerio de Hacienda - Sistema Gestor</title>
+
+    <link rel="icon" href="../Compartidas/imagenes/favicon.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="../Compartidas/imagenes/favicon.png" type="image/x-icon" />
+
+    <meta name="viewport" content = "width = device-width, initial-scale = 1.0, minimum-scale = 1.0, maximum-scale = 1.0, user-scalable = no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        
+    <link href="/Compartidas/rmm-css/chosen.css" rel="stylesheet" />
+    <link href="/Compartidas/rmm-css/estilomenu.css" rel="stylesheet" />
+    <link href="/Compartidas/rmm-css/EstiloPagina.css" rel="stylesheet" type="text/css" />
+    <link href="/Compartidas/rmm-css/font-awesome.css" rel="stylesheet" />
+    <link href="/Compartidas/rmm-css/font-awesome.min.css" rel="stylesheet" />
+    <link href="/Compartidas/rmm-css/PortalSistemaGestor.css" rel="stylesheet" />
+    <link href="/Compartidas/rmm-css/responsivemobilemenu.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+
+    <script type="text/jscript"  src="/Compartidas/rmm-js/jquery.min.js"></script>
+    <script type="text/javascript" src="/Compartidas/rmm-js/jquery-ui.js"></script>
+
+    <script type="text/jscript"  src="/Compartidas/rmm-js/combobox.js"></script>
+    <script type="text/jscript"  src="/Compartidas/rmm-js/maskedinput.js"></script>
+    <script type="text/jscript"  src="/Compartidas/rmm-js/menuscript.js"></script>
+    <script type="text/jscript"  src="/Compartidas/rmm-js/responsivemobilemenu.js"></script>
+    <script type="text/jscript"  src="/Compartidas/rmm-js/ValidaMontos.js"></script>
+    <script type="text/jscript"  src="/Compartidas/rmm-js/ValidadorPwC.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" />
+
+        <script type="text/javascript" >
+            function pageLoad(sender, args) {
+                $(".js-date-picker").datepicker({ dateFormat: 'dd/mm/yy' });
+                $(".chzn-select").chosen(); $(".chzn-select-deselect").chosen({ allow_single_deselect: true });
+            }
+        </script>
+
+    <asp:ContentPlaceHolder ID="ContenidoJS" runat="server">
+       
+    </asp:ContentPlaceHolder>
+    
+</head>
+     <script type="text/jscript"  src="/Compartidas/rmm-js/chosen.jquery.js"></script>
+<body class="fondoprincipal">
+    
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <asp:ContentPlaceHolder ID="ScriptContent" runat="server" />
+        <asp:Image ID="Image1" runat="server" ImageUrl="~/PaginaMaestra/imagenes/banner-principal (1).png" class="imagenencabezado" />
+        <div class="separador">
+            <div class="contenidoseparador" id="divCerrarSesion" runat="server">               
+               <asp:label id="lblBienvenido" runat="server"> </asp:label> <asp:LinkButton ID="lnkCerrarSesion" runat="server" OnClick="lnkCerrarSesion_Click" CausesValidation="false">Cerrar Sesión</asp:LinkButton>
+            </div>
+        </div>
+        <div id="encabezadoDiv" class="encabezado">
+            <asp:Literal runat="server" ID="litMenu" />
+            <asp:ContentPlaceHolder ID="encabezado" runat="server"></asp:ContentPlaceHolder>
+        </div>
+         <div style="height:100%;">
+        
+       
+            <div class="fondosecundario">
+                <div class="">
+                    <asp:ContentPlaceHolder ID="Enlaces" runat="server"></asp:ContentPlaceHolder>
+                </div>
+                <div id="divContenido" class="contenido">
+                    <asp:ContentPlaceHolder ID="Contenido" runat="server"></asp:ContentPlaceHolder>
+                </div>
+
+
+
+            
+            </div>
+             <div class="piepagina">             
+                <div class="contacto">
+                    <span>Ministerio de Hacienda <a title="Facebook Ministerio de Hacienda" href="https://www.facebook.com/ministeriodehaciendacr" target="_blank"><i class="icon-facebook-sign"></i></a><a title="Twitter Ministerio de Hacienda" href="https://twitter.com/HaciendaCR" target="_blank"><i class="icon-twitter"></i></a><a title="Canal YouTube Ministerio de Hacienda" href="https://www.youtube.com/user/HaciendaCR/" target="_blank"><i class="icon-youtube"></i></a><a class="tip" href="https://docs.google.com/forms/d/1prEnrcPX2LXGj6Q0SqeqGSkaecyeOjb9PElzDZQ5U54" target="_blank" data-toggle="tooltip" data-placement="right" title="" data-original-title="Evalúe nuestro sitio"><i class="icon-list"></i></a>
+                        <br/>
+                        República de Costa Rica<br/>
+                        San José, Avenida 2da<br/>
+                        Calle 1 y 3, diagonal al Teatro Nacional<br/>
+                        Correo electrónico: <a style="color: #fff; text-decoration: underline" href="mailto:comunicacionmh@hacienda.go.cr">comunicacionmh@hacienda.go.cr</a><br/>
+                        Central telefónica: 2284-5000<br/>
+                        Horario de atención: Lunes a viernes de 8:00 a.m. a 4:00 p.m.<br/>
+                    </span>
+                </div>
+                <div class="contenidopiepagina">
+                    <asp:Image ID="Image2" runat="server" ImageUrl="~/PaginaMaestra/imagenes/piepagina.png" class="imagenpiepagina" />
+                </div>
+            </div>
+           
+            <div class ="push"></div>
+       
+           
+         </div>
+         
+    </form>
+   
+
+    
+   
+</body>
+</html>

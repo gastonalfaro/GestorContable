@@ -1,0 +1,98 @@
+﻿<?xml version="1.0"?>
+<configuration>
+    <configSections>
+        <sectionGroup name="applicationSettings" type="System.Configuration.ApplicationSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" >
+            <section name="LogicaNegocio.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+        </sectionGroup>
+    </configSections>
+    <system.web>
+      <!--<globalization requestEncoding="utf-8" responseEncoding="utf-8" culture="es-CR"/>-->
+      <globalization requestEncoding="utf-8" responseEncoding="utf-8" culture="es-MX" fileEncoding="utf-8" uiCulture="es"/>
+      <compilation debug="true" targetFramework="4.5" />
+      <httpRuntime targetFramework="4.5" />
+    </system.web>
+
+  <appSettings>
+    <!--<add key="DireccionConfigs" value="C:\PwcProyectos\svn.Gestor2\Datos\ConexionSQL\Configs"/>-->
+    <add key="DireccionConfigs" value="C:\inetpub\wwwroot\SistemaGestor\Configs\"/>
+  </appSettings>
+  <connectionStrings>
+    <clear/>
+    <add name="ConexionBD" connectionString="Server=172.26.30.21\DMSS2014E01; Database=GestNICSPDEV; User Id=GestNICSPDEV; password=GestNICSPDEV" providerName="System.Data.SqlClient" />
+  </connectionStrings >
+  <system.serviceModel>
+    <bindings>
+      <basicHttpBinding>
+        <binding name="ExtractosSoap" />
+        <binding name="ServicioRDSSoap" />
+        <binding name="consultaRDSSoap" />
+      </basicHttpBinding>
+      <customBinding>
+        <binding name="binding">
+          <mtomMessageEncoding messageVersion="Soap11WSAddressing10" />
+          <httpsTransport authenticationScheme="Basic" />
+        </binding>
+        <binding name="binding_soap12">
+          <mtomMessageEncoding />
+          <httpsTransport authenticationScheme="Basic" />
+        </binding>
+      </customBinding>
+    </bindings>
+    <client>
+      <endpoint address="http://CPD-DSGSBOX1.mh.hacienda.go.cr:8000/sap/bc/srt/rfc/sap/zint_conf_extistencia_reserva/300/zint_conf_extistencia_reserva/binding"
+        binding="customBinding" bindingConfiguration="binding" contract="wrExisteReserva.ZINT_CONF_EXTISTENCIA_RESERVA"
+        name="binding" />
+      <endpoint address="http://CPD-DSGSBOX1.mh.hacienda.go.cr:8000/sap/bc/srt/rfc/sap/zint_conf_extistencia_reserva/300/zint_conf_extistencia_reserva/binding"
+        binding="customBinding" bindingConfiguration="binding_soap12"
+        contract="wrExisteReserva.ZINT_CONF_EXTISTENCIA_RESERVA" name="binding_soap12" />
+      <endpoint address="http://172.18.4.96/servicios/extractos.asmx"
+        binding="basicHttpBinding" bindingConfiguration="ExtractosSoap"
+        contract="sr_rdi_rde.ExtractosSoap" name="ExtractosSoap" />
+      <endpoint address="http://mh-cpd-dnspfs1:95/ServicioRDS.asmx"
+        binding="basicHttpBinding" bindingConfiguration="ServicioRDSSoap"
+        contract="srBccrRds.ServicioRDSSoap" name="ServicioRDSSoap" />
+      <endpoint address="http://mh-cpd-dnspfs1:90/consultaRDS.asmx"
+        binding="basicHttpBinding" bindingConfiguration="consultaRDSSoap"
+        contract="srBccrRds.consultaRDSSoap" name="consultaRDSSoap" />
+    </client>
+  </system.serviceModel>
+  <applicationSettings>
+    <add key="DireccionPlantilla" value="C:\Users\gtsadmin\Documents\Visual Studio 2013\Projects\SGv2\LogicaNegocio\PlantillasCorreo\ConfirmacionRegistro.html"/>
+    <add key="DireccionConfigs" value="C:\inetpub\wwwroot\SistemaGestor\Configs\"/>
+    <LogicaNegocio.Properties.Settings>
+      <setting name="LogicaNegocio_cr_fi_bccr_indicadoreseconomicos_wsIndicadoresEconomicos"
+        serializeAs="String">
+        <value>http://indicadoreseconomicos.bccr.fi.cr/indicadoreseconomicos/WebServices/wsIndicadoresEconomicos.asmx</value>
+      </setting>
+      <setting name="LogicaNegocio_wr_rdi_rde_Extractos" serializeAs="String">
+        <value>http://172.18.4.96/servicios/extractos.asmx</value>
+      </setting>
+      <setting name="LogicaNegocio_wrServicioDTR_DTR" serializeAs="String">
+        <value>http://10.3.10.48/CGPCanales/DTR.asmx</value>
+      </setting>
+      <setting name="LogicaNegocio_wrSigafAsientos_Z_FI_CARGA_CONTABLE"
+        serializeAs="String">
+        <value>http://cpd-qasg1.mh.hacienda.go.cr:8000/sap/bc/srt/rfc/sap/z_fi_carga_contable/350/z_fi_carga_contable/zcarga</value>
+      </setting>
+      <setting name="LogicaNegocio_wrSigafReserva_ZINT_CONF_EXTISTENCIA_RESERVA"
+        serializeAs="String">
+        <value>http://cpd-qasg1.mh.hacienda.go.cr:8000/sap/bc/srt/rfc/sap/zws_zint_conf_monto_reserva/350/zws_monto_reserva/binding</value>
+      </setting>
+      <setting name="LogicaNegocio_wrTributacion_Service1" serializeAs="String">
+        <value>http://172.16.56.119/WSSICxHACIENDA/Service1.asmx</value>
+      </setting>
+      <setting name="LogicaNegocio_wsAsientos_ServicioContable" serializeAs="String">
+        <value>http://mh-cpd-dnspap1:86/ServicioContable.asmx</value>
+      </setting>
+      <setting name="LogicaNegocio_wsSG_wsSistemaGestor" serializeAs="String">
+        <value>http://mh-cpd-dnspap1:81/wsSistemaGestor.asmx</value>
+      </setting>
+      <setting name="LogicaNegocio_wsDeudaInterna_wsDeudaInterna" serializeAs="String">
+        <value>http://mh-cpd-dnspap1:82/wsDeudaInterna.asmx</value>
+      </setting>
+      <setting name="LogicaNegocio_wsBccrRds1_consultaRDS" serializeAs="String">
+        <value>http://172.18.4.96/servicios/extractos.asmx</value>
+      </setting>
+    </LogicaNegocio.Properties.Settings>
+  </applicationSettings>
+</configuration>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://10.3.10.48/CGPCanales/DTR.asmx?wsdl" docRef="http://10.3.10.48/CGPCanales/DTR.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://10.3.10.48/CGPCanales/DTR.asmx" xmlns:q1="http://www.prosoft.cr/MinisterioHacienda/DTR/" binding="q1:DTRSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://10.3.10.48/CGPCanales/DTR.asmx" xmlns:q2="http://www.prosoft.cr/MinisterioHacienda/DTR/" binding="q2:DTRSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

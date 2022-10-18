@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration xmlns="http://schemas.microsoft.com/.NetConfiguration/v2.0">
+    <configSections>
+        <sectionGroup name="applicationSettings" type="System.Configuration.ApplicationSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" >
+            <section name="Datos.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+        </sectionGroup>
+    </configSections>
+    <system.web>
+      <compilation debug="true" targetFramework="4.5" />
+      <httpRuntime targetFramework="4.5" />
+    </system.web>
+
+
+    <appSettings>
+      <!--<add key="DireccionConfigs" value="C:\PwcProyectos\svn.Gestor2\Datos\ConexionSQL\Configs"/>-->
+      <add key="DireccionConfigs" value="C:\inetpub\wwwroot\SistemaGestor\Configs\"/>
+    </appSettings>
+  
+    <connectionStrings>
+      <clear/>
+      <add name="ConexionBD" connectionString="Server=172.26.30.21\DMSS2014E01; Database=GestNICSPDEV; Integrated Security=SSPI;" providerName="System.Data.SqlClient" />
+      <!--<add name="ConexionBD"
+       connectionString="Server=172.26.30.21\DMSS2014E01; Database=GestNICSPDEV; User Id=jimenezzl; password=GestNICSP2014"
+       providerName="System.Data.SqlClient" />-->
+
+      <add name="ConnectionString" connectionString="Server=172.26.30.21\DMSS2014E01; Database=GestNICSPDEV; Integrated Security=SSPI;" providerName="System.Data.SqlClient" />
+      <!--<add name="ConnectionString"
+       connectionString="Server=172.26.30.21\DMSS2014E01; Database=GestNICSPDEV; User Id=jimenezzl; password=GestNICSP2014"
+       providerName="System.Data.SqlClient" />-->
+    </connectionStrings >
+  
+    <applicationSettings>
+      <add key="DireccionConfigs" value="C:\inetpub\wwwroot\SistemaGestor\Configs\"/>
+      <Datos.Properties.Settings>
+        <setting name="SqlString" serializeAs="String">
+          <value>Server=172.26.30.21\DMSS2014E01; Database=GestNICSPDEV; Integrated Security=SSPI; providerName=System.Data.SqlClient</value>
+          <!--<value>Server=172.26.30.21\DMSS2014E01; Database=GestNICSPDEV; User Id=jimenezzl; password=GestNICSP2014</value>-->
+        </setting>
+      </Datos.Properties.Settings>
+    </applicationSettings>
+
+</configuration>

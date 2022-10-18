@@ -1,0 +1,88 @@
+﻿<?xml version="1.0"?>
+<!--
+  Descripción: Archivo de configuración del conector de 
+	Enterprise Library v1.0.0
+	Autor: Gabriel Garcia Granados
+	Fecha: 16-02-2016
+-->
+<CommandDef>
+  <Command>
+    <BaseDatos>MSSQL</BaseDatos>
+    <DbInstance>ConexionBD</DbInstance>
+    <Type>CommandType.StoredProcedure</Type>
+    <Text>ma.uspCrearEmpresa</Text>
+    <NumberOfParameters>9</NumberOfParameters>
+    <ReturnType>procedure</ReturnType>
+    <CommandTimeout>6000</CommandTimeout>
+  </Command>
+  <Parameters>
+    <Parameter>
+      <Name>@pIdPersonaJuridica</Name>
+      <VariableMapeo>Lstr_IdPersonaJuridica</VariableMapeo>
+      <Type>String</Type>
+      <Size>30</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+    <Parameter>
+      <Name>@pNombre</Name>
+      <VariableMapeo>Lstr_Nombre</VariableMapeo>
+      <Type>String</Type>
+      <Size>200</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+    <Parameter>
+      <Name>@pCorreoEmpresa</Name>
+      <VariableMapeo>Lstr_CorreoEmpresa</VariableMapeo>
+      <Type>String</Type>
+      <Size>64</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+    <Parameter>
+      <Name>@pTelefonoEmpresa</Name>
+      <VariableMapeo>Lstr_TelefonoEmpresa</VariableMapeo>
+      <Type>String</Type>
+      <Size>30</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+    <Parameter>
+      <Name>@pTipoIdPersonaAutoriza</Name>
+      <VariableMapeo>Lstr_TipoIdPersonaAutoriza</VariableMapeo>
+      <Type>String</Type>
+      <Size>10</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+    <Parameter>
+      <Name>@pIdPersonaAutoriza</Name>
+      <VariableMapeo>Lstr_IdPersonaAutoriza</VariableMapeo>
+      <Type>String</Type>
+      <Size>30</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+    <Parameter>
+      <Name>@pUsrCreacion</Name>
+      <VariableMapeo>Lstr_UsrCreacion</VariableMapeo>
+      <Type>String</Type>
+      <Size>15</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+    <Parameter>
+      <Name>@pResultado</Name>
+      <Type>String</Type>
+      <Size>2</Size>
+      <Direction>Output</Direction>
+    </Parameter>
+    <Parameter>
+      <Name>@pMensaje</Name>
+      <Type>String</Type>
+      <Size>500</Size>
+      <Direction>Output</Direction>
+    </Parameter>
+  </Parameters>
+</CommandDef>

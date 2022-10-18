@@ -1,0 +1,422 @@
+﻿<?xml version="1.0"?>
+<!--
+  Descripción: Archivo de configuración del conector de 
+	Enterprise Library v1.0.0
+	Autor: Gabriel García G.
+-->
+<CommandDef>
+  <Command>
+    <BaseDatos>MSSQL</BaseDatos>
+    <DbInstance>ConexionBD</DbInstance>
+    <Type>CommandType.StoredProcedure</Type>
+    <Text>cf.upsCrearAsientoLinea</Text>
+    <NumberOfParameters>45</NumberOfParameters>
+    <ReturnType>procedure</ReturnType>
+    <CommandTimeout>6000</CommandTimeout>
+  </Command>
+  <Parameters>
+
+    <Parameter>
+      <Name>@pConsecutivo</Name>
+      <VariableMapeo>Lint_Consecutivo</VariableMapeo>
+      <Type>Int32</Type>
+      <Size>32</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pSecuencia</Name>
+      <VariableMapeo>Lint_Secuencia</VariableMapeo>
+      <Type>Int32</Type>
+      <Size>32</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pBLDAT</Name>
+      <VariableMapeo>Lstr_BLDAT</VariableMapeo>
+      <Type>String</Type>
+      <Size>10</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pBLART</Name>
+      <VariableMapeo>Lstr_BLART</VariableMapeo>
+      <Type>String</Type>
+      <Size>2</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pBUKRS</Name>
+      <VariableMapeo>Lstr_BUKRS</VariableMapeo>
+      <Type>String</Type>
+      <Size>4</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pBUDAT</Name>
+      <VariableMapeo>Lstr_BUDAT</VariableMapeo>
+      <Type>String</Type>
+      <Size>10</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pWAERS</Name>
+      <VariableMapeo>Lstr_WAERS</VariableMapeo>
+      <Type>String</Type>
+      <Size>5</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pKURSF</Name>
+      <VariableMapeo>Ldec_KURSF</VariableMapeo>
+      <Type>Decimal</Type>
+      <Size>15</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pXBLNR</Name>
+      <VariableMapeo>Lstr_XBLNR</VariableMapeo>
+      <Type>String</Type>
+      <Size>16</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pXREF1_HD</Name>
+      <VariableMapeo>Lstr_XREF1_HD</VariableMapeo>
+      <Type>String</Type>
+      <Size>20</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pXREF2_HD</Name>
+      <VariableMapeo>Lstr_XREF2_HD</VariableMapeo>
+      <Type>String</Type>
+      <Size>20</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pBUZEI</Name>
+      <VariableMapeo>Lstr_BUZEI</VariableMapeo>
+      <Type>String</Type>
+      <Size>3</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pBKTXT</Name>
+      <VariableMapeo>Lstr_BKTXT</VariableMapeo>
+      <Type>String</Type>
+      <Size>25</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>    
+    
+    <Parameter>
+      <Name>@pBSCHL</Name>
+      <VariableMapeo>Lstr_BSCHL</VariableMapeo>
+      <Type>String</Type>
+      <Size>2</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+    
+    <Parameter>
+      <Name>@pHKONT</Name>
+      <VariableMapeo>Lstr_HKONT</VariableMapeo>
+      <Type>String</Type>
+      <Size>10</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pUMSKZ</Name>
+      <VariableMapeo>Lstr_UMSKZ</VariableMapeo>
+      <Type>String</Type>
+      <Size>1</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+    
+
+    <Parameter>
+      <Name>@pWRBTR</Name>
+      <VariableMapeo>Ldec_WRBTR</VariableMapeo>
+      <Type>Decimal</Type>
+      <Size>28</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+
+    <Parameter>
+      <Name>@pDMBE2</Name>
+      <VariableMapeo>Ldec_DMBE2</VariableMapeo>
+      <Type>Decimal</Type>
+      <Size>28</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+    
+    <Parameter>
+      <Name>@pMWSKZ</Name>
+      <VariableMapeo>Lstr_MWSKZ</VariableMapeo>
+      <Type>String</Type>
+      <Size>2</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pXMWST</Name>
+      <VariableMapeo>Lstr_XMWST</VariableMapeo>
+      <Type>String</Type>
+      <Size>1</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pZFBDT</Name>
+      <VariableMapeo>Lstr_ZFBDT</VariableMapeo>
+      <Type>String</Type>
+      <Size>10</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pZUONR</Name>
+      <VariableMapeo>Lstr_ZUONR</VariableMapeo>
+      <Type>String</Type>
+      <Size>18</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pSGTXT</Name>
+      <VariableMapeo>Lstr_SGTXT</VariableMapeo>
+      <Type>String</Type>
+      <Size>50</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pHBKID</Name>
+      <VariableMapeo>Lstr_HBKID</VariableMapeo>
+      <Type>String</Type>
+      <Size>5</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pZLSCH</Name>
+      <VariableMapeo>Lstr_ZLSCH</VariableMapeo>
+      <Type>String</Type>
+      <Size>1</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pKOSTL</Name>
+      <VariableMapeo>Lstr_KOSTL</VariableMapeo>
+      <Type>String</Type>
+      <Size>10</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pPRCTR</Name>
+      <VariableMapeo>Lstr_PRCTR</VariableMapeo>
+      <Type>String</Type>
+      <Size>10</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pAUFNR</Name>
+      <VariableMapeo>Lstr_AUFNR</VariableMapeo>
+      <Type>String</Type>
+      <Size>12</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pPROJK</Name>
+      <VariableMapeo>Lstr_PROJK</VariableMapeo>
+      <Type>String</Type>
+      <Size>24</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pFIPEX</Name>
+      <VariableMapeo>Lstr_FIPEX</VariableMapeo>
+      <Type>String</Type>
+      <Size>24</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pFISTL</Name>
+      <VariableMapeo>Lstr_FISTL</VariableMapeo>
+      <Type>String</Type>
+      <Size>16</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pMEASURE</Name>
+      <VariableMapeo>Lstr_MEASURE</VariableMapeo>
+      <Type>String</Type>
+      <Size>24</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pGEBER</Name>
+      <VariableMapeo>Lstr_GEBER</VariableMapeo>
+      <Type>String</Type>
+      <Size>10</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pWERKS</Name>
+      <VariableMapeo>Lstr_WERKS</VariableMapeo>
+      <Type>String</Type>
+      <Size>4</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pVALUT</Name>
+      <VariableMapeo>Lstr_VALUT</VariableMapeo>
+      <Type>String</Type>
+      <Size>10</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pKBLNR</Name>
+      <VariableMapeo>Lstr_KBLNR</VariableMapeo>
+      <Type>String</Type>
+      <Size>10</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pKBLPOS</Name>
+      <VariableMapeo>Lstr_KBLPOS</VariableMapeo>
+      <Type>String</Type>
+      <Size>3</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pRCOMP</Name>
+      <VariableMapeo>Lstr_RCOMP</VariableMapeo>
+      <Type>String</Type>
+      <Size>6</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pXREF2</Name>
+      <VariableMapeo>Lstr_XREF2</VariableMapeo>
+      <Type>String</Type>
+      <Size>12</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pXREF3</Name>
+      <VariableMapeo>Lstr_XREF3</VariableMapeo>
+      <Type>String</Type>
+      <Size>20</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pFKBER</Name>
+      <VariableMapeo>Lstr_FKBER</VariableMapeo>
+      <Type>String</Type>
+      <Size>16</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pUsuario</Name>
+      <VariableMapeo>Lstr_UsrCreacion</VariableMapeo>
+      <Type>String</Type>
+      <Size>20</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pResultado</Name>
+      <Type>String</Type>
+      <Size>2</Size>
+      <Direction>Output</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pMensaje</Name>
+      <Type>String</Type>
+      <Size>500</Size>
+      <Direction>Output</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pTmpSecuencia</Name>
+      <Type>Int32</Type>
+      <Size>32</Size>
+      <Nullable>False</Nullable>
+      <Direction>Output</Direction>
+    </Parameter>
+
+  </Parameters>
+</CommandDef>

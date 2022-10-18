@@ -1,0 +1,103 @@
+2015-10-26 16:26:06,311 [22] ERROR FileAppender - Value cannot be null.
+Parameter name: s
+2015-10-26 16:28:50,887 [22] ERROR FileAppender - Value cannot be null.
+Parameter name: s
+2015-10-26 16:33:44,520 [36] ERROR FileAppender - Value cannot be null.
+Parameter name: s
+2015-10-26 16:33:44,521 [17] ERROR FileAppender - Value cannot be null.
+Parameter name: s
+2015-10-26 16:37:27,267 [36] ERROR FileAppender - Value cannot be null.
+Parameter name: s
+<<<<<<< .mine
+2015-11-03 11:04:30,961 [14] INFO wsSistemaGestor.wsSistemaGestor - Error Número: 245, Conversion failed when converting the varchar value 'T33' to data type bit.
+2015-11-03 11:14:32,316 [25] INFO wsSistemaGestor.wsSistemaGestor - Error Número: 245, Conversion failed when converting the varchar value 'T33' to data type bit.
+2015-11-03 11:15:20,289 [20] INFO wsSistemaGestor.wsSistemaGestor - Error Número: 245, Conversion failed when converting the varchar value 'T33' to data type bit.
+2015-11-03 11:20:02,548 [20] INFO wsSistemaGestor.wsSistemaGestor - Error Número: 245, Conversion failed when converting the varchar value 'T33' to data type bit.
+2015-11-04 17:08:41,625 [30] INFO wsSistemaGestor.wsSistemaGestor - 
+2015-11-04 17:09:52,326 [17] INFO wsSistemaGestor.wsSistemaGestor - 
+2015-11-04 17:12:09,912 [29] INFO wsSistemaGestor.wsSistemaGestor - Error Número: 515, Cannot insert the value NULL into column 'Clave', table 'GestNICSPDEV.sg.Usuarios'; column does not allow nulls. INSERT fails.
+2015-11-04 17:13:48,559 [7] INFO wsSistemaGestor.wsSistemaGestor - 
+2015-11-04 17:14:43,465 [12] INFO wsSistemaGestor.wsSistemaGestor - 
+2015-11-05 14:05:53,263 [18] INFO wsSistemaGestor.wsSistemaGestor - Transacción Procesada
+2015-11-05 14:22:12,302 [9] INFO wsSistemaGestor.wsSistemaGestor - Transacción Procesada
+2015-11-05 14:36:14,551 [16] INFO wsSistemaGestor.wsSistemaGestor - Transacción Procesada
+2015-11-05 16:57:55,083 [10] INFO wsSistemaGestor.wsSistemaGestor - Transacción Procesada
+2015-11-06 15:52:15,941 [10] INFO wsSistemaGestor.wsSistemaGestor - Transacción Procesada
+2015-11-06 15:54:40,636 [12] INFO wsSistemaGestor.wsSistemaGestor - Transacción Procesada
+=======
+2015-11-05 12:08:58,106 [9] INFO wsSistemaGestor.wsSistemaGestor - Error al comunicar con base de datos
+2015-11-05 12:12:31,804 [8] INFO wsSistemaGestor.wsSistemaGestor - Error al comunicar con base de datos
+2015-11-05 13:58:38,434 [8] INFO FileAppender - Ruta: C:\Users\jgomezs\Documents\Visual Studio 2013\Projects\Tortoise\SistemaGestorLocal5\Datos\ConexionSQL\Configs\Mantenimiento\CrearAcreedor.config. Error:System.NullReferenceException: Object reference not set to an instance of an object.
+   at Datos.ConexionSQL.clsProcedimientoAlmacenado.EjecucionSP(String str_RutaArchivo, clsProcedimientoAlmacenado cpa_Llamado) in c:\Users\jgomezs\Documents\Visual Studio 2013\Projects\Tortoise\SistemaGestorLocal5\Datos\ConexionSQL\clsProcedimientoAlmacenado.cs:line 91
+2015-11-05 13:58:38,478 [8] INFO wsSistemaGestor.wsSistemaGestor - Ruta: C:\Users\jgomezs\Documents\Visual Studio 2013\Projects\Tortoise\SistemaGestorLocal5\Datos\ConexionSQL\Configs\Mantenimiento\CrearAcreedor.config. Error:System.NullReferenceException: Object reference not set to an instance of an object.
+   at Datos.ConexionSQL.clsProcedimientoAlmacenado.EjecucionSP(String str_RutaArchivo, clsProcedimientoAlmacenado cpa_Llamado) in c:\Users\jgomezs\Documents\Visual Studio 2013\Projects\Tortoise\SistemaGestorLocal5\Datos\ConexionSQL\clsProcedimientoAlmacenado.cs:line 91
+2015-11-05 13:58:47,664 [10] INFO FileAppender - Ruta: C:\Users\jgomezs\Documents\Visual Studio 2013\Projects\Tortoise\SistemaGestorLocal5\Datos\ConexionSQL\Configs\Mantenimiento\CrearAcreedor.config. Error:System.NullReferenceException: Object reference not set to an instance of an object.
+   at Datos.ConexionSQL.clsProcedimientoAlmacenado.EjecucionSP(String str_RutaArchivo, clsProcedimientoAlmacenado cpa_Llamado) in c:\Users\jgomezs\Documents\Visual Studio 2013\Projects\Tortoise\SistemaGestorLocal5\Datos\ConexionSQL\clsProcedimientoAlmacenado.cs:line 91
+2015-11-05 13:58:47,665 [10] INFO wsSistemaGestor.wsSistemaGestor - Ruta: C:\Users\jgomezs\Documents\Visual Studio 2013\Projects\Tortoise\SistemaGestorLocal5\Datos\ConexionSQL\Configs\Mantenimiento\CrearAcreedor.config. Error:System.NullReferenceException: Object reference not set to an instance of an object.
+   at Datos.ConexionSQL.clsProcedimientoAlmacenado.EjecucionSP(String str_RutaArchivo, clsProcedimientoAlmacenado cpa_Llamado) in c:\Users\jgomezs\Documents\Visual Studio 2013\Projects\Tortoise\SistemaGestorLocal5\Datos\ConexionSQL\clsProcedimientoAlmacenado.cs:line 91
+2015-11-05 13:59:18,644 [6] INFO FileAppender - Ruta: C:\Users\jgomezs\Documents\Visual Studio 2013\Projects\Tortoise\SistemaGestorLocal5\Datos\ConexionSQL\Configs\Mantenimiento\CrearAcreedor.config. Error:System.NullReferenceException: Object reference not set to an instance of an object.
+   at Datos.ConexionSQL.clsProcedimientoAlmacenado.EjecucionSP(String str_RutaArchivo, clsProcedimientoAlmacenado cpa_Llamado) in c:\Users\jgomezs\Documents\Visual Studio 2013\Projects\Tortoise\SistemaGestorLocal5\Datos\ConexionSQL\clsProcedimientoAlmacenado.cs:line 91
+2015-11-05 13:59:18,645 [6] INFO wsSistemaGestor.wsSistemaGestor - Ruta: C:\Users\jgomezs\Documents\Visual Studio 2013\Projects\Tortoise\SistemaGestorLocal5\Datos\ConexionSQL\Configs\Mantenimiento\CrearAcreedor.config. Error:System.NullReferenceException: Object reference not set to an instance of an object.
+   at Datos.ConexionSQL.clsProcedimientoAlmacenado.EjecucionSP(String str_RutaArchivo, clsProcedimientoAlmacenado cpa_Llamado) in c:\Users\jgomezs\Documents\Visual Studio 2013\Projects\Tortoise\SistemaGestorLocal5\Datos\ConexionSQL\clsProcedimientoAlmacenado.cs:line 91
+2015-11-05 14:00:23,238 [10] INFO FileAppender - Ruta: C:\Users\jgomezs\Documents\Visual Studio 2013\Projects\Tortoise\SistemaGestorLocal5\Datos\ConexionSQL\Configs\Mantenimiento\CrearAcreedor.config. Error:System.NullReferenceException: Object reference not set to an instance of an object.
+   at Datos.ConexionSQL.clsProcedimientoAlmacenado.EjecucionSP(String str_RutaArchivo, clsProcedimientoAlmacenado cpa_Llamado) in c:\Users\jgomezs\Documents\Visual Studio 2013\Projects\Tortoise\SistemaGestorLocal5\Datos\ConexionSQL\clsProcedimientoAlmacenado.cs:line 91
+2015-11-05 14:00:23,272 [10] INFO wsSistemaGestor.wsSistemaGestor - Ruta: C:\Users\jgomezs\Documents\Visual Studio 2013\Projects\Tortoise\SistemaGestorLocal5\Datos\ConexionSQL\Configs\Mantenimiento\CrearAcreedor.config. Error:System.NullReferenceException: Object reference not set to an instance of an object.
+   at Datos.ConexionSQL.clsProcedimientoAlmacenado.EjecucionSP(String str_RutaArchivo, clsProcedimientoAlmacenado cpa_Llamado) in c:\Users\jgomezs\Documents\Visual Studio 2013\Projects\Tortoise\SistemaGestorLocal5\Datos\ConexionSQL\clsProcedimientoAlmacenado.cs:line 91
+2015-11-05 14:05:59,676 [7] INFO FileAppender - Ruta: C:\Users\jgomezs\Documents\Visual Studio 2013\Projects\Tortoise\SistemaGestorLocal5\Datos\ConexionSQL\Configs\Mantenimiento\CrearBanco.config. Error:System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'uspCrearBanco' expects parameter '@pTelefono', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoLoadDataSet(IDbCommand command, DataSet dataSet, String[] tableNames)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String[] tableNames)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String tableName)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteDataSet(DbCommand command)
+   at Datos.ConexionSQL.clsProcedimientoAlmacenado.EjecucionSP(String str_RutaArchivo, clsProcedimientoAlmacenado cpa_Llamado) in c:\Users\jgomezs\Documents\Visual Studio 2013\Projects\Tortoise\SistemaGestorLocal5\Datos\ConexionSQL\clsProcedimientoAlmacenado.cs:line 119
+ClientConnectionId:5106c6a9-dd99-4507-89b4-e55bf52b2495
+Error Number:201,State:4,Class:16
+2015-11-05 14:05:59,705 [7] INFO wsSistemaGestor.wsSistemaGestor - Ruta: C:\Users\jgomezs\Documents\Visual Studio 2013\Projects\Tortoise\SistemaGestorLocal5\Datos\ConexionSQL\Configs\Mantenimiento\CrearBanco.config. Error:System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'uspCrearBanco' expects parameter '@pTelefono', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoLoadDataSet(IDbCommand command, DataSet dataSet, String[] tableNames)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String[] tableNames)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String tableName)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteDataSet(DbCommand command)
+   at Datos.ConexionSQL.clsProcedimientoAlmacenado.EjecucionSP(String str_RutaArchivo, clsProcedimientoAlmacenado cpa_Llamado) in c:\Users\jgomezs\Documents\Visual Studio 2013\Projects\Tortoise\SistemaGestorLocal5\Datos\ConexionSQL\clsProcedimientoAlmacenado.cs:line 119
+ClientConnectionId:5106c6a9-dd99-4507-89b4-e55bf52b2495
+Error Number:201,State:4,Class:16
+2015-11-05 14:07:07,441 [10] INFO FileAppender - Error Número: 2627, Violation of PRIMARY KEY constraint 'pkBancosIdBanco'. Cannot insert duplicate key in object 'ma.Bancos'. The duplicate key value is (1    ).
+2015-11-05 14:07:07,442 [10] INFO wsSistemaGestor.wsSistemaGestor - Error Número: 2627, Violation of PRIMARY KEY constraint 'pkBancosIdBanco'. Cannot insert duplicate key in object 'ma.Bancos'. The duplicate key value is (1    ).
+2015-11-05 14:07:29,064 [11] INFO FileAppender - Ruta: C:\Users\jgomezs\Documents\Visual Studio 2013\Projects\Tortoise\SistemaGestorLocal5\Datos\ConexionSQL\Configs\Mantenimiento\CrearAcreedor.config. Error:System.NullReferenceException: Object reference not set to an instance of an object.
+   at Datos.ConexionSQL.clsProcedimientoAlmacenado.EjecucionSP(String str_RutaArchivo, clsProcedimientoAlmacenado cpa_Llamado) in c:\Users\jgomezs\Documents\Visual Studio 2013\Projects\Tortoise\SistemaGestorLocal5\Datos\ConexionSQL\clsProcedimientoAlmacenado.cs:line 91
+2015-11-05 14:07:29,065 [11] INFO wsSistemaGestor.wsSistemaGestor - Ruta: C:\Users\jgomezs\Documents\Visual Studio 2013\Projects\Tortoise\SistemaGestorLocal5\Datos\ConexionSQL\Configs\Mantenimiento\CrearAcreedor.config. Error:System.NullReferenceException: Object reference not set to an instance of an object.
+   at Datos.ConexionSQL.clsProcedimientoAlmacenado.EjecucionSP(String str_RutaArchivo, clsProcedimientoAlmacenado cpa_Llamado) in c:\Users\jgomezs\Documents\Visual Studio 2013\Projects\Tortoise\SistemaGestorLocal5\Datos\ConexionSQL\clsProcedimientoAlmacenado.cs:line 91
+>>>>>>> .r342
+2015-11-09 10:48:57,884 [9] INFO wsSistemaGestor.wsSistemaGestor - Error al comunicar con base de datos
+2015-11-09 10:49:54,810 [9] INFO wsSistemaGestor.wsSistemaGestor - Error al comunicar con base de datos
+2015-11-09 10:51:32,587 [10] INFO wsSistemaGestor.wsSistemaGestor - Transacción Procesada

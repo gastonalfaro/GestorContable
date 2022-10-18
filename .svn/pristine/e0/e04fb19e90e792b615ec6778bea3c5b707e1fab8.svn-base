@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <configSections>
+    </configSections>
+    <startup> 
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5" />
+    </startup>
+  <appSettings>
+    <add key="DireccionConfigs" value="C:\inetpub\wwwroot\SistemaGestor\Configs\"/>
+    <add key="USER_SAP" value="WS_USER_INT" />
+    <add key="PASS_SAP" value="Hacienda2016" />
+    <!--<add key="PASS_SAP" value="NICSPGestor2016*" />-->
+    <!--<add key="USER_SAP" value="rodriguezzl" />
+    <add key="PASS_SAP" value="Luirodzu1" />-->
+  </appSettings>
+  <connectionStrings>
+    <clear/>
+    <add name="ConexionBD" connectionString="Server=LIEP_NICSP_02,58460; Database=GestNICSP; Integrated Security=SSPI;" providerName="System.Data.SqlClient" />
+    <!--<add name="ConexionBD" connectionString="Server=LIEQ_NICSP_01,58128; Database=GestNICSP; Integrated Security=SSPI;" providerName="System.Data.SqlClient" />-->
+    <!--<add name="ConexionBD" connectionString="Server=172.26.30.21\DMSS2014E01; Database=GestNICSPDEV; User Id=jimenezzl; password=GestNICSP2014" providerName="System.Data.SqlClient" />-->
+  </connectionStrings >
+</configuration>

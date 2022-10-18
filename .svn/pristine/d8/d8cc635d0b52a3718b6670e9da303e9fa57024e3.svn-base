@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://172.18.4.96/Servicios/Extractos.asmx/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s1="http://sinpe.cr/webservices/Rds" xmlns:s2="http://sinpe.cr/webservices/ACS" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://172.18.4.96/Servicios/Extractos.asmx/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://172.18.4.96/Servicios/Extractos.asmx/">
+      <s:import namespace="http://sinpe.cr/webservices/Rds" />
+      <s:element name="ListarCuponesPorFechaCancelacion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="fechaCancelacion" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="tipo_deuda" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListarCuponesPorFechaCancelacionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListarCuponesPorFechaCancelacionResult" type="tns:ArrayOfCupon" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCupon">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Cupon" nillable="true" type="s1:Cupon" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ListarCuponesPorFechaConstitucion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="fecConstitucion" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="tipo_deuda" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListarCuponesPorFechaConstitucionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListarCuponesPorFechaConstitucionResult" type="tns:ArrayOfCupon" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListarCuponesPorFechaValor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="fechaValor" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="tipo_deuda" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListarCuponesPorFechaValorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListarCuponesPorFechaValorResult" type="tns:ArrayOfCupon" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListarValoresPorFechaCancelacion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="fechaCancelacion" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="tipo_deuda" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListarValoresPorFechaCancelacionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListarValoresPorFechaCancelacionResult" type="tns:ArrayOfValor" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfValor">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Valor" nillable="true" type="s1:Valor" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ListarValoresPorFechaConstitucion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="fecConstitucion" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="tipo_deuda" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListarValoresPorFechaConstitucionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListarValoresPorFechaConstitucionResult" type="tns:ArrayOfValor" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListarValoresPorFechaValor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="fechaValor" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="tipo_deuda" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListarValoresPorFechaValorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListarValoresPorFechaValorResult" type="tns:ArrayOfValor" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ResumenSaldos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="fechaLiquidacion" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="tipo_deuda" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ResumenSaldosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ResumenSaldosResult" type="tns:ArrayOfSaldo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfSaldo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Saldo" nillable="true" type="s1:Saldo" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://sinpe.cr/webservices/Rds">
+      <s:complexType name="Cupon">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:ContratoDatos">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="NumCupon" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="NumValor" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="Nemotecnico" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="Estado" type="s1:EEstado" />
+              <s:element minOccurs="1" maxOccurs="1" name="CodMoneda" type="s1:EMoneda" />
+              <s:element minOccurs="1" maxOccurs="1" name="FechaInicio" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="FechaVencimiento" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="FechaCancelacion" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="InteresBruto" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="InteresNeto" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="InteresBrutoConvertido" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="InteresNetoConvertido" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="InteresNetoAcumulado" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="ImpuestoEfectivo" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="ImpuestoVencido" type="s:decimal" />
+              <s:element minOccurs="0" maxOccurs="1" name="CodReferencia" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="FechaConstitucion" type="s:dateTime" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ContratoDatos" />
+      <s:complexType name="Saldo">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:ContratoDatos">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="CodTipoSaldo" type="s1:TipoSaldoRds" />
+              <s:element minOccurs="1" maxOccurs="1" name="TipoPlazo" type="s1:TipoPlazoRds" />
+              <s:element minOccurs="1" maxOccurs="1" name="FechaSaldo" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="Instrumento" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="CodMoneda" type="s1:EMoneda" />
+              <s:element minOccurs="1" maxOccurs="1" name="Principal" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="EjercicioAnterior" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="EjercicioCorriente" type="s:decimal" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:simpleType name="TipoSaldoRds">
+        <s:restriction base="s:string">
+          <s:enumeration value="Ninguno" />
+          <s:enumeration value="Principal" />
+          <s:enumeration value="RendimientoDescuento" />
+          <s:enumeration value="Descuento" />
+          <s:enumeration value="Premio" />
+          <s:enumeration value="InteresAcumulado" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="TipoPlazoRds">
+        <s:restriction base="s:string">
+          <s:enumeration value="MuyCortoPlazo" />
+          <s:enumeration value="CortoPlazo" />
+          <s:enumeration value="MedianoPlazo" />
+          <s:enumeration value="LargoPlazo" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="EMoneda">
+        <s:restriction base="s:string">
+          <s:enumeration value="Ninguna" />
+          <s:enumeration value="Colones" />
+          <s:enumeration value="Dolares" />
+          <s:enumeration value="Euros" />
+          <s:enumeration value="UnidadesDeDesarrollo" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="Valor">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:ContratoDatos">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="NumValor" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="Nemotecnico" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="Estado" type="s1:EEstado" />
+              <s:element minOccurs="1" maxOccurs="1" name="FechaValor" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="FechaCancelacion" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="CodMoneda" type="s1:EMoneda" />
+              <s:element minOccurs="1" maxOccurs="1" name="FecVencimiento" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="ValorFacial" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="ValorTransadoNeto" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="ValorTransadoBruto" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="InteresNetoAcumulado" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="ImpuestoPagado" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="RendimientoPorDescuento" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="Precio" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="Premio" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="Descuento" type="s:decimal" />
+              <s:element minOccurs="0" maxOccurs="1" name="CodReferencia" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="FechaConstitucion" type="s:dateTime" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:simpleType name="EEstado">
+        <s:list>
+          <s:simpleType>
+            <s:restriction base="s:string">
+              <s:enumeration value="Ninguno" />
+              <s:enumeration value="Guardada" />
+              <s:enumeration value="Aprobada" />
+              <s:enumeration value="Eliminada" />
+              <s:enumeration value="PorConfirmar" />
+              <s:enumeration value="Vigente" />
+              <s:enumeration value="Prescrita" />
+              <s:enumeration value="Anulada" />
+              <s:enumeration value="EnCobro" />
+              <s:enumeration value="CanceladaAnticipada" />
+              <s:enumeration value="Cancelada" />
+              <s:enumeration value="AnulacionXAprobar" />
+              <s:enumeration value="InteresPrescrito" />
+              <s:enumeration value="EnEdicion" />
+              <s:enumeration value="Rechazado" />
+              <s:enumeration value="AnuladoPorCanje" />
+              <s:enumeration value="AnuladoPorRedencion" />
+            </s:restriction>
+          </s:simpleType>
+        </s:list>
+      </s:simpleType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://sinpe.cr/webservices/ACS">
+      <s:import namespace="http://sinpe.cr/webservices/Rds" />
+      <s:complexType name="Filtro">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:ContratoDatos">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="FecInicio" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="FecFinal" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="CuentaSINPE" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="CodEntidad" type="s:short" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Movimiento">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:ContratoDatos">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="Fecha" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="Monto" type="s:decimal" />
+              <s:element minOccurs="0" maxOccurs="1" name="Referencia" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="CodServicio" type="s:short" />
+              <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="Tipo" type="s2:TipoMovimiento" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:simpleType name="TipoMovimiento">
+        <s:restriction base="s:string">
+          <s:enumeration value="Credito" />
+          <s:enumeration value="Debito" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="EstadoCuentaDiario">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:ContratoDatos">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="SaldoInicialRetenido" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="SaldoFinalRetenido" type="s:decimal" />
+              <s:element minOccurs="0" maxOccurs="1" name="Movimientos" type="s2:ArrayOfMovimiento" />
+              <s:element minOccurs="1" maxOccurs="1" name="SaldoInicial" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="SaldoFinal" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="Fecha" type="s:dateTime" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfMovimiento">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Movimiento" nillable="true" type="s2:Movimiento" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EstadoCuenta">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:ContratoDatos">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="EstadosCuentaDiarios" type="s2:ArrayOfEstadoCuentaDiario" />
+              <s:element minOccurs="1" maxOccurs="1" name="FecInicio" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="FecFinal" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="CodMoneda" type="s2:Moneda" />
+              <s:element minOccurs="1" maxOccurs="1" name="CodEntidadPropietaria" type="s:short" />
+              <s:element minOccurs="0" maxOccurs="1" name="CuentaSINPE" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfEstadoCuentaDiario">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="EstadoCuentaDiario" nillable="true" type="s2:EstadoCuentaDiario" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="Moneda">
+        <s:restriction base="s:string">
+          <s:enumeration value="Ninguno" />
+          <s:enumeration value="Colones" />
+          <s:enumeration value="Dolares" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="SaldoCierreDiario">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:ContratoDatos">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="SaldoEncaje" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="Saldo" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="MontoRetenido" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="SaldoReal" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="Fecha" type="s:dateTime" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ListarCuponesPorFechaCancelacionSoapIn">
+    <wsdl:part name="parameters" element="tns:ListarCuponesPorFechaCancelacion" />
+  </wsdl:message>
+  <wsdl:message name="ListarCuponesPorFechaCancelacionSoapOut">
+    <wsdl:part name="parameters" element="tns:ListarCuponesPorFechaCancelacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListarCuponesPorFechaConstitucionSoapIn">
+    <wsdl:part name="parameters" element="tns:ListarCuponesPorFechaConstitucion" />
+  </wsdl:message>
+  <wsdl:message name="ListarCuponesPorFechaConstitucionSoapOut">
+    <wsdl:part name="parameters" element="tns:ListarCuponesPorFechaConstitucionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListarCuponesPorFechaValorSoapIn">
+    <wsdl:part name="parameters" element="tns:ListarCuponesPorFechaValor" />
+  </wsdl:message>
+  <wsdl:message name="ListarCuponesPorFechaValorSoapOut">
+    <wsdl:part name="parameters" element="tns:ListarCuponesPorFechaValorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListarValoresPorFechaCancelacionSoapIn">
+    <wsdl:part name="parameters" element="tns:ListarValoresPorFechaCancelacion" />
+  </wsdl:message>
+  <wsdl:message name="ListarValoresPorFechaCancelacionSoapOut">
+    <wsdl:part name="parameters" element="tns:ListarValoresPorFechaCancelacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListarValoresPorFechaConstitucionSoapIn">
+    <wsdl:part name="parameters" element="tns:ListarValoresPorFechaConstitucion" />
+  </wsdl:message>
+  <wsdl:message name="ListarValoresPorFechaConstitucionSoapOut">
+    <wsdl:part name="parameters" element="tns:ListarValoresPorFechaConstitucionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListarValoresPorFechaValorSoapIn">
+    <wsdl:part name="parameters" element="tns:ListarValoresPorFechaValor" />
+  </wsdl:message>
+  <wsdl:message name="ListarValoresPorFechaValorSoapOut">
+    <wsdl:part name="parameters" element="tns:ListarValoresPorFechaValorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ResumenSaldosSoapIn">
+    <wsdl:part name="parameters" element="tns:ResumenSaldos" />
+  </wsdl:message>
+  <wsdl:message name="ResumenSaldosSoapOut">
+    <wsdl:part name="parameters" element="tns:ResumenSaldosResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ExtractosSoap">
+    <wsdl:operation name="ListarCuponesPorFechaCancelacion">
+      <wsdl:input message="tns:ListarCuponesPorFechaCancelacionSoapIn" />
+      <wsdl:output message="tns:ListarCuponesPorFechaCancelacionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarCuponesPorFechaConstitucion">
+      <wsdl:input message="tns:ListarCuponesPorFechaConstitucionSoapIn" />
+      <wsdl:output message="tns:ListarCuponesPorFechaConstitucionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarCuponesPorFechaValor">
+      <wsdl:input message="tns:ListarCuponesPorFechaValorSoapIn" />
+      <wsdl:output message="tns:ListarCuponesPorFechaValorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarValoresPorFechaCancelacion">
+      <wsdl:input message="tns:ListarValoresPorFechaCancelacionSoapIn" />
+      <wsdl:output message="tns:ListarValoresPorFechaCancelacionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarValoresPorFechaConstitucion">
+      <wsdl:input message="tns:ListarValoresPorFechaConstitucionSoapIn" />
+      <wsdl:output message="tns:ListarValoresPorFechaConstitucionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarValoresPorFechaValor">
+      <wsdl:input message="tns:ListarValoresPorFechaValorSoapIn" />
+      <wsdl:output message="tns:ListarValoresPorFechaValorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ResumenSaldos">
+      <wsdl:input message="tns:ResumenSaldosSoapIn" />
+      <wsdl:output message="tns:ResumenSaldosSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ExtractosSoap" type="tns:ExtractosSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ListarCuponesPorFechaCancelacion">
+      <soap:operation soapAction="http://172.18.4.96/Servicios/Extractos.asmx/ListarCuponesPorFechaCancelacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarCuponesPorFechaConstitucion">
+      <soap:operation soapAction="http://172.18.4.96/Servicios/Extractos.asmx/ListarCuponesPorFechaConstitucion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarCuponesPorFechaValor">
+      <soap:operation soapAction="http://172.18.4.96/Servicios/Extractos.asmx/ListarCuponesPorFechaValor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarValoresPorFechaCancelacion">
+      <soap:operation soapAction="http://172.18.4.96/Servicios/Extractos.asmx/ListarValoresPorFechaCancelacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarValoresPorFechaConstitucion">
+      <soap:operation soapAction="http://172.18.4.96/Servicios/Extractos.asmx/ListarValoresPorFechaConstitucion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarValoresPorFechaValor">
+      <soap:operation soapAction="http://172.18.4.96/Servicios/Extractos.asmx/ListarValoresPorFechaValor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResumenSaldos">
+      <soap:operation soapAction="http://172.18.4.96/Servicios/Extractos.asmx/ResumenSaldos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ExtractosSoap12" type="tns:ExtractosSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ListarCuponesPorFechaCancelacion">
+      <soap12:operation soapAction="http://172.18.4.96/Servicios/Extractos.asmx/ListarCuponesPorFechaCancelacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarCuponesPorFechaConstitucion">
+      <soap12:operation soapAction="http://172.18.4.96/Servicios/Extractos.asmx/ListarCuponesPorFechaConstitucion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarCuponesPorFechaValor">
+      <soap12:operation soapAction="http://172.18.4.96/Servicios/Extractos.asmx/ListarCuponesPorFechaValor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarValoresPorFechaCancelacion">
+      <soap12:operation soapAction="http://172.18.4.96/Servicios/Extractos.asmx/ListarValoresPorFechaCancelacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarValoresPorFechaConstitucion">
+      <soap12:operation soapAction="http://172.18.4.96/Servicios/Extractos.asmx/ListarValoresPorFechaConstitucion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarValoresPorFechaValor">
+      <soap12:operation soapAction="http://172.18.4.96/Servicios/Extractos.asmx/ListarValoresPorFechaValor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResumenSaldos">
+      <soap12:operation soapAction="http://172.18.4.96/Servicios/Extractos.asmx/ResumenSaldos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Extractos">
+    <wsdl:port name="ExtractosSoap" binding="tns:ExtractosSoap">
+      <soap:address location="http://172.18.4.96/servicios/extractos.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ExtractosSoap12" binding="tns:ExtractosSoap12">
+      <soap12:address location="http://172.18.4.96/servicios/extractos.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

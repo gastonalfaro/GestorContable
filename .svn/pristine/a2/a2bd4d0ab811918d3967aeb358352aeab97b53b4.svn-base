@@ -1,0 +1,2596 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="CargarValoresCuponesSINPE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_FechaInicio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_FechaFin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_TipoDeuda" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CargarValoresCuponesSINPEResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CargarValoresCuponesSINPEResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarTitulosValores">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lint_NumValor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Nemotecnico" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lint_NumCupon" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Garantia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Tipo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ldt_FchInicio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ldt_FchFin" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarTitulosValoresResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarTitulosValoresResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CrearTituloValor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="lint_NumValor" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_EstadoValor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_NemoTecnico" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Tipo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_TipoNegociacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Moneda" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldec_ValorFacial" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="ldt_FchValor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Plazo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ldt_FchCancelacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ldt_FchVencimiento" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldec_ValorTransadoBruto" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldec_ValorTransadoNeto" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldec_TasaBruta" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldec_TasaNeta" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldec_Margen" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="lint_NumEmisionSerie" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Propietario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_EntidadCustodia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ldt_FchCreacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_SistemaNegociacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_MotivoAnulacion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldec_RendimientoPorDescuento" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldec_ImpuestoPagado" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldec_Premio" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Origen" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CrearTituloValorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CrearTituloValorResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CrearTituloReclasificado">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="lint_NumValor" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_NemoTecnico" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Tipo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Moneda" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldec_ValorFacial" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldec_ValorTransadoBruto" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldec_ValorTransadoNeto" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldt_FchValor" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldt_FchCancelacion" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldt_FchVencimiento" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_SistemaNegociacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CrearTituloReclasificadoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CrearTituloReclasificadoResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ConsultarTitulosReclasificados">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lint_NumValor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Nemotecnico" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldt_FchInicio" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldt_FchFin" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarTitulosReclasificadosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarTitulosReclasificadosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CrearTituloGarantia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="lint_NumValor" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_EstadoValor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_NemoTecnico" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Moneda" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldec_ValorFacial" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="ldt_FchCreacionT" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Propietario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_IndicadorGarantia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CrearTituloGarantiaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CrearTituloGarantiaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarTituloGarantia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="lint_NumValor" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_NemoTecnico" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Usuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarTituloGarantiaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EliminarTituloGarantiaResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarTituloValorMant">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_NroValor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_NemoTecnico" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Tipo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_FchInicio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_FchFin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_ExactaFecha" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarTituloValorMantResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarTituloValorMantResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificarTituloValorMant">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="lint_NumValor" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_NemoTecnico" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_TasaVariable" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldec_TasaVariableValor" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldec_Margen" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_UsrModifica" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldt_FchModifica" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificarTituloValorMantResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ModificarTituloValorMantResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AnularTituloValor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="lint_NumValor" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_NemoTecnico" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_EstadoValor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_UsrModifica" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldt_FchModifica" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AnularTituloValorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AnularTituloValorResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CrearCanje">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="lint_NumValor" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_EstadoValor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_NemoTecnico" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_TipoNegociacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Moneda" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldec_ValorFacial" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="ldt_FchValor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ldt_FchCancelacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ldt_FchVencimiento" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldec_ValorTransadoBruto" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldec_ValorTransadoNeto" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldec_TasaBruta" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldec_RendimientoPorDescuento" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CrearCanjeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CrearCanjeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CrearSubastaInversa">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="lint_NumValor" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_EstadoValor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_NemoTecnico" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_TipoNegociacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Moneda" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldec_ValorFacial" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="ldt_FchValor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ldt_FchCancelacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ldt_FchVencimiento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Propietario" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldec_ValorTransadoBruto" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldec_ValorTransadoNeto" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldec_TasaBruta" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldec_RendimientoPorDescuento" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CrearSubastaInversaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CrearSubastaInversaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CrearPagoCCSS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_EstadoValor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_NemoTecnico" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Tipo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_TipoNegociacion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="lint_NumValor" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Moneda" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldec_ValorFacial" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="ldt_FchValor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_PlazoValor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ldt_FchCancelacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ldt_FchVencimiento" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldec_ValorTransadoBruto" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldec_ValorTransadoNeto" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldec_TasaBruta" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldec_TasaNeta" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_NroEmisionSerie" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ldt_FchCreacionT" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_SistemaNegociacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_MotivoAnulacion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldec_RendimientoPorDescuento" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldec_Premio" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldec_ImpuestoPagado" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_UsrCreacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_ModuloSINPE" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CrearPagoCCSSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CrearPagoCCSSResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CrearTrasladoMagisterio">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_EstadoValor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_NemoTecnico" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Tipo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_TipoNegociacion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="lint_NumValor" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Moneda" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldec_ValorFacial" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="ldt_FchValor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_PlazoValor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ldt_FchCancelacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ldt_FchVencimiento" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldec_ValorTransadoBruto" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldec_ValorTransadoNeto" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldec_TasaBruta" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldec_TasaNeta" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="ldt_FchCreacionT" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Propietario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_SistemaNegociacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_MotivoAnulacion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldec_RendimientoPorDescuento" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldec_Premio" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldec_ImpuestoPagado" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_UsrCreacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_ModuloSINPE" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CrearTrasladoMagisterioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CrearTrasladoMagisterioResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CrearNeteo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="lint_NumValor" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_EstadoValor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_NemoTecnico" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_TipoNegociacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Moneda" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldec_ValorFacial" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="ldt_FchValor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ldt_FchCancelacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ldt_FchVencimiento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Propietario" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldec_ValorTransadoBruto" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldec_ValorTransadoNeto" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldec_TasaBruta" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldec_RendimientoPorDescuento" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CrearNeteoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CrearNeteoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarCostoTransaccion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="lint_IdCostoTransaccion" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Usuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarCostoTransaccionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EliminarCostoTransaccionResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CrearCostoTransaccion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lint_NumValor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_NemoTecnico" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ldt_Fecha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Moneda" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldec_Monto" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldec_MontoColones" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldec_TpoCambio" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Detalle" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_ModuloSINPE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CrearCostoTransaccionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CrearCostoTransaccionResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificarCostoTransaccion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="lint_IdCostoTransaccion" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="lint_NumValor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_NemoTecnico" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldt_Fecha" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Moneda" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldec_Monto" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldec_MontoColones" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldec_TpoCambio" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Detalle" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_ModuloSINPE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_UsrModifica" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldt_FchModifica" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificarCostoTransaccionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ModificarCostoTransaccionResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarCostoTransaccion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lint_IdCostoTransaccion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_NroValor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_NemoTecnico" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ldt_Fecha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Estado" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarCostoTransaccionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarCostoTransaccionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ContabilizarCalculosFinancieros">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_NbrTabla" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lint_IdCostoTransaccion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_NroValor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_NemoTecnico" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_UsrModifica" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldt_FchModifica" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ContabilizarCalculosFinancierosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ContabilizarCalculosFinancierosResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalculaDevengoValores">
+        <s:complexType />
+      </s:element>
+      <s:element name="CalculaDevengoValoresResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CalculaDevengoValoresResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarDevengoIntereses">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_NroValor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_NemoTecnico" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarDevengoInteresesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarDevengoInteresesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarFlujoEfectivo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_NroValor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_NemoTecnico" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarFlujoEfectivoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarFlujoEfectivoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaMontoReservaSAP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_IdReserva" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_IdPosicion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaMontoReservaSAPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultaMontoReservaSAPResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="DataSet" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:element ref="s:schema" />
+            <s:any />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ArrayOfString" nillable="true" type="tns:ArrayOfString" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CargarValoresCuponesSINPESoapIn">
+    <wsdl:part name="parameters" element="tns:CargarValoresCuponesSINPE" />
+  </wsdl:message>
+  <wsdl:message name="CargarValoresCuponesSINPESoapOut">
+    <wsdl:part name="parameters" element="tns:CargarValoresCuponesSINPEResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarTitulosValoresSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarTitulosValores" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarTitulosValoresSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarTitulosValoresResponse" />
+  </wsdl:message>
+  <wsdl:message name="CrearTituloValorSoapIn">
+    <wsdl:part name="parameters" element="tns:CrearTituloValor" />
+  </wsdl:message>
+  <wsdl:message name="CrearTituloValorSoapOut">
+    <wsdl:part name="parameters" element="tns:CrearTituloValorResponse" />
+  </wsdl:message>
+  <wsdl:message name="CrearTituloReclasificadoSoapIn">
+    <wsdl:part name="parameters" element="tns:CrearTituloReclasificado" />
+  </wsdl:message>
+  <wsdl:message name="CrearTituloReclasificadoSoapOut">
+    <wsdl:part name="parameters" element="tns:CrearTituloReclasificadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarTitulosReclasificadosSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarTitulosReclasificados" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarTitulosReclasificadosSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarTitulosReclasificadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="CrearTituloGarantiaSoapIn">
+    <wsdl:part name="parameters" element="tns:CrearTituloGarantia" />
+  </wsdl:message>
+  <wsdl:message name="CrearTituloGarantiaSoapOut">
+    <wsdl:part name="parameters" element="tns:CrearTituloGarantiaResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarTituloGarantiaSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarTituloGarantia" />
+  </wsdl:message>
+  <wsdl:message name="EliminarTituloGarantiaSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarTituloGarantiaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarTituloValorMantSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarTituloValorMant" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarTituloValorMantSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarTituloValorMantResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModificarTituloValorMantSoapIn">
+    <wsdl:part name="parameters" element="tns:ModificarTituloValorMant" />
+  </wsdl:message>
+  <wsdl:message name="ModificarTituloValorMantSoapOut">
+    <wsdl:part name="parameters" element="tns:ModificarTituloValorMantResponse" />
+  </wsdl:message>
+  <wsdl:message name="AnularTituloValorSoapIn">
+    <wsdl:part name="parameters" element="tns:AnularTituloValor" />
+  </wsdl:message>
+  <wsdl:message name="AnularTituloValorSoapOut">
+    <wsdl:part name="parameters" element="tns:AnularTituloValorResponse" />
+  </wsdl:message>
+  <wsdl:message name="CrearCanjeSoapIn">
+    <wsdl:part name="parameters" element="tns:CrearCanje" />
+  </wsdl:message>
+  <wsdl:message name="CrearCanjeSoapOut">
+    <wsdl:part name="parameters" element="tns:CrearCanjeResponse" />
+  </wsdl:message>
+  <wsdl:message name="CrearSubastaInversaSoapIn">
+    <wsdl:part name="parameters" element="tns:CrearSubastaInversa" />
+  </wsdl:message>
+  <wsdl:message name="CrearSubastaInversaSoapOut">
+    <wsdl:part name="parameters" element="tns:CrearSubastaInversaResponse" />
+  </wsdl:message>
+  <wsdl:message name="CrearPagoCCSSSoapIn">
+    <wsdl:part name="parameters" element="tns:CrearPagoCCSS" />
+  </wsdl:message>
+  <wsdl:message name="CrearPagoCCSSSoapOut">
+    <wsdl:part name="parameters" element="tns:CrearPagoCCSSResponse" />
+  </wsdl:message>
+  <wsdl:message name="CrearTrasladoMagisterioSoapIn">
+    <wsdl:part name="parameters" element="tns:CrearTrasladoMagisterio" />
+  </wsdl:message>
+  <wsdl:message name="CrearTrasladoMagisterioSoapOut">
+    <wsdl:part name="parameters" element="tns:CrearTrasladoMagisterioResponse" />
+  </wsdl:message>
+  <wsdl:message name="CrearNeteoSoapIn">
+    <wsdl:part name="parameters" element="tns:CrearNeteo" />
+  </wsdl:message>
+  <wsdl:message name="CrearNeteoSoapOut">
+    <wsdl:part name="parameters" element="tns:CrearNeteoResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarCostoTransaccionSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarCostoTransaccion" />
+  </wsdl:message>
+  <wsdl:message name="EliminarCostoTransaccionSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarCostoTransaccionResponse" />
+  </wsdl:message>
+  <wsdl:message name="CrearCostoTransaccionSoapIn">
+    <wsdl:part name="parameters" element="tns:CrearCostoTransaccion" />
+  </wsdl:message>
+  <wsdl:message name="CrearCostoTransaccionSoapOut">
+    <wsdl:part name="parameters" element="tns:CrearCostoTransaccionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModificarCostoTransaccionSoapIn">
+    <wsdl:part name="parameters" element="tns:ModificarCostoTransaccion" />
+  </wsdl:message>
+  <wsdl:message name="ModificarCostoTransaccionSoapOut">
+    <wsdl:part name="parameters" element="tns:ModificarCostoTransaccionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarCostoTransaccionSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarCostoTransaccion" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarCostoTransaccionSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarCostoTransaccionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ContabilizarCalculosFinancierosSoapIn">
+    <wsdl:part name="parameters" element="tns:ContabilizarCalculosFinancieros" />
+  </wsdl:message>
+  <wsdl:message name="ContabilizarCalculosFinancierosSoapOut">
+    <wsdl:part name="parameters" element="tns:ContabilizarCalculosFinancierosResponse" />
+  </wsdl:message>
+  <wsdl:message name="CalculaDevengoValoresSoapIn">
+    <wsdl:part name="parameters" element="tns:CalculaDevengoValores" />
+  </wsdl:message>
+  <wsdl:message name="CalculaDevengoValoresSoapOut">
+    <wsdl:part name="parameters" element="tns:CalculaDevengoValoresResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarDevengoInteresesSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarDevengoIntereses" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarDevengoInteresesSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarDevengoInteresesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarFlujoEfectivoSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarFlujoEfectivo" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarFlujoEfectivoSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarFlujoEfectivoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaMontoReservaSAPSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaMontoReservaSAP" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaMontoReservaSAPSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaMontoReservaSAPResponse" />
+  </wsdl:message>
+  <wsdl:message name="CargarValoresCuponesSINPEHttpGetIn">
+    <wsdl:part name="lstr_FechaInicio" type="s:string" />
+    <wsdl:part name="lstr_FechaFin" type="s:string" />
+    <wsdl:part name="lstr_TipoDeuda" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CargarValoresCuponesSINPEHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarTitulosValoresHttpGetIn">
+    <wsdl:part name="lint_NumValor" type="s:string" />
+    <wsdl:part name="lstr_Nemotecnico" type="s:string" />
+    <wsdl:part name="lint_NumCupon" type="s:string" />
+    <wsdl:part name="lstr_Garantia" type="s:string" />
+    <wsdl:part name="lstr_Tipo" type="s:string" />
+    <wsdl:part name="ldt_FchInicio" type="s:string" />
+    <wsdl:part name="ldt_FchFin" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarTitulosValoresHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="CrearTituloValorHttpGetIn">
+    <wsdl:part name="lint_NumValor" type="s:string" />
+    <wsdl:part name="lstr_EstadoValor" type="s:string" />
+    <wsdl:part name="lstr_NemoTecnico" type="s:string" />
+    <wsdl:part name="lstr_Tipo" type="s:string" />
+    <wsdl:part name="lstr_TipoNegociacion" type="s:string" />
+    <wsdl:part name="lstr_Moneda" type="s:string" />
+    <wsdl:part name="ldec_ValorFacial" type="s:string" />
+    <wsdl:part name="ldt_FchValor" type="s:string" />
+    <wsdl:part name="lstr_Plazo" type="s:string" />
+    <wsdl:part name="ldt_FchCancelacion" type="s:string" />
+    <wsdl:part name="ldt_FchVencimiento" type="s:string" />
+    <wsdl:part name="ldec_ValorTransadoBruto" type="s:string" />
+    <wsdl:part name="ldec_ValorTransadoNeto" type="s:string" />
+    <wsdl:part name="ldec_TasaBruta" type="s:string" />
+    <wsdl:part name="ldec_TasaNeta" type="s:string" />
+    <wsdl:part name="ldec_Margen" type="s:string" />
+    <wsdl:part name="lint_NumEmisionSerie" type="s:string" />
+    <wsdl:part name="lstr_Propietario" type="s:string" />
+    <wsdl:part name="lstr_EntidadCustodia" type="s:string" />
+    <wsdl:part name="ldt_FchCreacion" type="s:string" />
+    <wsdl:part name="lstr_SistemaNegociacion" type="s:string" />
+    <wsdl:part name="lstr_MotivoAnulacion" type="s:string" />
+    <wsdl:part name="ldec_RendimientoPorDescuento" type="s:string" />
+    <wsdl:part name="ldec_ImpuestoPagado" type="s:string" />
+    <wsdl:part name="ldec_Premio" type="s:string" />
+    <wsdl:part name="lstr_Origen" type="s:string" />
+    <wsdl:part name="lstr_UsrCreacion" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CrearTituloValorHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CrearTituloReclasificadoHttpGetIn">
+    <wsdl:part name="lint_NumValor" type="s:string" />
+    <wsdl:part name="lstr_NemoTecnico" type="s:string" />
+    <wsdl:part name="lstr_Tipo" type="s:string" />
+    <wsdl:part name="lstr_Moneda" type="s:string" />
+    <wsdl:part name="ldec_ValorFacial" type="s:string" />
+    <wsdl:part name="ldec_ValorTransadoBruto" type="s:string" />
+    <wsdl:part name="ldec_ValorTransadoNeto" type="s:string" />
+    <wsdl:part name="ldt_FchValor" type="s:string" />
+    <wsdl:part name="ldt_FchCancelacion" type="s:string" />
+    <wsdl:part name="ldt_FchVencimiento" type="s:string" />
+    <wsdl:part name="lstr_SistemaNegociacion" type="s:string" />
+    <wsdl:part name="lstr_Estado" type="s:string" />
+    <wsdl:part name="lstr_UsrCreacion" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CrearTituloReclasificadoHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarTitulosReclasificadosHttpGetIn">
+    <wsdl:part name="lint_NumValor" type="s:string" />
+    <wsdl:part name="lstr_Nemotecnico" type="s:string" />
+    <wsdl:part name="ldt_FchInicio" type="s:string" />
+    <wsdl:part name="ldt_FchFin" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarTitulosReclasificadosHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="CrearTituloGarantiaHttpGetIn">
+    <wsdl:part name="lint_NumValor" type="s:string" />
+    <wsdl:part name="lstr_EstadoValor" type="s:string" />
+    <wsdl:part name="lstr_NemoTecnico" type="s:string" />
+    <wsdl:part name="lstr_Moneda" type="s:string" />
+    <wsdl:part name="ldec_ValorFacial" type="s:string" />
+    <wsdl:part name="ldt_FchCreacionT" type="s:string" />
+    <wsdl:part name="lstr_Propietario" type="s:string" />
+    <wsdl:part name="lstr_IndicadorGarantia" type="s:string" />
+    <wsdl:part name="lstr_UsrCreacion" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CrearTituloGarantiaHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="EliminarTituloGarantiaHttpGetIn">
+    <wsdl:part name="lint_NumValor" type="s:string" />
+    <wsdl:part name="lstr_NemoTecnico" type="s:string" />
+    <wsdl:part name="lstr_Usuario" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="EliminarTituloGarantiaHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarTituloValorMantHttpGetIn">
+    <wsdl:part name="lstr_NroValor" type="s:string" />
+    <wsdl:part name="lstr_NemoTecnico" type="s:string" />
+    <wsdl:part name="str_Tipo" type="s:string" />
+    <wsdl:part name="str_FchInicio" type="s:string" />
+    <wsdl:part name="str_FchFin" type="s:string" />
+    <wsdl:part name="str_ExactaFecha" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarTituloValorMantHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ModificarTituloValorMantHttpGetIn">
+    <wsdl:part name="lint_NumValor" type="s:string" />
+    <wsdl:part name="lstr_NemoTecnico" type="s:string" />
+    <wsdl:part name="lstr_TasaVariable" type="s:string" />
+    <wsdl:part name="ldec_TasaVariableValor" type="s:string" />
+    <wsdl:part name="ldec_Margen" type="s:string" />
+    <wsdl:part name="lstr_UsrModifica" type="s:string" />
+    <wsdl:part name="ldt_FchModifica" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ModificarTituloValorMantHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AnularTituloValorHttpGetIn">
+    <wsdl:part name="lint_NumValor" type="s:string" />
+    <wsdl:part name="lstr_NemoTecnico" type="s:string" />
+    <wsdl:part name="lstr_EstadoValor" type="s:string" />
+    <wsdl:part name="lstr_UsrModifica" type="s:string" />
+    <wsdl:part name="ldt_FchModifica" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AnularTituloValorHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="CrearCanjeHttpGetIn">
+    <wsdl:part name="lint_NumValor" type="s:string" />
+    <wsdl:part name="lstr_EstadoValor" type="s:string" />
+    <wsdl:part name="lstr_NemoTecnico" type="s:string" />
+    <wsdl:part name="lstr_TipoNegociacion" type="s:string" />
+    <wsdl:part name="lstr_Moneda" type="s:string" />
+    <wsdl:part name="ldec_ValorFacial" type="s:string" />
+    <wsdl:part name="ldt_FchValor" type="s:string" />
+    <wsdl:part name="ldt_FchCancelacion" type="s:string" />
+    <wsdl:part name="ldt_FchVencimiento" type="s:string" />
+    <wsdl:part name="ldec_ValorTransadoBruto" type="s:string" />
+    <wsdl:part name="ldec_ValorTransadoNeto" type="s:string" />
+    <wsdl:part name="ldec_TasaBruta" type="s:string" />
+    <wsdl:part name="ldec_RendimientoPorDescuento" type="s:string" />
+    <wsdl:part name="lstr_UsrCreacion" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CrearCanjeHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CrearSubastaInversaHttpGetIn">
+    <wsdl:part name="lint_NumValor" type="s:string" />
+    <wsdl:part name="lstr_EstadoValor" type="s:string" />
+    <wsdl:part name="lstr_NemoTecnico" type="s:string" />
+    <wsdl:part name="lstr_TipoNegociacion" type="s:string" />
+    <wsdl:part name="lstr_Moneda" type="s:string" />
+    <wsdl:part name="ldec_ValorFacial" type="s:string" />
+    <wsdl:part name="ldt_FchValor" type="s:string" />
+    <wsdl:part name="ldt_FchCancelacion" type="s:string" />
+    <wsdl:part name="ldt_FchVencimiento" type="s:string" />
+    <wsdl:part name="lstr_Propietario" type="s:string" />
+    <wsdl:part name="ldec_ValorTransadoBruto" type="s:string" />
+    <wsdl:part name="ldec_ValorTransadoNeto" type="s:string" />
+    <wsdl:part name="ldec_TasaBruta" type="s:string" />
+    <wsdl:part name="ldec_RendimientoPorDescuento" type="s:string" />
+    <wsdl:part name="lstr_UsrCreacion" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CrearSubastaInversaHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CrearPagoCCSSHttpGetIn">
+    <wsdl:part name="lstr_EstadoValor" type="s:string" />
+    <wsdl:part name="lstr_NemoTecnico" type="s:string" />
+    <wsdl:part name="lstr_Tipo" type="s:string" />
+    <wsdl:part name="lstr_TipoNegociacion" type="s:string" />
+    <wsdl:part name="lint_NumValor" type="s:string" />
+    <wsdl:part name="lstr_Moneda" type="s:string" />
+    <wsdl:part name="ldec_ValorFacial" type="s:string" />
+    <wsdl:part name="ldt_FchValor" type="s:string" />
+    <wsdl:part name="lstr_PlazoValor" type="s:string" />
+    <wsdl:part name="ldt_FchCancelacion" type="s:string" />
+    <wsdl:part name="ldt_FchVencimiento" type="s:string" />
+    <wsdl:part name="ldec_ValorTransadoBruto" type="s:string" />
+    <wsdl:part name="ldec_ValorTransadoNeto" type="s:string" />
+    <wsdl:part name="ldec_TasaBruta" type="s:string" />
+    <wsdl:part name="ldec_TasaNeta" type="s:string" />
+    <wsdl:part name="lstr_NroEmisionSerie" type="s:string" />
+    <wsdl:part name="ldt_FchCreacionT" type="s:string" />
+    <wsdl:part name="lstr_SistemaNegociacion" type="s:string" />
+    <wsdl:part name="lstr_MotivoAnulacion" type="s:string" />
+    <wsdl:part name="ldec_RendimientoPorDescuento" type="s:string" />
+    <wsdl:part name="ldec_Premio" type="s:string" />
+    <wsdl:part name="ldec_ImpuestoPagado" type="s:string" />
+    <wsdl:part name="lstr_UsrCreacion" type="s:string" />
+    <wsdl:part name="lstr_ModuloSINPE" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CrearPagoCCSSHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CrearTrasladoMagisterioHttpGetIn">
+    <wsdl:part name="lstr_EstadoValor" type="s:string" />
+    <wsdl:part name="lstr_NemoTecnico" type="s:string" />
+    <wsdl:part name="lstr_Tipo" type="s:string" />
+    <wsdl:part name="lstr_TipoNegociacion" type="s:string" />
+    <wsdl:part name="lint_NumValor" type="s:string" />
+    <wsdl:part name="lstr_Moneda" type="s:string" />
+    <wsdl:part name="ldec_ValorFacial" type="s:string" />
+    <wsdl:part name="ldt_FchValor" type="s:string" />
+    <wsdl:part name="lstr_PlazoValor" type="s:string" />
+    <wsdl:part name="ldt_FchCancelacion" type="s:string" />
+    <wsdl:part name="ldt_FchVencimiento" type="s:string" />
+    <wsdl:part name="ldec_ValorTransadoBruto" type="s:string" />
+    <wsdl:part name="ldec_ValorTransadoNeto" type="s:string" />
+    <wsdl:part name="ldec_TasaBruta" type="s:string" />
+    <wsdl:part name="ldec_TasaNeta" type="s:string" />
+    <wsdl:part name="ldt_FchCreacionT" type="s:string" />
+    <wsdl:part name="lstr_Propietario" type="s:string" />
+    <wsdl:part name="lstr_SistemaNegociacion" type="s:string" />
+    <wsdl:part name="lstr_MotivoAnulacion" type="s:string" />
+    <wsdl:part name="ldec_RendimientoPorDescuento" type="s:string" />
+    <wsdl:part name="ldec_Premio" type="s:string" />
+    <wsdl:part name="ldec_ImpuestoPagado" type="s:string" />
+    <wsdl:part name="lstr_UsrCreacion" type="s:string" />
+    <wsdl:part name="lstr_ModuloSINPE" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CrearTrasladoMagisterioHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CrearNeteoHttpGetIn">
+    <wsdl:part name="lint_NumValor" type="s:string" />
+    <wsdl:part name="lstr_EstadoValor" type="s:string" />
+    <wsdl:part name="lstr_NemoTecnico" type="s:string" />
+    <wsdl:part name="lstr_TipoNegociacion" type="s:string" />
+    <wsdl:part name="lstr_Moneda" type="s:string" />
+    <wsdl:part name="ldec_ValorFacial" type="s:string" />
+    <wsdl:part name="ldt_FchValor" type="s:string" />
+    <wsdl:part name="ldt_FchCancelacion" type="s:string" />
+    <wsdl:part name="ldt_FchVencimiento" type="s:string" />
+    <wsdl:part name="lstr_Propietario" type="s:string" />
+    <wsdl:part name="ldec_ValorTransadoBruto" type="s:string" />
+    <wsdl:part name="ldec_ValorTransadoNeto" type="s:string" />
+    <wsdl:part name="ldec_TasaBruta" type="s:string" />
+    <wsdl:part name="ldec_RendimientoPorDescuento" type="s:string" />
+    <wsdl:part name="lstr_UsrCreacion" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CrearNeteoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="EliminarCostoTransaccionHttpGetIn">
+    <wsdl:part name="lint_IdCostoTransaccion" type="s:string" />
+    <wsdl:part name="lstr_Usuario" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="EliminarCostoTransaccionHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="CrearCostoTransaccionHttpGetIn">
+    <wsdl:part name="lint_NumValor" type="s:string" />
+    <wsdl:part name="lstr_NemoTecnico" type="s:string" />
+    <wsdl:part name="ldt_Fecha" type="s:string" />
+    <wsdl:part name="lstr_Moneda" type="s:string" />
+    <wsdl:part name="ldec_Monto" type="s:string" />
+    <wsdl:part name="ldec_MontoColones" type="s:string" />
+    <wsdl:part name="ldec_TpoCambio" type="s:string" />
+    <wsdl:part name="lstr_Detalle" type="s:string" />
+    <wsdl:part name="lstr_ModuloSINPE" type="s:string" />
+    <wsdl:part name="lstr_UsrCreacion" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CrearCostoTransaccionHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="ModificarCostoTransaccionHttpGetIn">
+    <wsdl:part name="lint_IdCostoTransaccion" type="s:string" />
+    <wsdl:part name="lint_NumValor" type="s:string" />
+    <wsdl:part name="lstr_NemoTecnico" type="s:string" />
+    <wsdl:part name="ldt_Fecha" type="s:string" />
+    <wsdl:part name="lstr_Moneda" type="s:string" />
+    <wsdl:part name="ldec_Monto" type="s:string" />
+    <wsdl:part name="ldec_MontoColones" type="s:string" />
+    <wsdl:part name="ldec_TpoCambio" type="s:string" />
+    <wsdl:part name="lstr_Detalle" type="s:string" />
+    <wsdl:part name="lstr_ModuloSINPE" type="s:string" />
+    <wsdl:part name="lstr_Estado" type="s:string" />
+    <wsdl:part name="lstr_UsrModifica" type="s:string" />
+    <wsdl:part name="ldt_FchModifica" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ModificarCostoTransaccionHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarCostoTransaccionHttpGetIn">
+    <wsdl:part name="lint_IdCostoTransaccion" type="s:string" />
+    <wsdl:part name="lstr_NroValor" type="s:string" />
+    <wsdl:part name="lstr_NemoTecnico" type="s:string" />
+    <wsdl:part name="ldt_Fecha" type="s:string" />
+    <wsdl:part name="lstr_Estado" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarCostoTransaccionHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ContabilizarCalculosFinancierosHttpGetIn">
+    <wsdl:part name="lstr_NbrTabla" type="s:string" />
+    <wsdl:part name="lint_IdCostoTransaccion" type="s:string" />
+    <wsdl:part name="lstr_NroValor" type="s:string" />
+    <wsdl:part name="lstr_NemoTecnico" type="s:string" />
+    <wsdl:part name="lstr_Estado" type="s:string" />
+    <wsdl:part name="lstr_UsrModifica" type="s:string" />
+    <wsdl:part name="ldt_FchModifica" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ContabilizarCalculosFinancierosHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="CalculaDevengoValoresHttpGetIn" />
+  <wsdl:message name="CalculaDevengoValoresHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarDevengoInteresesHttpGetIn">
+    <wsdl:part name="lstr_NroValor" type="s:string" />
+    <wsdl:part name="lstr_NemoTecnico" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarDevengoInteresesHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarFlujoEfectivoHttpGetIn">
+    <wsdl:part name="lstr_NroValor" type="s:string" />
+    <wsdl:part name="lstr_NemoTecnico" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarFlujoEfectivoHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaMontoReservaSAPHttpGetIn">
+    <wsdl:part name="str_IdReserva" type="s:string" />
+    <wsdl:part name="str_IdPosicion" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaMontoReservaSAPHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CargarValoresCuponesSINPEHttpPostIn">
+    <wsdl:part name="lstr_FechaInicio" type="s:string" />
+    <wsdl:part name="lstr_FechaFin" type="s:string" />
+    <wsdl:part name="lstr_TipoDeuda" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CargarValoresCuponesSINPEHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarTitulosValoresHttpPostIn">
+    <wsdl:part name="lint_NumValor" type="s:string" />
+    <wsdl:part name="lstr_Nemotecnico" type="s:string" />
+    <wsdl:part name="lint_NumCupon" type="s:string" />
+    <wsdl:part name="lstr_Garantia" type="s:string" />
+    <wsdl:part name="lstr_Tipo" type="s:string" />
+    <wsdl:part name="ldt_FchInicio" type="s:string" />
+    <wsdl:part name="ldt_FchFin" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarTitulosValoresHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="CrearTituloValorHttpPostIn">
+    <wsdl:part name="lint_NumValor" type="s:string" />
+    <wsdl:part name="lstr_EstadoValor" type="s:string" />
+    <wsdl:part name="lstr_NemoTecnico" type="s:string" />
+    <wsdl:part name="lstr_Tipo" type="s:string" />
+    <wsdl:part name="lstr_TipoNegociacion" type="s:string" />
+    <wsdl:part name="lstr_Moneda" type="s:string" />
+    <wsdl:part name="ldec_ValorFacial" type="s:string" />
+    <wsdl:part name="ldt_FchValor" type="s:string" />
+    <wsdl:part name="lstr_Plazo" type="s:string" />
+    <wsdl:part name="ldt_FchCancelacion" type="s:string" />
+    <wsdl:part name="ldt_FchVencimiento" type="s:string" />
+    <wsdl:part name="ldec_ValorTransadoBruto" type="s:string" />
+    <wsdl:part name="ldec_ValorTransadoNeto" type="s:string" />
+    <wsdl:part name="ldec_TasaBruta" type="s:string" />
+    <wsdl:part name="ldec_TasaNeta" type="s:string" />
+    <wsdl:part name="ldec_Margen" type="s:string" />
+    <wsdl:part name="lint_NumEmisionSerie" type="s:string" />
+    <wsdl:part name="lstr_Propietario" type="s:string" />
+    <wsdl:part name="lstr_EntidadCustodia" type="s:string" />
+    <wsdl:part name="ldt_FchCreacion" type="s:string" />
+    <wsdl:part name="lstr_SistemaNegociacion" type="s:string" />
+    <wsdl:part name="lstr_MotivoAnulacion" type="s:string" />
+    <wsdl:part name="ldec_RendimientoPorDescuento" type="s:string" />
+    <wsdl:part name="ldec_ImpuestoPagado" type="s:string" />
+    <wsdl:part name="ldec_Premio" type="s:string" />
+    <wsdl:part name="lstr_Origen" type="s:string" />
+    <wsdl:part name="lstr_UsrCreacion" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CrearTituloValorHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CrearTituloReclasificadoHttpPostIn">
+    <wsdl:part name="lint_NumValor" type="s:string" />
+    <wsdl:part name="lstr_NemoTecnico" type="s:string" />
+    <wsdl:part name="lstr_Tipo" type="s:string" />
+    <wsdl:part name="lstr_Moneda" type="s:string" />
+    <wsdl:part name="ldec_ValorFacial" type="s:string" />
+    <wsdl:part name="ldec_ValorTransadoBruto" type="s:string" />
+    <wsdl:part name="ldec_ValorTransadoNeto" type="s:string" />
+    <wsdl:part name="ldt_FchValor" type="s:string" />
+    <wsdl:part name="ldt_FchCancelacion" type="s:string" />
+    <wsdl:part name="ldt_FchVencimiento" type="s:string" />
+    <wsdl:part name="lstr_SistemaNegociacion" type="s:string" />
+    <wsdl:part name="lstr_Estado" type="s:string" />
+    <wsdl:part name="lstr_UsrCreacion" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CrearTituloReclasificadoHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarTitulosReclasificadosHttpPostIn">
+    <wsdl:part name="lint_NumValor" type="s:string" />
+    <wsdl:part name="lstr_Nemotecnico" type="s:string" />
+    <wsdl:part name="ldt_FchInicio" type="s:string" />
+    <wsdl:part name="ldt_FchFin" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarTitulosReclasificadosHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="CrearTituloGarantiaHttpPostIn">
+    <wsdl:part name="lint_NumValor" type="s:string" />
+    <wsdl:part name="lstr_EstadoValor" type="s:string" />
+    <wsdl:part name="lstr_NemoTecnico" type="s:string" />
+    <wsdl:part name="lstr_Moneda" type="s:string" />
+    <wsdl:part name="ldec_ValorFacial" type="s:string" />
+    <wsdl:part name="ldt_FchCreacionT" type="s:string" />
+    <wsdl:part name="lstr_Propietario" type="s:string" />
+    <wsdl:part name="lstr_IndicadorGarantia" type="s:string" />
+    <wsdl:part name="lstr_UsrCreacion" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CrearTituloGarantiaHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="EliminarTituloGarantiaHttpPostIn">
+    <wsdl:part name="lint_NumValor" type="s:string" />
+    <wsdl:part name="lstr_NemoTecnico" type="s:string" />
+    <wsdl:part name="lstr_Usuario" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="EliminarTituloGarantiaHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarTituloValorMantHttpPostIn">
+    <wsdl:part name="lstr_NroValor" type="s:string" />
+    <wsdl:part name="lstr_NemoTecnico" type="s:string" />
+    <wsdl:part name="str_Tipo" type="s:string" />
+    <wsdl:part name="str_FchInicio" type="s:string" />
+    <wsdl:part name="str_FchFin" type="s:string" />
+    <wsdl:part name="str_ExactaFecha" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarTituloValorMantHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ModificarTituloValorMantHttpPostIn">
+    <wsdl:part name="lint_NumValor" type="s:string" />
+    <wsdl:part name="lstr_NemoTecnico" type="s:string" />
+    <wsdl:part name="lstr_TasaVariable" type="s:string" />
+    <wsdl:part name="ldec_TasaVariableValor" type="s:string" />
+    <wsdl:part name="ldec_Margen" type="s:string" />
+    <wsdl:part name="lstr_UsrModifica" type="s:string" />
+    <wsdl:part name="ldt_FchModifica" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ModificarTituloValorMantHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AnularTituloValorHttpPostIn">
+    <wsdl:part name="lint_NumValor" type="s:string" />
+    <wsdl:part name="lstr_NemoTecnico" type="s:string" />
+    <wsdl:part name="lstr_EstadoValor" type="s:string" />
+    <wsdl:part name="lstr_UsrModifica" type="s:string" />
+    <wsdl:part name="ldt_FchModifica" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AnularTituloValorHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="CrearCanjeHttpPostIn">
+    <wsdl:part name="lint_NumValor" type="s:string" />
+    <wsdl:part name="lstr_EstadoValor" type="s:string" />
+    <wsdl:part name="lstr_NemoTecnico" type="s:string" />
+    <wsdl:part name="lstr_TipoNegociacion" type="s:string" />
+    <wsdl:part name="lstr_Moneda" type="s:string" />
+    <wsdl:part name="ldec_ValorFacial" type="s:string" />
+    <wsdl:part name="ldt_FchValor" type="s:string" />
+    <wsdl:part name="ldt_FchCancelacion" type="s:string" />
+    <wsdl:part name="ldt_FchVencimiento" type="s:string" />
+    <wsdl:part name="ldec_ValorTransadoBruto" type="s:string" />
+    <wsdl:part name="ldec_ValorTransadoNeto" type="s:string" />
+    <wsdl:part name="ldec_TasaBruta" type="s:string" />
+    <wsdl:part name="ldec_RendimientoPorDescuento" type="s:string" />
+    <wsdl:part name="lstr_UsrCreacion" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CrearCanjeHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CrearSubastaInversaHttpPostIn">
+    <wsdl:part name="lint_NumValor" type="s:string" />
+    <wsdl:part name="lstr_EstadoValor" type="s:string" />
+    <wsdl:part name="lstr_NemoTecnico" type="s:string" />
+    <wsdl:part name="lstr_TipoNegociacion" type="s:string" />
+    <wsdl:part name="lstr_Moneda" type="s:string" />
+    <wsdl:part name="ldec_ValorFacial" type="s:string" />
+    <wsdl:part name="ldt_FchValor" type="s:string" />
+    <wsdl:part name="ldt_FchCancelacion" type="s:string" />
+    <wsdl:part name="ldt_FchVencimiento" type="s:string" />
+    <wsdl:part name="lstr_Propietario" type="s:string" />
+    <wsdl:part name="ldec_ValorTransadoBruto" type="s:string" />
+    <wsdl:part name="ldec_ValorTransadoNeto" type="s:string" />
+    <wsdl:part name="ldec_TasaBruta" type="s:string" />
+    <wsdl:part name="ldec_RendimientoPorDescuento" type="s:string" />
+    <wsdl:part name="lstr_UsrCreacion" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CrearSubastaInversaHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CrearPagoCCSSHttpPostIn">
+    <wsdl:part name="lstr_EstadoValor" type="s:string" />
+    <wsdl:part name="lstr_NemoTecnico" type="s:string" />
+    <wsdl:part name="lstr_Tipo" type="s:string" />
+    <wsdl:part name="lstr_TipoNegociacion" type="s:string" />
+    <wsdl:part name="lint_NumValor" type="s:string" />
+    <wsdl:part name="lstr_Moneda" type="s:string" />
+    <wsdl:part name="ldec_ValorFacial" type="s:string" />
+    <wsdl:part name="ldt_FchValor" type="s:string" />
+    <wsdl:part name="lstr_PlazoValor" type="s:string" />
+    <wsdl:part name="ldt_FchCancelacion" type="s:string" />
+    <wsdl:part name="ldt_FchVencimiento" type="s:string" />
+    <wsdl:part name="ldec_ValorTransadoBruto" type="s:string" />
+    <wsdl:part name="ldec_ValorTransadoNeto" type="s:string" />
+    <wsdl:part name="ldec_TasaBruta" type="s:string" />
+    <wsdl:part name="ldec_TasaNeta" type="s:string" />
+    <wsdl:part name="lstr_NroEmisionSerie" type="s:string" />
+    <wsdl:part name="ldt_FchCreacionT" type="s:string" />
+    <wsdl:part name="lstr_SistemaNegociacion" type="s:string" />
+    <wsdl:part name="lstr_MotivoAnulacion" type="s:string" />
+    <wsdl:part name="ldec_RendimientoPorDescuento" type="s:string" />
+    <wsdl:part name="ldec_Premio" type="s:string" />
+    <wsdl:part name="ldec_ImpuestoPagado" type="s:string" />
+    <wsdl:part name="lstr_UsrCreacion" type="s:string" />
+    <wsdl:part name="lstr_ModuloSINPE" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CrearPagoCCSSHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CrearTrasladoMagisterioHttpPostIn">
+    <wsdl:part name="lstr_EstadoValor" type="s:string" />
+    <wsdl:part name="lstr_NemoTecnico" type="s:string" />
+    <wsdl:part name="lstr_Tipo" type="s:string" />
+    <wsdl:part name="lstr_TipoNegociacion" type="s:string" />
+    <wsdl:part name="lint_NumValor" type="s:string" />
+    <wsdl:part name="lstr_Moneda" type="s:string" />
+    <wsdl:part name="ldec_ValorFacial" type="s:string" />
+    <wsdl:part name="ldt_FchValor" type="s:string" />
+    <wsdl:part name="lstr_PlazoValor" type="s:string" />
+    <wsdl:part name="ldt_FchCancelacion" type="s:string" />
+    <wsdl:part name="ldt_FchVencimiento" type="s:string" />
+    <wsdl:part name="ldec_ValorTransadoBruto" type="s:string" />
+    <wsdl:part name="ldec_ValorTransadoNeto" type="s:string" />
+    <wsdl:part name="ldec_TasaBruta" type="s:string" />
+    <wsdl:part name="ldec_TasaNeta" type="s:string" />
+    <wsdl:part name="ldt_FchCreacionT" type="s:string" />
+    <wsdl:part name="lstr_Propietario" type="s:string" />
+    <wsdl:part name="lstr_SistemaNegociacion" type="s:string" />
+    <wsdl:part name="lstr_MotivoAnulacion" type="s:string" />
+    <wsdl:part name="ldec_RendimientoPorDescuento" type="s:string" />
+    <wsdl:part name="ldec_Premio" type="s:string" />
+    <wsdl:part name="ldec_ImpuestoPagado" type="s:string" />
+    <wsdl:part name="lstr_UsrCreacion" type="s:string" />
+    <wsdl:part name="lstr_ModuloSINPE" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CrearTrasladoMagisterioHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CrearNeteoHttpPostIn">
+    <wsdl:part name="lint_NumValor" type="s:string" />
+    <wsdl:part name="lstr_EstadoValor" type="s:string" />
+    <wsdl:part name="lstr_NemoTecnico" type="s:string" />
+    <wsdl:part name="lstr_TipoNegociacion" type="s:string" />
+    <wsdl:part name="lstr_Moneda" type="s:string" />
+    <wsdl:part name="ldec_ValorFacial" type="s:string" />
+    <wsdl:part name="ldt_FchValor" type="s:string" />
+    <wsdl:part name="ldt_FchCancelacion" type="s:string" />
+    <wsdl:part name="ldt_FchVencimiento" type="s:string" />
+    <wsdl:part name="lstr_Propietario" type="s:string" />
+    <wsdl:part name="ldec_ValorTransadoBruto" type="s:string" />
+    <wsdl:part name="ldec_ValorTransadoNeto" type="s:string" />
+    <wsdl:part name="ldec_TasaBruta" type="s:string" />
+    <wsdl:part name="ldec_RendimientoPorDescuento" type="s:string" />
+    <wsdl:part name="lstr_UsrCreacion" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CrearNeteoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="EliminarCostoTransaccionHttpPostIn">
+    <wsdl:part name="lint_IdCostoTransaccion" type="s:string" />
+    <wsdl:part name="lstr_Usuario" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="EliminarCostoTransaccionHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="CrearCostoTransaccionHttpPostIn">
+    <wsdl:part name="lint_NumValor" type="s:string" />
+    <wsdl:part name="lstr_NemoTecnico" type="s:string" />
+    <wsdl:part name="ldt_Fecha" type="s:string" />
+    <wsdl:part name="lstr_Moneda" type="s:string" />
+    <wsdl:part name="ldec_Monto" type="s:string" />
+    <wsdl:part name="ldec_MontoColones" type="s:string" />
+    <wsdl:part name="ldec_TpoCambio" type="s:string" />
+    <wsdl:part name="lstr_Detalle" type="s:string" />
+    <wsdl:part name="lstr_ModuloSINPE" type="s:string" />
+    <wsdl:part name="lstr_UsrCreacion" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CrearCostoTransaccionHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="ModificarCostoTransaccionHttpPostIn">
+    <wsdl:part name="lint_IdCostoTransaccion" type="s:string" />
+    <wsdl:part name="lint_NumValor" type="s:string" />
+    <wsdl:part name="lstr_NemoTecnico" type="s:string" />
+    <wsdl:part name="ldt_Fecha" type="s:string" />
+    <wsdl:part name="lstr_Moneda" type="s:string" />
+    <wsdl:part name="ldec_Monto" type="s:string" />
+    <wsdl:part name="ldec_MontoColones" type="s:string" />
+    <wsdl:part name="ldec_TpoCambio" type="s:string" />
+    <wsdl:part name="lstr_Detalle" type="s:string" />
+    <wsdl:part name="lstr_ModuloSINPE" type="s:string" />
+    <wsdl:part name="lstr_Estado" type="s:string" />
+    <wsdl:part name="lstr_UsrModifica" type="s:string" />
+    <wsdl:part name="ldt_FchModifica" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ModificarCostoTransaccionHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarCostoTransaccionHttpPostIn">
+    <wsdl:part name="lint_IdCostoTransaccion" type="s:string" />
+    <wsdl:part name="lstr_NroValor" type="s:string" />
+    <wsdl:part name="lstr_NemoTecnico" type="s:string" />
+    <wsdl:part name="ldt_Fecha" type="s:string" />
+    <wsdl:part name="lstr_Estado" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarCostoTransaccionHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ContabilizarCalculosFinancierosHttpPostIn">
+    <wsdl:part name="lstr_NbrTabla" type="s:string" />
+    <wsdl:part name="lint_IdCostoTransaccion" type="s:string" />
+    <wsdl:part name="lstr_NroValor" type="s:string" />
+    <wsdl:part name="lstr_NemoTecnico" type="s:string" />
+    <wsdl:part name="lstr_Estado" type="s:string" />
+    <wsdl:part name="lstr_UsrModifica" type="s:string" />
+    <wsdl:part name="ldt_FchModifica" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ContabilizarCalculosFinancierosHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="CalculaDevengoValoresHttpPostIn" />
+  <wsdl:message name="CalculaDevengoValoresHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarDevengoInteresesHttpPostIn">
+    <wsdl:part name="lstr_NroValor" type="s:string" />
+    <wsdl:part name="lstr_NemoTecnico" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarDevengoInteresesHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarFlujoEfectivoHttpPostIn">
+    <wsdl:part name="lstr_NroValor" type="s:string" />
+    <wsdl:part name="lstr_NemoTecnico" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarFlujoEfectivoHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaMontoReservaSAPHttpPostIn">
+    <wsdl:part name="str_IdReserva" type="s:string" />
+    <wsdl:part name="str_IdPosicion" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaMontoReservaSAPHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="wsDeudaInternaSoap">
+    <wsdl:operation name="CargarValoresCuponesSINPE">
+      <wsdl:input message="tns:CargarValoresCuponesSINPESoapIn" />
+      <wsdl:output message="tns:CargarValoresCuponesSINPESoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarTitulosValores">
+      <wsdl:input message="tns:ConsultarTitulosValoresSoapIn" />
+      <wsdl:output message="tns:ConsultarTitulosValoresSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearTituloValor">
+      <wsdl:input message="tns:CrearTituloValorSoapIn" />
+      <wsdl:output message="tns:CrearTituloValorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearTituloReclasificado">
+      <wsdl:input message="tns:CrearTituloReclasificadoSoapIn" />
+      <wsdl:output message="tns:CrearTituloReclasificadoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarTitulosReclasificados">
+      <wsdl:input message="tns:ConsultarTitulosReclasificadosSoapIn" />
+      <wsdl:output message="tns:ConsultarTitulosReclasificadosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearTituloGarantia">
+      <wsdl:input message="tns:CrearTituloGarantiaSoapIn" />
+      <wsdl:output message="tns:CrearTituloGarantiaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarTituloGarantia">
+      <wsdl:input message="tns:EliminarTituloGarantiaSoapIn" />
+      <wsdl:output message="tns:EliminarTituloGarantiaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarTituloValorMant">
+      <wsdl:input message="tns:ConsultarTituloValorMantSoapIn" />
+      <wsdl:output message="tns:ConsultarTituloValorMantSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarTituloValorMant">
+      <wsdl:input message="tns:ModificarTituloValorMantSoapIn" />
+      <wsdl:output message="tns:ModificarTituloValorMantSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AnularTituloValor">
+      <wsdl:input message="tns:AnularTituloValorSoapIn" />
+      <wsdl:output message="tns:AnularTituloValorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearCanje">
+      <wsdl:input message="tns:CrearCanjeSoapIn" />
+      <wsdl:output message="tns:CrearCanjeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearSubastaInversa">
+      <wsdl:input message="tns:CrearSubastaInversaSoapIn" />
+      <wsdl:output message="tns:CrearSubastaInversaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearPagoCCSS">
+      <wsdl:input message="tns:CrearPagoCCSSSoapIn" />
+      <wsdl:output message="tns:CrearPagoCCSSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearTrasladoMagisterio">
+      <wsdl:input message="tns:CrearTrasladoMagisterioSoapIn" />
+      <wsdl:output message="tns:CrearTrasladoMagisterioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearNeteo">
+      <wsdl:input message="tns:CrearNeteoSoapIn" />
+      <wsdl:output message="tns:CrearNeteoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarCostoTransaccion">
+      <wsdl:input message="tns:EliminarCostoTransaccionSoapIn" />
+      <wsdl:output message="tns:EliminarCostoTransaccionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearCostoTransaccion">
+      <wsdl:input message="tns:CrearCostoTransaccionSoapIn" />
+      <wsdl:output message="tns:CrearCostoTransaccionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarCostoTransaccion">
+      <wsdl:input message="tns:ModificarCostoTransaccionSoapIn" />
+      <wsdl:output message="tns:ModificarCostoTransaccionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCostoTransaccion">
+      <wsdl:input message="tns:ConsultarCostoTransaccionSoapIn" />
+      <wsdl:output message="tns:ConsultarCostoTransaccionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ContabilizarCalculosFinancieros">
+      <wsdl:input message="tns:ContabilizarCalculosFinancierosSoapIn" />
+      <wsdl:output message="tns:ContabilizarCalculosFinancierosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CalculaDevengoValores">
+      <wsdl:input message="tns:CalculaDevengoValoresSoapIn" />
+      <wsdl:output message="tns:CalculaDevengoValoresSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarDevengoIntereses">
+      <wsdl:input message="tns:ConsultarDevengoInteresesSoapIn" />
+      <wsdl:output message="tns:ConsultarDevengoInteresesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarFlujoEfectivo">
+      <wsdl:input message="tns:ConsultarFlujoEfectivoSoapIn" />
+      <wsdl:output message="tns:ConsultarFlujoEfectivoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaMontoReservaSAP">
+      <wsdl:input message="tns:ConsultaMontoReservaSAPSoapIn" />
+      <wsdl:output message="tns:ConsultaMontoReservaSAPSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="wsDeudaInternaHttpGet">
+    <wsdl:operation name="CargarValoresCuponesSINPE">
+      <wsdl:input message="tns:CargarValoresCuponesSINPEHttpGetIn" />
+      <wsdl:output message="tns:CargarValoresCuponesSINPEHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarTitulosValores">
+      <wsdl:input message="tns:ConsultarTitulosValoresHttpGetIn" />
+      <wsdl:output message="tns:ConsultarTitulosValoresHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearTituloValor">
+      <wsdl:input message="tns:CrearTituloValorHttpGetIn" />
+      <wsdl:output message="tns:CrearTituloValorHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearTituloReclasificado">
+      <wsdl:input message="tns:CrearTituloReclasificadoHttpGetIn" />
+      <wsdl:output message="tns:CrearTituloReclasificadoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarTitulosReclasificados">
+      <wsdl:input message="tns:ConsultarTitulosReclasificadosHttpGetIn" />
+      <wsdl:output message="tns:ConsultarTitulosReclasificadosHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearTituloGarantia">
+      <wsdl:input message="tns:CrearTituloGarantiaHttpGetIn" />
+      <wsdl:output message="tns:CrearTituloGarantiaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarTituloGarantia">
+      <wsdl:input message="tns:EliminarTituloGarantiaHttpGetIn" />
+      <wsdl:output message="tns:EliminarTituloGarantiaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarTituloValorMant">
+      <wsdl:input message="tns:ConsultarTituloValorMantHttpGetIn" />
+      <wsdl:output message="tns:ConsultarTituloValorMantHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarTituloValorMant">
+      <wsdl:input message="tns:ModificarTituloValorMantHttpGetIn" />
+      <wsdl:output message="tns:ModificarTituloValorMantHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AnularTituloValor">
+      <wsdl:input message="tns:AnularTituloValorHttpGetIn" />
+      <wsdl:output message="tns:AnularTituloValorHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearCanje">
+      <wsdl:input message="tns:CrearCanjeHttpGetIn" />
+      <wsdl:output message="tns:CrearCanjeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearSubastaInversa">
+      <wsdl:input message="tns:CrearSubastaInversaHttpGetIn" />
+      <wsdl:output message="tns:CrearSubastaInversaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearPagoCCSS">
+      <wsdl:input message="tns:CrearPagoCCSSHttpGetIn" />
+      <wsdl:output message="tns:CrearPagoCCSSHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearTrasladoMagisterio">
+      <wsdl:input message="tns:CrearTrasladoMagisterioHttpGetIn" />
+      <wsdl:output message="tns:CrearTrasladoMagisterioHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearNeteo">
+      <wsdl:input message="tns:CrearNeteoHttpGetIn" />
+      <wsdl:output message="tns:CrearNeteoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarCostoTransaccion">
+      <wsdl:input message="tns:EliminarCostoTransaccionHttpGetIn" />
+      <wsdl:output message="tns:EliminarCostoTransaccionHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearCostoTransaccion">
+      <wsdl:input message="tns:CrearCostoTransaccionHttpGetIn" />
+      <wsdl:output message="tns:CrearCostoTransaccionHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarCostoTransaccion">
+      <wsdl:input message="tns:ModificarCostoTransaccionHttpGetIn" />
+      <wsdl:output message="tns:ModificarCostoTransaccionHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCostoTransaccion">
+      <wsdl:input message="tns:ConsultarCostoTransaccionHttpGetIn" />
+      <wsdl:output message="tns:ConsultarCostoTransaccionHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ContabilizarCalculosFinancieros">
+      <wsdl:input message="tns:ContabilizarCalculosFinancierosHttpGetIn" />
+      <wsdl:output message="tns:ContabilizarCalculosFinancierosHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CalculaDevengoValores">
+      <wsdl:input message="tns:CalculaDevengoValoresHttpGetIn" />
+      <wsdl:output message="tns:CalculaDevengoValoresHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarDevengoIntereses">
+      <wsdl:input message="tns:ConsultarDevengoInteresesHttpGetIn" />
+      <wsdl:output message="tns:ConsultarDevengoInteresesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarFlujoEfectivo">
+      <wsdl:input message="tns:ConsultarFlujoEfectivoHttpGetIn" />
+      <wsdl:output message="tns:ConsultarFlujoEfectivoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaMontoReservaSAP">
+      <wsdl:input message="tns:ConsultaMontoReservaSAPHttpGetIn" />
+      <wsdl:output message="tns:ConsultaMontoReservaSAPHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="wsDeudaInternaHttpPost">
+    <wsdl:operation name="CargarValoresCuponesSINPE">
+      <wsdl:input message="tns:CargarValoresCuponesSINPEHttpPostIn" />
+      <wsdl:output message="tns:CargarValoresCuponesSINPEHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarTitulosValores">
+      <wsdl:input message="tns:ConsultarTitulosValoresHttpPostIn" />
+      <wsdl:output message="tns:ConsultarTitulosValoresHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearTituloValor">
+      <wsdl:input message="tns:CrearTituloValorHttpPostIn" />
+      <wsdl:output message="tns:CrearTituloValorHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearTituloReclasificado">
+      <wsdl:input message="tns:CrearTituloReclasificadoHttpPostIn" />
+      <wsdl:output message="tns:CrearTituloReclasificadoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarTitulosReclasificados">
+      <wsdl:input message="tns:ConsultarTitulosReclasificadosHttpPostIn" />
+      <wsdl:output message="tns:ConsultarTitulosReclasificadosHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearTituloGarantia">
+      <wsdl:input message="tns:CrearTituloGarantiaHttpPostIn" />
+      <wsdl:output message="tns:CrearTituloGarantiaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarTituloGarantia">
+      <wsdl:input message="tns:EliminarTituloGarantiaHttpPostIn" />
+      <wsdl:output message="tns:EliminarTituloGarantiaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarTituloValorMant">
+      <wsdl:input message="tns:ConsultarTituloValorMantHttpPostIn" />
+      <wsdl:output message="tns:ConsultarTituloValorMantHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarTituloValorMant">
+      <wsdl:input message="tns:ModificarTituloValorMantHttpPostIn" />
+      <wsdl:output message="tns:ModificarTituloValorMantHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AnularTituloValor">
+      <wsdl:input message="tns:AnularTituloValorHttpPostIn" />
+      <wsdl:output message="tns:AnularTituloValorHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearCanje">
+      <wsdl:input message="tns:CrearCanjeHttpPostIn" />
+      <wsdl:output message="tns:CrearCanjeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearSubastaInversa">
+      <wsdl:input message="tns:CrearSubastaInversaHttpPostIn" />
+      <wsdl:output message="tns:CrearSubastaInversaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearPagoCCSS">
+      <wsdl:input message="tns:CrearPagoCCSSHttpPostIn" />
+      <wsdl:output message="tns:CrearPagoCCSSHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearTrasladoMagisterio">
+      <wsdl:input message="tns:CrearTrasladoMagisterioHttpPostIn" />
+      <wsdl:output message="tns:CrearTrasladoMagisterioHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearNeteo">
+      <wsdl:input message="tns:CrearNeteoHttpPostIn" />
+      <wsdl:output message="tns:CrearNeteoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarCostoTransaccion">
+      <wsdl:input message="tns:EliminarCostoTransaccionHttpPostIn" />
+      <wsdl:output message="tns:EliminarCostoTransaccionHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearCostoTransaccion">
+      <wsdl:input message="tns:CrearCostoTransaccionHttpPostIn" />
+      <wsdl:output message="tns:CrearCostoTransaccionHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarCostoTransaccion">
+      <wsdl:input message="tns:ModificarCostoTransaccionHttpPostIn" />
+      <wsdl:output message="tns:ModificarCostoTransaccionHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCostoTransaccion">
+      <wsdl:input message="tns:ConsultarCostoTransaccionHttpPostIn" />
+      <wsdl:output message="tns:ConsultarCostoTransaccionHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ContabilizarCalculosFinancieros">
+      <wsdl:input message="tns:ContabilizarCalculosFinancierosHttpPostIn" />
+      <wsdl:output message="tns:ContabilizarCalculosFinancierosHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CalculaDevengoValores">
+      <wsdl:input message="tns:CalculaDevengoValoresHttpPostIn" />
+      <wsdl:output message="tns:CalculaDevengoValoresHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarDevengoIntereses">
+      <wsdl:input message="tns:ConsultarDevengoInteresesHttpPostIn" />
+      <wsdl:output message="tns:ConsultarDevengoInteresesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarFlujoEfectivo">
+      <wsdl:input message="tns:ConsultarFlujoEfectivoHttpPostIn" />
+      <wsdl:output message="tns:ConsultarFlujoEfectivoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaMontoReservaSAP">
+      <wsdl:input message="tns:ConsultaMontoReservaSAPHttpPostIn" />
+      <wsdl:output message="tns:ConsultaMontoReservaSAPHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsDeudaInternaSoap" type="tns:wsDeudaInternaSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CargarValoresCuponesSINPE">
+      <soap:operation soapAction="http://tempuri.org/CargarValoresCuponesSINPE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarTitulosValores">
+      <soap:operation soapAction="http://tempuri.org/ConsultarTitulosValores" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearTituloValor">
+      <soap:operation soapAction="http://tempuri.org/CrearTituloValor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearTituloReclasificado">
+      <soap:operation soapAction="http://tempuri.org/CrearTituloReclasificado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarTitulosReclasificados">
+      <soap:operation soapAction="http://tempuri.org/ConsultarTitulosReclasificados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearTituloGarantia">
+      <soap:operation soapAction="http://tempuri.org/CrearTituloGarantia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarTituloGarantia">
+      <soap:operation soapAction="http://tempuri.org/EliminarTituloGarantia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarTituloValorMant">
+      <soap:operation soapAction="http://tempuri.org/ConsultarTituloValorMant" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarTituloValorMant">
+      <soap:operation soapAction="http://tempuri.org/ModificarTituloValorMant" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnularTituloValor">
+      <soap:operation soapAction="http://tempuri.org/AnularTituloValor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearCanje">
+      <soap:operation soapAction="http://tempuri.org/CrearCanje" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearSubastaInversa">
+      <soap:operation soapAction="http://tempuri.org/CrearSubastaInversa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearPagoCCSS">
+      <soap:operation soapAction="http://tempuri.org/CrearPagoCCSS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearTrasladoMagisterio">
+      <soap:operation soapAction="http://tempuri.org/CrearTrasladoMagisterio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearNeteo">
+      <soap:operation soapAction="http://tempuri.org/CrearNeteo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarCostoTransaccion">
+      <soap:operation soapAction="http://tempuri.org/EliminarCostoTransaccion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearCostoTransaccion">
+      <soap:operation soapAction="http://tempuri.org/CrearCostoTransaccion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarCostoTransaccion">
+      <soap:operation soapAction="http://tempuri.org/ModificarCostoTransaccion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCostoTransaccion">
+      <soap:operation soapAction="http://tempuri.org/ConsultarCostoTransaccion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContabilizarCalculosFinancieros">
+      <soap:operation soapAction="http://tempuri.org/ContabilizarCalculosFinancieros" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalculaDevengoValores">
+      <soap:operation soapAction="http://tempuri.org/CalculaDevengoValores" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarDevengoIntereses">
+      <soap:operation soapAction="http://tempuri.org/ConsultarDevengoIntereses" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarFlujoEfectivo">
+      <soap:operation soapAction="http://tempuri.org/ConsultarFlujoEfectivo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaMontoReservaSAP">
+      <soap:operation soapAction="http://tempuri.org/ConsultaMontoReservaSAP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsDeudaInternaSoap12" type="tns:wsDeudaInternaSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CargarValoresCuponesSINPE">
+      <soap12:operation soapAction="http://tempuri.org/CargarValoresCuponesSINPE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarTitulosValores">
+      <soap12:operation soapAction="http://tempuri.org/ConsultarTitulosValores" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearTituloValor">
+      <soap12:operation soapAction="http://tempuri.org/CrearTituloValor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearTituloReclasificado">
+      <soap12:operation soapAction="http://tempuri.org/CrearTituloReclasificado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarTitulosReclasificados">
+      <soap12:operation soapAction="http://tempuri.org/ConsultarTitulosReclasificados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearTituloGarantia">
+      <soap12:operation soapAction="http://tempuri.org/CrearTituloGarantia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarTituloGarantia">
+      <soap12:operation soapAction="http://tempuri.org/EliminarTituloGarantia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarTituloValorMant">
+      <soap12:operation soapAction="http://tempuri.org/ConsultarTituloValorMant" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarTituloValorMant">
+      <soap12:operation soapAction="http://tempuri.org/ModificarTituloValorMant" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnularTituloValor">
+      <soap12:operation soapAction="http://tempuri.org/AnularTituloValor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearCanje">
+      <soap12:operation soapAction="http://tempuri.org/CrearCanje" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearSubastaInversa">
+      <soap12:operation soapAction="http://tempuri.org/CrearSubastaInversa" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearPagoCCSS">
+      <soap12:operation soapAction="http://tempuri.org/CrearPagoCCSS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearTrasladoMagisterio">
+      <soap12:operation soapAction="http://tempuri.org/CrearTrasladoMagisterio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearNeteo">
+      <soap12:operation soapAction="http://tempuri.org/CrearNeteo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarCostoTransaccion">
+      <soap12:operation soapAction="http://tempuri.org/EliminarCostoTransaccion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearCostoTransaccion">
+      <soap12:operation soapAction="http://tempuri.org/CrearCostoTransaccion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarCostoTransaccion">
+      <soap12:operation soapAction="http://tempuri.org/ModificarCostoTransaccion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCostoTransaccion">
+      <soap12:operation soapAction="http://tempuri.org/ConsultarCostoTransaccion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContabilizarCalculosFinancieros">
+      <soap12:operation soapAction="http://tempuri.org/ContabilizarCalculosFinancieros" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalculaDevengoValores">
+      <soap12:operation soapAction="http://tempuri.org/CalculaDevengoValores" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarDevengoIntereses">
+      <soap12:operation soapAction="http://tempuri.org/ConsultarDevengoIntereses" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarFlujoEfectivo">
+      <soap12:operation soapAction="http://tempuri.org/ConsultarFlujoEfectivo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaMontoReservaSAP">
+      <soap12:operation soapAction="http://tempuri.org/ConsultaMontoReservaSAP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsDeudaInternaHttpGet" type="tns:wsDeudaInternaHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="CargarValoresCuponesSINPE">
+      <http:operation location="/CargarValoresCuponesSINPE" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarTitulosValores">
+      <http:operation location="/ConsultarTitulosValores" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearTituloValor">
+      <http:operation location="/CrearTituloValor" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearTituloReclasificado">
+      <http:operation location="/CrearTituloReclasificado" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarTitulosReclasificados">
+      <http:operation location="/ConsultarTitulosReclasificados" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearTituloGarantia">
+      <http:operation location="/CrearTituloGarantia" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarTituloGarantia">
+      <http:operation location="/EliminarTituloGarantia" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarTituloValorMant">
+      <http:operation location="/ConsultarTituloValorMant" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarTituloValorMant">
+      <http:operation location="/ModificarTituloValorMant" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnularTituloValor">
+      <http:operation location="/AnularTituloValor" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearCanje">
+      <http:operation location="/CrearCanje" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearSubastaInversa">
+      <http:operation location="/CrearSubastaInversa" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearPagoCCSS">
+      <http:operation location="/CrearPagoCCSS" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearTrasladoMagisterio">
+      <http:operation location="/CrearTrasladoMagisterio" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearNeteo">
+      <http:operation location="/CrearNeteo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarCostoTransaccion">
+      <http:operation location="/EliminarCostoTransaccion" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearCostoTransaccion">
+      <http:operation location="/CrearCostoTransaccion" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarCostoTransaccion">
+      <http:operation location="/ModificarCostoTransaccion" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCostoTransaccion">
+      <http:operation location="/ConsultarCostoTransaccion" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContabilizarCalculosFinancieros">
+      <http:operation location="/ContabilizarCalculosFinancieros" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalculaDevengoValores">
+      <http:operation location="/CalculaDevengoValores" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarDevengoIntereses">
+      <http:operation location="/ConsultarDevengoIntereses" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarFlujoEfectivo">
+      <http:operation location="/ConsultarFlujoEfectivo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaMontoReservaSAP">
+      <http:operation location="/ConsultaMontoReservaSAP" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsDeudaInternaHttpPost" type="tns:wsDeudaInternaHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="CargarValoresCuponesSINPE">
+      <http:operation location="/CargarValoresCuponesSINPE" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarTitulosValores">
+      <http:operation location="/ConsultarTitulosValores" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearTituloValor">
+      <http:operation location="/CrearTituloValor" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearTituloReclasificado">
+      <http:operation location="/CrearTituloReclasificado" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarTitulosReclasificados">
+      <http:operation location="/ConsultarTitulosReclasificados" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearTituloGarantia">
+      <http:operation location="/CrearTituloGarantia" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarTituloGarantia">
+      <http:operation location="/EliminarTituloGarantia" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarTituloValorMant">
+      <http:operation location="/ConsultarTituloValorMant" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarTituloValorMant">
+      <http:operation location="/ModificarTituloValorMant" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnularTituloValor">
+      <http:operation location="/AnularTituloValor" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearCanje">
+      <http:operation location="/CrearCanje" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearSubastaInversa">
+      <http:operation location="/CrearSubastaInversa" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearPagoCCSS">
+      <http:operation location="/CrearPagoCCSS" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearTrasladoMagisterio">
+      <http:operation location="/CrearTrasladoMagisterio" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearNeteo">
+      <http:operation location="/CrearNeteo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarCostoTransaccion">
+      <http:operation location="/EliminarCostoTransaccion" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearCostoTransaccion">
+      <http:operation location="/CrearCostoTransaccion" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarCostoTransaccion">
+      <http:operation location="/ModificarCostoTransaccion" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCostoTransaccion">
+      <http:operation location="/ConsultarCostoTransaccion" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContabilizarCalculosFinancieros">
+      <http:operation location="/ContabilizarCalculosFinancieros" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalculaDevengoValores">
+      <http:operation location="/CalculaDevengoValores" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarDevengoIntereses">
+      <http:operation location="/ConsultarDevengoIntereses" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarFlujoEfectivo">
+      <http:operation location="/ConsultarFlujoEfectivo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaMontoReservaSAP">
+      <http:operation location="/ConsultaMontoReservaSAP" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsDeudaInterna">
+    <wsdl:port name="wsDeudaInternaSoap" binding="tns:wsDeudaInternaSoap">
+      <soap:address location="http://mh-cpd-dnspap1:82/wsDeudaInterna.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsDeudaInternaSoap12" binding="tns:wsDeudaInternaSoap12">
+      <soap12:address location="http://mh-cpd-dnspap1:82/wsDeudaInterna.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsDeudaInternaHttpGet" binding="tns:wsDeudaInternaHttpGet">
+      <http:address location="http://mh-cpd-dnspap1:82/wsDeudaInterna.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsDeudaInternaHttpPost" binding="tns:wsDeudaInternaHttpPost">
+      <http:address location="http://mh-cpd-dnspap1:82/wsDeudaInterna.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

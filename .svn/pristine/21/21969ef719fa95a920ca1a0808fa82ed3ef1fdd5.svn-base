@@ -1,0 +1,40 @@
+﻿<?xml version="1.0"?>
+<!--
+  Descripción: Archivo de configuración del conector de 
+	Enterprise Library v1.0.0
+	Autor: Daniel Ignacio Mendez Serrano
+	Fecha: 20-04-2012
+-->
+<CommandDef>
+	<Command>
+		<BaseDatos>MSSQL</BaseDatos>
+		<DbInstance>ConexionBD</DbInstance>
+		<Type>CommandType.StoredProcedure</Type>
+		<Text>sg.uspEliminarExpediente</Text>
+		<NumberOfParameters>3</NumberOfParameters>
+		<ReturnType>procedure</ReturnType>
+		<CommandTimeout>6000</CommandTimeout>
+	</Command>
+	<Parameters>
+      <Parameter>
+        <Name>@pIdExpediente</Name>
+        <VariableMapeo>Lstr_IdExpediente</VariableMapeo>
+        <Type>String</Type>
+        <Nullable>False</Nullable>
+        <Size>30</Size>
+        <Direction>Input</Direction>
+      </Parameter>
+		<Parameter>
+			<Name>@pStatus</Name>
+			<Type>String</Type>
+			<Size>32</Size>
+			<Direction>Output</Direction>
+		</Parameter>
+		<Parameter>
+			<Name>@pMessage</Name>
+			<Type>String</Type>
+			<Size>32</Size>
+			<Direction>Output</Direction>
+		</Parameter>
+	</Parameters>
+</CommandDef>

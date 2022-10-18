@@ -1,0 +1,141 @@
+﻿<?xml version="1.0"?>
+<!--
+  Descripción: Archivo de configuración del conector de 
+	Enterprise Library v1.0.0
+	Autor: Gabriel García G.
+-->
+<CommandDef>
+  <Command>
+    <BaseDatos>MSSQL</BaseDatos>
+    <DbInstance>ConexionBD</DbInstance>
+    <Type>CommandType.StoredProcedure</Type>
+    <Text>cf.upsCrearAsiento</Text>
+    <NumberOfParameters>14</NumberOfParameters>
+    <ReturnType>procedure</ReturnType>
+    <CommandTimeout>6000</CommandTimeout>
+  </Command>
+  <Parameters>
+
+    <Parameter>
+      <Name>@pConsecutivo</Name>
+      <VariableMapeo>Lint_Consecutivo</VariableMapeo>
+      <Type>Int32</Type>
+      <Size>32</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pIdModulo</Name>
+      <VariableMapeo>Lstr_IdModulo</VariableMapeo>
+      <Type>String</Type>
+      <Size>4</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pIdOperacion</Name>
+      <VariableMapeo>Lstr_IdOperacion</VariableMapeo>
+      <Type>String</Type>
+      <Size>10</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pConsecutivoOrigen</Name>
+      <VariableMapeo>Lint_ConsecutivoOrigen</VariableMapeo>
+      <Type>Int32</Type>
+      <Size>32</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pIdMovimiento</Name>
+      <VariableMapeo>Lstr_IdMovimiento</VariableMapeo>
+      <Type>String</Type>
+      <Size>40</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pFecha</Name>
+      <VariableMapeo>Ldt_Fecha</VariableMapeo>
+      <Type>Datetime</Type>
+      <Size>20</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pDetalle</Name>
+      <VariableMapeo>Lstr_Detalle</VariableMapeo>
+      <Type>String</Type>
+      <Size>2000</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pEstado</Name>
+      <VariableMapeo>Lstr_Estado</VariableMapeo>
+      <Type>String</Type>
+      <Size>4</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pCodAsiento</Name>
+      <VariableMapeo>Lstr_CodAsiento</VariableMapeo>
+      <Type>String</Type>
+      <Size>50</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pLogAsiento</Name>
+      <VariableMapeo>Lstr_LogAsiento</VariableMapeo>
+      <Type>String</Type>
+      <Size>2000</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+    
+    <Parameter>
+      <Name>@pUsuario</Name>
+      <VariableMapeo>Lstr_UsrCreacion</VariableMapeo>
+      <Type>String</Type>
+      <Size>20</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+    
+    <Parameter>
+      <Name>@pResultado</Name>
+      <Type>String</Type>
+      <Size>2</Size>
+      <Direction>Output</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pMensaje</Name>
+      <Type>String</Type>
+      <Size>500</Size>
+      <Direction>Output</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pTmpConsecutivo</Name>
+      <Type>Int32</Type>
+      <Size>32</Size>
+      <Nullable>False</Nullable>
+      <Direction>Output</Direction>
+    </Parameter>
+    
+  </Parameters>
+</CommandDef>

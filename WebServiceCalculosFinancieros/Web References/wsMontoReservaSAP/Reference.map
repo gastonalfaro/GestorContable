@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://apq-sgf01.mh.hacienda.go.cr:8000/sap/bc/srt/wsdl/flv_10002A111AD1/bndg_url/sap/bc/srt/rfc/sap/zws_zint_conf_monto_reserva/350/zws_zint_conf_monto_reserva/binding?sap-client=350" filename="binding.wsdl" />
+  </Results>
+</DiscoveryClientResultsFile>

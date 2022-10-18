@@ -1,0 +1,228 @@
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGAsientosDeudaInterna\bin\Release\SGAsientosDeudaInterna.exe.config
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGAsientosDeudaInterna\bin\Release\SGAsientosDeudaInterna.exe.manifest
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGAsientosDeudaInterna\bin\Release\SGAsientosDeudaInterna.application
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGAsientosDeudaInterna\bin\Release\SGAsientosDeudaInterna.exe
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGAsientosDeudaInterna\bin\Release\SGAsientosDeudaInterna.XmlSerializers.dll
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGAsientosDeudaInterna\bin\Release\SGAsientosDeudaInterna.pdb
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGAsientosDeudaInterna\bin\Release\LogicaNegocio.dll
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGAsientosDeudaInterna\bin\Release\Datos.dll
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGAsientosDeudaInterna\bin\Release\log4net.dll
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGAsientosDeudaInterna\bin\Release\Microsoft.Office.Interop.Excel.dll
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGAsientosDeudaInterna\bin\Release\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGAsientosDeudaInterna\bin\Release\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGAsientosDeudaInterna\bin\Release\Microsoft.Practices.ServiceLocation.dll
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGAsientosDeudaInterna\bin\Release\Microsoft.Practices.Unity.dll
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGAsientosDeudaInterna\bin\Release\Microsoft.Practices.Unity.Interception.dll
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGAsientosDeudaInterna\bin\Release\LogicaNegocio.pdb
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGAsientosDeudaInterna\bin\Release\Datos.pdb
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGAsientosDeudaInterna\bin\Release\log4net.xml
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGAsientosDeudaInterna\bin\Release\Microsoft.Office.Interop.Excel.xml
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGAsientosDeudaInterna\bin\Release\LogicaNegocio.XmlSerializers.dll
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGAsientosDeudaInterna\obj\Release\SGAsientosDeudaInterna.csprojResolveAssemblyReference.cache
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGAsientosDeudaInterna\obj\Release\SGAsientosDeudaInterna.exe.manifest
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGAsientosDeudaInterna\obj\Release\SGAsientosDeudaInterna.application
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGAsientosDeudaInterna\obj\Release\SGAsientosDeudaInterna.exe
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGAsientosDeudaInterna\obj\Release\SGAsientosDeudaInterna.pdb
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\SGAsientosDeudaInterna\obj\Release\SGAsientosDeudaInterna.XmlSerializers.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGAsientosDeudaInterna\bin\Release\SGAsientosDeudaInterna.exe.config
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGAsientosDeudaInterna\bin\Release\SGAsientosDeudaInterna.exe.manifest
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGAsientosDeudaInterna\bin\Release\SGAsientosDeudaInterna.application
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGAsientosDeudaInterna\bin\Release\SGAsientosDeudaInterna.exe
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGAsientosDeudaInterna\bin\Release\SGAsientosDeudaInterna.XmlSerializers.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGAsientosDeudaInterna\bin\Release\SGAsientosDeudaInterna.pdb
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGAsientosDeudaInterna\bin\Release\LogicaNegocio.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGAsientosDeudaInterna\bin\Release\Datos.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGAsientosDeudaInterna\bin\Release\log4net.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGAsientosDeudaInterna\bin\Release\Microsoft.Office.Interop.Excel.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGAsientosDeudaInterna\bin\Release\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGAsientosDeudaInterna\bin\Release\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGAsientosDeudaInterna\bin\Release\Microsoft.Practices.ServiceLocation.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGAsientosDeudaInterna\bin\Release\Microsoft.Practices.Unity.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGAsientosDeudaInterna\bin\Release\Microsoft.Practices.Unity.Interception.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGAsientosDeudaInterna\bin\Release\LogicaNegocio.pdb
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGAsientosDeudaInterna\bin\Release\Datos.pdb
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGAsientosDeudaInterna\bin\Release\log4net.xml
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGAsientosDeudaInterna\bin\Release\Microsoft.Office.Interop.Excel.xml
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGAsientosDeudaInterna\bin\Release\LogicaNegocio.XmlSerializers.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGAsientosDeudaInterna\obj\Release\SGAsientosDeudaInterna.csprojResolveAssemblyReference.cache
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGAsientosDeudaInterna\obj\Release\SGAsientosDeudaInterna.exe.manifest
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGAsientosDeudaInterna\obj\Release\SGAsientosDeudaInterna.application
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGAsientosDeudaInterna\obj\Release\SGAsientosDeudaInterna.exe
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGAsientosDeudaInterna\obj\Release\SGAsientosDeudaInterna.pdb
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\SGAsientosDeudaInterna\obj\Release\SGAsientosDeudaInterna.XmlSerializers.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGAsientosDeudaInterna\bin\Release\SGAsientosDeudaInterna.exe.config
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGAsientosDeudaInterna\bin\Release\SGAsientosDeudaInterna.exe.manifest
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGAsientosDeudaInterna\bin\Release\SGAsientosDeudaInterna.application
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGAsientosDeudaInterna\bin\Release\SGAsientosDeudaInterna.exe
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGAsientosDeudaInterna\bin\Release\SGAsientosDeudaInterna.XmlSerializers.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGAsientosDeudaInterna\bin\Release\SGAsientosDeudaInterna.pdb
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGAsientosDeudaInterna\bin\Release\LogicaNegocio.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGAsientosDeudaInterna\bin\Release\Datos.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGAsientosDeudaInterna\bin\Release\log4net.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGAsientosDeudaInterna\bin\Release\Microsoft.Office.Interop.Excel.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGAsientosDeudaInterna\bin\Release\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGAsientosDeudaInterna\bin\Release\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGAsientosDeudaInterna\bin\Release\Microsoft.Practices.ServiceLocation.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGAsientosDeudaInterna\bin\Release\Microsoft.Practices.Unity.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGAsientosDeudaInterna\bin\Release\Microsoft.Practices.Unity.Interception.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGAsientosDeudaInterna\bin\Release\LogicaNegocio.pdb
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGAsientosDeudaInterna\bin\Release\Datos.pdb
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGAsientosDeudaInterna\bin\Release\log4net.xml
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGAsientosDeudaInterna\bin\Release\Microsoft.Office.Interop.Excel.xml
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGAsientosDeudaInterna\bin\Release\LogicaNegocio.XmlSerializers.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGAsientosDeudaInterna\obj\Release\SGAsientosDeudaInterna.csprojResolveAssemblyReference.cache
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGAsientosDeudaInterna\obj\Release\SGAsientosDeudaInterna.exe.manifest
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGAsientosDeudaInterna\obj\Release\SGAsientosDeudaInterna.application
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGAsientosDeudaInterna\obj\Release\SGAsientosDeudaInterna.exe
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGAsientosDeudaInterna\obj\Release\SGAsientosDeudaInterna.pdb
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\SGAsientosDeudaInterna\obj\Release\SGAsientosDeudaInterna.XmlSerializers.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGAsientosDeudaInterna\bin\Release\SGAsientosDeudaInterna.exe.config
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGAsientosDeudaInterna\bin\Release\SGAsientosDeudaInterna.exe.manifest
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGAsientosDeudaInterna\bin\Release\SGAsientosDeudaInterna.application
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGAsientosDeudaInterna\bin\Release\SGAsientosDeudaInterna.exe
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGAsientosDeudaInterna\bin\Release\SGAsientosDeudaInterna.XmlSerializers.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGAsientosDeudaInterna\bin\Release\SGAsientosDeudaInterna.pdb
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGAsientosDeudaInterna\bin\Release\LogicaNegocio.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGAsientosDeudaInterna\bin\Release\log4net.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGAsientosDeudaInterna\bin\Release\Datos.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGAsientosDeudaInterna\bin\Release\Microsoft.Office.Interop.Excel.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGAsientosDeudaInterna\bin\Release\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGAsientosDeudaInterna\bin\Release\office.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGAsientosDeudaInterna\bin\Release\Microsoft.Vbe.Interop.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGAsientosDeudaInterna\bin\Release\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGAsientosDeudaInterna\bin\Release\Microsoft.Practices.ServiceLocation.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGAsientosDeudaInterna\bin\Release\Microsoft.Practices.Unity.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGAsientosDeudaInterna\bin\Release\stdole.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGAsientosDeudaInterna\bin\Release\Microsoft.Practices.Unity.Interception.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGAsientosDeudaInterna\bin\Release\LogicaNegocio.pdb
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGAsientosDeudaInterna\bin\Release\LogicaNegocio.dll.config
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGAsientosDeudaInterna\bin\Release\log4net.xml
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGAsientosDeudaInterna\bin\Release\Datos.pdb
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGAsientosDeudaInterna\bin\Release\Datos.dll.config
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGAsientosDeudaInterna\bin\Release\Microsoft.Office.Interop.Excel.xml
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGAsientosDeudaInterna\bin\Release\office.xml
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGAsientosDeudaInterna\bin\Release\LogicaNegocio.XmlSerializers.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGAsientosDeudaInterna\obj\Release\SGAsientosDeudaInterna.csprojAssemblyReference.cache
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGAsientosDeudaInterna\obj\Release\SGAsientosDeudaInterna.csproj.CoreCompileInputs.cache
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGAsientosDeudaInterna\obj\Release\SGAsientosDeudaInterna.exe.manifest
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGAsientosDeudaInterna\obj\Release\SGAsientosDeudaInterna.application
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGAsientosDeudaInterna\obj\Release\SGAsientosDeudaInterna.csproj.CopyComplete
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGAsientosDeudaInterna\obj\Release\SGAsientosDeudaInterna.exe
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGAsientosDeudaInterna\obj\Release\SGAsientosDeudaInterna.pdb
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\SGAsientosDeudaInterna\obj\Release\SGAsientosDeudaInterna.XmlSerializers.dll
+D:\PaqueteGestorEmergencia\Fuente\SGAsientosDeudaInterna\bin\Release\SGAsientosDeudaInterna.exe.config
+D:\PaqueteGestorEmergencia\Fuente\SGAsientosDeudaInterna\bin\Release\SGAsientosDeudaInterna.exe.manifest
+D:\PaqueteGestorEmergencia\Fuente\SGAsientosDeudaInterna\bin\Release\SGAsientosDeudaInterna.application
+D:\PaqueteGestorEmergencia\Fuente\SGAsientosDeudaInterna\bin\Release\SGAsientosDeudaInterna.exe
+D:\PaqueteGestorEmergencia\Fuente\SGAsientosDeudaInterna\bin\Release\SGAsientosDeudaInterna.XmlSerializers.dll
+D:\PaqueteGestorEmergencia\Fuente\SGAsientosDeudaInterna\bin\Release\SGAsientosDeudaInterna.pdb
+D:\PaqueteGestorEmergencia\Fuente\SGAsientosDeudaInterna\bin\Release\LogicaNegocio.dll
+D:\PaqueteGestorEmergencia\Fuente\SGAsientosDeudaInterna\bin\Release\log4net.dll
+D:\PaqueteGestorEmergencia\Fuente\SGAsientosDeudaInterna\bin\Release\Datos.dll
+D:\PaqueteGestorEmergencia\Fuente\SGAsientosDeudaInterna\bin\Release\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\PaqueteGestorEmergencia\Fuente\SGAsientosDeudaInterna\bin\Release\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\PaqueteGestorEmergencia\Fuente\SGAsientosDeudaInterna\bin\Release\Microsoft.Practices.ServiceLocation.dll
+D:\PaqueteGestorEmergencia\Fuente\SGAsientosDeudaInterna\bin\Release\Microsoft.Practices.Unity.dll
+D:\PaqueteGestorEmergencia\Fuente\SGAsientosDeudaInterna\bin\Release\stdole.dll
+D:\PaqueteGestorEmergencia\Fuente\SGAsientosDeudaInterna\bin\Release\Microsoft.Practices.Unity.Interception.dll
+D:\PaqueteGestorEmergencia\Fuente\SGAsientosDeudaInterna\bin\Release\LogicaNegocio.pdb
+D:\PaqueteGestorEmergencia\Fuente\SGAsientosDeudaInterna\bin\Release\LogicaNegocio.dll.config
+D:\PaqueteGestorEmergencia\Fuente\SGAsientosDeudaInterna\bin\Release\log4net.xml
+D:\PaqueteGestorEmergencia\Fuente\SGAsientosDeudaInterna\bin\Release\Datos.pdb
+D:\PaqueteGestorEmergencia\Fuente\SGAsientosDeudaInterna\bin\Release\Datos.dll.config
+D:\PaqueteGestorEmergencia\Fuente\SGAsientosDeudaInterna\bin\Release\LogicaNegocio.XmlSerializers.dll
+D:\PaqueteGestorEmergencia\Fuente\SGAsientosDeudaInterna\obj\Release\SGAsientosDeudaInterna.csprojAssemblyReference.cache
+D:\PaqueteGestorEmergencia\Fuente\SGAsientosDeudaInterna\obj\Release\SGAsientosDeudaInterna.csproj.CoreCompileInputs.cache
+D:\PaqueteGestorEmergencia\Fuente\SGAsientosDeudaInterna\obj\Release\SGAsientosDeudaInterna.exe.manifest
+D:\PaqueteGestorEmergencia\Fuente\SGAsientosDeudaInterna\obj\Release\SGAsientosDeudaInterna.application
+D:\PaqueteGestorEmergencia\Fuente\SGAsientosDeudaInterna\obj\Release\SGAsientosDeudaInterna.csproj.CopyComplete
+D:\PaqueteGestorEmergencia\Fuente\SGAsientosDeudaInterna\obj\Release\SGAsientosDeudaInterna.exe
+D:\PaqueteGestorEmergencia\Fuente\SGAsientosDeudaInterna\obj\Release\SGAsientosDeudaInterna.pdb
+D:\PaqueteGestorEmergencia\Fuente\SGAsientosDeudaInterna\obj\Release\SGAsientosDeudaInterna.XmlSerializers.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGAsientosDeudaInterna\bin\Release\SGAsientosDeudaInterna.exe.config
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGAsientosDeudaInterna\bin\Release\SGAsientosDeudaInterna.exe.manifest
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGAsientosDeudaInterna\bin\Release\SGAsientosDeudaInterna.application
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGAsientosDeudaInterna\bin\Release\SGAsientosDeudaInterna.exe
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGAsientosDeudaInterna\bin\Release\SGAsientosDeudaInterna.XmlSerializers.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGAsientosDeudaInterna\bin\Release\SGAsientosDeudaInterna.pdb
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGAsientosDeudaInterna\bin\Release\LogicaNegocio.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGAsientosDeudaInterna\bin\Release\log4net.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGAsientosDeudaInterna\bin\Release\Datos.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGAsientosDeudaInterna\bin\Release\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGAsientosDeudaInterna\bin\Release\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGAsientosDeudaInterna\bin\Release\Microsoft.Practices.ServiceLocation.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGAsientosDeudaInterna\bin\Release\Microsoft.Practices.Unity.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGAsientosDeudaInterna\bin\Release\stdole.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGAsientosDeudaInterna\bin\Release\Microsoft.Practices.Unity.Interception.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGAsientosDeudaInterna\bin\Release\LogicaNegocio.pdb
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGAsientosDeudaInterna\bin\Release\LogicaNegocio.dll.config
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGAsientosDeudaInterna\bin\Release\log4net.xml
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGAsientosDeudaInterna\bin\Release\Datos.pdb
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGAsientosDeudaInterna\bin\Release\Datos.dll.config
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGAsientosDeudaInterna\bin\Release\LogicaNegocio.XmlSerializers.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGAsientosDeudaInterna\obj\Release\SGAsientosDeudaInterna.csprojAssemblyReference.cache
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGAsientosDeudaInterna\obj\Release\SGAsientosDeudaInterna.csproj.CoreCompileInputs.cache
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGAsientosDeudaInterna\obj\Release\SGAsientosDeudaInterna.exe.manifest
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGAsientosDeudaInterna\obj\Release\SGAsientosDeudaInterna.application
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGAsientosDeudaInterna\obj\Release\SGAsientosDeudaInterna.csproj.CopyComplete
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGAsientosDeudaInterna\obj\Release\SGAsientosDeudaInterna.exe
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGAsientosDeudaInterna\obj\Release\SGAsientosDeudaInterna.pdb
+D:\CODIGOFUENTEGESTOR\PR\Fuente\SGAsientosDeudaInterna\obj\Release\SGAsientosDeudaInterna.XmlSerializers.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGAsientosDeudaInterna\bin\Release\SGAsientosDeudaInterna.exe.config
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGAsientosDeudaInterna\bin\Release\SGAsientosDeudaInterna.exe.manifest
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGAsientosDeudaInterna\bin\Release\SGAsientosDeudaInterna.application
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGAsientosDeudaInterna\bin\Release\SGAsientosDeudaInterna.exe
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGAsientosDeudaInterna\bin\Release\SGAsientosDeudaInterna.XmlSerializers.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGAsientosDeudaInterna\bin\Release\SGAsientosDeudaInterna.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGAsientosDeudaInterna\bin\Release\LogicaNegocio.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGAsientosDeudaInterna\bin\Release\log4net.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGAsientosDeudaInterna\bin\Release\Datos.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGAsientosDeudaInterna\bin\Release\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGAsientosDeudaInterna\bin\Release\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGAsientosDeudaInterna\bin\Release\Microsoft.Practices.ServiceLocation.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGAsientosDeudaInterna\bin\Release\Microsoft.Practices.Unity.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGAsientosDeudaInterna\bin\Release\stdole.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGAsientosDeudaInterna\bin\Release\Microsoft.Practices.Unity.Interception.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGAsientosDeudaInterna\bin\Release\LogicaNegocio.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGAsientosDeudaInterna\bin\Release\LogicaNegocio.dll.config
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGAsientosDeudaInterna\bin\Release\log4net.xml
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGAsientosDeudaInterna\bin\Release\Datos.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGAsientosDeudaInterna\bin\Release\Datos.dll.config
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGAsientosDeudaInterna\bin\Release\LogicaNegocio.XmlSerializers.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGAsientosDeudaInterna\obj\Release\SGAsientosDeudaInterna.csprojAssemblyReference.cache
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGAsientosDeudaInterna\obj\Release\SGAsientosDeudaInterna.csproj.CoreCompileInputs.cache
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGAsientosDeudaInterna\obj\Release\SGAsientosDeudaInterna.exe.manifest
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGAsientosDeudaInterna\obj\Release\SGAsientosDeudaInterna.application
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGAsientosDeudaInterna\obj\Release\SGAsientosDeudaInterna.csproj.CopyComplete
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGAsientosDeudaInterna\obj\Release\SGAsientosDeudaInterna.exe
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGAsientosDeudaInterna\obj\Release\SGAsientosDeudaInterna.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\SGAsientosDeudaInterna\obj\Release\SGAsientosDeudaInterna.XmlSerializers.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGAsientosDeudaInterna\bin\Release\SGAsientosDeudaInterna.exe.config
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGAsientosDeudaInterna\bin\Release\SGAsientosDeudaInterna.exe.manifest
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGAsientosDeudaInterna\bin\Release\SGAsientosDeudaInterna.application
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGAsientosDeudaInterna\bin\Release\SGAsientosDeudaInterna.exe
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGAsientosDeudaInterna\bin\Release\SGAsientosDeudaInterna.XmlSerializers.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGAsientosDeudaInterna\bin\Release\SGAsientosDeudaInterna.pdb
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGAsientosDeudaInterna\bin\Release\LogicaNegocio.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGAsientosDeudaInterna\bin\Release\log4net.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGAsientosDeudaInterna\bin\Release\Datos.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGAsientosDeudaInterna\bin\Release\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGAsientosDeudaInterna\bin\Release\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGAsientosDeudaInterna\bin\Release\Microsoft.Practices.ServiceLocation.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGAsientosDeudaInterna\bin\Release\Microsoft.Practices.Unity.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGAsientosDeudaInterna\bin\Release\stdole.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGAsientosDeudaInterna\bin\Release\Microsoft.Practices.Unity.Interception.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGAsientosDeudaInterna\bin\Release\LogicaNegocio.pdb
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGAsientosDeudaInterna\bin\Release\LogicaNegocio.dll.config
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGAsientosDeudaInterna\bin\Release\log4net.xml
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGAsientosDeudaInterna\bin\Release\Datos.pdb
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGAsientosDeudaInterna\bin\Release\Datos.dll.config
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGAsientosDeudaInterna\bin\Release\LogicaNegocio.XmlSerializers.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGAsientosDeudaInterna\obj\Release\SGAsientosDeudaInterna.csproj.AssemblyReference.cache
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGAsientosDeudaInterna\obj\Release\SGAsientosDeudaInterna.csproj.CoreCompileInputs.cache
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGAsientosDeudaInterna\obj\Release\SGAsientosDeudaInterna.exe.manifest
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGAsientosDeudaInterna\obj\Release\SGAsientosDeudaInterna.application
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGAsientosDeudaInterna\obj\Release\SGAsientosDeudaInterna.csproj.CopyComplete
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGAsientosDeudaInterna\obj\Release\SGAsientosDeudaInterna.exe
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGAsientosDeudaInterna\obj\Release\SGAsientosDeudaInterna.pdb
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\SGAsientosDeudaInterna\obj\Release\SGAsientosDeudaInterna.XmlSerializers.dll

@@ -1,0 +1,513 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using LogicaNegocio.CalculosFinancieros.DeudaInterna;
+using System.Data.OleDb;
+using System.Globalization;
+using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
+using Presentacion.Compartidas;
+using System.IO;
+using System.Collections;
+using System.Configuration;
+//using System.Data.SqlClient;
+using System.Drawing;
+using Microsoft.Reporting.WebForms;
+using eWorld.UI;
+using Presentacion.Compartidas;
+using Presentacion.Compartidas.VisorReportes;
+using System.Diagnostics;
+using System.Reflection;
+
+namespace Presentacion.CalculosFinancieros.DeudaInterna
+{
+    public partial class frmProcesosManuales : BASE
+    {
+        # region Variables
+        private Presentacion.wsSG.wsSistemaGestor ws_SGService = new Presentacion.wsSG.wsSistemaGestor();
+        private Presentacion.wsDeudaExterna.wsDeudaExterna ws_DE = new Presentacion.wsDeudaExterna.wsDeudaExterna();
+        private Presentacion.wsDeudaInterna.wsDeudaInterna ws_DI = new Presentacion.wsDeudaInterna.wsDeudaInterna();
+
+        private wsDI.wsDeudaInterna wsDInterna = new wsDI.wsDeudaInterna();
+        private wsDeudaExterna.wsDeudaExterna wsDExterna = new wsDeudaExterna.wsDeudaExterna();
+
+        private string gstr_Usuario = String.Empty;
+        private string gstr_ModuloActual = String.Empty;
+        private char gchr_MensajeExito;
+        # endregion
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+            gchr_MensajeExito = clsSesion.Current.chr_MensajeExito;
+
+            try
+            {
+                gstr_Usuario = clsSesion.Current.LoginUsuario;
+
+                if (!IsPostBack)
+                {
+                    CargarNemotecnico();
+                    if (!string.IsNullOrEmpty(gstr_Usuario))
+                    {
+                        if (!clsSeguridadVistas.MostrarElementos(gstr_Usuario, Master, "frmProcesosManuales"))
+                            Response.Redirect("~/Principal.aspx", true);
+                        //else
+                        //    PanelReporte.Visible = false;
+                    }
+                    else
+                        Response.Redirect("~/Login.aspx", true);
+                }
+            }
+            catch (Exception ex)
+            {
+                //lblEstatus.Text = ex.ToString();
+                //Response.Redirect("~/Login.aspx", true);
+            }
+        }
+
+        private void CargarNemotecnico()
+        {
+            DataSet lNemotecnicos = ws_SGService.uwsConsultarNemotecnicos("", "", "", "", "");
+            this.ddlNemotecnico.DataSource = lNemotecnicos;
+            this.ddlNemotecnico.DataTextField = "IdNemotecnico";
+            this.ddlNemotecnico.DataValueField = "IdNemotecnico";
+            this.ddlNemotecnico.DataBind();
+        }
+        protected void btnCanje_Click(object sender, EventArgs e)
+        {
+            wsDeudaInterna.wsDeudaInterna wsDI = new wsDeudaInterna.wsDeudaInterna();
+            string msj;
+            string fc = txtFchFin.Text;
+
+            if (string.IsNullOrEmpty(fc))
+                msj = "Debe seleccionar una fecha.";
+            else
+            {
+                wsDI.Timeout = int.MaxValue;
+                wsDI.CalculaCanjeSubasta("C", txtFchFin.Text);
+                msj = "Canje ejecutado con éxito.";
+
+            }
+            string script = @"<script type='text/javascript'> alert('" + msj + "'); </script>";
+            ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
+        
+        }
+        protected void btnSubasta_Click(object sender, EventArgs e)
+        {
+            wsDeudaInterna.wsDeudaInterna wsDI = new wsDeudaInterna.wsDeudaInterna();
+            string msj;
+            string fc = txtFchFin.Text;
+
+            if (string.IsNullOrEmpty(fc))
+                msj = "Debe seleccionar una fecha.";
+            else
+            {
+                wsDI.Timeout = int.MaxValue;
+                wsDI.CalculaCanjeSubasta("S", txtFchFin.Text);
+                msj = "Subasta ejecutada con éxito.";
+
+            }
+            string script = @"<script type='text/javascript'> alert('" + msj + "'); </script>";
+            ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
+        }
+        protected void btnContaCanje_Click(object sender, EventArgs e)
+        {
+            //wsDI.wsDeudaInterna wsDInterna = new wsDI.wsDeudaInterna();
+            string msj;
+            string fc = txtFchFin.Text;
+
+            if (string.IsNullOrEmpty(fc))
+                msj = "Debe seleccionar una fecha.";
+            else
+            {
+                
+                if (!VerificaTitulosCanje(fc))
+                    msj = "Debe de asignarle los títulos nuevos de compra del canje.";
+                else
+                {
+                    msj = wsDInterna.CrearAsientoCanje(fc);
+                    //msj = "Asiento de canje ejecutado con éxito.";
+                }
+            }
+            string script = @"<script type='text/javascript'> alert('" + msj + "'); </script>";
+            ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
+
+        }
+        protected void btnContaSubasta_Click(object sender, EventArgs e)
+        {
+            //wsDI.wsDeudaInterna wsDInterna = new wsDI.wsDeudaInterna();
+            string msj;
+            string fc = txtFchFin.Text;
+
+            if (string.IsNullOrEmpty(fc))
+                msj = "Debe seleccionar una fecha.";
+            else
+            {
+                msj = wsDInterna.CrearAsientoSubasta(fc);
+               
+
+            }
+            string script = @"<script type='text/javascript'> alert('" + msj + "'); </script>";
+            ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
+        }
+        private bool VerificaTitulosCanje(string fecha)
+        {
+            try
+            {
+                wsSG.wsSistemaGestor wsSGE = new wsSG.wsSistemaGestor();
+                DataSet ds = wsSGE.uwsConsultarDinamico("select count(1) from [cf].[TitulosCanjeSubasta] " +
+                                                        "where  Convert(varchar(8),FchCanje,112) = Convert(varchar(8),Convert(datetime,'" + fecha + "',103),112) ");
+                if (Convert.ToInt32(ds.Tables[0].Rows[0][0]) == 0)
+                    return false;
+                else
+                    return true;
+            }
+            catch
+            { return false; }
+        }
+        protected void btnCargarValores_Click(object sender, EventArgs e)
+        {
+            //wsDI.wsDeudaInterna wsDInterna = new wsDI.wsDeudaInterna();
+            string msj;
+            string fc = txtFchFin.Text;
+
+            if (string.IsNullOrEmpty(fc))
+                msj = "Debe seleccionar una fecha.";
+            else
+            {
+                msj = wsDInterna.CargarValoresCuponesSINPE(fc, fc, "3" ); //tipo 3 para consultar cupones y valores
+
+
+            }
+            string script = @"<script type='text/javascript'> alert('" + msj + "'); </script>";
+            ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
+        }
+        protected void btnCargarCancelaciones_Click(object sender, EventArgs e)
+        {
+            //wsDI.wsDeudaInterna wsDInterna = new wsDI.wsDeudaInterna();
+            string msj;
+            string fc = txtFchFin.Text;
+
+            if (string.IsNullOrEmpty(fc))
+                msj = "Debe seleccionar una fecha.";
+            else
+            {
+                msj = wsDInterna.CargarValoresCuponesSINPE(fc, fc, "1");//tipo 1 para consultar cancelaciones
+
+
+            }
+            string script = @"<script type='text/javascript'> alert('" + msj + "'); </script>";
+            ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
+        }
+        protected void btnCalculaDevengo_Click(object sender, EventArgs e)
+        {
+            //wsDI.wsDeudaInterna wsDInterna = new wsDI.wsDeudaInterna();
+            string msj;
+            //string fc = txtFchFin.Text;
+
+            //if (string.IsNullOrEmpty(fc))
+            //    msj = "Debe seleccionar una fecha.";
+            //else
+            //{
+            //int lint_valor = 0;
+            wsDInterna.Timeout = -1;
+            if (!string.IsNullOrEmpty(this.ddlNumValor.SelectedValue) )
+            {
+
+                msj = wsDInterna.CalculaDevengoValores(0, Convert.ToInt32(this.ddlNumValor.SelectedValue), this.ddlNemotecnico.SelectedValue, "S");//tipo 3 para consultar cancelaciones
+            }
+            else
+            {
+
+                msj = wsDInterna.CalculaDevengoValores(0, 0, this.ddlNemotecnico.SelectedValue, "N");//tipo 3 para consultar cancelaciones
+            }
+
+
+            //}
+            string script = @"<script type='text/javascript'> alert('" + msj + "'); </script>";
+            ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
+        }
+        protected void btnContabilizaDevengo_Click(object sender, EventArgs e)
+        {
+            //wsDI.wsDeudaInterna wsDInterna = new wsDI.wsDeudaInterna();
+            string msj;
+            string fc = txtFchFin.Text;
+
+            if (string.IsNullOrEmpty(fc))
+                msj = "Debe seleccionar una fecha.";
+            else
+            {
+                msj = wsDInterna.ContabilizaDevengoPorFecha(txtFchFin.Text, txtFchFin.Text, this.ddlNumValor.SelectedValue, this.ddlNemotecnico.SelectedValue, "");//tipo 3 para consultar cancelaciones
+
+
+            }
+            string script = @"<script type='text/javascript'> alert('" + msj + "'); </script>";
+            ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
+        }
+        protected void btnContabilizaColocaciones_Click(object sender, EventArgs e)
+        {
+            //wsDI.wsDeudaInterna wsDInterna = new wsDI.wsDeudaInterna();
+            string msj;
+            string fc = txtFchFin.Text;
+
+            if (string.IsNullOrEmpty(fc))
+                msj = "Debe seleccionar una fecha.";
+            else
+            {
+                msj = wsDInterna.ContabilizarColocacion(txtFchFin.Text, txtFchFin.Text, (ddlNumValor.SelectedValue == "") ? "-1" : ddlNumValor.SelectedValue, ddlNemotecnico.SelectedValue,true);
+
+
+            }
+            string script = @"<script type='text/javascript'> alert('" + msj + "'); </script>";
+            ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
+        }
+        protected void btnContabilizaCostosTransaccion_Click(object sender, EventArgs e)
+        {
+            //wsDI.wsDeudaInterna wsDInterna = new wsDI.wsDeudaInterna();
+            string msj;
+            string fc = txtFchFin.Text;
+
+            if (string.IsNullOrEmpty(fc))
+                msj = "Debe seleccionar una fecha.";
+            else
+            {
+                msj = wsDInterna.ContabilizarCostoTransaccion();
+
+
+            }
+            string script = @"<script type='text/javascript'> alert('" + msj + "'); </script>";
+            ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
+        }
+        protected void btnEjecutaDTSSIGADE_Click(object sender, EventArgs e)
+        {
+            //wsDI.wsDeudaInterna wsDInterna = new wsDI.wsDeudaInterna();
+            string msj = "";
+
+            msj = this.wsDExterna.EjecutarDTSSIGADE("", "");
+
+
+            string script = @"<script type='text/javascript'> alert('" + msj + "'); </script>";
+            ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
+        }
+        protected void btnContabilizaPagoCupones_Click(object sender, EventArgs e)
+        {
+            //wsDI.wsDeudaInterna wsDInterna = new wsDI.wsDeudaInterna();
+            string msj;
+            string fc = txtFchFin.Text;
+
+            if (string.IsNullOrEmpty(fc))
+                msj = "Debe seleccionar una fecha.";
+            else
+            {
+                msj = wsDInterna.contabilizaPagoCupones(txtFchFin.Text, txtFchFin.Text, this.ddlNumValor.SelectedValue, this.ddlNemotecnico.SelectedValue);
+
+
+            }
+            string script = @"<script type='text/javascript'> alert('" + msj + "'); </script>";
+            ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
+        }
+        protected void btnContabilizaReclasificaciones_Click(object sender, EventArgs e)
+        {
+            //wsDI.wsDeudaInterna wsDInterna = new wsDI.wsDeudaInterna();
+            string msj;
+            string fc = txtFchFin.Text;
+
+            if (string.IsNullOrEmpty(fc))
+                msj = "Debe seleccionar una fecha.";
+            else
+            {
+                msj = wsDInterna.ContabilizarReclasificarPlazos(txtFchFin.Text, txtFchFin.Text, this.ddlNumValor.SelectedValue, this.ddlNemotecnico.SelectedValue);
+
+
+            }
+            string script = @"<script type='text/javascript'> alert('" + msj + "'); </script>";
+            ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
+        }
+
+        protected void btnContabilizaDiferencialCamb_Click(object sender, EventArgs e)
+        {
+            //wsDI.wsDeudaInterna wsDInterna = new wsDI.wsDeudaInterna();
+            string msj;
+            string fc = txtFchFin.Text;
+
+            if (string.IsNullOrEmpty(fc))
+                msj = "Debe seleccionar una fecha.";
+            else
+            {
+                msj = wsDInterna.ContabilizarDifCambiario(txtFchFin.Text, this.ddlNemotecnico.SelectedValue);
+
+
+            }
+            string script = @"<script type='text/javascript'> alert('" + msj + "'); </script>";
+            ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
+        }
+        protected void btnContabilizaCancelacionesAnti_Click(object sender, EventArgs e)
+        {
+            //wsDI.wsDeudaInterna wsDInterna = new wsDI.wsDeudaInterna();
+            string msj;
+            string fc = txtFchFin.Text;
+
+            decimal lint_valor = 0;
+            if (!string.IsNullOrEmpty(this.ddlNumValor.SelectedValue))
+            {
+                lint_valor = Convert.ToDecimal (this.ddlNumValor.SelectedValue);
+            }
+
+            if (string.IsNullOrEmpty(fc))
+                msj = "Debe seleccionar una fecha.";
+            else
+            {
+                msj = wsDInterna.ContabilizarCancelacionAnticipada(this.ddlNemotecnico.SelectedValue, lint_valor, txtFchFin.Text, 0, 0, 0, 0, 0);
+
+
+            }
+            string script = @"<script type='text/javascript'> alert('" + msj + "'); </script>";
+            ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
+        }
+        protected void btnContabilizaCancelaciones_Click(object sender, EventArgs e)
+        {
+            //wsDI.wsDeudaInterna wsDInterna = new wsDI.wsDeudaInterna();
+            string msj;
+            string fc = txtFchFin.Text;
+
+            if (string.IsNullOrEmpty(fc))
+                msj = "Debe seleccionar una fecha.";
+            else
+            {
+                msj = wsDInterna.ContabilizarCancelacion( txtFchFin.Text, txtFchFin.Text);
+
+
+            }
+            string script = @"<script type='text/javascript'> alert('" + msj + "'); </script>";
+            ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
+        }
+        protected void btnContabilizaPrescripciones_Click(object sender, EventArgs e)
+        {
+            //wsDI.wsDeudaInterna wsDInterna = new wsDI.wsDeudaInterna();
+            string msj;
+            string fc = txtFchFin.Text;
+
+            if (string.IsNullOrEmpty(fc))
+                msj = "Debe seleccionar una fecha.";
+            else
+            {
+                msj = wsDInterna.ContabilizaPrescripciones(txtFchFin.Text);
+
+
+            }
+            string script = @"<script type='text/javascript'> alert('" + msj + "'); </script>";
+            ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
+        }
+        protected void btnContabilizaMagisterio_Click(object sender, EventArgs e)
+        {
+            string msj;
+            string fc = txtFchFin.Text;
+
+            if (string.IsNullOrEmpty(fc))
+                msj = "Debe seleccionar una fecha.";
+            else
+            {
+                msj = wsDInterna.ContabilizaMagisterio(0, this.ddlNemotecnico.SelectedValue);
+
+
+            }
+            string script = @"<script type='text/javascript'> alert('" + msj + "'); </script>";
+            ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
+        }
+        
+        
+        protected void btnProceso_Click(object sender, EventArgs e)
+        {
+            switch (ddlProceso.SelectedValue)
+            {
+                case "CarVal"://Cargar Valores
+                    this.btnCargarValores_Click(sender, e);
+                    break;
+                case "ConCol"://Contabilizar Colocaciones
+                    this.btnContabilizaColocaciones_Click(sender, e);
+                    break;
+                case "CosTran"://Costos de Transaccion
+                    this.btnContabilizaCostosTransaccion_Click(sender, e);
+                    break;
+                case "CalDev"://Calcular devengo
+                    this.btnCalculaDevengo_Click(sender, e);
+                    break;
+                case "CarCan"://Cargar Cancelaciones
+                    this.btnCargarCancelaciones_Click(sender, e);
+                    break;
+                case "PagCup"://Pago de Cupones
+                    this.btnContabilizaPagoCupones_Click(sender, e);
+                    break;
+                case "ConDev"://Contabilizar Devengo
+                    this.btnContabilizaDevengo_Click(sender, e);
+                    break;
+                case "RecVal"://Reclasificaciones del Mes
+                    this.btnContabilizaReclasificaciones_Click(sender, e);
+                    break;
+                case "DifCam"://Diferencial Cambiario
+                    this.btnContabilizaDiferencialCamb_Click(sender, e);
+                    break;
+                case "CieMes"://Cierre de Mes
+                    //this.btnContaSubasta_Click(sender, e);
+                    break;
+                case "CieAno"://Cierre de Año
+                    //this.btnContaSubasta_Click(sender, e);
+                    break;
+                case "CalSub"://Calcular Subasta
+                    this.btnSubasta_Click(sender, e);
+                    break;
+                case "ConSub"://Contabilizar Subasta
+                    this.btnContaSubasta_Click(sender, e);
+                    break;
+                case "CalCan"://Calcular Canje
+                    this.btnCanje_Click(sender, e);
+                    break;
+                case "ConCan"://Contabilizar Canje
+                    this.btnContaCanje_Click(sender, e);
+                    break;
+                //case "ConPres"://Contabilizar Prescripciones
+                //    this.btnContabilizaPrescripciones_Click(sender, e);
+                //    break;
+                //case "ConMag"://Contabilizar Magisterio
+                //    this.btnContabilizaMagisterio_Click(sender, e);
+                //    break;
+                case "ConCanc"://Contabilizar Cancelaciones
+                    this.btnContabilizaCancelaciones_Click(sender, e);
+                    break;
+                case "ConCanAnti"://Contabilizar Cancelaciones Anticipadas
+                    this.btnContabilizaCancelacionesAnti_Click(sender, e);
+                    break;
+                //case "DTSSIGADE"://Ejecutar DTSSIGADE
+                //    this.btnEjecutaDTSSIGADE_Click(sender, e);
+                //    break;
+                default:
+                    break;
+            }
+        }
+
+        protected void ddlNemotecnico_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.ddlNumValor.ClearSelection();
+            this.ddlNumValor.Dispose();
+            this.ddlNumValor.Items.Clear();
+            this.ddlNumValor.Items.Insert(0, (new ListItem("-- Seleccione--", "")));
+            if (!string.IsNullOrEmpty(this.ddlNemotecnico.SelectedValue.Trim()))
+            {
+                DataSet ds_ConsultaTitulos = new DataSet();
+                ds_ConsultaTitulos = wsDInterna.ConsultarTitulosValores(String.Empty, this.ddlNemotecnico.SelectedValue.Trim(), String.Empty, String.Empty, String.Empty, String.Empty, String.Empty, String.Empty, "01/01/1900", "01/01/5000");
+                this.ddlNumValor.DataTextField =
+                this.ddlNumValor.DataValueField = "NroValor";
+                if (ds_ConsultaTitulos.Tables.Count > 0 && ds_ConsultaTitulos.Tables["Table"].Rows.Count > 0)
+                {
+                    this.ddlNumValor.DataSource=ds_ConsultaTitulos;
+                    this.ddlNumValor.DataBind();
+                }//if
+            }//if
+        }
+    }
+}

@@ -1,0 +1,7 @@
+Alias >> CERT_HACIENDA
+pass >> 654321
+
+
+Keystore >> J_STORE_HACIENDA
+pass >> 654321
+

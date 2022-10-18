@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Application-Name: GestorContable
+Implementation-Title: x
+Implementation-Version: 1.0.0
+Archiver-Version: Plexus Archiver
+Built-By: x
+Specification-Vendor: x
+Specification-Title: x
+Application-Library-Allowable-Codebase: *
+Implementation-Vendor: x
+Caller-Allowable-Codebase: http://mh-cpd-qanspap1/ 127.0.0.1 localhost
+Permissions: all-permissions
+Codebase: *
+Created-By: Jar
+Build-Jdk: 1.8.0_40
+Specification-Version: 1.0.0

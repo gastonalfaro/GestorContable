@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://www.prosoft.cr/CGPCanalesIBAN/DTR/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.prosoft.cr/CGPCanalesIBAN/DTR/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.prosoft.cr/CGPCanalesIBAN/DTR/Imports">
+      <xsd:import schemaLocation="http://tndigitalwcfv3:90/CGPCanalesWCF/DTR.svc?xsd=xsd0" namespace="http://www.prosoft.cr/CGPCanalesIBAN/DTR/" />
+      <xsd:import schemaLocation="http://tndigitalwcfv3:90/CGPCanalesWCF/DTR.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="DTRIBANSoap_ServicioDisponible_InputMessage">
+    <wsdl:part name="parameters" element="tns:ServicioDisponible" />
+  </wsdl:message>
+  <wsdl:message name="DTRIBANSoap_ServicioDisponible_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ServicioDisponibleResponse" />
+  </wsdl:message>
+  <wsdl:message name="AutorizarRequest">
+    <wsdl:part name="Autorizar" element="tns:Autorizar" />
+  </wsdl:message>
+  <wsdl:message name="AutorizarResponse">
+    <wsdl:part name="AutorizarResponse" element="tns:AutorizarResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarRequest">
+    <wsdl:part name="Eliminar" element="tns:Eliminar" />
+  </wsdl:message>
+  <wsdl:message name="EliminarResponse">
+    <wsdl:part name="EliminarResponse" element="tns:EliminarResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarRequest">
+    <wsdl:part name="Enviar" element="tns:Enviar" />
+  </wsdl:message>
+  <wsdl:message name="EnviarResponse">
+    <wsdl:part name="EnviarResponse" element="tns:EnviarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerInformacionCuentaRequest">
+    <wsdl:part name="ObtenerInformacionCuenta" element="tns:ObtenerInformacionCuenta" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerInformacionCuentaResponse">
+    <wsdl:part name="ObtenerInformacionCuentaResponse" element="tns:ObtenerInformacionCuentaResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnvioDirectoRequest">
+    <wsdl:part name="EnvioDirecto" element="tns:EnvioDirecto" />
+  </wsdl:message>
+  <wsdl:message name="EnvioDirectoResponse">
+    <wsdl:part name="EnvioDirectoResponse" element="tns:EnvioDirectoResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarRequest">
+    <wsdl:part name="Registrar" element="tns:Registrar" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarResponse">
+    <wsdl:part name="RegistrarResponse" element="tns:RegistrarResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnvioDirectoCreditoCuentaRequest">
+    <wsdl:part name="EnvioDirectoCreditoCuenta" element="tns:EnvioDirectoCreditoCuenta" />
+  </wsdl:message>
+  <wsdl:message name="EnvioDirectoCreditoCuentaResponse">
+    <wsdl:part name="EnvioDirectoCreditoCuentaResponse" element="tns:EnvioDirectoCreditoCuentaResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnvioDirectoCreditoCuentaCalendarizadoRequest">
+    <wsdl:part name="EnvioDirectoCreditoCuentaCalendarizado" element="tns:EnvioDirectoCreditoCuentaCalendarizado" />
+  </wsdl:message>
+  <wsdl:message name="EnvioDirectoCreditoCuentaCalendarizadoResponse">
+    <wsdl:part name="EnvioDirectoCreditoCuentaCalendarizadoResponse" element="tns:EnvioDirectoCreditoCuentaCalendarizadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarCreditoCuentaRequest">
+    <wsdl:part name="RegistrarCreditoCuenta" element="tns:RegistrarCreditoCuenta" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarCreditoCuentaResponse">
+    <wsdl:part name="RegistrarCreditoCuentaResponse" element="tns:RegistrarCreditoCuentaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarRequest">
+    <wsdl:part name="Consultar" element="tns:Consultar" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarResponse">
+    <wsdl:part name="ConsultarResponse" element="tns:ConsultarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarCalendarizadasRequest">
+    <wsdl:part name="ConsultarCalendarizadas" element="tns:ConsultarCalendarizadas" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarCalendarizadasResponse">
+    <wsdl:part name="ConsultarCalendarizadasResponse" element="tns:ConsultarCalendarizadasResponse" />
+  </wsdl:message>
+  <wsdl:message name="InactivarCalendarizacionRequest">
+    <wsdl:part name="InactivarCalendarizacion" element="tns:InactivarCalendarizacion" />
+  </wsdl:message>
+  <wsdl:message name="InactivarCalendarizacionResponse">
+    <wsdl:part name="InactivarCalendarizacionResponse" element="tns:InactivarCalendarizacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActivarCalendarizacionRequest">
+    <wsdl:part name="ActivarCalendarizacion" element="tns:ActivarCalendarizacion" />
+  </wsdl:message>
+  <wsdl:message name="ActivarCalendarizacionResponse">
+    <wsdl:part name="ActivarCalendarizacionResponse" element="tns:ActivarCalendarizacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="CancelarCalendarizacionRequest">
+    <wsdl:part name="CancelarCalendarizacion" element="tns:CancelarCalendarizacion" />
+  </wsdl:message>
+  <wsdl:message name="CancelarCalendarizacionResponse">
+    <wsdl:part name="CancelarCalendarizacionResponse" element="tns:CancelarCalendarizacionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="DTRIBANSoap">
+    <wsdl:operation name="ServicioDisponible">
+      <wsdl:input wsaw:Action="http://www.prosoft.cr/CGPCanalesIBAN/DTR/ServicioDisponible" message="tns:DTRIBANSoap_ServicioDisponible_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.prosoft.cr/CGPCanalesIBAN/DTR/DTRIBANSoap/ServicioDisponibleResponse" message="tns:DTRIBANSoap_ServicioDisponible_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Autorizar">
+      <wsdl:input wsaw:Action="http://www.prosoft.cr/CGPCanalesIBAN/DTR/Autorizar" name="AutorizarRequest" message="tns:AutorizarRequest" />
+      <wsdl:output wsaw:Action="http://www.prosoft.cr/CGPCanalesIBAN/DTR/DTRIBANSoap/AutorizarResponse" name="AutorizarResponse" message="tns:AutorizarResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar">
+      <wsdl:input wsaw:Action="http://www.prosoft.cr/CGPCanalesIBAN/DTR/Eliminar" name="EliminarRequest" message="tns:EliminarRequest" />
+      <wsdl:output wsaw:Action="http://www.prosoft.cr/CGPCanalesIBAN/DTR/DTRIBANSoap/EliminarResponse" name="EliminarResponse" message="tns:EliminarResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="Enviar">
+      <wsdl:input wsaw:Action="http://www.prosoft.cr/CGPCanalesIBAN/DTR/Enviar" name="EnviarRequest" message="tns:EnviarRequest" />
+      <wsdl:output wsaw:Action="http://www.prosoft.cr/CGPCanalesIBAN/DTR/DTRIBANSoap/EnviarResponse" name="EnviarResponse" message="tns:EnviarResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerInformacionCuenta">
+      <wsdl:input wsaw:Action="http://www.prosoft.cr/CGPCanalesIBAN/DTR/ObtenerInformacionCuenta" name="ObtenerInformacionCuentaRequest" message="tns:ObtenerInformacionCuentaRequest" />
+      <wsdl:output wsaw:Action="http://www.prosoft.cr/CGPCanalesIBAN/DTR/DTRIBANSoap/ObtenerInformacionCuentaResponse" name="ObtenerInformacionCuentaResponse" message="tns:ObtenerInformacionCuentaResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="EnvioDirecto">
+      <wsdl:input wsaw:Action="http://www.prosoft.cr/CGPCanalesIBAN/DTR/EnvioDirecto" name="EnvioDirectoRequest" message="tns:EnvioDirectoRequest" />
+      <wsdl:output wsaw:Action="http://www.prosoft.cr/CGPCanalesIBAN/DTR/DTRIBANSoap/EnvioDirectoResponse" name="EnvioDirectoResponse" message="tns:EnvioDirectoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="Registrar">
+      <wsdl:input wsaw:Action="http://www.prosoft.cr/CGPCanalesIBAN/DTR/Registrar" name="RegistrarRequest" message="tns:RegistrarRequest" />
+      <wsdl:output wsaw:Action="http://www.prosoft.cr/CGPCanalesIBAN/DTR/DTRIBANSoap/RegistrarResponse" name="RegistrarResponse" message="tns:RegistrarResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="EnvioDirectoCreditoCuenta">
+      <wsdl:input wsaw:Action="http://www.prosoft.cr/CGPCanalesIBAN/DTR/EnvioDirectoCreditoCuenta" name="EnvioDirectoCreditoCuentaRequest" message="tns:EnvioDirectoCreditoCuentaRequest" />
+      <wsdl:output wsaw:Action="http://www.prosoft.cr/CGPCanalesIBAN/DTR/DTRIBANSoap/EnvioDirectoCreditoCuentaResponse" name="EnvioDirectoCreditoCuentaResponse" message="tns:EnvioDirectoCreditoCuentaResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="EnvioDirectoCreditoCuentaCalendarizado">
+      <wsdl:input wsaw:Action="http://www.prosoft.cr/CGPCanalesIBAN/DTR/EnvioDirectoCreditoCuentaCalendarizado" name="EnvioDirectoCreditoCuentaCalendarizadoRequest" message="tns:EnvioDirectoCreditoCuentaCalendarizadoRequest" />
+      <wsdl:output wsaw:Action="http://www.prosoft.cr/CGPCanalesIBAN/DTR/DTRIBANSoap/EnvioDirectoCreditoCuentaCalendarizadoResponse" name="EnvioDirectoCreditoCuentaCalendarizadoResponse" message="tns:EnvioDirectoCreditoCuentaCalendarizadoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarCreditoCuenta">
+      <wsdl:input wsaw:Action="http://www.prosoft.cr/CGPCanalesIBAN/DTR/RegistrarCreditoCuenta" name="RegistrarCreditoCuentaRequest" message="tns:RegistrarCreditoCuentaRequest" />
+      <wsdl:output wsaw:Action="http://www.prosoft.cr/CGPCanalesIBAN/DTR/DTRIBANSoap/RegistrarCreditoCuentaResponse" name="RegistrarCreditoCuentaResponse" message="tns:RegistrarCreditoCuentaResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="Consultar">
+      <wsdl:input wsaw:Action="http://www.prosoft.cr/CGPCanalesIBAN/DTR/Consultar" name="ConsultarRequest" message="tns:ConsultarRequest" />
+      <wsdl:output wsaw:Action="http://www.prosoft.cr/CGPCanalesIBAN/DTR/DTRIBANSoap/ConsultarResponse" name="ConsultarResponse" message="tns:ConsultarResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCalendarizadas">
+      <wsdl:input wsaw:Action="http://www.prosoft.cr/CGPCanalesIBAN/DTR/ConsultarCalendarizadas" name="ConsultarCalendarizadasRequest" message="tns:ConsultarCalendarizadasRequest" />
+      <wsdl:output wsaw:Action="http://www.prosoft.cr/CGPCanalesIBAN/DTR/DTRIBANSoap/ConsultarCalendarizadasResponse" name="ConsultarCalendarizadasResponse" message="tns:ConsultarCalendarizadasResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="InactivarCalendarizacion">
+      <wsdl:input wsaw:Action="http://www.prosoft.cr/CGPCanalesIBAN/DTR/InactivarCalendarizacion" name="InactivarCalendarizacionRequest" message="tns:InactivarCalendarizacionRequest" />
+      <wsdl:output wsaw:Action="http://www.prosoft.cr/CGPCanalesIBAN/DTR/DTRIBANSoap/InactivarCalendarizacionResponse" name="InactivarCalendarizacionResponse" message="tns:InactivarCalendarizacionResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ActivarCalendarizacion">
+      <wsdl:input wsaw:Action="http://www.prosoft.cr/CGPCanalesIBAN/DTR/ActivarCalendarizacion" name="ActivarCalendarizacionRequest" message="tns:ActivarCalendarizacionRequest" />
+      <wsdl:output wsaw:Action="http://www.prosoft.cr/CGPCanalesIBAN/DTR/DTRIBANSoap/ActivarCalendarizacionResponse" name="ActivarCalendarizacionResponse" message="tns:ActivarCalendarizacionResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelarCalendarizacion">
+      <wsdl:input wsaw:Action="http://www.prosoft.cr/CGPCanalesIBAN/DTR/CancelarCalendarizacion" name="CancelarCalendarizacionRequest" message="tns:CancelarCalendarizacionRequest" />
+      <wsdl:output wsaw:Action="http://www.prosoft.cr/CGPCanalesIBAN/DTR/DTRIBANSoap/CancelarCalendarizacionResponse" name="CancelarCalendarizacionResponse" message="tns:CancelarCalendarizacionResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

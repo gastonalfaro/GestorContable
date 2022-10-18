@@ -1,0 +1,226 @@
+﻿          .uppercase {
+            text-transform: uppercase;
+        } 
+        .lowercase {
+            text-transform: lowercase;
+        } 
+        .capitalize {
+            text-transform: capitalize;
+        }
+
+ 
+
+        .auto-style1 {
+            height: 47px;
+            width: 139px;
+            text-align: left;
+        }
+        .auto-style3 {
+            height: 49px;
+            width: 336px;
+        }
+        .auto-style4 {
+            height: 50px;
+            text-align: right;
+        }
+        .auto-style9 {
+            height: 59px;
+        }
+        .titulotabla {
+            text-align: left;
+            font-weight: 700;
+            color: #3366CC;
+            font-size: medium;
+        }
+        .auto-style13 {
+            height: 30px;
+        }
+        .auto-style15 {
+            height: 36px;
+        }
+        .auto-style17 {
+            height: 30px;
+            width: 117px;
+        }
+        .auto-style18 {
+            height: 59px;
+            width: 117px;
+        }
+        .auto-style19 {
+            height: 51px;
+            width: 117px;
+        }
+        .auto-style20 {
+            height: 36px;
+            width: 117px;
+        }
+        .auto-style22 {
+        }
+        .auto-style23 {
+            height: 59px;
+            width: 235px;
+        }
+        .auto-style24 {
+            height: 51px;
+            width: 235px;
+        }
+        .auto-style25 {
+            height: 36px;
+            width: 235px;
+        }
+        .auto-style27 {
+            height: 30px;
+            width: 140px;
+        }
+        .auto-style28 {
+            height: 59px;
+            width: 140px;
+        }
+        .auto-style29 {
+            height: 51px;
+            width: 140px;
+        }
+        .auto-style30 {
+            height: 36px;
+            width: 140px;
+        }
+        .auto-style34 {
+            height: 51px;
+            width: 139px;
+        }
+        .auto-style37 {
+            height: 68px;
+            width: 117px;
+        }
+        .auto-style38 {
+            height: 68px;
+            width: 140px;
+        }
+        .auto-style40 {
+            height: 68px;
+            width: 235px;
+        }
+        .auto-style43 {
+            height: 30px;
+            width: 139px;
+        }
+        .auto-style44 {
+            height: 59px;
+            width: 139px;
+        }
+        .auto-style45 {
+            height: 36px;
+            width: 139px;
+        }
+        .auto-style46 {
+        }
+        .auto-style48 {
+            width: 117px;
+        }
+        .auto-style49 {
+            width: 140px;
+        }
+        .auto-style51 {
+            width: 235px;
+        }
+        .auto-style52 {
+            width: 139px;
+        }
+        .auto-style59 {
+            height: 30px;
+            width: 336px;
+        }
+        .auto-style61 {
+            height: 59px;
+            width: 336px;
+        }
+        .auto-style62 {
+            height: 36px;
+            width: 336px;
+        }
+        .auto-style63 {            text-align: right;
+        }
+        .auto-style79 {
+            width: 336px;
+        }
+        .auto-style86 {
+            height: 37px;
+            width: 336px;
+        }
+        .auto-style87 {
+            height: 37px;
+            width: 117px;
+        }
+        .auto-style88 {
+            height: 37px;
+            width: 140px;
+        }
+        .auto-style90 {
+            height: 37px;
+            width: 235px;
+        }
+        .auto-style91 {
+            height: 37px;
+            width: 139px;
+        }
+        .auto-style92 {
+            height: 37px;
+        }
+        .auto-style93 {
+            font-size: small;
+            font-weight: 700;
+        }
+        .auto-style95 {
+            border: 1px solid #563d7c;
+            border-radius: 5px;
+            color: white;
+            background-image: url(imagenes/1444297118_Save.png);
+            background-repeat: no-repeat;
+            background-position: left;
+            padding-left: 15px;
+            background-color: #3366CC;
+            font-size: small;
+            padding-right: 10px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+        .auto-style99 {
+            font-size: medium;
+            color: #FF0000;
+            display: inline-block;
+        }
+        .auto-style100 {
+            font-weight: bold;
+        }
+        .auto-style101 {
+            font-size: small;
+            font-weight: bold;
+        }
+        .auto-style102 {
+            height: 45px;
+            width: 336px;
+            font-weight: bold;
+        }
+        .auto-style103 {
+            height: 45px;
+            width: 117px;
+        }
+        .auto-style104 {
+            height: 45px;
+            width: 140px;
+        }
+        .auto-style105 {
+            height: 45px;
+            width: 139px;
+        }
+        .auto-style106 {
+            height: 45px;
+            width: 235px;
+        }
+        .auto-style107 {
+            height: 45px;
+        }
+
+
+
+       

@@ -1,0 +1,357 @@
+﻿using Presentacion.Compartidas;
+using Presentacion.Compartidas.VisorReportes;
+using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Diagnostics;
+using System.Linq;
+using System.Reflection;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using Microsoft.Reporting.WebForms;
+using System.Data;
+using System.Globalization;
+
+namespace Presentacion.Contingentes
+{
+    public partial class ReportesContingentes : BASE
+    {
+        private string str_tipoReport = string.Empty;
+        private string gstr_Usuario = String.Empty;
+        private static Presentacion.wsSG.wsSistemaGestor ws_SGService = new Presentacion.wsSG.wsSistemaGestor();
+        protected void Page_Load(object sender, EventArgs e)
+        {
+           
+            gstr_Usuario = clsSesion.Current.LoginUsuario;
+
+            if (!string.IsNullOrEmpty(gstr_Usuario))
+            {
+                if (!clsSeguridadVistas.MostrarElementos(gstr_Usuario, Master, "OBJ_CT"))
+                    Response.Redirect("~/Principal.aspx", true);
+                else
+                {
+                    string reporteAplicar = Request.QueryString["rept"];
+                    Session["reporte"] = reporteAplicar;
+                    ViewState["Reporte"] = Session["reporte"];
+
+                    str_tipoReport = Convert.ToString(ViewState["Reporte"]);
+
+                    if (!IsPostBack)
+                    {
+                        InicializarCampos();
+                        this.txtFechaFin.Text =
+                        this.txtFechaInicio.Text = DateTime.Now.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture);
+
+                        if (str_tipoReport == "XCruce")
+                        {
+                            CargarSociedades();
+                            lstMinisterios.Visible = true;
+                            lblMinisterios.Visible = true;
+                            lblEstadoRes.Visible = true;
+                            ddlEstadoRes.Visible = true;
+                        }
+                        else
+                        {
+                            lstMinisterios.Visible = false;
+                            lblMinisterios.Visible = false;
+                            lblEstadoRes.Visible = false;
+                            ddlEstadoRes.Visible = false;
+                        }
+                        if (str_tipoReport == "BITCON")
+                        {
+                            this.divBitacora.Visible = true;
+                            this.divEstado.Visible = false;
+                        }
+                        ReportesContingentesMultiView.ActiveViewIndex = 0;
+                    }
+
+                }
+            }
+            else
+            {
+
+                if (String.IsNullOrEmpty(gstr_Usuario))
+                {
+                    MessageBox.Show("Sesión de usuario finalizó.");
+                    Response.Redirect("~/Login.aspx", true);
+                }
+            }
+        }
+
+        private bool ColumnEqual(object A, object B)
+        {
+            if (A == DBNull.Value && B == DBNull.Value)
+                return true;
+            if (A == DBNull.Value || B == DBNull.Value)
+                return false;
+            return (A.Equals(B));
+        }
+
+        public DataTable SelectDistinct(DataTable SourceTable, string FieldName)
+        {
+            DataTable dt = new DataTable(SourceTable.TableName);
+            dt.Columns.Add(FieldName, SourceTable.Columns[FieldName].DataType);
+            object LastValue = null;
+            foreach (DataRow dr in SourceTable.Select("", FieldName))
+            {
+                if (LastValue == null || !(ColumnEqual(LastValue, dr[FieldName])))
+                {
+                    LastValue = dr[FieldName];
+                    dt.Rows.Add(new object[] { LastValue });
+                }
+            }
+            return dt;
+        }
+
+        protected void InicializarCampos()
+        {
+            try
+            {
+                DataTable ldat_Bitacora = ws_SGService.uwsConsultarBitacorasAsientos(null, null, null, null, null, "CT").Tables[0];
+
+                this.ddlIdOperacion.DataSource = SelectDistinct(ldat_Bitacora, "IdOperacion");
+                this.ddlIdOperacion.DataTextField =
+                this.ddlIdOperacion.DataValueField = "IdOperacion";
+                this.ddlIdOperacion.DataBind();
+
+                this.ddlIdSociedad.DataSource = SelectDistinct(ldat_Bitacora, "IdSociedadGL");
+                this.ddlIdSociedad.DataTextField =
+                this.ddlIdSociedad.DataValueField = "IdSociedadGL";
+                this.ddlIdSociedad.DataBind();
+
+                this.ddlIdTransaccion.DataSource = SelectDistinct(ldat_Bitacora, "IdTransaccion");
+                this.ddlIdTransaccion.DataTextField =
+                this.ddlIdTransaccion.DataValueField = "IdTransaccion";
+                this.ddlIdTransaccion.DataBind();
+
+                this.ddlIdOperacion.Items.Insert(0, new ListItem("-- Seleccione Valor --", ""));
+                this.ddlIdSociedad.Items.Insert(0, new ListItem("-- Seleccione Valor --", ""));
+                this.ddlIdTransaccion.Items.Insert(0, new ListItem("-- Seleccione Valor --", ""));
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
+            }
+        }
+
+        protected void btnGenerarReporte_Click(object sender, EventArgs e)
+        {
+            string str_mensaje = string.Empty;
+            string strUsuario = clsSesion.Current.LoginUsuario;
+            string strIdEntidad, strFechaInicio, strFechaFin;
+            DateTime FechaInicio, FechaFin;
+            try
+            {
+
+
+                string str_Institucion = clsSesion.Current.SociedadUsr;
+
+                FechaInicio = Convert.ToDateTime(this.txtFechaInicio.Text.Equals(string.Empty) ?  "01/01/1900" : this.txtFechaInicio.Text);
+                FechaFin = Convert.ToDateTime(this.txtFechaFin.Text.Equals(string.Empty) ? "01/01/1900" : this.txtFechaFin.Text);
+
+                strFechaInicio = String.Format("{0:yyyy}", FechaInicio) + '/' + String.Format("{0:MM}", FechaInicio) + '/' + String.Format("{0:dd}", FechaInicio) + ' ' +
+                    String.Format("{0:HH}", FechaInicio) + ':' +
+                    String.Format("{0:mm}", FechaInicio) + ':' +
+                    String.Format("{0:ss}", FechaInicio) + '.' +
+                    String.Format("{0:fff}", FechaInicio);
+
+                strFechaFin = String.Format("{0:yyyy}", FechaFin) + '/' + String.Format("{0:MM}", FechaFin) + '/' + String.Format("{0:dd}", FechaFin) + ' ' +
+                    String.Format("{0:HH}", FechaFin) + ':' +
+                    String.Format("{0:mm}", FechaFin) + ':' +
+                    String.Format("{0:ss}", FechaFin) + '.' +
+                    String.Format("{0:fff}", FechaFin);
+
+                //ParametrosReporte oParam = new ParametrosReporte();
+                List<ReportParameter> oParametros = new List<ReportParameter>();
+                List<ReportParameter> oParametros2 = new List<ReportParameter>();
+                List<ReportParameter> oParametros3 = new List<ReportParameter>();
+                List<ReportParameter> oParametros4 = new List<ReportParameter>();
+                List<String> Sociedades = new List<String>();
+                ParametrosReporte oParam;
+                
+                if ((!strUsuario.Equals(string.Empty)) && (!str_Institucion.Equals(string.Empty)))
+                {
+                   // oParametros.Add(new ReportParameter("IdUsuarioEjecutaRpt", strUsuario, false));
+                    oParametros.Add(new ReportParameter("FechaInicio", strFechaInicio, false));
+                    oParametros.Add(new ReportParameter("FechaFin", strFechaFin, false));
+                    if (str_tipoReport == "XCruce")
+                    {
+                        string str_ListaSociedades = "";
+                        foreach (ListItem item in lstMinisterios.Items)
+                        {
+                            if (item.Selected)
+                            {
+                                str_ListaSociedades += item.Value.Trim() + ",";
+                            }
+                        }
+
+                        string str_EstadoResolucion = ddlEstadoRes.SelectedValue.Trim();
+                        oParametros.Add(new ReportParameter("Sociedad", str_ListaSociedades, false)); ;
+                        oParametros.Add(new ReportParameter("EstadoResolucion", str_EstadoResolucion, false));
+                        
+                    }
+                    else if ( str_tipoReport == "CXCxP")
+                    {
+                      ///  oParametros.Add(new ReportParameter("IdEntidad", str_Institucion, false)); 
+                    }
+//                          else if (str_tipoReport == "CXP" || str_tipoReport == "CXC" || str_tipoReport == "CXCxP")
+                    else
+                    {
+                        oParametros.Add(new ReportParameter("Sociedad", str_Institucion, false)); 
+                    }
+                    //oParametros.Add(new ReportParameter("Sociedad", str_Institucion, false));
+                    //Otros paramtros
+                    oParametros2.Add(new ReportParameter("FechaInicio", strFechaInicio, false));
+                    oParametros2.Add(new ReportParameter("FechaFin", strFechaFin, false));
+                   switch (str_tipoReport)
+                    { 
+                        case "Activo"://1
+                            oParametros.Add(new ReportParameter("pConSinResolucion", "C", false));
+                            oParametros.Add(new ReportParameter("pEstadoPretension", "1", false)); 
+                            oParam = new ParametrosReporte(ConfigurationManager.AppSettings["ReporteActivosContigentes"], oParametros, ConfigurationManager.AppSettings["ServidorReportes"]);
+                            Session.Add("ParametrosReporte", oParam);
+                            break;
+                        case "Pasivo"://2
+                            oParametros.Add(new ReportParameter("pConSinResolucion", "C", false));
+                            oParametros.Add(new ReportParameter("pEstadoPretension", "0", false)); 
+                            oParam = new ParametrosReporte(ConfigurationManager.AppSettings["ReportePasivosContigentes"], oParametros, ConfigurationManager.AppSettings["ServidorReportes"]);
+                            Session.Add("ParametrosReporte", oParam);
+                            break;
+                        case "Provision"://3
+                            oParam = new ParametrosReporte(ConfigurationManager.AppSettings["ReporteProvisiones"], oParametros, ConfigurationManager.AppSettings["ServidorReportes"]);
+                            Session.Add("ParametrosReporte", oParam);
+                            break;
+                        case "CXCxP"://4
+                            oParam = new ParametrosReporte(ConfigurationManager.AppSettings["ReporteCXCxP"], oParametros, ConfigurationManager.AppSettings["ServidorReportes"]);
+                            Session.Add("ParametrosReporte", oParam);
+                            break;
+                        case "Anulado"://5
+                            oParam = new ParametrosReporte(ConfigurationManager.AppSettings["ReporteAnulados"], oParametros, ConfigurationManager.AppSettings["ServidorReportes"]);
+                            Session.Add("ParametrosReporte", oParam);
+                            break;
+                        case "Duplicado"://6
+                            oParam = new ParametrosReporte(ConfigurationManager.AppSettings["ReporteDuplicados"], oParametros, ConfigurationManager.AppSettings["ServidorReportes"]);
+                            Session.Add("ParametrosReporte", oParam);
+                            break;
+                        case "XCruce"://7
+                            oParam = new ParametrosReporte(ConfigurationManager.AppSettings["ReporteCruceVariables"], oParametros, ConfigurationManager.AppSettings["ServidorReportes"]);
+                            Session.Add("ParametrosReporte", oParam);
+
+                            break;
+                        case "Previsiones"://8
+                            oParam = new ParametrosReporte(ConfigurationManager.AppSettings["ReportePrevisiones"], oParametros2, ConfigurationManager.AppSettings["ServidorReportes"]);
+                            Session.Add("ParametrosReporte", oParam);
+                            break;
+                        case "PrevisionesMinisterios"://8
+                            oParam = new ParametrosReporte(ConfigurationManager.AppSettings["ReportePrevisionesMinisterios"], oParametros2, ConfigurationManager.AppSettings["ServidorReportes"]);
+                            Session.Add("ParametrosReporte", oParam);
+                            break;
+                        case "CXC":
+                            oParam = new ParametrosReporte(ConfigurationManager.AppSettings["ReporteCXC"], oParametros, ConfigurationManager.AppSettings["ServidorReportes"]);
+                            Session.Add("ParametrosReporte", oParam);
+                            break;
+                        case "CXP":
+                            oParam = new ParametrosReporte(ConfigurationManager.AppSettings["ReporteCXP"], oParametros, ConfigurationManager.AppSettings["ServidorReportes"]);
+                            Session.Add("ParametrosReporte", oParam);
+                            break;
+                        case "CIC":
+                            oParametros3.Add(new ReportParameter("pFchDesde", strFechaInicio, false));
+                            oParametros3.Add(new ReportParameter("pFchHasta", strFechaFin, false));
+                            oParam = new ParametrosReporte(ConfigurationManager.AppSettings["ReportePagosExpedientesCI"], oParametros3, ConfigurationManager.AppSettings["ServidorReportes"]);
+                            Session.Add("ParametrosReporte", oParam);
+                            break;
+                        case "BITCON":
+                            oParametros4.Add(new ReportParameter("pFechaInicio", strFechaInicio, false));
+                            oParametros4.Add(new ReportParameter("pFechaFinal", strFechaFin, false));
+                            oParametros4.Add(new ReportParameter("pIdOperacion", this.ddlIdOperacion.SelectedValue.Equals(string.Empty) ? null : this.ddlIdOperacion.SelectedValue, false));
+                            oParametros4.Add(new ReportParameter("pIdSociedadGL", this.ddlIdSociedad.SelectedValue.Equals(string.Empty) ? null : this.ddlIdSociedad.SelectedValue, false));
+                            oParametros4.Add(new ReportParameter("pIdTransaccion", this.ddlIdTransaccion.SelectedValue.Equals(string.Empty) ? null : this.ddlIdTransaccion.SelectedValue, false));
+                            oParametros4.Add(new ReportParameter("pIdModulo", "CT", false));
+                            oParametros4.Add(new ReportParameter("pTitulo", "Contingentes", false));
+                            oParam = new ParametrosReporte(ConfigurationManager.AppSettings["ReporteBitacora"], oParametros4, ConfigurationManager.AppSettings["ServidorReportes"]);
+                            Session.Add("ParametrosReporte", oParam);
+                            break;
+                    }
+
+                   ReportesContingentesMultiView.ActiveViewIndex = 1;
+                   this.ViewParametrosLinkButton.Visible = true;
+                   this.ViewReporteLinkButton.Visible = true;
+                   this.SeparadorParametrosReporteLabel.Visible = true;
+                }
+                else
+                {
+                    str_mensaje = ConfigurationManager.AppSettings["strErrorParametros"].ToString();
+                    MessageBox.Show(str_mensaje);
+                }
+            }
+            catch (Exception ex)
+            {
+                #region MensajeError
+                EventLog.WriteEntry(ConfigurationManager.AppSettings["EventLogSource"].ToString(),
+                    //Obtiene el nombre de la clase.
+                "NICSP"
+                    //Nombre del método.
+                + "." + MethodInfo.GetCurrentMethod().Name
+                    //Error especifico.
+                + ": Excepcion  " + ex.Message.ToString() + ". ",
+                EventLogEntryType.Error);
+
+                str_mensaje = "NICSP Excepcion:  " + ex.Message.ToString() + ". ";
+                MessageBox.Show(str_mensaje);
+                #endregion
+            }
+            finally
+            {
+
+            }
+        }
+
+        protected void ViewReporteLinkButton_Click(object sender, EventArgs e)
+        {
+            ReportesContingentesMultiView.ActiveViewIndex = 1;
+        }
+
+        protected void ViewParametrosLinkButton_Click(object sender, EventArgs e)
+        {
+            ReportesContingentesMultiView.ActiveViewIndex = 0;
+            //ViewReporteLinkButton.Visible = false;
+        }
+
+        private void CargarSociedades()
+        {
+            DataTable ldt_Instituciones = new DataTable();
+            DataTable ldt_Opcion = new DataTable();
+
+            ldt_Instituciones = ws_SGService.uwsConsultarSociedadesGL("", "", "", "", "").Tables[0];
+            ldt_Opcion = ws_SGService.uwsConsultarOpcionesCatalogo("30", "", "", "").Tables[0];
+
+            if (ldt_Instituciones != null)
+            {
+                DataTable ldt_InstitucionesDDL = new DataTable();
+                ldt_InstitucionesDDL.Clear();
+                ldt_InstitucionesDDL.Columns.Add("NomSociedad");
+                ldt_InstitucionesDDL.Columns.Add("IdSociedadGL");
+
+                int int_TamanoTablaInst = ldt_Instituciones.Rows.Count;
+                for (int i = 0; i < int_TamanoTablaInst; i++)
+                {
+                    DataRow ldr_Sociedad = ldt_InstitucionesDDL.NewRow();
+                    DataRow ldr_FilaInstituciones = ldt_Instituciones.Rows[i];
+                    int int_IdSociedadGL = Convert.ToInt32(ldr_FilaInstituciones["IdSociedadGL"].ToString());
+                    if (int_IdSociedadGL > 11200 && int_IdSociedadGL <= 11999)
+                    {
+                        ldr_Sociedad["NomSociedad"] = ldr_FilaInstituciones["NomSociedad"].ToString();
+                        ldr_Sociedad["IdSociedadGL"] = ldr_FilaInstituciones["IdSociedadGL"].ToString();
+                        ldt_InstitucionesDDL.Rows.Add(ldr_Sociedad);
+                    }
+                }
+                lstMinisterios.DataSource = ldt_InstitucionesDDL;
+                lstMinisterios.DataTextField = "NomSociedad";
+                lstMinisterios.DataValueField = "IdSociedadGL";
+                lstMinisterios.DataBind();
+                //ddlMinisterio.Items.Insert(0, new ListItem("", ""));
+            }
+        }
+    }
+}

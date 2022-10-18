@@ -1,0 +1,1297 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{50F386CA-81BA-473C-9E93-8AD8E3C50A62}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Datos</RootNamespace>
+    <AssemblyName>Datos</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libs\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Configuration.Design.HostAdapter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libs\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.HostAdapter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Configuration.Design.HostAdapterV5, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libs\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.HostAdapterV5.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Configuration.DesignTime, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libs\Microsoft.Practices.EnterpriseLibrary.Configuration.DesignTime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libs\Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libs\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libs\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libs\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libs\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConexionSQL\clsProcedimientoAlmacenado.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\clsConsultarAsientos.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\clsConsultarAsientosLineas.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\clsConsultarCategoriasNotas.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\clsConsultarArchivosDeuda.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\clsCrearArchivoDeuda.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\clsCrearAsiento.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\clsEliminarAsientosLineas.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsCambiaEstadoAcreedor.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsCambiaEstadoAmortizacion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsCambiaEstadoComision.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsCambiaEstadoGiro.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsCambiaEstadoGiroEstimado.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsCambiaEstadoInteresPago.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsCambiaEstadoInteres.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsCambiaEstadoInteresPunitivoPago.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsCambiaEstadoInteresPunitivo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsCambiaEstadoPrestamo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsCambiaEstadoTasaFlotante.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsCambiaEstadoTramo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsConsultarCalculosDevengoDE.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsConsultarCalculosDevengoMensualDE.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsConsultarCalculosFlujoEfectivoDE.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsConsultarCalculosFlujoEfectivoDEAgrupa.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsConsultarCalculosFlujoEfectivoMensualDE.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsConsultarPagosDE.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsConsultaSaldosDeudaExt.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsConsultaAcreedor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsConsultaAmortizacion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsConsultaAsientoAjuste.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsConsultaCalculoFlujoEfectivoDE.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsConsultaComisionPago.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsConsultaComision.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsConsultaDesembolso.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsConsultaDevengoInteresDE.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsConsultaGiroEstimado.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsConsultaInteresPago.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsConsultaInteres.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsConsultaInteresPunitivoPago.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsConsultaInteresPunitivo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsConsultaPago.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsConsultaPrestamo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsConsultarPrestamosReclasificar.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsConsultaTasaFlotante.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsConsultaTramo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsCreaAcreedor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsCreaAmortizacion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsCreaAsientoAjuste.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsCreaCalculoFlujoEfectivoDE.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsCreaComisionPago.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsCreaComision.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsCreaDesembolso.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsCreaDevengoInteresDE.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsCreaGiroEstimado.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsCreaHistReclasificacion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsCreaInteresPago.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsCreaInteres.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsCreaInteresPunitivoPago.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsCreaInteresPunitivo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsCreaPago.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsCreaPrestamo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsCrearCalculosDevengoDE.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsCrearCalculosDevengoMensualDE.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsCrearCalculosFlujoEfectivoDE.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsCrearCalculosFlujoEfectivoMensualDE.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsCreaTasaFlotante.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsCreaTramo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsEliminarCalculosDevengoDE.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsEliminarCalculosDevengoMensualDE.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsEliminarCalculosFlujoEfectivoDE.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsEliminarCalculosFlujoEfectivoMensualDE.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsModificaAcreedor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsModificaAmortizacion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsModificaComision.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsModificaComisionPago.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsModificaGiro.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsModificaGiroEstimado.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsModificaInteresPago.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsModificaInteres.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsModificaInteresPunitivoPago.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsModificaInteresPunitivo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsModificaPrestamo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsModificarCodigosAsiento.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsModificarPago.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsModificaTasaFlotante.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsModificaTramo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsReporteFlujoEfectivoDeudaExt.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsTipoCambioBCCR.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaInterna\clsConsultaCalculoFlujoEfectivoNroSerie.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaInterna\clsConsultaCanjeEmision.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaInterna\clsConsultaDevengoInteresCanje.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaInterna\clsConsultaDevengoMensualCanje.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaInterna\clsConsultaPenultimaFechaDevengo.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaInterna\clsConsultaDevengoInteresNroSerie.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaInterna\clsConsultaDevengoMensualNroSerie.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaInterna\clsConsultaIntereFlujo.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaInterna\clsConsultaInteresDevengo.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaInterna\clsConsultaCostoAmortizacionFinal.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaInterna\clsConsultaColumnaDevengoMensual.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaInterna\clsConsultaNumerosEmision.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaInterna\clsConsultaNroEmisionVenta.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaInterna\clsConsultaNroEmisionCompra.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaInterna\clsConsultaTituloReclasificado.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaInterna\clsConsultaTituloValorValores.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaInterna\clsConsultaTituloValorMant.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaInterna\clsContabilizaCalculosFinancieros.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaInterna\clsConsultaCostoTransaccion.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaInterna\clsConsultaAsientoDeudaInterna.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaInterna\clsConsultaDevengoMensual.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaInterna\clsConsultaDevengoInteres.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaInterna\clsConsultaCalculoFlujoEfectivo.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaInterna\clsConsultaTituloValor.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaInterna\clsCreaCalculoFlujoEfectivoNroSerie.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\clsCrearAsientoLinea.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaInterna\clsCreaTitulosCanjeSubasta.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaInterna\clsCreaCanjeEmisionDetalle.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaInterna\clsCreaCanjeEmision.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaInterna\clsCreaDevengoInteresCanje.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaInterna\clsCreaDevengoMensualCanje.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaInterna\clsCreaTituloReclasificado.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaExterna\clsEjecutarDTSSIGADE.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaInterna\clsModificaCostoTransaccion.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaInterna\clsEliminaCostoTransaccion.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaInterna\clsCreaEmisionSubasta.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaInterna\clsCreaCancelacion.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaInterna\clsCreaCalculoFlujoEfectivo.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaInterna\clsCreaDevengoInteresNroSerie.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaInterna\clsCreaDevengoMensualNroSerie.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaInterna\clsCreaDevengoMensual.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaInterna\clsCreaDevengoInteres.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaInterna\clsCreaAsientoDeudaInterna.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaInterna\clsCreaPagoCCSS.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaInterna\clsCreaTrasladoMagisterio.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaInterna\clsCreaTituloValor.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaInterna\clsEliminaTituloGarantia.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaInterna\clsAnularTituloValor.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaInterna\clsModificaTituloGarantia.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaInterna\clsModificaTituloValor.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaInterna\clsCreaCostoTransaccion.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaInterna\clsModificaTituloValorMant.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CalculosFinancieros\DeudaInterna\clsReporteSaldosNemotecnicosUDES.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CapturaIngresos\clsCambiarEstadoFormularioCapturaIngresos.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CapturaIngresos\clsConsultaFormulario.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CapturaIngresos\clsConsultarComprobantesPagoPorFormulario.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CapturaIngresos\clsConsultarFormulariosCapturaIngresos.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CapturaIngresos\clsConsultarPagoFormulario.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CapturaIngresos\clsConsultarPagosPorFormulario.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CapturaIngresos\clsConsultarSociedades.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CapturaIngresos\clsDeshabilitarPago.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CapturaIngresos\clsInsertarComprobantesPagoPorFormulario.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CapturaIngresos\clsInsertarFormularioCapturaIngresos.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\CapturaIngresos\clsInsertarPagosFormularioCaptura.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsBuscarArchivoAnexoEstadoFinanciero.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsBuscarArchivoAnexoEstadoFinancieroFilestream.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsBuscarArchivoEstadoFinanciero.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsBuscarArchivoEstadoFinancieroFilestream.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsBuscarArchivoEstadoFinancieroTamanoByte.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsBuscarArchivoPlantillaEstadoFinancieroFilestream.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsBuscarBitacoraFlujoErroresDTSX.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsBuscarCatalogoEtapaEstadoFinanciero.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsBuscarCatalogoUnidadesTiempoPeriodo.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsBuscarEntidadesDeUnAmbito.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsBuscarEstadoFinanciero.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsBuscarEstadoFinancieroBalanceComprobacion.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsBuscarEstadoFinancieroBalanceComprobacionParaSIGAF.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsBuscarEstadosFinancierosDeudaPublica.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsBuscarEtapaEstadoFinanciero.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsBuscarUnidadesTiempoPeriodoEnCursoPorFecha.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsBuscarUsuario.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsBuscarUsuariosPorRol.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsConsultarArchivosAnexosEstadosFinancierosCargados.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsConsultarArchivosPlantillasEstadosFinancierosCargados.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsConsultarBitacoraFlujoErroresDTSX.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsConsultarCatalogoEtapaEstadoFinanciero.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsConsultarCatalogoUnidadesTiempoPeriodo.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsConsultarCorreosAutorizacionEstadosFinancierosCargados.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsConsultarEstadoFinanciero.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsConsultarEstadosFinancierosCargados.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsConsultarEtapaEstadoFinanciero.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Contigentes\clsCrearAntiguedadDeSaldos.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsEjecutarDTSXBD.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsEjecutarDTSXPrueba.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsEliminarArchivo.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsEliminarArchivoAnexoEstadoFinanciero.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsEliminarArchivoPlantillaEstadoFinanciero.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsEliminarCatalogoEtapaEstadoFinanciero.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsEliminarEstadoFinanciero.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsEliminarEstadoFinancieroBalanceComprobacion.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsEliminarEstadoFinancieroCambioPatrimonioNeto.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsEliminarEstadoFinancieroFlujoEfectivo.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsEliminarEstadosFinancierosDeudaPublica.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsEliminarEtapaEstadoFinanciero.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsInsertarArchivoAnexoEstadoFinanciero.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsInsertarArchivoAnexoEstadoFinancieroFileStream.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsInsertarArchivoEstadoFinancieroFileStream.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsInsertarArchivoPlantillaEstadoFinancieroFileStream.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsInsertarCatalogoEtapaEstadoFinanciero.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsInsertarEstadoFinanciero.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsInsertarEtapaEstadoFinanciero.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsModificarCatalogoEtapaEstadoFinanciero.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsModificarEstadoFinanciero.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsModificarEtapaEstadoFinanciero.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsRPTBuscarBitacoraFlujoErroresDTSX.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsRPTEntidadesEntregaEstadoFinancieroATiempo.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsRPTEntidadesEntregaEstadoFinancieroRechazadas.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsRPTEntidadesEntregaEstadoFinancieroTarde.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsRPTEstadoFinancieroCambioPatrimonioNetoAgregado.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsRPTEstadoFinancieroCambioPatrimonioNetoDesagregado.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsRPTEstadoFinancieroFlujoEfectivoAgregado.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsRPTEstadoFinancieroFlujoEfectivoDesagregado.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsRPTEstadoFinancieroSituacionEvolucionBienesAgregado.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsRPTEstadoFinancieroSituacionEvolucionBienesDesagregado.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsValidaCargaUnidadTiempoPeriodoCorrectoCorreoAutorizacion.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsValidaEstadoFinancieroBalanceComprobacion.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsValidaEstadoFinancieroCambioPatrimonioNeto.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsValidaEstadoFinancieroFlujoEfectivo.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsValidaEstadosFinancierosDeudaPublica.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Contigentes\clsConsultarCobrosPagos.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Contigentes\clsEliminarExpediente.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Contigentes\clsModificarCobrosPagos.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Contigentes\clsModificarCobrosPagosArchivo.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Contigentes\clsModificarCodigosAsientoCo.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Contigentes\clsModificarExpediente.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Contigentes\clsModificarLiquidacion.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Contigentes\clsModificarResolucion.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Contigentes\clsObtieneDatosGeneralContigentes.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Contigentes\clsRegistrarBitacoraDeMovimientosCuentas.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Contigentes\clsRegistrarLiquidacion.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Contigentes\clsRegistrarPretensionInicial.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsBorrarBancoServicio.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsBorrarServicioOficina.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsConsultarISOconBCCR.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsConsultarBancosCuentas.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsConsultarBancosServicios.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsConsultarCuentaContablesTipo.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsConsultarDinamico.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsConsultarEmpresas.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsConsultarEmpresasAutorizados.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsConsultarReservas.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsConsultarReservasDetallado.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsConsultarReservasDetalle.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsConsultarServiciosOficinas.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsConsultarSociedadesGLSociedadesFi.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsCrearBancoCuenta.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsCrearBancoServicio.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsCrearCuentaConsolida.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsCrearEmpresa.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsCrearEmpresaAutorizado.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsCrearReserva.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsCrearReservaDetalle.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsCrearServicioOficina.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsCrearSociedadGLSociedadFi.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsModificarBancoCuenta.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsModificarReserva.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsModificarReservaDetalle.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsModificarSociedadGL.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsModificarSociedadGLSociedadFi.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsEliminarTipoAsiento.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\RevelacionNotas\clsActualizarFormularioExp.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\RevelacionNotas\clsActualizarObservacionesRevCont.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\RevelacionNotas\clsActualizarRevContTotalActivos.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\RevelacionNotas\clsActualizarRevContTotalPasivos.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\RevelacionNotas\clsAutorizarCambiosRevelacion.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\RevelacionNotas\clsAutorizarRevelacionPendiente.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\RevelacionNotas\clsBuscarFormulario.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\RevelacionNotas\clsBuscarRevelacionContingente.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\RevelacionNotas\clsConsultarRevelacionContingente.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\RevelacionNotas\clsConsultarRevelacionContSoc.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\RevelacionNotas\clsConsultarRevelacionPendiente.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\RevelacionNotas\clsCrearRevelacionPendiente.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\RevelacionNotas\clsEliminarRevelacionPendiente.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\RevelacionNotas\clsModificarRevelacionPendiente.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\RevelacionNotas\clsSubirArchivoRevelacion.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Seguridad\clsActualizarPerfilUsuario.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Seguridad\clsCerrarSesionesActivas.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Seguridad\clsCerrarSesionUsuario.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Seguridad\clsConsultarBitacoraAsientos.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Seguridad\clsConsultarCodigo.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Seguridad\clsLoguearUsuarioFirma.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Seguridad\clsRecuperarContrasena.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsBuscarArchivoPlantillaEstadoFinanciero.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsEjecutarDTSX.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsEliminarArchivoEstadoFinanciero.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsInsertarArchivoEstadoFinanciero.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Consolidacion\clsInsertarArchivoPlantillaEstadoFinanciero.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Contigentes\clsRegistrarCobroPago.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsBorrarOficinaCeBe.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsConsultarAcreedores.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsConsultarAmbitosConsolidacion.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsConsultarAreasFuncionales.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsConsultarAsignacionesACUC.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsConsultarBancos.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsConsultarCatalogosGenerales.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsConsultarCentrosBeneficio.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsConsultarCentrosCosto.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsConsultarCentrosGestores.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsConsultarClasesDocumento.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsConsultarCuentasContables.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsConsultarCuentasSociedades.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsConsultarDirecciones.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsConsultarElementosPEP.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsConsultarEntidadesCP.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsConsultarFondos.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsConsultarGruposCuentas.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsConsultarIndicadoresEconomicos.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsConsultarJerarquias.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsConsultarJerarquiasPeriodo.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsConsultarModulos.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsConsultarMonedas.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsConsultarNemotecnicos.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsConsultarOficinas.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsConsultarOficinasCeBe.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsConsultarOpcionesCatalogo.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsConsultarOperaciones.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsConsultarPaises.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsConsultarPlanesCuentas.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsConsultarPosicionesPresupuestarias.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsConsultarPrevisionesIncobrables.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsConsultarProgramas.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsConsultarPropietarios.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsConsultarServicios.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsConsultarSociedadesCosto.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsConsultarSociedadesFinancieras.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsConsultarSociedadesGL.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsConsultarTiposAsiento.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsConsultarTiposCambio.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsConsultarUnidadesConsolidacion.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsConsultarValoresIndicadoresEco.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsCrearAmbitoConsolidacion.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsCrearAreaFuncional.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsCrearAcreedor.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsCrearAsignacionACUC.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsCrearBanco.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsCrearCatalogoGeneral.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsCrearCentroBeneficio.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsCrearCentroCosto.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsCrearCentroGestor.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsCrearClaseDocumento.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsCrearCuentaContable.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsCrearCuentaSociedad.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsCrearDireccion.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsCrearElementoPEP.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsCrearEntidadCP.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsCrearFondo.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsCrearGrupoCuenta.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsCrearIndicadorEconomico.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsCrearJerarquia.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsCrearJerarquiaPeriodo.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsCrearModulo.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsCrearMoneda.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsCrearNemotecnico.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsCrearOficina.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsCrearOficinaCeBe.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsCrearOpcionCatalogo.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsCrearOperacion.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsCrearPais.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsCrearPlanCuenta.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsCrearPosicionPresupuestaria.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsCrearPrevisionIncobrable.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsCrearPrograma.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsCrearPropietario.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsCrearServicio.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsCrearSociedadCosto.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsCrearSociedadFinanciera.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsCrearSociedadGL.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsCrearTipoAsiento.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsCrearTipoCambio.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsCrearUnidadConsolidacion.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsCrearValorIndicadorEco.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsModificarAcreedor.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsModificarBanco.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsModificarCatalogoGeneral.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsModificarIndicadorEconomico.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsModificarModulo.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsModificarMoneda.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsModificarNemotecnico.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsModificarOficina.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsModificarOpcionCatalogo.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsModificarOperacion.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsModificarPais.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsModificarParametro.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsCrearParametro.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsConsultarParametros.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Contigentes\clsRegistrarEntidadPersona.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Contigentes\clsRegistrarResolucion.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsModificarPrevisionIncobrable.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsModificarPropietario.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsModificarServicio.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsModificarTipoAsiento.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsModificarTipoCambio.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsModificarValorIndicadorEco.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\RevelacionNotas\clsConsultarFormulario.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\RevelacionNotas\clsCrearFormulario.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\RevelacionNotas\clsGuardarFormulario.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\RevelacionNotas\clsImprimirFormulario.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\RevelacionNotas\clsModificarFormulario.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Seguridad\clsActualizarObjeto.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Seguridad\clsActualizarPermisosRolObjeto.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Seguridad\clsActualizarPoliticasSeguridad.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Seguridad\clsActualizarUsuario.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Seguridad\clsCrearObjeto.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Contigentes\clsRegistrarExpediente.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Seguridad\clsActualizarRol.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Seguridad\clsAsignarRolUsuario.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Seguridad\clsConfirmarUsuario.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Seguridad\clsConsultarBitacoraErrores.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Seguridad\clsConsultarObjetos.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Seguridad\clsConsultarPermisosUsuarios.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Seguridad\clsConsultarPoliticas.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Seguridad\clsConsultarRolesObjetos.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Seguridad\clsConsultarRolesUsuarios.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Seguridad\clsConsultarSesionesUsuario.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Seguridad\clsConsultarUsuarios.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Seguridad\clsCrearPolitica.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Seguridad\clsCrearRol.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Seguridad\clsCrearRolObjeto.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Seguridad\clsCrearRolUsuario.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Seguridad\clsEliminarObjeto.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Seguridad\clsEliminarRol.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Seguridad\clsEliminarRolObjeto.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Seguridad\clsEliminarRolUsuario.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Seguridad\clsLoguearUsuario.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Seguridad\clsRegistrarAccionBitacora.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Seguridad\clsRegistrarUsuario.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Seguridad\clsConsultarRol.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\Seguridad\clsRegistrarUsuarioFirma.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\SubirArchivo\clsArchivoSubir.cs" />
+    <Compile Include="ConexionSQL\Procedimientos\SubirArchivo\clsEliminarArchivo.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="obj\Release\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Release\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Release\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceCargaContable\Reference.cs" />
+    <Compile Include="Service References\ServiceCargaContable\Reference1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ConexionSAP\" />
+    <Folder Include="ConexionSQL\Procedimientos\Expediente\" />
+    <Folder Include="obj\Release\TempPE\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Datos.dll" />
+    <Content Include="bin\Datos.pdb" />
+    <Content Include="bin\Microsoft.Practices.EnterpriseLibrary.Common.dll" />
+    <Content Include="bin\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.HostAdapter.dll" />
+    <Content Include="bin\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.HostAdapterV5.dll" />
+    <Content Include="bin\Microsoft.Practices.EnterpriseLibrary.Configuration.DesignTime.dll" />
+    <Content Include="bin\Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.dll" />
+    <Content Include="bin\Microsoft.Practices.EnterpriseLibrary.Data.dll" />
+    <Content Include="bin\Microsoft.Practices.ServiceLocation.dll" />
+    <Content Include="bin\Microsoft.Practices.Unity.dll" />
+    <Content Include="bin\Microsoft.Practices.Unity.Interception.dll" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\CrearAmortizacion.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\CrearComision.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\CrearDesembolso.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\CrearGiroEstimado.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\CrearHistReclasificacion.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\CrearInteres.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\CrearInteresPunitivo.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\CrearTasaFlotante.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\CrearTramo.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\ModificarAmortizacion.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\ModificarComision.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\ModificarDesembolso.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\ModificarGiroEstimado.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\ModificarInteres.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\ModificarInteresPunitivo.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\ModificarPrestamo.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\ModificarTasaFlotante.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\ModificarTramo.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\EstadoAmortizacion.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\EstadoComision.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\EstadoGiroEstimado.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\EstadoInteres.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\EstadoInteresPunitivo.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\EstadoPrestamo.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\EstadoTasaFlotante.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\EstadoTramo.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaInterna\ConsultarAsientoDeudaInterna.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaInterna\ConsultarCalculoFlujoEfectivo.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaInterna\ConsultarTituloValor.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaInterna\CrearAsientoDeudaInterna.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaInterna\CrearCalculoFlujoEfectivo.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaInterna\CrearCancelacion.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaInterna\CrearCostoTransaccion.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaInterna\CrearDevengoIntereses.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaInterna\CrearDevengoMensual.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaInterna\CrearTituloValor.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaInterna\ModificarTituloValor.config" />
+    <Content Include="ConexionSQL\Configs\CapturaIngresos\InsertarPagosFormularioCaptura.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ConexionSQL\Configs\Contigentes\Expedientes\ConsultarExpedientesXNumeroExpFecha.config" />
+    <Content Include="ConexionSQL\Configs\Contigentes\Expedientes\ConsultarExpedientesXNumeroExp.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ConsultarBancosServicios.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ConexionSQL\Configs\Mantenimiento\CrearBancoServicio.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\BorrarBancoServicio.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\ConsultarPago.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\CrearPago.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ConsultarReservas.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\CrearReserva.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\ConsultarAcreedor.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\CrearAcreedor.config" />
+    <Content Include="ConexionSQL\Configs\CapturaIngresos\ConsultarFormulario.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\ModificarAcreedor.config" />
+    <Content Include="ConexionSQL\Configs\CapturaIngresos\ConsultarSociedades.config" />
+    <Content Include="ConexionSQL\Configs\RevelacionNotas\ActualizarFormularioExp.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\ConsultarAsientoAjuste.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\CrearAsientoAjuste.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\CrearReservaDetalle.config" />
+    <Content Include="ConexionSQL\Configs\CapturaIngresos\ConsultarPagosFormulario.config" />
+    <Content Include="ConexionSQL\Configs\CapturaIngresos\InsertarFormularioCapturaIngresos.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ConexionSQL\Configs\CapturaIngresos\ConsultarFormulariosPendientesCaptura.config" />
+    <Content Include="ConexionSQL\Configs\CapturaIngresos\ConsultarPagosFormularioCaptura.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ConsultarReservasDetalle.config" />
+    <Content Include="ConexionSQL\Configs\CapturaIngresos\ConsultarPagosPorFormulario.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\CrearCuentaConsolida.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ConexionSQL\Configs\CapturaIngresos\ConsultarFormulariosCapturasIngresos.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ConexionSQL\Configs\Consolidacion\BuscarArchivoAnexoEstadoFinanciero.config" />
+    <Content Include="ConexionSQL\Configs\Consolidacion\BuscarBitacoraFlujoErroresDTSX.config" />
+    <Content Include="ConexionSQL\Configs\Consolidacion\BuscarCatalogoEtapaEstadoFinanciero.config" />
+    <Content Include="ConexionSQL\Configs\Consolidacion\BuscarEntidadesDeUnAmbito.config" />
+    <Content Include="ConexionSQL\Configs\Consolidacion\BuscarEstadoFinanciero.config" />
+    <Content Include="ConexionSQL\Configs\Consolidacion\BuscarEstadoFinancieroBalanceComprobacion.config" />
+    <Content Include="ConexionSQL\Configs\Consolidacion\BuscarEstadoFinancieroBalanceComprobacionParaSIGAF.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ConexionSQL\Configs\Consolidacion\BuscarEtapaEstadoFinanciero.config" />
+    <Content Include="ConexionSQL\Configs\Consolidacion\ConsultarBitacoraFlujoErroresDTSX.config" />
+    <Content Include="ConexionSQL\Configs\Consolidacion\ConsultarEstadosFinancierosCargados.config" />
+    <Content Include="ConexionSQL\Configs\Consolidacion\ConsultarEtapaEstadoFinanciero.config" />
+    <Content Include="ConexionSQL\Configs\Consolidacion\EliminarArchivoAnexoEstadoFinanciero.config" />
+    <Content Include="ConexionSQL\Configs\Consolidacion\EliminarArchivoPlantillaEstadoFinanciero.config" />
+    <Content Include="ConexionSQL\Configs\Consolidacion\EliminarCatalogoEtapaEstadoFinanciero.config" />
+    <Content Include="ConexionSQL\Configs\Consolidacion\EliminarEstadoFinanciero.config" />
+    <Content Include="ConexionSQL\Configs\Consolidacion\EliminarEstadoFinancieroBalanceComprobacion.config" />
+    <Content Include="ConexionSQL\Configs\Consolidacion\EliminarEstadoFinancieroCambioPatrimonioNeto.config" />
+    <Content Include="ConexionSQL\Configs\Consolidacion\EliminarEstadoFinancieroFlujoEfectivo.config" />
+    <Content Include="ConexionSQL\Configs\Consolidacion\EliminarEtapaEstadoFinanciero.config" />
+    <Content Include="ConexionSQL\Configs\Consolidacion\InsertarArchivoAnexoEstadoFinanciero.config" />
+    <Content Include="ConexionSQL\Configs\Consolidacion\InsertarCatalogoEtapaEstadoFinanciero.config" />
+    <Content Include="ConexionSQL\Configs\Consolidacion\InsertarEstadoFinanciero.config" />
+    <Content Include="ConexionSQL\Configs\Consolidacion\InsertarEtapaEstadoFinanciero.config" />
+    <Content Include="ConexionSQL\Configs\Consolidacion\ModificarCatalogoEtapaEstadoFinanciero.config" />
+    <Content Include="ConexionSQL\Configs\Consolidacion\ModificarEstadoFinanciero.config" />
+    <Content Include="ConexionSQL\Configs\Consolidacion\ModificarEtapaEstadoFinanciero.config" />
+    <Content Include="ConexionSQL\Configs\Consolidacion\RPTBuscarBitacoraFlujoErroresDTSX.config" />
+    <Content Include="ConexionSQL\Configs\Consolidacion\RPTEntidadesEntregaEstadoFinancieroATiempo.config" />
+    <Content Include="ConexionSQL\Configs\Consolidacion\RPTEntidadesEntregaEstadoFinancieroRechazadas.config" />
+    <Content Include="ConexionSQL\Configs\Consolidacion\RPTEntidadesEntregaEstadoFinancieroTarde.config" />
+    <Content Include="ConexionSQL\Configs\Consolidacion\RPTEstadoFinancieroCambioPatrimonioNetoAgregado.config" />
+    <Content Include="ConexionSQL\Configs\Consolidacion\RPTEstadoFinancieroCambioPatrimonioNetoDesagregado.config" />
+    <Content Include="ConexionSQL\Configs\Contigentes\Archivos\EliminarArchivo.config" />
+    <Content Include="ConexionSQL\Configs\Contigentes\Archivos\ModificarArchivo.config" />
+    <Content Include="ConexionSQL\Configs\Contigentes\Archivos\RegistrarArchivo.config" />
+    <Content Include="ConexionSQL\Configs\Contigentes\EntidadesPersonas\EliminarEP.config" />
+    <Content Include="ConexionSQL\Configs\Contigentes\EntidadesPersonas\ModificarEP.config" />
+    <Content Include="ConexionSQL\Configs\Contigentes\EntidadesPersonas\RegistrarEP.config" />
+    <Content Include="ConexionSQL\Configs\CapturaIngresos\CambiarEstadoFormularioCapturaIngresos.config" />
+    <Content Include="ConexionSQL\Configs\RevelacionNotas\AutorizarCambiosRevelacion.config" />
+    <Content Include="ConexionSQL\Configs\CapturaIngresos\EstadoPagoFormulario.config" />
+    <Content Include="ConexionSQL\Configs\CapturaIngresos\InsertarComprobantesPagoPorFormulario.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ConexionSQL\Configs\CapturaIngresos\ConsultarComprobantesPagoPorFormulario.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ConsultarCuentasContablesTipo.config" />
+    <Content Include="ConexionSQL\Configs\Consolidacion\BuscarCatalogoUnidadesTiempoPeriodo.config" />
+    <Content Include="ConexionSQL\Configs\Consolidacion\ConsultarCatalogoEtapaEstadoFinanciero.config" />
+    <Content Include="ConexionSQL\Configs\Consolidacion\ConsultarCatalogoUnidadesTiempoPeriodo.config" />
+    <Content Include="ConexionSQL\Configs\Consolidacion\BuscarArchivoEstadoFinancieroTamanoByte.config" />
+    <Content Include="ConexionSQL\Configs\Consolidacion\ConsultarEstadoFinanciero.config" />
+    <Content Include="ConexionSQL\Configs\Consolidacion\RPTEstadoFinancieroFlujoEfectivoAgregado.config" />
+    <Content Include="ConexionSQL\Configs\Consolidacion\RPTEstadoFinancieroFlujoEfectivoDesagregado.config" />
+    <Content Include="ConexionSQL\Configs\Consolidacion\ValidaCargaUnidadTiempoPeriodoCorrectoCorreoAutorizacion.config" />
+    <Content Include="ConexionSQL\Configs\Consolidacion\ValidaEstadoFinancieroBalanceComprobacion.config" />
+    <Content Include="ConexionSQL\Configs\Consolidacion\ValidaEstadoFinancieroCambioPatrimonioNeto.config" />
+    <Content Include="ConexionSQL\Configs\Consolidacion\ValidaEstadoFinancieroFlujoEfectivo.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ModificarSociedadGL.config" />
+    <Content Include="ConexionSQL\Configs\RevelacionNotas\ActualizarObservacionesRevCont.config" />
+    <Content Include="ConexionSQL\Configs\RevelacionNotas\ActualizarRevContTotalActivos.config" />
+    <Content Include="ConexionSQL\Configs\RevelacionNotas\ActualizarRevContTotalPasivos.config" />
+    <Content Include="ConexionSQL\Configs\RevelacionNotas\BuscarRevelacionContingente.config" />
+    <Content Include="ConexionSQL\Configs\RevelacionNotas\ConsultarRevelacionContingente.config" />
+    <Content Include="ConexionSQL\Configs\RevelacionNotas\ConsultarRevelacionesContSoc.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\CrearSociedadGLSociedadFi.config" />
+    <Content Include="ConexionSQL\Configs\Consolidacion\BuscarArchivoEstadoFinanciero.config" />
+    <Content Include="ConexionSQL\Configs\Consolidacion\BuscarUnidadesTiempoPeriodoEnCursoPorFecha.config" />
+    <Content Include="ConexionSQL\Configs\Consolidacion\ConsultarArchivosAnexosEstadosFinancierosCargados.config" />
+    <Content Include="ConexionSQL\Configs\Consolidacion\ConsultarArchivosPlantillasEstadosFinancierosCargados.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaInterna\ConsultarDevengoIntereses.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaInterna\ConsultarDevengoMensual.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ModificarSociedadGLSociedadFi.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ConsultarBancosCuentas.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\CrearBancoCuenta.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ModificarBancoCuenta.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\BorrarServicioOficina.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ConsultarServiciosOficinas.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\CrearServicioOficina.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ModificarReservaDetalle.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ModificarReserva.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\EstadoAcreedor.config" />
+    <Content Include="ConexionSQL\Configs\Contigentes\Expedientes\RegistrarBitacoraMovimientosCuentas.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaInterna\ConsultarCostoTransaccion.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaInterna\ContabilizarCalculosFinancieros.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaInterna\CrearTrasladoMagisterio.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaInterna\CrearPagoCCSS.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ConsultarEmpresasAutorizados.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\CrearEmpresaAutorizado.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaInterna\ModificarTituloGarantia.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\CrearEmpresa.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ConsultarEmpresas.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaInterna\ConsultarNroEmisionCompra.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaInterna\ConsultarNroEmisionVenta.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaInterna\ConsultarCostoAmortizacionFinal.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaInterna\ConsultarInteresDevengo.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaInterna\ConsultarInteresFlujo.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaInterna\ConsultarNumerosEmision.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaInterna\ConsultarCalculoFlujoEfectivoNroSerie.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaInterna\ConsultarDevengoInteresesNroSerie.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaInterna\ConsultarDevengoMensualNroSerie.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaInterna\CrearCalculoFlujoEfectivoNroSerie.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaInterna\CrearDevengoInteresesNroSerie.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaInterna\CrearDevengoMensualNroSerie.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\ConsultarDevengoInteresesDE.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\CrearDevengoInteresesDE.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\ConsultarCalculoFlujoEfectivoDE.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\CrearCalculoFlujoEfectivoDE.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ConsultarDinamico.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaInterna\ConsultarColumnaDevengoMensual.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaInterna\ConsultarPenultimaFechaDevengo.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaInterna\CrearEmisionesSubasta.config" />
+    <Content Include="ConexionSQL\Configs\Consolidacion\ConsultarCorreosAutorizacionEstadosFinancierosCargados.config" />
+    <Content Include="ConexionSQL\Configs\Consolidacion\BuscarEstadosFinancierosDeudaPublica.config" />
+    <Content Include="ConexionSQL\Configs\Consolidacion\BuscarUsuario.config" />
+    <Content Include="ConexionSQL\Configs\Consolidacion\BuscarUsuariosPorRol.config" />
+    <Content Include="ConexionSQL\Configs\Consolidacion\EliminarEstadosFinancierosDeudaPublica.config" />
+    <Content Include="ConexionSQL\Configs\Consolidacion\ValidaEstadosFinancierosDeudaPublica.config" />
+    <Content Include="ConexionSQL\Configs\Consolidacion\EjecutarDTSXBD.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ConexionSQL\Configs\RevelacionNotas\AutorizarRevelacionPendiente.config" />
+    <Content Include="ConexionSQL\Configs\RevelacionNotas\ConsultarRevelacionesPendientes.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\CrearArchivoDeuda.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\ConsultarArchivosDeuda.config" />
+    <Content Include="ConexionSQL\Configs\Contigentes\Expedientes\CrearExpedienteReporte.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\CrearComisionPago.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\ConsultarComisionPago.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\CrearInteresPunitivoPago.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\CrearInteresPago.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\EstadoInteresPago.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\ModificarInteresPago.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\ConsultarInteresPago.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\ConsultarInteresPunitivoPago.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\ModificarInteresPunitivoPago.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\EstadoInteresPunitivoPago.config" />
+    <Content Include="ConexionSQL\Configs\Contigentes\Resoluciones\ConsultarExpendientesResoluciones.config" />
+    <Content Include="ConexionSQL\Configs\Contigentes\Resoluciones\ConsultarResolucion.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaInterna\ConsultarTituloValorMant.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaInterna\ModificarTituloValorMant.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\ModificarGiro.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\ModificarPago.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaInterna\EliminarCostoTransaccion.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\ConsultarCategoriasNotas.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaInterna\ModificarCostoTransaccion.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaInterna\EliminarTituloGarantia.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\ConsultarPrestamosReclasificar.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaInterna\AnularTituloValor.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ConsultarReservasDetallado.config" />
+    <Content Include="ConexionSQL\Configs\Contigentes\CobrosPagos\ConsultarCobrosPagos.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaInterna\CrearTituloReclasificado.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaInterna\ConsultarTituloReclasificado.config" />
+    <Content Include="ConexionSQL\Configs\Consolidacion\EliminarArchivo.config" />
+    <Content Include="ConexionSQL\Configs\Contigentes\Resoluciones\ModificarLiquidacion.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ConexionSQL\Configs\Contigentes\Resoluciones\RegistrarLiquidacion.config" />
+    <Content Include="ConexionSQL\Configs\Contigentes\CobrosPagos\ModificarCobrosPagos.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\ReporteFlujoEfectivoDeudaExt.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\ModificarComisionPago.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ConexionSQL\Configs\Mantenimiento\EliminarTipoAsiento.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaInterna\ConsultarTituloValorValores.config" />
+    <Content Include="ConexionSQL\Configs\Contigentes\CobrosPagos\ModificarCobrosPagosArchivo.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\ModificarCodigosAsiento.config" />
+    <Content Include="ConexionSQL\Configs\Contigentes\ModificarCodigosAsiento.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\ConsultarSaldosDeudaExt.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\EstadoGiro.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\ConsultarCalculosFlujoEfectivoDE.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\ConsultarCalculosDevengoDE.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\ConsultarCalculosDevengoMensualDE.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\CrearCalculosFlujoEfectivoDE.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\EliminarCalculosFlujoEfectivoDE.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\EliminarCalculosDevengoDE.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\EliminarCalculosDevengoMensualDE.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\ConsultarCalculosFlujoEfectivoMensualDE.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\CrearCalculosFlujoEfectivoMensualDE.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\EliminarCalculosFlujoEfectivoMensualDE.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\CrearCalculosDevengoDE.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaInterna\CrearDevengoInteresesCanje.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaInterna\ConsultarDevengoInteresesCanje.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaInterna\CrearDevengoMensualCanje.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaInterna\ConsultarDevengoMensualCanje.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaInterna\CrearCanjeEmision.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaInterna\CrearCanjeEmisionDetalle.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaInterna\ConsultarCanjeEmision.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaInterna\CrearTitulosCanjeSubasta.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\ConsultarCalculosFlujoEfectivoDEAgrupa.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\CrearAsiento.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\CrearAsientoLinea.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\ConsultarAsientos.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\ConsultarAsientosLineas.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\EliminarAsientosLineas.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaInterna\ReporteSaldosNemotecnicosUDES.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\ConsultarPagosDE.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\EjecutarDTSSIGADE.config" />
+    <Content Include="ConexionSQL\Configs\Contigentes\CrearAntiguedadDeSaldos.config" />
+    <None Include="ConexionSQL\Configs\RevelacionNotas\CrearFormulario.config">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="ConexionSQL\Configs\RevelacionNotas\CrearFormularioExp.config" />
+    <Content Include="ConexionSQL\Configs\RevelacionNotas\EliminarArchivo.config" />
+    <Content Include="ConexionSQL\Configs\RevelacionNotas\CrearRevelacionPendiente.config" />
+    <Content Include="ConexionSQL\Configs\RevelacionNotas\EliminarRevelacionPendiente.config" />
+    <None Include="ConexionSQL\Configs\RevelacionNotas\ModificarFormulario.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ConexionSQL\Configs\RevelacionNotas\ConsultarFomulario.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ConexionSQL\Configs\RevelacionNotas\BuscarFormulario.config">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="ConexionSQL\Configs\Seguridad\ActualizarEstadoCuentaUsuario.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\CrearBanco.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ConexionSQL\Configs\Mantenimiento\CrearCatalogoGeneral.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\CrearIndicadorEconomico.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\CrearModulo.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\CrearNemotecnico.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ConexionSQL\Configs\Mantenimiento\CrearOficina.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\CrearOpcionCatalogo.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\CrearOperacion.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\CrearPais.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\CrearPropietario.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\CrearServicio.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ConexionSQL\Configs\Mantenimiento\CrearValorIndicadorEco.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ModificarAcreedor.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ModificarAreaFuncional.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ModificarBanco.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ModificarCatalogoGeneral.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\CrearDireccion.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ModificarDireccion.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ModificarIndicadorEconomico.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ModificarModulo.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ModificarNemotecnico.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ModificarOficina.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ModificarOpcionCatalogo.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ModificarOperacion.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ModificarPais.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ModificarPropietario.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ModificarServicio.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ModificarTipoAsiento.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ModificarValorIndicadorEco.config" />
+    <Content Include="ConexionSQL\Configs\Consolidacion\BuscarArchivoPlantillaEstadoFinanciero.config" />
+    <Content Include="ConexionSQL\Configs\Consolidacion\EjecutarDTSX.config" />
+    <Content Include="ConexionSQL\Configs\Consolidacion\EliminarArchivoEstadoFinanciero.config" />
+    <Content Include="ConexionSQL\Configs\Consolidacion\InsertarArchivoEstadoFinanciero.config" />
+    <Content Include="ConexionSQL\Configs\Consolidacion\InsertarArchivoPlantillaEstadoFinanciero.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\CrearPrestamo.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\ConsultarPrestamo.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ConsultarPrevisionesIncobrables.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\CrearPrevisionIncobrable.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ModificarPrevisionIncobrable.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ConexionSQL\Configs\Mantenimiento\CrearOficinaCeBe.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\BorrarOficinaCeBe.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ConsultarCuentasSociedades.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\ConsultarAmortizacion.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\ConsultarComision.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\ConsultarDesembolso.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\ConsultarGiroEstimado.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\ConsultarInteres.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\ConsultarInteresPunitivo.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\ConsultarTasaFlotante.config" />
+    <Content Include="ConexionSQL\Configs\CalculosFinancieros\DeudaExterna\ConsultarTramo.config" />
+    <Content Include="ConexionSQL\Configs\RevelacionNotas\ModificarRevelacionPendiente.config" />
+    <None Include="ConexionSQL\Configs\Seguridad\ActualizarPermisosRolObjeto.config" />
+    <Content Include="ConexionSQL\Configs\Seguridad\CerrarSesionUsuario.config" />
+    <Content Include="ConexionSQL\Configs\Seguridad\CerrarSesionesActivas.config" />
+    <Content Include="ConexionSQL\Configs\Seguridad\ConsultarBitacoraAsientos.config" />
+    <None Include="ConexionSQL\Configs\Seguridad\EliminarRol.config" />
+    <None Include="ConexionSQL\Configs\Seguridad\EliminarRolObjeto.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ConexionSQL\Configs\Seguridad\EliminarRolUsuario.config">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="ConexionSQL\Configs\Seguridad\LoguearUsuarioFirma.config" />
+    <None Include="ConexionSQL\Configs\Seguridad\RecuperarContasena.config">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="ConexionSQL\Configs\Seguridad\RegistrarUsuario.config" />
+    <Content Include="ConexionSQL\Configs\Seguridad\ConsultarPoliticas.config" />
+    <Content Include="ConexionSQL\Configs\Seguridad\ConsultarRoles.config" />
+    <Content Include="ConexionSQL\Configs\Seguridad\CrearRolUsuario.config" />
+    <Content Include="ConexionSQL\Configs\Seguridad\CrearRolObjeto.config" />
+    <Content Include="ConexionSQL\Configs\Seguridad\ActualizarPerfilUsuario.config" />
+    <Content Include="ConexionSQL\Configs\Seguridad\ActualizarPoliticasSeguridad.config" />
+    <Content Include="ConexionSQL\Configs\Seguridad\ActualizarRol.config" />
+    <Content Include="ConexionSQL\Configs\Seguridad\ActualizarUsuario.config" />
+    <Content Include="ConexionSQL\Configs\Seguridad\AsignarRolUsuario.config" />
+    <Content Include="ConexionSQL\Configs\Seguridad\ConfirmarUsuario.config" />
+    <Content Include="ConexionSQL\Configs\Seguridad\ConsultarBitacoraErrores.config" />
+    <Content Include="ConexionSQL\Configs\Seguridad\ConsultarObjetos.config" />
+    <Content Include="ConexionSQL\Configs\Seguridad\ConsultarPermisosUsuarios.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ConexionSQL\Configs\Seguridad\ConsultarRolesObjetos.config" />
+    <Content Include="ConexionSQL\Configs\Seguridad\ConsultarRolesUsuarios.config" />
+    <Content Include="ConexionSQL\Configs\Seguridad\ConsultarSesionesUsuario.config" />
+    <Content Include="ConexionSQL\Configs\Seguridad\ConsultarUsuarios.config" />
+    <Content Include="ConexionSQL\Configs\Seguridad\CrearObjeto.config" />
+    <Content Include="ConexionSQL\Configs\Seguridad\CrearPolitica.config" />
+    <Content Include="ConexionSQL\Configs\Seguridad\CrearRol.config" />
+    <Content Include="ConexionSQL\Configs\Seguridad\LoguearUsuario.config" />
+    <Content Include="ConexionSQL\Configs\Seguridad\ActualizarObjeto.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ConsultarModulos.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ConexionSQL\Configs\Contigentes\Expedientes\EliminarExpediente.config" />
+    <Content Include="ConexionSQL\Configs\Contigentes\Expedientes\ModificarExpediente.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ConexionSQL\Configs\Contigentes\Expedientes\RegistrarExpediente.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ConexionSQL\Configs\Contigentes\Expedientes\RegistrarEntidadPersona.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ConexionSQL\Configs\Contigentes\Resoluciones\EliminarResolucion.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ConexionSQL\Configs\Contigentes\Resoluciones\ModificarResolucion.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ConexionSQL\Configs\Contigentes\Resoluciones\RegistrarResolucion.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ConexionSQL\Configs\Contigentes\Expedientes\ConsultarExpedientesEntidadesPersonas.config" />
+    <Content Include="ConexionSQL\Configs\Contigentes\Expedientes\RegistrarPretensionInicial.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ConsultarParametros.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\CrearParametro.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ModificarParametro.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\CrearAcreedor.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\CrearAreaFuncional.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ConsultarAreasFuncionales.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ConexionSQL\Configs\Contigentes\CobrosPagos\RegistrarCobroPago.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ConexionSQL\Configs\Contigentes\Expedientes\CrearRevelacionNota.config" />
+    <Content Include="ConexionSQL\Configs\Contigentes\Expedientes\CerrarRevelacion.config" />
+    <Content Include="ConexionSQL\Configs\Contigentes\Resoluciones\DeclararSinLugar.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ConexionSQL\Configs\Contigentes\Expedientes\AnularExpediente.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\CrearCuentaContable.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\CrearCentroGestor.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\CrearClaseDocumento.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\CrearElementoPEP.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\CrearEntidadCP.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\CrearFondo.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\CrearTipoCambio.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ModificarTipoCambio.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\CrearMoneda.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ModificarMoneda.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ConsultarMonedas.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ConexionSQL\Configs\Mantenimiento\CrearCuentaSociedad.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\CrearPlanCuenta.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\CrearGrupoCuenta.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\CrearPosicionPresupuestaria.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\CrearPrograma.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\CrearSociedadCosto.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\CrearSociedadFinanciera.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\CrearSociedadGL.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\CrearUnidadConsolidacion.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\CrearAmbitoConsolidacion.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\CrearJerarquia.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\CrearJerarquiaPeriodo.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\CrearAsignacionACUC.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ConsultarISOconBCCR.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ConsultarAcreedores.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ConsultarBancos.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ConsultarCatalogosGenerales.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ConsultarCentrosBeneficio.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ConsultarCentrosCosto.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ConsultarCentrosGestores.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ConsultarClasesDocumento.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ConsultarCuentasContables.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ConsultarDirecciones.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ConsultarElementosPEP.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ConsultarEntidadesCP.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ConsultarFondos.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ConsultarGruposCuentas.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ConsultarIndicadoresEconomicos.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ConsultarJerarquias.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ConsultarJerarquiasPeriodo.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ConsultarNemotecnicos.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ConsultarOficinas.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ConsultarOficinasCeBe.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ConsultarOpcionesCatalogo.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ConsultarOperaciones.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ConsultarPaises.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ConsultarPlanesCuenta.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ConsultarPosicionesPresupuestarias.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ConsultarProgramas.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ConsultarPropietarios.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ConsultarServicios.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ConsultarSociedadesCosto.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ConsultarSociedadesFinancieras.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ConsultarSociedadesGL.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ConsultarSociedadesGLSociedadesFi.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ConsultarTiposAsiento.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ConsultarTiposCambio.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ConsultarUnidadesConsolidacion.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ConsultarAmbitosConsolidacion.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ConsultarValoresIndicadoresEco.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ConsultarAsignacionesACUC.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\CrearTipoAsiento.config" />
+    <Compile Include="ConexionSQL\Procedimientos\Mantenimiento\clsModificarDireccion.cs" />
+    <Content Include="ConexionSQL\Configs\Seguridad\RegistrarUsuarioFirma.config" />
+    <Content Include="ConexionSQL\Configs\Seguridad\RegistrarAccionBitacora.config" />
+    <Content Include="obj\Release\Componentes de Conexion.csprojResolveAssemblyReference.cache" />
+    <Content Include="obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="packages.config" />
+    <None Include="Properties\PublishProfiles\CapturaIngresos.pubxml" />
+    <None Include="Properties\PublishProfiles\fs.pubxml" />
+    <None Include="Properties\PublishProfiles\publico.pubxml" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\CrearAreaFuncional.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ConsultarAreasFuncionales.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\ConsultarAreasFuncionales.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\CrearAreaFuncional.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\CrearCentroBeneficio.config" />
+    <Content Include="ConexionSQL\Configs\Mantenimiento\CrearCentroCosto.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Properties\PublishProfiles\wscalcfin.pubxml" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ConexionSQL\Configs\Seguridad\EliminarObjeto.config" />
+    <Content Include="Libs\Microsoft.Practices.EnterpriseLibrary.Common.dll" />
+    <Content Include="Libs\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.HostAdapter.dll" />
+    <Content Include="Libs\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.HostAdapterV5.dll" />
+    <Content Include="Libs\Microsoft.Practices.EnterpriseLibrary.Configuration.DesignTime.dll" />
+    <Content Include="Libs\Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.dll" />
+    <Content Include="Libs\Microsoft.Practices.EnterpriseLibrary.Data.dll" />
+    <Content Include="Libs\Microsoft.Practices.ServiceLocation.dll" />
+    <Content Include="Libs\Microsoft.Practices.Unity.dll" />
+    <Content Include="Libs\Microsoft.Practices.Unity.Interception.dll" />
+    <Content Include="obj\Release\Componentes de Conexion.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Release\Datos.dll" />
+    <Content Include="obj\Release\Datos.pdb" />
+    <None Include="Service References\ServiceCargaContable\configuration.svcinfo" />
+    <None Include="Service References\ServiceCargaContable\configuration91.svcinfo" />
+    <None Include="Service References\ServiceCargaContable\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference1.cs</LastGenOutput>
+    </None>
+    <Content Include="web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Service References\ServiceCargaContable\zcarga.wsdl" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>58468</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/Componentes de Conexion</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

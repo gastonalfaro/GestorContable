@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <configSections>
+    <sectionGroup name="applicationSettings" type="System.Configuration.ApplicationSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" >
+      <section name="SGAsientosDeudaInterna.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+    </sectionGroup>
+  </configSections>
+  <startup>
+    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5" />
+  </startup>
+  <appSettings>
+    <add key="DireccionConfigs" value="C:\inetpub\wwwroot\SistemaGestor\Configs\"/>
+    <add key="USER_SAP" value="WS_USER_INT" />
+    <add key="PASS_SAP" value="Hacienda2016" />
+
+  </appSettings>
+  <connectionStrings>
+    <clear/>
+    <!--<add name="ConexionBD" connectionString="Server=LIEQ_NICSP_01,58128; Database=GestNICSP; Integrated Security=SSPI;" providerName="System.Data.SqlClient" />-->
+    <add name="ConexionBD" connectionString="Server=172.26.30.21\DMSS2014E01; Database=GestNICSPDEV; User Id=jimenezzl; password=GestNICSP2014" providerName="System.Data.SqlClient" />
+  </connectionStrings >
+  <!--<applicationSettings>
+    <WebServiceContableAsientos.Properties.Settings>
+      <setting name="USER_SAP" serializeAs="String">
+        <value>WS_USER_INT</value>
+      </setting>
+      <setting name="PASS_SAP" serializeAs="String">
+        <value>Hacienda2016</value>
+      </setting>
+      <setting name="WebServiceContableAsientos_wsCC_Z_FI_CARGA_CONTABLE"
+          serializeAs="String">
+        <value>http://cpd-qasg1.mh.hacienda.go.cr:8000/sap/bc/srt/rfc/sap/z_fi_carga_contable/350/z_fi_carga_contable/zcarga</value>
+      </setting>
+    </WebServiceContableAsientos.Properties.Settings>
+  </applicationSettings>-->
+  <applicationSettings>
+    <SGAsientosDeudaInterna.Properties.Settings>
+      <setting name="SGAsientosDeudaInterna_wsDeudaInterna_wsDeudaInterna"
+        serializeAs="String">
+        <value>http://mh-cpd-dnspap1:82/wsDeudaInterna.asmx</value>
+      </setting>
+      <setting name="SGAsientosDeudaInterna_ws_SGService_wsSistemaGestor"
+        serializeAs="String">
+        <value>http://mh-cpd-dnspap1:81/wsSistemaGestor.asmx</value>
+      </setting>
+      <setting name="SGAsientosDeudaInterna_wsAsientos_ServicioContable"
+        serializeAs="String">
+        <value>http://mh-cpd-dnspap1:86/ServicioContable.asmx</value>
+      </setting>
+    </SGAsientosDeudaInterna.Properties.Settings>
+  </applicationSettings>
+</configuration>

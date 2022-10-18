@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\PublicacionesGestor\BC</_PublishTargetUrl>
+    <History>True|2022-10-11T16:31:51.9244341Z;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/log4net.dll">
+      <publishTime>09/18/2018 15:56:33</publishTime>
+    </File>
+    <File Include="bin/WebServiceBalanceComprobacion.dll">
+      <publishTime>10/11/2022 10:31:47</publishTime>
+    </File>
+    <File Include="bin/WebServiceBalanceComprobacion.pdb">
+      <publishTime>10/11/2022 10:31:47</publishTime>
+    </File>
+    <File Include="bin/WebServiceBalanceComprobacion.XmlSerializers.dll">
+      <publishTime>10/11/2022 10:31:48</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>06/05/2019 14:05:23</publishTime>
+    </File>
+    <File Include="Web References/wsSAPBCQAS/ZINT_RECIBE_BALANCE_COMPROBAResponse.datasource">
+      <publishTime>10/03/2022 16:29:48</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>10/11/2022 10:31:49</publishTime>
+    </File>
+    <File Include="wsBalanceComprobacion.asmx">
+      <publishTime>09/11/2018 10:19:08</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

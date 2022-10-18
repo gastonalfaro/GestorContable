@@ -1,0 +1,61 @@
+﻿<?xml version="1.0"?>
+<!--
+  Descripción: Archivo de configuración del conector de 
+	Enterprise Library v1.0.0
+	Autor: Steven Vega
+-->
+<CommandDef>
+  <Command>
+    <BaseDatos>MSSQL</BaseDatos>
+    <DbInstance>ConexionBD</DbInstance>
+    <Type>CommandType.StoredProcedure</Type>
+    <Text>ci.uspConsultarFormulariosCaptura</Text>
+    <NumberOfParameters>5</NumberOfParameters>
+    <ReturnType>procedure</ReturnType>
+    <CommandTimeout>6000</CommandTimeout>
+  </Command>
+  <Parameters>
+	
+    <Parameter>
+      <Name>@pIdPersona</Name>
+      <VariableMapeo>Lstr_IdPersona</VariableMapeo>
+      <Type>String</Type>
+      <Size>30</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pTipoIdPersona</Name>
+      <VariableMapeo>Lstr_TipoIdPersona</VariableMapeo>
+      <Type>String</Type>
+      <Size>10</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+    
+    <Parameter>
+      <Name>@pEstado</Name>
+      <VariableMapeo>Lstr_Estado</VariableMapeo>
+      <Type>String</Type>
+      <Size>500</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+	
+    <Parameter>
+      <Name>@pResultado</Name>
+      <Type>String</Type>
+      <Size>2</Size>
+      <Direction>Output</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pMensaje</Name>
+      <Type>String</Type>
+      <Size>500</Size>
+      <Direction>Output</Direction>
+    </Parameter>
+
+  </Parameters>
+</CommandDef>

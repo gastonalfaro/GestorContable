@@ -1,0 +1,1956 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s1="http://tempuri.org/AbstractTypes" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="uwsRegistrarAccionBitacora">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_IdModulo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_IdSesionUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Accion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Detalle" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="uwsRegistrarAccionBitacoraResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uwsRegistrarAccionBitacoraResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="uwsObtenerArchivoCapturaIngresos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="int_IdFormulario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="int_Anno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_TipoIdPersona" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_IdPersona" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="uwsObtenerArchivoCapturaIngresosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uwsObtenerArchivoCapturaIngresosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="uwsEnviarCorreoCI">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_Asunto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Cuerpo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="b_data" type="s:base64Binary" />
+            <s:element minOccurs="1" maxOccurs="1" name="int_IdFormulario" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="int_Anno" type="s:short" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_userCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="uwsEnviarCorreoCIResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uwsEnviarCorreoCIResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CrearFormulario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="lint_IdFormulario" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lint_Anno" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_TipoIdPersona" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_IdPersona" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_NomPersona" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_TipoIdPersonaTramite" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_IdPersonaTramite" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_NomPersonaTramite" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Correo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_IdSociedadGL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_IdOficina" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_IdBanco" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_IdElementoPEP" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_IdReservaPresupuestaria" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_NroExpediente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Descripcion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_CtaCliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Direccion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldt_FchIngreso" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldt_FchImpreso" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldt_FchPago" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldt_FchContabilizado" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldt_FchAnulado" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Observaciones" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_IdMoneda" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldec_Monto" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_ReferenciaDTR" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Usuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CrearFormularioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CrearFormularioResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CambiarEstadoFormulario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="lint_IdFormulario" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lint_Anno" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_EstadoActual" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_EstadoNuevo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_ReferenciaDTR" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Usuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CambiarEstadoFormularioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CambiarEstadoFormularioResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificarFormulario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="lint_IdFormulario" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lint_Anno" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_TipoIdPersona" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_IdPersona" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_NomPersona" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_TipoIdPersonaTramite" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_IdPersonaTramite" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_NomPersonaTramite" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Correo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_IdSociedadGL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_IdOficina" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_IdBanco" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_IdElementoPEP" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_IdReservaPresupuestaria" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_NroExpediente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Descripcion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_CtaCliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Direccion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldt_FchIngreso" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldt_FchImpreso" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldt_FchPago" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldt_FchContabilizado" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldt_FchAnulado" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Observaciones" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_IdMoneda" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldec_Monto" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_ReferenciaDTR" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Usuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificarFormularioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ModificarFormularioResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarFormulario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_IdPersona" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_TipoPersona" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Estado" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarFormularioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarFormularioResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarFormulariosCapturaIngresos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="lint_IdFormulario" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lint_Anno" type="s:short" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_TipoIdPersona" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_IdPersona" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_IdSociedadGL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_IdElementoPEP" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_IdReservaPresupuestaria" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_NroExpediente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Descripcion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_CtaCliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Estado" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarFormulariosCapturaIngresosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarFormulariosCapturaIngresosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CrearPago">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="lint_IdFormulario" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lint_Anno" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lint_IdPago" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldt_FchIngreso" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldt_FchPago" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_IdInstitucion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_IdServicio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_CtaMayor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_IdOficina" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_IdPosPre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_IdReservaPresupuestaria" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_NroExpediente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_IdMoneda" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldec_Monto" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Periodo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Usuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CrearPagoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CrearPagoResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificarPago">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="lint_IdFormulario" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lint_Anno" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lint_IdPago" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldt_FchIngreso" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldt_FchPago" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_IdInstitucion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_IdServicio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_CtaMayor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_IdOficina" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_IdPosPre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_IdReservaPresupuestaria" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_NroExpediente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_IdMoneda" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldec_Monto" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Periodo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Usuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificarPagoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ModificarPagoResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarPago">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="lint_IdFormulario" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lint_Anno" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarPagoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarPagoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeshabilitarPago">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="lint_IdFormulario" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lint_Anno" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lint_IdPago" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_UsrModifica" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldt_FchModifica" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeshabilitarPagoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeshabilitarPagoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CrearComprobantePago">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="lint_IdFormulario" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lint_AnioFormulario" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_NumComprobante" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldt_FchComprobante" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_IdBanco" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_IdMoneda" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldec_pMonto" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Observaciones" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Usuario" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldt_FchModifica" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CrearComprobantePagoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CrearComprobantePagoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarComprobantePago">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="lint_IdFormulario" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lint_AnioFormulario" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_NumComprobante" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldt_FchComprobante" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_IdBanco" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_IdMoneda" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarComprobantePagoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarComprobantePagoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="uwsConvertirMontoLetras">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="letras" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="uwsConvertirMontoLetrasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uwsConvertirMontoLetrasResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="uwsConvertirMontoStringLetras">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="letras" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_NomMoneda" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_IdMoneda" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="uwsConvertirMontoStringLetrasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uwsConvertirMontoStringLetrasResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="uwsCalcularDígitoVerificador">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cuentacliente" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="uwsCalcularDígitoVerificadorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="uwsCalcularDígitoVerificadorResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarAsientosCI">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lint_Anno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lint_Idformulario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarAsientosCIResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarAsientosCIResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="DataSet" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:element ref="s:schema" />
+            <s:any />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ArrayOfString" nillable="true" type="tns:ArrayOfString" />
+      <s:element name="boolean" type="s:boolean" />
+    </s:schema>
+    <s:schema targetNamespace="http://tempuri.org/AbstractTypes">
+      <s:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <s:complexType name="StringArray">
+        <s:complexContent mixed="false">
+          <s:restriction base="soapenc:Array">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="unbounded" name="String" type="s:string" />
+            </s:sequence>
+          </s:restriction>
+        </s:complexContent>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="uwsRegistrarAccionBitacoraSoapIn">
+    <wsdl:part name="parameters" element="tns:uwsRegistrarAccionBitacora" />
+  </wsdl:message>
+  <wsdl:message name="uwsRegistrarAccionBitacoraSoapOut">
+    <wsdl:part name="parameters" element="tns:uwsRegistrarAccionBitacoraResponse" />
+  </wsdl:message>
+  <wsdl:message name="uwsObtenerArchivoCapturaIngresosSoapIn">
+    <wsdl:part name="parameters" element="tns:uwsObtenerArchivoCapturaIngresos" />
+  </wsdl:message>
+  <wsdl:message name="uwsObtenerArchivoCapturaIngresosSoapOut">
+    <wsdl:part name="parameters" element="tns:uwsObtenerArchivoCapturaIngresosResponse" />
+  </wsdl:message>
+  <wsdl:message name="uwsEnviarCorreoCISoapIn">
+    <wsdl:part name="parameters" element="tns:uwsEnviarCorreoCI" />
+  </wsdl:message>
+  <wsdl:message name="uwsEnviarCorreoCISoapOut">
+    <wsdl:part name="parameters" element="tns:uwsEnviarCorreoCIResponse" />
+  </wsdl:message>
+  <wsdl:message name="CrearFormularioSoapIn">
+    <wsdl:part name="parameters" element="tns:CrearFormulario" />
+  </wsdl:message>
+  <wsdl:message name="CrearFormularioSoapOut">
+    <wsdl:part name="parameters" element="tns:CrearFormularioResponse" />
+  </wsdl:message>
+  <wsdl:message name="CambiarEstadoFormularioSoapIn">
+    <wsdl:part name="parameters" element="tns:CambiarEstadoFormulario" />
+  </wsdl:message>
+  <wsdl:message name="CambiarEstadoFormularioSoapOut">
+    <wsdl:part name="parameters" element="tns:CambiarEstadoFormularioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModificarFormularioSoapIn">
+    <wsdl:part name="parameters" element="tns:ModificarFormulario" />
+  </wsdl:message>
+  <wsdl:message name="ModificarFormularioSoapOut">
+    <wsdl:part name="parameters" element="tns:ModificarFormularioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarFormularioSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarFormulario" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarFormularioSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarFormularioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarFormulariosCapturaIngresosSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarFormulariosCapturaIngresos" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarFormulariosCapturaIngresosSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarFormulariosCapturaIngresosResponse" />
+  </wsdl:message>
+  <wsdl:message name="CrearPagoSoapIn">
+    <wsdl:part name="parameters" element="tns:CrearPago" />
+  </wsdl:message>
+  <wsdl:message name="CrearPagoSoapOut">
+    <wsdl:part name="parameters" element="tns:CrearPagoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModificarPagoSoapIn">
+    <wsdl:part name="parameters" element="tns:ModificarPago" />
+  </wsdl:message>
+  <wsdl:message name="ModificarPagoSoapOut">
+    <wsdl:part name="parameters" element="tns:ModificarPagoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarPagoSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarPago" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarPagoSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarPagoResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeshabilitarPagoSoapIn">
+    <wsdl:part name="parameters" element="tns:DeshabilitarPago" />
+  </wsdl:message>
+  <wsdl:message name="DeshabilitarPagoSoapOut">
+    <wsdl:part name="parameters" element="tns:DeshabilitarPagoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CrearComprobantePagoSoapIn">
+    <wsdl:part name="parameters" element="tns:CrearComprobantePago" />
+  </wsdl:message>
+  <wsdl:message name="CrearComprobantePagoSoapOut">
+    <wsdl:part name="parameters" element="tns:CrearComprobantePagoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarComprobantePagoSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarComprobantePago" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarComprobantePagoSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarComprobantePagoResponse" />
+  </wsdl:message>
+  <wsdl:message name="uwsConvertirMontoLetrasSoapIn">
+    <wsdl:part name="parameters" element="tns:uwsConvertirMontoLetras" />
+  </wsdl:message>
+  <wsdl:message name="uwsConvertirMontoLetrasSoapOut">
+    <wsdl:part name="parameters" element="tns:uwsConvertirMontoLetrasResponse" />
+  </wsdl:message>
+  <wsdl:message name="uwsConvertirMontoStringLetrasSoapIn">
+    <wsdl:part name="parameters" element="tns:uwsConvertirMontoStringLetras" />
+  </wsdl:message>
+  <wsdl:message name="uwsConvertirMontoStringLetrasSoapOut">
+    <wsdl:part name="parameters" element="tns:uwsConvertirMontoStringLetrasResponse" />
+  </wsdl:message>
+  <wsdl:message name="uwsCalcularDígitoVerificadorSoapIn">
+    <wsdl:part name="parameters" element="tns:uwsCalcularDígitoVerificador" />
+  </wsdl:message>
+  <wsdl:message name="uwsCalcularDígitoVerificadorSoapOut">
+    <wsdl:part name="parameters" element="tns:uwsCalcularDígitoVerificadorResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarAsientosCISoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarAsientosCI" />
+  </wsdl:message>
+  <wsdl:message name="EnviarAsientosCISoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarAsientosCIResponse" />
+  </wsdl:message>
+  <wsdl:message name="uwsRegistrarAccionBitacoraHttpGetIn">
+    <wsdl:part name="str_IdModulo" type="s:string" />
+    <wsdl:part name="str_IdSesionUsuario" type="s:string" />
+    <wsdl:part name="str_Accion" type="s:string" />
+    <wsdl:part name="str_Detalle" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="uwsRegistrarAccionBitacoraHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="uwsObtenerArchivoCapturaIngresosHttpGetIn">
+    <wsdl:part name="int_IdFormulario" type="s:string" />
+    <wsdl:part name="int_Anno" type="s:string" />
+    <wsdl:part name="str_TipoIdPersona" type="s:string" />
+    <wsdl:part name="str_IdPersona" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="uwsObtenerArchivoCapturaIngresosHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="uwsEnviarCorreoCIHttpGetIn">
+    <wsdl:part name="str_Asunto" type="s:string" />
+    <wsdl:part name="str_Cuerpo" type="s:string" />
+    <wsdl:part name="str_nombre" type="s:string" />
+    <wsdl:part name="b_data" type="s1:StringArray" />
+    <wsdl:part name="int_IdFormulario" type="s:string" />
+    <wsdl:part name="int_Anno" type="s:string" />
+    <wsdl:part name="str_userCreacion" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="uwsEnviarCorreoCIHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="CrearFormularioHttpGetIn">
+    <wsdl:part name="lint_IdFormulario" type="s:string" />
+    <wsdl:part name="lint_Anno" type="s:string" />
+    <wsdl:part name="lstr_TipoIdPersona" type="s:string" />
+    <wsdl:part name="lstr_IdPersona" type="s:string" />
+    <wsdl:part name="lstr_NomPersona" type="s:string" />
+    <wsdl:part name="lstr_TipoIdPersonaTramite" type="s:string" />
+    <wsdl:part name="lstr_IdPersonaTramite" type="s:string" />
+    <wsdl:part name="lstr_NomPersonaTramite" type="s:string" />
+    <wsdl:part name="lstr_Correo" type="s:string" />
+    <wsdl:part name="lstr_IdSociedadGL" type="s:string" />
+    <wsdl:part name="lstr_IdOficina" type="s:string" />
+    <wsdl:part name="lstr_IdBanco" type="s:string" />
+    <wsdl:part name="lstr_IdElementoPEP" type="s:string" />
+    <wsdl:part name="lstr_IdReservaPresupuestaria" type="s:string" />
+    <wsdl:part name="lstr_NroExpediente" type="s:string" />
+    <wsdl:part name="lstr_Descripcion" type="s:string" />
+    <wsdl:part name="lstr_CtaCliente" type="s:string" />
+    <wsdl:part name="lstr_Direccion" type="s:string" />
+    <wsdl:part name="ldt_FchIngreso" type="s:string" />
+    <wsdl:part name="ldt_FchImpreso" type="s:string" />
+    <wsdl:part name="ldt_FchPago" type="s:string" />
+    <wsdl:part name="ldt_FchContabilizado" type="s:string" />
+    <wsdl:part name="ldt_FchAnulado" type="s:string" />
+    <wsdl:part name="lstr_Estado" type="s:string" />
+    <wsdl:part name="lstr_Observaciones" type="s:string" />
+    <wsdl:part name="lstr_IdMoneda" type="s:string" />
+    <wsdl:part name="ldec_Monto" type="s:string" />
+    <wsdl:part name="lstr_ReferenciaDTR" type="s:string" />
+    <wsdl:part name="lstr_Usuario" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CrearFormularioHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="CambiarEstadoFormularioHttpGetIn">
+    <wsdl:part name="lint_IdFormulario" type="s:string" />
+    <wsdl:part name="lint_Anno" type="s:string" />
+    <wsdl:part name="lstr_EstadoActual" type="s:string" />
+    <wsdl:part name="lstr_EstadoNuevo" type="s:string" />
+    <wsdl:part name="lstr_ReferenciaDTR" type="s:string" />
+    <wsdl:part name="lstr_Usuario" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CambiarEstadoFormularioHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ModificarFormularioHttpGetIn">
+    <wsdl:part name="lint_IdFormulario" type="s:string" />
+    <wsdl:part name="lint_Anno" type="s:string" />
+    <wsdl:part name="lstr_TipoIdPersona" type="s:string" />
+    <wsdl:part name="lstr_IdPersona" type="s:string" />
+    <wsdl:part name="lstr_NomPersona" type="s:string" />
+    <wsdl:part name="lstr_TipoIdPersonaTramite" type="s:string" />
+    <wsdl:part name="lstr_IdPersonaTramite" type="s:string" />
+    <wsdl:part name="lstr_NomPersonaTramite" type="s:string" />
+    <wsdl:part name="lstr_Correo" type="s:string" />
+    <wsdl:part name="lstr_IdSociedadGL" type="s:string" />
+    <wsdl:part name="lstr_IdOficina" type="s:string" />
+    <wsdl:part name="lstr_IdBanco" type="s:string" />
+    <wsdl:part name="lstr_IdElementoPEP" type="s:string" />
+    <wsdl:part name="lstr_IdReservaPresupuestaria" type="s:string" />
+    <wsdl:part name="lstr_NroExpediente" type="s:string" />
+    <wsdl:part name="lstr_Descripcion" type="s:string" />
+    <wsdl:part name="lstr_CtaCliente" type="s:string" />
+    <wsdl:part name="lstr_Direccion" type="s:string" />
+    <wsdl:part name="ldt_FchIngreso" type="s:string" />
+    <wsdl:part name="ldt_FchImpreso" type="s:string" />
+    <wsdl:part name="ldt_FchPago" type="s:string" />
+    <wsdl:part name="ldt_FchContabilizado" type="s:string" />
+    <wsdl:part name="ldt_FchAnulado" type="s:string" />
+    <wsdl:part name="lstr_Estado" type="s:string" />
+    <wsdl:part name="lstr_Observaciones" type="s:string" />
+    <wsdl:part name="lstr_IdMoneda" type="s:string" />
+    <wsdl:part name="ldec_Monto" type="s:string" />
+    <wsdl:part name="lstr_ReferenciaDTR" type="s:string" />
+    <wsdl:part name="lstr_Usuario" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ModificarFormularioHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarFormularioHttpGetIn">
+    <wsdl:part name="lstr_IdPersona" type="s:string" />
+    <wsdl:part name="lstr_TipoPersona" type="s:string" />
+    <wsdl:part name="lstr_Estado" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarFormularioHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarFormulariosCapturaIngresosHttpGetIn">
+    <wsdl:part name="lint_IdFormulario" type="s:string" />
+    <wsdl:part name="lint_Anno" type="s:string" />
+    <wsdl:part name="lstr_TipoIdPersona" type="s:string" />
+    <wsdl:part name="lstr_IdPersona" type="s:string" />
+    <wsdl:part name="lstr_IdSociedadGL" type="s:string" />
+    <wsdl:part name="lstr_IdElementoPEP" type="s:string" />
+    <wsdl:part name="lstr_IdReservaPresupuestaria" type="s:string" />
+    <wsdl:part name="lstr_NroExpediente" type="s:string" />
+    <wsdl:part name="lstr_Descripcion" type="s:string" />
+    <wsdl:part name="lstr_CtaCliente" type="s:string" />
+    <wsdl:part name="lstr_Estado" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarFormulariosCapturaIngresosHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="CrearPagoHttpGetIn">
+    <wsdl:part name="lint_IdFormulario" type="s:string" />
+    <wsdl:part name="lint_Anno" type="s:string" />
+    <wsdl:part name="lint_IdPago" type="s:string" />
+    <wsdl:part name="ldt_FchIngreso" type="s:string" />
+    <wsdl:part name="ldt_FchPago" type="s:string" />
+    <wsdl:part name="lstr_IdInstitucion" type="s:string" />
+    <wsdl:part name="lstr_IdServicio" type="s:string" />
+    <wsdl:part name="lstr_CtaMayor" type="s:string" />
+    <wsdl:part name="lstr_IdOficina" type="s:string" />
+    <wsdl:part name="lstr_IdPosPre" type="s:string" />
+    <wsdl:part name="lstr_IdReservaPresupuestaria" type="s:string" />
+    <wsdl:part name="lstr_NroExpediente" type="s:string" />
+    <wsdl:part name="lstr_IdMoneda" type="s:string" />
+    <wsdl:part name="ldec_Monto" type="s:string" />
+    <wsdl:part name="lstr_Periodo" type="s:string" />
+    <wsdl:part name="lstr_Usuario" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CrearPagoHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="ModificarPagoHttpGetIn">
+    <wsdl:part name="lint_IdFormulario" type="s:string" />
+    <wsdl:part name="lint_Anno" type="s:string" />
+    <wsdl:part name="lint_IdPago" type="s:string" />
+    <wsdl:part name="ldt_FchIngreso" type="s:string" />
+    <wsdl:part name="ldt_FchPago" type="s:string" />
+    <wsdl:part name="lstr_IdInstitucion" type="s:string" />
+    <wsdl:part name="lstr_IdServicio" type="s:string" />
+    <wsdl:part name="lstr_CtaMayor" type="s:string" />
+    <wsdl:part name="lstr_IdOficina" type="s:string" />
+    <wsdl:part name="lstr_IdPosPre" type="s:string" />
+    <wsdl:part name="lstr_IdReservaPresupuestaria" type="s:string" />
+    <wsdl:part name="lstr_NroExpediente" type="s:string" />
+    <wsdl:part name="lstr_IdMoneda" type="s:string" />
+    <wsdl:part name="ldec_Monto" type="s:string" />
+    <wsdl:part name="lstr_Periodo" type="s:string" />
+    <wsdl:part name="lstr_Usuario" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ModificarPagoHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarPagoHttpGetIn">
+    <wsdl:part name="lint_IdFormulario" type="s:string" />
+    <wsdl:part name="lint_Anno" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarPagoHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="DeshabilitarPagoHttpGetIn">
+    <wsdl:part name="lint_IdFormulario" type="s:string" />
+    <wsdl:part name="lint_Anno" type="s:string" />
+    <wsdl:part name="lint_IdPago" type="s:string" />
+    <wsdl:part name="lstr_Estado" type="s:string" />
+    <wsdl:part name="lstr_UsrModifica" type="s:string" />
+    <wsdl:part name="ldt_FchModifica" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DeshabilitarPagoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CrearComprobantePagoHttpGetIn">
+    <wsdl:part name="lint_IdFormulario" type="s:string" />
+    <wsdl:part name="lint_AnioFormulario" type="s:string" />
+    <wsdl:part name="lstr_NumComprobante" type="s:string" />
+    <wsdl:part name="ldt_FchComprobante" type="s:string" />
+    <wsdl:part name="lstr_IdBanco" type="s:string" />
+    <wsdl:part name="lstr_IdMoneda" type="s:string" />
+    <wsdl:part name="ldec_pMonto" type="s:string" />
+    <wsdl:part name="lstr_Observaciones" type="s:string" />
+    <wsdl:part name="lstr_Usuario" type="s:string" />
+    <wsdl:part name="ldt_FchModifica" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CrearComprobantePagoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarComprobantePagoHttpGetIn">
+    <wsdl:part name="lint_IdFormulario" type="s:string" />
+    <wsdl:part name="lint_AnioFormulario" type="s:string" />
+    <wsdl:part name="lstr_NumComprobante" type="s:string" />
+    <wsdl:part name="ldt_FchComprobante" type="s:string" />
+    <wsdl:part name="lstr_IdBanco" type="s:string" />
+    <wsdl:part name="lstr_IdMoneda" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarComprobantePagoHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="uwsConvertirMontoLetrasHttpGetIn">
+    <wsdl:part name="letras" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="uwsConvertirMontoLetrasHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="uwsConvertirMontoStringLetrasHttpGetIn">
+    <wsdl:part name="letras" type="s:string" />
+    <wsdl:part name="str_NomMoneda" type="s:string" />
+    <wsdl:part name="str_IdMoneda" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="uwsConvertirMontoStringLetrasHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="uwsCalcularDígitoVerificadorHttpGetIn">
+    <wsdl:part name="cuentacliente" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="uwsCalcularDígitoVerificadorHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="EnviarAsientosCIHttpGetIn">
+    <wsdl:part name="lint_Anno" type="s:string" />
+    <wsdl:part name="lint_Idformulario" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="EnviarAsientosCIHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="uwsRegistrarAccionBitacoraHttpPostIn">
+    <wsdl:part name="str_IdModulo" type="s:string" />
+    <wsdl:part name="str_IdSesionUsuario" type="s:string" />
+    <wsdl:part name="str_Accion" type="s:string" />
+    <wsdl:part name="str_Detalle" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="uwsRegistrarAccionBitacoraHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="uwsObtenerArchivoCapturaIngresosHttpPostIn">
+    <wsdl:part name="int_IdFormulario" type="s:string" />
+    <wsdl:part name="int_Anno" type="s:string" />
+    <wsdl:part name="str_TipoIdPersona" type="s:string" />
+    <wsdl:part name="str_IdPersona" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="uwsObtenerArchivoCapturaIngresosHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="uwsEnviarCorreoCIHttpPostIn">
+    <wsdl:part name="str_Asunto" type="s:string" />
+    <wsdl:part name="str_Cuerpo" type="s:string" />
+    <wsdl:part name="str_nombre" type="s:string" />
+    <wsdl:part name="b_data" type="s1:StringArray" />
+    <wsdl:part name="int_IdFormulario" type="s:string" />
+    <wsdl:part name="int_Anno" type="s:string" />
+    <wsdl:part name="str_userCreacion" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="uwsEnviarCorreoCIHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="CrearFormularioHttpPostIn">
+    <wsdl:part name="lint_IdFormulario" type="s:string" />
+    <wsdl:part name="lint_Anno" type="s:string" />
+    <wsdl:part name="lstr_TipoIdPersona" type="s:string" />
+    <wsdl:part name="lstr_IdPersona" type="s:string" />
+    <wsdl:part name="lstr_NomPersona" type="s:string" />
+    <wsdl:part name="lstr_TipoIdPersonaTramite" type="s:string" />
+    <wsdl:part name="lstr_IdPersonaTramite" type="s:string" />
+    <wsdl:part name="lstr_NomPersonaTramite" type="s:string" />
+    <wsdl:part name="lstr_Correo" type="s:string" />
+    <wsdl:part name="lstr_IdSociedadGL" type="s:string" />
+    <wsdl:part name="lstr_IdOficina" type="s:string" />
+    <wsdl:part name="lstr_IdBanco" type="s:string" />
+    <wsdl:part name="lstr_IdElementoPEP" type="s:string" />
+    <wsdl:part name="lstr_IdReservaPresupuestaria" type="s:string" />
+    <wsdl:part name="lstr_NroExpediente" type="s:string" />
+    <wsdl:part name="lstr_Descripcion" type="s:string" />
+    <wsdl:part name="lstr_CtaCliente" type="s:string" />
+    <wsdl:part name="lstr_Direccion" type="s:string" />
+    <wsdl:part name="ldt_FchIngreso" type="s:string" />
+    <wsdl:part name="ldt_FchImpreso" type="s:string" />
+    <wsdl:part name="ldt_FchPago" type="s:string" />
+    <wsdl:part name="ldt_FchContabilizado" type="s:string" />
+    <wsdl:part name="ldt_FchAnulado" type="s:string" />
+    <wsdl:part name="lstr_Estado" type="s:string" />
+    <wsdl:part name="lstr_Observaciones" type="s:string" />
+    <wsdl:part name="lstr_IdMoneda" type="s:string" />
+    <wsdl:part name="ldec_Monto" type="s:string" />
+    <wsdl:part name="lstr_ReferenciaDTR" type="s:string" />
+    <wsdl:part name="lstr_Usuario" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CrearFormularioHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="CambiarEstadoFormularioHttpPostIn">
+    <wsdl:part name="lint_IdFormulario" type="s:string" />
+    <wsdl:part name="lint_Anno" type="s:string" />
+    <wsdl:part name="lstr_EstadoActual" type="s:string" />
+    <wsdl:part name="lstr_EstadoNuevo" type="s:string" />
+    <wsdl:part name="lstr_ReferenciaDTR" type="s:string" />
+    <wsdl:part name="lstr_Usuario" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CambiarEstadoFormularioHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ModificarFormularioHttpPostIn">
+    <wsdl:part name="lint_IdFormulario" type="s:string" />
+    <wsdl:part name="lint_Anno" type="s:string" />
+    <wsdl:part name="lstr_TipoIdPersona" type="s:string" />
+    <wsdl:part name="lstr_IdPersona" type="s:string" />
+    <wsdl:part name="lstr_NomPersona" type="s:string" />
+    <wsdl:part name="lstr_TipoIdPersonaTramite" type="s:string" />
+    <wsdl:part name="lstr_IdPersonaTramite" type="s:string" />
+    <wsdl:part name="lstr_NomPersonaTramite" type="s:string" />
+    <wsdl:part name="lstr_Correo" type="s:string" />
+    <wsdl:part name="lstr_IdSociedadGL" type="s:string" />
+    <wsdl:part name="lstr_IdOficina" type="s:string" />
+    <wsdl:part name="lstr_IdBanco" type="s:string" />
+    <wsdl:part name="lstr_IdElementoPEP" type="s:string" />
+    <wsdl:part name="lstr_IdReservaPresupuestaria" type="s:string" />
+    <wsdl:part name="lstr_NroExpediente" type="s:string" />
+    <wsdl:part name="lstr_Descripcion" type="s:string" />
+    <wsdl:part name="lstr_CtaCliente" type="s:string" />
+    <wsdl:part name="lstr_Direccion" type="s:string" />
+    <wsdl:part name="ldt_FchIngreso" type="s:string" />
+    <wsdl:part name="ldt_FchImpreso" type="s:string" />
+    <wsdl:part name="ldt_FchPago" type="s:string" />
+    <wsdl:part name="ldt_FchContabilizado" type="s:string" />
+    <wsdl:part name="ldt_FchAnulado" type="s:string" />
+    <wsdl:part name="lstr_Estado" type="s:string" />
+    <wsdl:part name="lstr_Observaciones" type="s:string" />
+    <wsdl:part name="lstr_IdMoneda" type="s:string" />
+    <wsdl:part name="ldec_Monto" type="s:string" />
+    <wsdl:part name="lstr_ReferenciaDTR" type="s:string" />
+    <wsdl:part name="lstr_Usuario" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ModificarFormularioHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarFormularioHttpPostIn">
+    <wsdl:part name="lstr_IdPersona" type="s:string" />
+    <wsdl:part name="lstr_TipoPersona" type="s:string" />
+    <wsdl:part name="lstr_Estado" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarFormularioHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarFormulariosCapturaIngresosHttpPostIn">
+    <wsdl:part name="lint_IdFormulario" type="s:string" />
+    <wsdl:part name="lint_Anno" type="s:string" />
+    <wsdl:part name="lstr_TipoIdPersona" type="s:string" />
+    <wsdl:part name="lstr_IdPersona" type="s:string" />
+    <wsdl:part name="lstr_IdSociedadGL" type="s:string" />
+    <wsdl:part name="lstr_IdElementoPEP" type="s:string" />
+    <wsdl:part name="lstr_IdReservaPresupuestaria" type="s:string" />
+    <wsdl:part name="lstr_NroExpediente" type="s:string" />
+    <wsdl:part name="lstr_Descripcion" type="s:string" />
+    <wsdl:part name="lstr_CtaCliente" type="s:string" />
+    <wsdl:part name="lstr_Estado" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarFormulariosCapturaIngresosHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="CrearPagoHttpPostIn">
+    <wsdl:part name="lint_IdFormulario" type="s:string" />
+    <wsdl:part name="lint_Anno" type="s:string" />
+    <wsdl:part name="lint_IdPago" type="s:string" />
+    <wsdl:part name="ldt_FchIngreso" type="s:string" />
+    <wsdl:part name="ldt_FchPago" type="s:string" />
+    <wsdl:part name="lstr_IdInstitucion" type="s:string" />
+    <wsdl:part name="lstr_IdServicio" type="s:string" />
+    <wsdl:part name="lstr_CtaMayor" type="s:string" />
+    <wsdl:part name="lstr_IdOficina" type="s:string" />
+    <wsdl:part name="lstr_IdPosPre" type="s:string" />
+    <wsdl:part name="lstr_IdReservaPresupuestaria" type="s:string" />
+    <wsdl:part name="lstr_NroExpediente" type="s:string" />
+    <wsdl:part name="lstr_IdMoneda" type="s:string" />
+    <wsdl:part name="ldec_Monto" type="s:string" />
+    <wsdl:part name="lstr_Periodo" type="s:string" />
+    <wsdl:part name="lstr_Usuario" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CrearPagoHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="ModificarPagoHttpPostIn">
+    <wsdl:part name="lint_IdFormulario" type="s:string" />
+    <wsdl:part name="lint_Anno" type="s:string" />
+    <wsdl:part name="lint_IdPago" type="s:string" />
+    <wsdl:part name="ldt_FchIngreso" type="s:string" />
+    <wsdl:part name="ldt_FchPago" type="s:string" />
+    <wsdl:part name="lstr_IdInstitucion" type="s:string" />
+    <wsdl:part name="lstr_IdServicio" type="s:string" />
+    <wsdl:part name="lstr_CtaMayor" type="s:string" />
+    <wsdl:part name="lstr_IdOficina" type="s:string" />
+    <wsdl:part name="lstr_IdPosPre" type="s:string" />
+    <wsdl:part name="lstr_IdReservaPresupuestaria" type="s:string" />
+    <wsdl:part name="lstr_NroExpediente" type="s:string" />
+    <wsdl:part name="lstr_IdMoneda" type="s:string" />
+    <wsdl:part name="ldec_Monto" type="s:string" />
+    <wsdl:part name="lstr_Periodo" type="s:string" />
+    <wsdl:part name="lstr_Usuario" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ModificarPagoHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarPagoHttpPostIn">
+    <wsdl:part name="lint_IdFormulario" type="s:string" />
+    <wsdl:part name="lint_Anno" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarPagoHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="DeshabilitarPagoHttpPostIn">
+    <wsdl:part name="lint_IdFormulario" type="s:string" />
+    <wsdl:part name="lint_Anno" type="s:string" />
+    <wsdl:part name="lint_IdPago" type="s:string" />
+    <wsdl:part name="lstr_Estado" type="s:string" />
+    <wsdl:part name="lstr_UsrModifica" type="s:string" />
+    <wsdl:part name="ldt_FchModifica" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DeshabilitarPagoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CrearComprobantePagoHttpPostIn">
+    <wsdl:part name="lint_IdFormulario" type="s:string" />
+    <wsdl:part name="lint_AnioFormulario" type="s:string" />
+    <wsdl:part name="lstr_NumComprobante" type="s:string" />
+    <wsdl:part name="ldt_FchComprobante" type="s:string" />
+    <wsdl:part name="lstr_IdBanco" type="s:string" />
+    <wsdl:part name="lstr_IdMoneda" type="s:string" />
+    <wsdl:part name="ldec_pMonto" type="s:string" />
+    <wsdl:part name="lstr_Observaciones" type="s:string" />
+    <wsdl:part name="lstr_Usuario" type="s:string" />
+    <wsdl:part name="ldt_FchModifica" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CrearComprobantePagoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarComprobantePagoHttpPostIn">
+    <wsdl:part name="lint_IdFormulario" type="s:string" />
+    <wsdl:part name="lint_AnioFormulario" type="s:string" />
+    <wsdl:part name="lstr_NumComprobante" type="s:string" />
+    <wsdl:part name="ldt_FchComprobante" type="s:string" />
+    <wsdl:part name="lstr_IdBanco" type="s:string" />
+    <wsdl:part name="lstr_IdMoneda" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarComprobantePagoHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="uwsConvertirMontoLetrasHttpPostIn">
+    <wsdl:part name="letras" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="uwsConvertirMontoLetrasHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="uwsConvertirMontoStringLetrasHttpPostIn">
+    <wsdl:part name="letras" type="s:string" />
+    <wsdl:part name="str_NomMoneda" type="s:string" />
+    <wsdl:part name="str_IdMoneda" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="uwsConvertirMontoStringLetrasHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="uwsCalcularDígitoVerificadorHttpPostIn">
+    <wsdl:part name="cuentacliente" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="uwsCalcularDígitoVerificadorHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="EnviarAsientosCIHttpPostIn">
+    <wsdl:part name="lint_Anno" type="s:string" />
+    <wsdl:part name="lint_Idformulario" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="EnviarAsientosCIHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="wsCapturaIngresoSoap">
+    <wsdl:operation name="uwsRegistrarAccionBitacora">
+      <wsdl:input message="tns:uwsRegistrarAccionBitacoraSoapIn" />
+      <wsdl:output message="tns:uwsRegistrarAccionBitacoraSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="uwsObtenerArchivoCapturaIngresos">
+      <wsdl:input message="tns:uwsObtenerArchivoCapturaIngresosSoapIn" />
+      <wsdl:output message="tns:uwsObtenerArchivoCapturaIngresosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="uwsEnviarCorreoCI">
+      <wsdl:input message="tns:uwsEnviarCorreoCISoapIn" />
+      <wsdl:output message="tns:uwsEnviarCorreoCISoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearFormulario">
+      <wsdl:input message="tns:CrearFormularioSoapIn" />
+      <wsdl:output message="tns:CrearFormularioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CambiarEstadoFormulario">
+      <wsdl:input message="tns:CambiarEstadoFormularioSoapIn" />
+      <wsdl:output message="tns:CambiarEstadoFormularioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarFormulario">
+      <wsdl:input message="tns:ModificarFormularioSoapIn" />
+      <wsdl:output message="tns:ModificarFormularioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarFormulario">
+      <wsdl:input message="tns:ConsultarFormularioSoapIn" />
+      <wsdl:output message="tns:ConsultarFormularioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarFormulariosCapturaIngresos">
+      <wsdl:input message="tns:ConsultarFormulariosCapturaIngresosSoapIn" />
+      <wsdl:output message="tns:ConsultarFormulariosCapturaIngresosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearPago">
+      <wsdl:input message="tns:CrearPagoSoapIn" />
+      <wsdl:output message="tns:CrearPagoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarPago">
+      <wsdl:input message="tns:ModificarPagoSoapIn" />
+      <wsdl:output message="tns:ModificarPagoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPago">
+      <wsdl:input message="tns:ConsultarPagoSoapIn" />
+      <wsdl:output message="tns:ConsultarPagoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeshabilitarPago">
+      <wsdl:input message="tns:DeshabilitarPagoSoapIn" />
+      <wsdl:output message="tns:DeshabilitarPagoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearComprobantePago">
+      <wsdl:input message="tns:CrearComprobantePagoSoapIn" />
+      <wsdl:output message="tns:CrearComprobantePagoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarComprobantePago">
+      <wsdl:input message="tns:ConsultarComprobantePagoSoapIn" />
+      <wsdl:output message="tns:ConsultarComprobantePagoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="uwsConvertirMontoLetras">
+      <wsdl:input message="tns:uwsConvertirMontoLetrasSoapIn" />
+      <wsdl:output message="tns:uwsConvertirMontoLetrasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="uwsConvertirMontoStringLetras">
+      <wsdl:input message="tns:uwsConvertirMontoStringLetrasSoapIn" />
+      <wsdl:output message="tns:uwsConvertirMontoStringLetrasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="uwsCalcularDígitoVerificador">
+      <wsdl:input message="tns:uwsCalcularDígitoVerificadorSoapIn" />
+      <wsdl:output message="tns:uwsCalcularDígitoVerificadorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarAsientosCI">
+      <wsdl:input message="tns:EnviarAsientosCISoapIn" />
+      <wsdl:output message="tns:EnviarAsientosCISoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="wsCapturaIngresoHttpGet">
+    <wsdl:operation name="uwsRegistrarAccionBitacora">
+      <wsdl:input message="tns:uwsRegistrarAccionBitacoraHttpGetIn" />
+      <wsdl:output message="tns:uwsRegistrarAccionBitacoraHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="uwsObtenerArchivoCapturaIngresos">
+      <wsdl:input message="tns:uwsObtenerArchivoCapturaIngresosHttpGetIn" />
+      <wsdl:output message="tns:uwsObtenerArchivoCapturaIngresosHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="uwsEnviarCorreoCI">
+      <wsdl:input message="tns:uwsEnviarCorreoCIHttpGetIn" />
+      <wsdl:output message="tns:uwsEnviarCorreoCIHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearFormulario">
+      <wsdl:input message="tns:CrearFormularioHttpGetIn" />
+      <wsdl:output message="tns:CrearFormularioHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CambiarEstadoFormulario">
+      <wsdl:input message="tns:CambiarEstadoFormularioHttpGetIn" />
+      <wsdl:output message="tns:CambiarEstadoFormularioHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarFormulario">
+      <wsdl:input message="tns:ModificarFormularioHttpGetIn" />
+      <wsdl:output message="tns:ModificarFormularioHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarFormulario">
+      <wsdl:input message="tns:ConsultarFormularioHttpGetIn" />
+      <wsdl:output message="tns:ConsultarFormularioHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarFormulariosCapturaIngresos">
+      <wsdl:input message="tns:ConsultarFormulariosCapturaIngresosHttpGetIn" />
+      <wsdl:output message="tns:ConsultarFormulariosCapturaIngresosHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearPago">
+      <wsdl:input message="tns:CrearPagoHttpGetIn" />
+      <wsdl:output message="tns:CrearPagoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarPago">
+      <wsdl:input message="tns:ModificarPagoHttpGetIn" />
+      <wsdl:output message="tns:ModificarPagoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPago">
+      <wsdl:input message="tns:ConsultarPagoHttpGetIn" />
+      <wsdl:output message="tns:ConsultarPagoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeshabilitarPago">
+      <wsdl:input message="tns:DeshabilitarPagoHttpGetIn" />
+      <wsdl:output message="tns:DeshabilitarPagoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearComprobantePago">
+      <wsdl:input message="tns:CrearComprobantePagoHttpGetIn" />
+      <wsdl:output message="tns:CrearComprobantePagoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarComprobantePago">
+      <wsdl:input message="tns:ConsultarComprobantePagoHttpGetIn" />
+      <wsdl:output message="tns:ConsultarComprobantePagoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="uwsConvertirMontoLetras">
+      <wsdl:input message="tns:uwsConvertirMontoLetrasHttpGetIn" />
+      <wsdl:output message="tns:uwsConvertirMontoLetrasHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="uwsConvertirMontoStringLetras">
+      <wsdl:input message="tns:uwsConvertirMontoStringLetrasHttpGetIn" />
+      <wsdl:output message="tns:uwsConvertirMontoStringLetrasHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="uwsCalcularDígitoVerificador">
+      <wsdl:input message="tns:uwsCalcularDígitoVerificadorHttpGetIn" />
+      <wsdl:output message="tns:uwsCalcularDígitoVerificadorHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarAsientosCI">
+      <wsdl:input message="tns:EnviarAsientosCIHttpGetIn" />
+      <wsdl:output message="tns:EnviarAsientosCIHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="wsCapturaIngresoHttpPost">
+    <wsdl:operation name="uwsRegistrarAccionBitacora">
+      <wsdl:input message="tns:uwsRegistrarAccionBitacoraHttpPostIn" />
+      <wsdl:output message="tns:uwsRegistrarAccionBitacoraHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="uwsObtenerArchivoCapturaIngresos">
+      <wsdl:input message="tns:uwsObtenerArchivoCapturaIngresosHttpPostIn" />
+      <wsdl:output message="tns:uwsObtenerArchivoCapturaIngresosHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="uwsEnviarCorreoCI">
+      <wsdl:input message="tns:uwsEnviarCorreoCIHttpPostIn" />
+      <wsdl:output message="tns:uwsEnviarCorreoCIHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearFormulario">
+      <wsdl:input message="tns:CrearFormularioHttpPostIn" />
+      <wsdl:output message="tns:CrearFormularioHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CambiarEstadoFormulario">
+      <wsdl:input message="tns:CambiarEstadoFormularioHttpPostIn" />
+      <wsdl:output message="tns:CambiarEstadoFormularioHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarFormulario">
+      <wsdl:input message="tns:ModificarFormularioHttpPostIn" />
+      <wsdl:output message="tns:ModificarFormularioHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarFormulario">
+      <wsdl:input message="tns:ConsultarFormularioHttpPostIn" />
+      <wsdl:output message="tns:ConsultarFormularioHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarFormulariosCapturaIngresos">
+      <wsdl:input message="tns:ConsultarFormulariosCapturaIngresosHttpPostIn" />
+      <wsdl:output message="tns:ConsultarFormulariosCapturaIngresosHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearPago">
+      <wsdl:input message="tns:CrearPagoHttpPostIn" />
+      <wsdl:output message="tns:CrearPagoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarPago">
+      <wsdl:input message="tns:ModificarPagoHttpPostIn" />
+      <wsdl:output message="tns:ModificarPagoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPago">
+      <wsdl:input message="tns:ConsultarPagoHttpPostIn" />
+      <wsdl:output message="tns:ConsultarPagoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeshabilitarPago">
+      <wsdl:input message="tns:DeshabilitarPagoHttpPostIn" />
+      <wsdl:output message="tns:DeshabilitarPagoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearComprobantePago">
+      <wsdl:input message="tns:CrearComprobantePagoHttpPostIn" />
+      <wsdl:output message="tns:CrearComprobantePagoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarComprobantePago">
+      <wsdl:input message="tns:ConsultarComprobantePagoHttpPostIn" />
+      <wsdl:output message="tns:ConsultarComprobantePagoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="uwsConvertirMontoLetras">
+      <wsdl:input message="tns:uwsConvertirMontoLetrasHttpPostIn" />
+      <wsdl:output message="tns:uwsConvertirMontoLetrasHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="uwsConvertirMontoStringLetras">
+      <wsdl:input message="tns:uwsConvertirMontoStringLetrasHttpPostIn" />
+      <wsdl:output message="tns:uwsConvertirMontoStringLetrasHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="uwsCalcularDígitoVerificador">
+      <wsdl:input message="tns:uwsCalcularDígitoVerificadorHttpPostIn" />
+      <wsdl:output message="tns:uwsCalcularDígitoVerificadorHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarAsientosCI">
+      <wsdl:input message="tns:EnviarAsientosCIHttpPostIn" />
+      <wsdl:output message="tns:EnviarAsientosCIHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsCapturaIngresoSoap" type="tns:wsCapturaIngresoSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="uwsRegistrarAccionBitacora">
+      <soap:operation soapAction="http://tempuri.org/uwsRegistrarAccionBitacora" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uwsObtenerArchivoCapturaIngresos">
+      <soap:operation soapAction="http://tempuri.org/uwsObtenerArchivoCapturaIngresos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uwsEnviarCorreoCI">
+      <soap:operation soapAction="http://tempuri.org/uwsEnviarCorreoCI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearFormulario">
+      <soap:operation soapAction="http://tempuri.org/CrearFormulario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CambiarEstadoFormulario">
+      <soap:operation soapAction="http://tempuri.org/CambiarEstadoFormulario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarFormulario">
+      <soap:operation soapAction="http://tempuri.org/ModificarFormulario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarFormulario">
+      <soap:operation soapAction="http://tempuri.org/ConsultarFormulario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarFormulariosCapturaIngresos">
+      <soap:operation soapAction="http://tempuri.org/ConsultarFormulariosCapturaIngresos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearPago">
+      <soap:operation soapAction="http://tempuri.org/CrearPago" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarPago">
+      <soap:operation soapAction="http://tempuri.org/ModificarPago" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPago">
+      <soap:operation soapAction="http://tempuri.org/ConsultarPago" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeshabilitarPago">
+      <soap:operation soapAction="http://tempuri.org/DeshabilitarPago" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearComprobantePago">
+      <soap:operation soapAction="http://tempuri.org/CrearComprobantePago" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarComprobantePago">
+      <soap:operation soapAction="http://tempuri.org/ConsultarComprobantePago" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uwsConvertirMontoLetras">
+      <soap:operation soapAction="http://tempuri.org/uwsConvertirMontoLetras" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uwsConvertirMontoStringLetras">
+      <soap:operation soapAction="http://tempuri.org/uwsConvertirMontoStringLetras" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uwsCalcularDígitoVerificador">
+      <soap:operation soapAction="http://tempuri.org/uwsCalcularDígitoVerificador" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarAsientosCI">
+      <soap:operation soapAction="http://tempuri.org/EnviarAsientosCI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsCapturaIngresoSoap12" type="tns:wsCapturaIngresoSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="uwsRegistrarAccionBitacora">
+      <soap12:operation soapAction="http://tempuri.org/uwsRegistrarAccionBitacora" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uwsObtenerArchivoCapturaIngresos">
+      <soap12:operation soapAction="http://tempuri.org/uwsObtenerArchivoCapturaIngresos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uwsEnviarCorreoCI">
+      <soap12:operation soapAction="http://tempuri.org/uwsEnviarCorreoCI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearFormulario">
+      <soap12:operation soapAction="http://tempuri.org/CrearFormulario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CambiarEstadoFormulario">
+      <soap12:operation soapAction="http://tempuri.org/CambiarEstadoFormulario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarFormulario">
+      <soap12:operation soapAction="http://tempuri.org/ModificarFormulario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarFormulario">
+      <soap12:operation soapAction="http://tempuri.org/ConsultarFormulario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarFormulariosCapturaIngresos">
+      <soap12:operation soapAction="http://tempuri.org/ConsultarFormulariosCapturaIngresos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearPago">
+      <soap12:operation soapAction="http://tempuri.org/CrearPago" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarPago">
+      <soap12:operation soapAction="http://tempuri.org/ModificarPago" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPago">
+      <soap12:operation soapAction="http://tempuri.org/ConsultarPago" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeshabilitarPago">
+      <soap12:operation soapAction="http://tempuri.org/DeshabilitarPago" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearComprobantePago">
+      <soap12:operation soapAction="http://tempuri.org/CrearComprobantePago" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarComprobantePago">
+      <soap12:operation soapAction="http://tempuri.org/ConsultarComprobantePago" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uwsConvertirMontoLetras">
+      <soap12:operation soapAction="http://tempuri.org/uwsConvertirMontoLetras" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uwsConvertirMontoStringLetras">
+      <soap12:operation soapAction="http://tempuri.org/uwsConvertirMontoStringLetras" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uwsCalcularDígitoVerificador">
+      <soap12:operation soapAction="http://tempuri.org/uwsCalcularDígitoVerificador" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarAsientosCI">
+      <soap12:operation soapAction="http://tempuri.org/EnviarAsientosCI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsCapturaIngresoHttpGet" type="tns:wsCapturaIngresoHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="uwsRegistrarAccionBitacora">
+      <http:operation location="/uwsRegistrarAccionBitacora" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uwsObtenerArchivoCapturaIngresos">
+      <http:operation location="/uwsObtenerArchivoCapturaIngresos" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uwsEnviarCorreoCI">
+      <http:operation location="/uwsEnviarCorreoCI" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearFormulario">
+      <http:operation location="/CrearFormulario" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CambiarEstadoFormulario">
+      <http:operation location="/CambiarEstadoFormulario" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarFormulario">
+      <http:operation location="/ModificarFormulario" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarFormulario">
+      <http:operation location="/ConsultarFormulario" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarFormulariosCapturaIngresos">
+      <http:operation location="/ConsultarFormulariosCapturaIngresos" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearPago">
+      <http:operation location="/CrearPago" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarPago">
+      <http:operation location="/ModificarPago" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPago">
+      <http:operation location="/ConsultarPago" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeshabilitarPago">
+      <http:operation location="/DeshabilitarPago" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearComprobantePago">
+      <http:operation location="/CrearComprobantePago" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarComprobantePago">
+      <http:operation location="/ConsultarComprobantePago" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uwsConvertirMontoLetras">
+      <http:operation location="/uwsConvertirMontoLetras" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uwsConvertirMontoStringLetras">
+      <http:operation location="/uwsConvertirMontoStringLetras" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uwsCalcularDígitoVerificador">
+      <http:operation location="/uwsCalcularDígitoVerificador" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarAsientosCI">
+      <http:operation location="/EnviarAsientosCI" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsCapturaIngresoHttpPost" type="tns:wsCapturaIngresoHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="uwsRegistrarAccionBitacora">
+      <http:operation location="/uwsRegistrarAccionBitacora" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uwsObtenerArchivoCapturaIngresos">
+      <http:operation location="/uwsObtenerArchivoCapturaIngresos" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uwsEnviarCorreoCI">
+      <http:operation location="/uwsEnviarCorreoCI" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearFormulario">
+      <http:operation location="/CrearFormulario" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CambiarEstadoFormulario">
+      <http:operation location="/CambiarEstadoFormulario" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarFormulario">
+      <http:operation location="/ModificarFormulario" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarFormulario">
+      <http:operation location="/ConsultarFormulario" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarFormulariosCapturaIngresos">
+      <http:operation location="/ConsultarFormulariosCapturaIngresos" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearPago">
+      <http:operation location="/CrearPago" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarPago">
+      <http:operation location="/ModificarPago" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPago">
+      <http:operation location="/ConsultarPago" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeshabilitarPago">
+      <http:operation location="/DeshabilitarPago" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearComprobantePago">
+      <http:operation location="/CrearComprobantePago" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarComprobantePago">
+      <http:operation location="/ConsultarComprobantePago" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uwsConvertirMontoLetras">
+      <http:operation location="/uwsConvertirMontoLetras" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uwsConvertirMontoStringLetras">
+      <http:operation location="/uwsConvertirMontoStringLetras" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uwsCalcularDígitoVerificador">
+      <http:operation location="/uwsCalcularDígitoVerificador" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarAsientosCI">
+      <http:operation location="/EnviarAsientosCI" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsCapturaIngreso">
+    <wsdl:port name="wsCapturaIngresoSoap" binding="tns:wsCapturaIngresoSoap">
+      <soap:address location="http://mh-cpd-dnspap1:83/wsCapturaIngreso.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsCapturaIngresoSoap12" binding="tns:wsCapturaIngresoSoap12">
+      <soap12:address location="http://mh-cpd-dnspap1:83/wsCapturaIngreso.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsCapturaIngresoHttpGet" binding="tns:wsCapturaIngresoHttpGet">
+      <http:address location="http://mh-cpd-dnspap1:83/wsCapturaIngreso.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsCapturaIngresoHttpPost" binding="tns:wsCapturaIngresoHttpPost">
+      <http:address location="http://mh-cpd-dnspap1:83/wsCapturaIngreso.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

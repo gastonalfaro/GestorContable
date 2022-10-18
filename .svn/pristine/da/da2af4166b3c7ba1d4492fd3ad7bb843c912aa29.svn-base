@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<!--
+  Descripción: Archivo de configuración del conector de 
+	Enterprise Library v1.0.0
+	Autor: Fabian SolAnno Redondo
+	Fecha: 27-08-2015
+-->
+<CommandDef>
+	<Command>
+		<BaseDatos>MSSQL</BaseDatos>
+		<DbInstance>ConexionBD</DbInstance>
+		<Type>CommandType.StoredProcedure</Type>
+		<Text>sg.uspConsultarBitacoraAsientos</Text>
+		<NumberOfParameters>8</NumberOfParameters>
+		<ReturnType>procedure</ReturnType>
+		<CommandTimeout>6000</CommandTimeout>
+	</Command>
+	<Parameters>
+		<Parameter>
+			<Name>@pFechaInicio</Name>
+			<VariableMapeo>Lstr_FechaInicio</VariableMapeo>
+			<Type>DateTime</Type>
+			<Size>64</Size>
+			<Nullable>True</Nullable>
+			<Direction>Input</Direction>
+		</Parameter>
+		<Parameter>
+			<Name>@pFechaFinal</Name>
+			<VariableMapeo>Lstr_FechaFinal</VariableMapeo>
+			<Type>DateTime</Type>
+			<Size>64</Size>
+			<Nullable>True</Nullable>
+			<Direction>Input</Direction>
+		</Parameter>
+		<Parameter>
+			<Name>@pIdOperacion</Name>
+			<VariableMapeo>Lstr_IdOperacion</VariableMapeo>
+			<Type>String</Type>
+			<Size>32</Size>
+			<Nullable>True</Nullable>
+			<Direction>Input</Direction>
+		</Parameter>
+		<Parameter>
+			<Name>@pIdSociedadGL</Name>
+			<VariableMapeo>Lstr_IdSociedadGL</VariableMapeo>
+			<Type>String</Type>
+			<Size>4</Size>
+			<Nullable>True</Nullable>
+			<Direction>Input</Direction>
+		</Parameter>
+    <Parameter>
+      <Name>@pIdTransaccion</Name>
+      <VariableMapeo>Lstr_IdTransaccion</VariableMapeo>
+      <Type>String</Type>
+      <Size>200</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+    <Parameter>
+      <Name>@pIdModulo</Name>
+      <VariableMapeo>Lstr_IdModulo</VariableMapeo>
+      <Type>String</Type>
+      <Size>200</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+		<Parameter>
+			<Name>@pResultado</Name>
+			<Type>String</Type>
+			<Size>2</Size>
+			<Direction>Output</Direction>
+		</Parameter>
+		<Parameter>
+			<Name>@pMensaje</Name>
+			<Type>String</Type>
+			<Size>500</Size>
+			<Direction>Output</Direction>
+		</Parameter>
+	</Parameters>
+</CommandDef>

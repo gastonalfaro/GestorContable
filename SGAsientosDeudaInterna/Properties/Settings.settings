@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SGAsientosDeudaInterna.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="SGAsientosDeudaInterna_wsDeudaInterna_wsDeudaInterna" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://mh-cpd-qanspwb1:82/wsDeudaInterna.asmx</Value>
+    </Setting>
+    <Setting Name="SGAsientosDeudaInterna_ws_SGService_wsSistemaGestor" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://mh-cpd-qanspwb1:81/wsSistemaGestor.asmx</Value>
+    </Setting>
+    <Setting Name="SGAsientosDeudaInterna_wsAsientos_ServicioContable" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://mh-cpd-qanspwb1:86/ServicioContable.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

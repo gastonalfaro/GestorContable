@@ -1,0 +1,3487 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s1="urn:sap-com:document:sap:rfc:functions" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="urn:sap-com:document:sap:rfc:functions" />
+      <s:element name="uwsBalanceComprobacion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="t_cabecera" type="s1:ZINT_EST_CAB_BALANCE_CONSOL" />
+            <s:element minOccurs="0" maxOccurs="1" name="t_posicion" type="tns:ArrayOfZINT_EST_POS_BALANCE_CONSOL" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfZINT_EST_POS_BALANCE_CONSOL">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ZINT_EST_POS_BALANCE_CONSOL" nillable="true" type="s1:ZINT_EST_POS_BALANCE_CONSOL" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="uwsBalanceComprobacionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uwsBalanceComprobacionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="str_CodResultado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarArchivoAnexoEstadoFinanciero">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_IdEstadoFinancieroArchivoAnexo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarArchivoAnexoEstadoFinancieroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscarArchivoAnexoEstadoFinancieroResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="str_CodResultado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarArchivoAnexoEstadoFinanciero">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_IdEstadoFinancieroArchivoAnexo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarArchivoAnexoEstadoFinancieroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EliminarArchivoAnexoEstadoFinancieroResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_CodResultado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarArchivoAnexoEstadoFinanciero">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_IdEntidad" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="int_IdEstadoFinanciero" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="int_Periodo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UnidadTiempoPeriodo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_NombreArchivo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_TipoArchivo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="int_TamanoByteArchivo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="dt_FechaArchivo" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarArchivoAnexoEstadoFinancieroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertarArchivoAnexoEstadoFinancieroResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="str_CodResultado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarArchivoAnexoEstadoFinancieroFilestream">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Buffer" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_IdEntidad" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="int_IdEstadoFinanciero" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="int_Periodo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UnidadTiempoPeriodo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_NombreArchivo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_TipoArchivo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="int_TamanoByteArchivo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="dt_FechaArchivo" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarArchivoAnexoEstadoFinancieroFilestreamResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertarArchivoAnexoEstadoFinancieroFilestreamResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="str_CodResultado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarArchivosAnexosEstadosFinancierosCargados">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_IdEntidad" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="int_Periodo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UnidadTiempoPeriodo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarArchivosAnexosEstadosFinancierosCargadosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarArchivosAnexosEstadosFinancierosCargadosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="str_CodResultado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarArchivoAnexoEstadoFinancieroFilestream">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="bt_Buffer" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_IdEstadoFinancieroArchivoAnexo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarArchivoAnexoEstadoFinancieroFilestreamResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscarArchivoAnexoEstadoFinancieroFilestreamResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="str_CodResultado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarArchivoEstadoFinanciero">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_IdEstadoFinancieroArchivo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarArchivoEstadoFinancieroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscarArchivoEstadoFinancieroResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="str_CodResultado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarArchivoEstadoFinanciero">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_IdEstadoFinancieroArchivo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarArchivoEstadoFinancieroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EliminarArchivoEstadoFinancieroResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_CodResultado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarArchivoEstadoFinanciero">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_IdEntidad" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="int_IdEstadoFinanciero" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="int_Periodo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UnidadTiempoPeriodo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_NombreArchivo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_TipoArchivo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="int_TamanoByteArchivo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="dt_FechaArchivo" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarArchivoEstadoFinancieroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertarArchivoEstadoFinancieroResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="str_CodResultado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarArchivoEstadoFinancieroFileStream">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Buffer" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_IdEntidad" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="int_IdEstadoFinanciero" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="int_Periodo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UnidadTiempoPeriodo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_NombreArchivo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_TipoArchivo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="int_TamanoByteArchivo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="dt_FechaArchivo" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarArchivoEstadoFinancieroFileStreamResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertarArchivoEstadoFinancieroFileStreamResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="str_CodResultado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarArchivoEstadoFinancieroFilestream">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_IdEstadoFinancieroArchivo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarArchivoEstadoFinancieroFilestreamResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscarArchivoEstadoFinancieroFilestreamResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="str_CodResultado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarArchivoEstadoFinancieroTamanoByte">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_IdEntidad" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="int_Periodo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UnidadTiempoPeriodo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarArchivoEstadoFinancieroTamanoByteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscarArchivoEstadoFinancieroTamanoByteResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="str_CodResultado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarArchivoPlantillaEstadoFinanciero">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_IdEstadoFinancieroArchivoPlantilla" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarArchivoPlantillaEstadoFinancieroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscarArchivoPlantillaEstadoFinancieroResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="str_CodResultado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarArchivoPlantillaEstadoFinanciero">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_IdEstadoFinancieroArchivoPlantilla" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarArchivoPlantillaEstadoFinancieroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EliminarArchivoPlantillaEstadoFinancieroResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_CodResultado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarArchivoPlantillaEstadoFinanciero">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="int_IdEstadoFinanciero" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_NombreArchivo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_TipoArchivo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dt_FechaArchivo" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarArchivoPlantillaEstadoFinancieroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertarArchivoPlantillaEstadoFinancieroResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="str_CodResultado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarArchivoPlantillaEstadoFinancieroFilestream">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Buffer" type="s:base64Binary" />
+            <s:element minOccurs="1" maxOccurs="1" name="int_IdEstadoFinanciero" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_NombreArchivo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_TipoArchivo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dt_FechaArchivo" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarArchivoPlantillaEstadoFinancieroFilestreamResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertarArchivoPlantillaEstadoFinancieroFilestreamResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="str_CodResultado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarArchivoPlantillaEstadoFinancieroFilestreamS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Buffer" type="s:base64Binary" />
+            <s:element minOccurs="1" maxOccurs="1" name="int_IdEstadoFinanciero" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_NombreArchivo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_TipoArchivo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dt_FechaArchivo" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarArchivoPlantillaEstadoFinancieroFilestreamSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertarArchivoPlantillaEstadoFinancieroFilestreamSResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_CodResultado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarArchivosPlantillasEstadosFinancierosCargados">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarArchivosPlantillasEstadosFinancierosCargadosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarArchivosPlantillasEstadosFinancierosCargadosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="str_CodResultado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarBitacoraFlujoErroresDTSX">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_NombreProceso" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dt_FechaDe" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="dt_FechaHasta" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarBitacoraFlujoErroresDTSXResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscarBitacoraFlujoErroresDTSXResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="str_CodResultado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarBitacoraFlujoErroresDTSX">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarBitacoraFlujoErroresDTSXResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarBitacoraFlujoErroresDTSXResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="str_CodResultado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarCatalogoEtapaEstadoFinanciero">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="int_IdEtapaEstadoFinanciero" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarCatalogoEtapaEstadoFinancieroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscarCatalogoEtapaEstadoFinancieroResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="str_CodResultado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarCatalogoEtapaEstadoFinanciero">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarCatalogoEtapaEstadoFinancieroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarCatalogoEtapaEstadoFinancieroResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="str_CodResultado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarCatalogoEtapaEstadoFinanciero">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="int_IdEtapaEstadoFinanciero" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarCatalogoEtapaEstadoFinancieroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EliminarCatalogoEtapaEstadoFinancieroResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_CodResultado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarCatalogoEtapaEstadoFinanciero">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="int_IdEstadoFinanciero" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_DescripEtapaEstadoFinanciero" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarCatalogoEtapaEstadoFinancieroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertarCatalogoEtapaEstadoFinancieroResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_CodResultado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificarCatalogoEtapaEstadoFinanciero">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="int_IdEstadoFinanciero" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_DescripEtapaEstadoFinanciero" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificarCatalogoEtapaEstadoFinancieroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ModificarCatalogoEtapaEstadoFinancieroResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_CodResultado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarCatalogoUnidadesTiempoPeriodo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_UnidadTiempoPeriodo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarCatalogoUnidadesTiempoPeriodoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscarCatalogoUnidadesTiempoPeriodoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="str_CodResultado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarCatalogoUnidadesTiempoPeriodo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarCatalogoUnidadesTiempoPeriodoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarCatalogoUnidadesTiempoPeriodoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="str_CodResultado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="uwsEjecutarDTSX">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_DTSXPaqueteURL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_DTSXPaqueteNombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_DTSXPaqueteVariable" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="str_bEjecutar64Bit" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Ruta32Bit" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="uwsEjecutarDTSXResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uwsEjecutarDTSXResult" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_CodResultado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="uwsEjecutarDTSXBD">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_DTSXPaqueteURL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_DTSXPaqueteNombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_DTSXPaqueteVariable" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="str_bEjecutar64Bit" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Ruta32Bit" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsrCreacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_DTSXFolderName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_DTSXProyecto" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="uwsEjecutarDTSXBDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uwsEjecutarDTSXBDResult" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_CodResultado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="uwsPrueba">
+        <s:complexType />
+      </s:element>
+      <s:element name="uwsPruebaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uwsPruebaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="uwsPrueba2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsrCreacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_prueba" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="uwsPrueba2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uwsPrueba2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="uwsEliminarArchivo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_DTSXPaqueteURL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_DTSXPaqueteVariable" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="uwsEliminarArchivoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uwsEliminarArchivoResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="uwsBuscarEntidadesDeUnAmbito">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_IdAmbitoConsolidacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="uwsBuscarEntidadesDeUnAmbitoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uwsBuscarEntidadesDeUnAmbitoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="str_CodResultado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="uwsBuscarEstadoFinanciero">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="bt_IdEstadoFinanciero" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="uwsBuscarEstadoFinancieroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uwsBuscarEstadoFinancieroResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="str_CodResultado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarEstadoFinanciero">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarEstadoFinancieroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarEstadoFinancieroResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="str_CodResultado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarEstadoFinanciero">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="bt_IdEstadoFinanciero" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarEstadoFinancieroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EliminarEstadoFinancieroResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_CodResultado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarEstadoFinanciero">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="bt_IdEstadoFinanciero" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_NombreEstadoFinanciero" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_DescripcionEstadoFinanciero" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarEstadoFinancieroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertarEstadoFinancieroResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_CodResultado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificarEstadoFinanciero">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="bt_IdEstadoFinanciero" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_NombreEstadoFinanciero" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_DescripcionEstadoFinanciero" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificarEstadoFinancieroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ModificarEstadoFinancieroResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_CodResultado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarEstadoFinancieroBalanceComprobacion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_IdEntidad" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="int_Periodo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UnidadTiempoPeriodo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarEstadoFinancieroBalanceComprobacionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscarEstadoFinancieroBalanceComprobacionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="str_CodResultado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarEstadoFinancieroBalanceComprobacion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="bt_IdEstadoFinanciero" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_IdEntidad" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="int_Periodo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UnidadTiempoPeriodo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarEstadoFinancieroBalanceComprobacionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EliminarEstadoFinancieroBalanceComprobacionResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_CodResultado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarEstadoFinancieroBalanceComprobacion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_IdEntidad" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="int_Periodo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UnidadTiempoPeriodo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarEstadoFinancieroBalanceComprobacionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidarEstadoFinancieroBalanceComprobacionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="str_CodResultado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarEstadoFinancieroBalanceComprobacionParaSIGAF">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_IdEntidad" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="int_Periodo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UnidadTiempoPeriodo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarEstadoFinancieroBalanceComprobacionParaSIGAFResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscarEstadoFinancieroBalanceComprobacionParaSIGAFResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="str_CodResultado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarEstadoFinancieroCambioPatrimonioNeto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="bt_IdEstadoFinanciero" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_IdEntidad" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="int_Periodo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UnidadTiempoPeriodo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarEstadoFinancieroCambioPatrimonioNetoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EliminarEstadoFinancieroCambioPatrimonioNetoResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_CodResultado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarEstadoFinancieroCambioPatrimonioNeto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_IdEntidad" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="int_Periodo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UnidadTiempoPeriodo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarEstadoFinancieroCambioPatrimonioNetoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidarEstadoFinancieroCambioPatrimonioNetoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="str_CodResultado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarEstadoFinancieroDeudaPublica">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_IdEntidad" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="int_Periodo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UnidadTiempoPeriodo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarEstadoFinancieroDeudaPublicaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscarEstadoFinancieroDeudaPublicaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="str_CodResultado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarEstadoFinancieroDeudaPublica">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="bt_IdEstadoFinanciero" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_IdEntidad" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="int_Periodo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UnidadTiempoPeriodo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarEstadoFinancieroDeudaPublicaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EliminarEstadoFinancieroDeudaPublicaResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_CodResultado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarEstadoFinancieroDeudaPublica">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_IdEntidad" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="int_Periodo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UnidadTiempoPeriodo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarEstadoFinancieroDeudaPublicaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidarEstadoFinancieroDeudaPublicaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="str_CodResultado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarEstadoFinancieroFlujoEfectivo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="bt_IdEstadoFinanciero" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_IdEntidad" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="int_Periodo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UnidadTiempoPeriodo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarEstadoFinancieroFlujoEfectivoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EliminarEstadoFinancieroFlujoEfectivoResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_CodResultado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarEstadoFinancieroFlujoEfectivo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_IdEntidad" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="int_Periodo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UnidadTiempoPeriodo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarEstadoFinancieroFlujoEfectivoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidarEstadoFinancieroFlujoEfectivoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="str_CodResultado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarEstadoFinancierosCargados">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_IdEntidad" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="int_Periodo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UnidadTiempoPeriodo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarEstadoFinancierosCargadosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarEstadoFinancierosCargadosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="str_CodResultado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarCorreosAutorizacionEstadosFinancierosCargados">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_IdEntidad" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="int_Periodo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UnidadTiempoPeriodo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarCorreosAutorizacionEstadosFinancierosCargadosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarCorreosAutorizacionEstadosFinancierosCargadosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="str_CodResultado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarEtapaEstadoFinanciero">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_IdEntidad" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="int_Periodo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UnidadTiempoPeriodo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dt_FechaDeEtapaEstado" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarEtapaEstadoFinancieroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscarEtapaEstadoFinancieroResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="str_CodResultado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarEtapaEstadoFinanciero">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_IdEntidad" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="int_Periodo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UnidadTiempoPeriodo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarEtapaEstadoFinancieroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarEtapaEstadoFinancieroResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="str_CodResultado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarEtapaEstadoFinanciero">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_IdEntidad" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="int_Periodo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UnidadTiempoPeriodo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="int_IdEtapasEstadoFinanciero" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_NotaRazon" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsuarioEtapaEstado" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dt_FechaDeEtapaEstado" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarEtapaEstadoFinancieroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EliminarEtapaEstadoFinancieroResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_CodResultado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarEtapaEstadoFinanciero">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_IdEntidad" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="int_Periodo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UnidadTiempoPeriodo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="int_IdEtapaEstadoFinanciero" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_NotaRazon" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsuarioEtapaEstado" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dt_FechaDeEtapaEstado" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarEtapaEstadoFinancieroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertarEtapaEstadoFinancieroResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_CodResultado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificarEtapaEstadoFinanciero">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_IdEntidad" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="int_Periodo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UnidadTiempoPeriodo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="int_IdEtapasEstadoFinanciero" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_NotaRazon" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsuarioEtapaEstado" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dt_FechaDeEtapaEstado" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificarEtapaEstadoFinancieroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ModificarEtapaEstadoFinancieroResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_CodResultado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarUnidadTiempoPeriodoCorrectoCorreoAutorizacion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_IdEntidad" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="int_Periodo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UnidadTiempoPeriodo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarUnidadTiempoPeriodoCorrectoCorreoAutorizacionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidarUnidadTiempoPeriodoCorrectoCorreoAutorizacionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="str_CodResultado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarUnidadesTiempoPeriodoEnCursoPorFecha">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dt_Fecha" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarUnidadesTiempoPeriodoEnCursoPorFechaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscarUnidadesTiempoPeriodoEnCursoPorFechaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="str_CodResultado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_IdUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscarUsuarioResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="str_CodResultado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarUsuariosPorRol">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="int_IdRol" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_IdSociedadGL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_UsrCreacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarUsuariosPorRolResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscarUsuariosPorRolResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="str_CodResultado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarCorreoPC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CorreoClientePort" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="CorreoClienteHost" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CorreoNetworkCredentialUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CorreoNetworkCredentialPassWord" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_CorreoFrom" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_CorreoTo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_CorreoCC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Mensaje" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Asunto" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarCorreoPCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EnviarCorreoPCResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="ArrayOfString" nillable="true" type="tns:ArrayOfString" />
+      <s:element name="boolean" type="s:boolean" />
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="urn:sap-com:document:sap:rfc:functions">
+      <s:complexType name="ZINT_EST_CAB_BALANCE_CONSOL">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="LEDGER" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="VISTA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="VERSION" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="EJERCICIO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="PERIODO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="UNID_CONSOL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="PLAN_POS" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ZINT_EST_POS_BALANCE_CONSOL">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="POSICION" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="SUBPOSICION" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="UNID_ASOCIADA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="MONEDA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="SIGNO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="VALOR_ML" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="VALOR_MT" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="VALOR_AC" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="uwsBalanceComprobacionSoapIn">
+    <wsdl:part name="parameters" element="tns:uwsBalanceComprobacion" />
+  </wsdl:message>
+  <wsdl:message name="uwsBalanceComprobacionSoapOut">
+    <wsdl:part name="parameters" element="tns:uwsBalanceComprobacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscarArchivoAnexoEstadoFinancieroSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscarArchivoAnexoEstadoFinanciero" />
+  </wsdl:message>
+  <wsdl:message name="BuscarArchivoAnexoEstadoFinancieroSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscarArchivoAnexoEstadoFinancieroResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarArchivoAnexoEstadoFinancieroSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarArchivoAnexoEstadoFinanciero" />
+  </wsdl:message>
+  <wsdl:message name="EliminarArchivoAnexoEstadoFinancieroSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarArchivoAnexoEstadoFinancieroResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertarArchivoAnexoEstadoFinancieroSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertarArchivoAnexoEstadoFinanciero" />
+  </wsdl:message>
+  <wsdl:message name="InsertarArchivoAnexoEstadoFinancieroSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertarArchivoAnexoEstadoFinancieroResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertarArchivoAnexoEstadoFinancieroFilestreamSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertarArchivoAnexoEstadoFinancieroFilestream" />
+  </wsdl:message>
+  <wsdl:message name="InsertarArchivoAnexoEstadoFinancieroFilestreamSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertarArchivoAnexoEstadoFinancieroFilestreamResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarArchivosAnexosEstadosFinancierosCargadosSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarArchivosAnexosEstadosFinancierosCargados" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarArchivosAnexosEstadosFinancierosCargadosSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarArchivosAnexosEstadosFinancierosCargadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscarArchivoAnexoEstadoFinancieroFilestreamSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscarArchivoAnexoEstadoFinancieroFilestream" />
+  </wsdl:message>
+  <wsdl:message name="BuscarArchivoAnexoEstadoFinancieroFilestreamSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscarArchivoAnexoEstadoFinancieroFilestreamResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscarArchivoEstadoFinancieroSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscarArchivoEstadoFinanciero" />
+  </wsdl:message>
+  <wsdl:message name="BuscarArchivoEstadoFinancieroSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscarArchivoEstadoFinancieroResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarArchivoEstadoFinancieroSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarArchivoEstadoFinanciero" />
+  </wsdl:message>
+  <wsdl:message name="EliminarArchivoEstadoFinancieroSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarArchivoEstadoFinancieroResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertarArchivoEstadoFinancieroSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertarArchivoEstadoFinanciero" />
+  </wsdl:message>
+  <wsdl:message name="InsertarArchivoEstadoFinancieroSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertarArchivoEstadoFinancieroResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertarArchivoEstadoFinancieroFileStreamSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertarArchivoEstadoFinancieroFileStream" />
+  </wsdl:message>
+  <wsdl:message name="InsertarArchivoEstadoFinancieroFileStreamSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertarArchivoEstadoFinancieroFileStreamResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscarArchivoEstadoFinancieroFilestreamSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscarArchivoEstadoFinancieroFilestream" />
+  </wsdl:message>
+  <wsdl:message name="BuscarArchivoEstadoFinancieroFilestreamSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscarArchivoEstadoFinancieroFilestreamResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscarArchivoEstadoFinancieroTamanoByteSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscarArchivoEstadoFinancieroTamanoByte" />
+  </wsdl:message>
+  <wsdl:message name="BuscarArchivoEstadoFinancieroTamanoByteSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscarArchivoEstadoFinancieroTamanoByteResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscarArchivoPlantillaEstadoFinancieroSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscarArchivoPlantillaEstadoFinanciero" />
+  </wsdl:message>
+  <wsdl:message name="BuscarArchivoPlantillaEstadoFinancieroSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscarArchivoPlantillaEstadoFinancieroResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarArchivoPlantillaEstadoFinancieroSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarArchivoPlantillaEstadoFinanciero" />
+  </wsdl:message>
+  <wsdl:message name="EliminarArchivoPlantillaEstadoFinancieroSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarArchivoPlantillaEstadoFinancieroResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertarArchivoPlantillaEstadoFinancieroSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertarArchivoPlantillaEstadoFinanciero" />
+  </wsdl:message>
+  <wsdl:message name="InsertarArchivoPlantillaEstadoFinancieroSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertarArchivoPlantillaEstadoFinancieroResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertarArchivoPlantillaEstadoFinancieroFilestreamSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertarArchivoPlantillaEstadoFinancieroFilestream" />
+  </wsdl:message>
+  <wsdl:message name="InsertarArchivoPlantillaEstadoFinancieroFilestreamSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertarArchivoPlantillaEstadoFinancieroFilestreamResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertarArchivoPlantillaEstadoFinancieroFilestreamSSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertarArchivoPlantillaEstadoFinancieroFilestreamS" />
+  </wsdl:message>
+  <wsdl:message name="InsertarArchivoPlantillaEstadoFinancieroFilestreamSSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertarArchivoPlantillaEstadoFinancieroFilestreamSResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarArchivosPlantillasEstadosFinancierosCargadosSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarArchivosPlantillasEstadosFinancierosCargados" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarArchivosPlantillasEstadosFinancierosCargadosSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarArchivosPlantillasEstadosFinancierosCargadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscarBitacoraFlujoErroresDTSXSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscarBitacoraFlujoErroresDTSX" />
+  </wsdl:message>
+  <wsdl:message name="BuscarBitacoraFlujoErroresDTSXSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscarBitacoraFlujoErroresDTSXResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarBitacoraFlujoErroresDTSXSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarBitacoraFlujoErroresDTSX" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarBitacoraFlujoErroresDTSXSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarBitacoraFlujoErroresDTSXResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscarCatalogoEtapaEstadoFinancieroSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscarCatalogoEtapaEstadoFinanciero" />
+  </wsdl:message>
+  <wsdl:message name="BuscarCatalogoEtapaEstadoFinancieroSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscarCatalogoEtapaEstadoFinancieroResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarCatalogoEtapaEstadoFinancieroSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarCatalogoEtapaEstadoFinanciero" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarCatalogoEtapaEstadoFinancieroSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarCatalogoEtapaEstadoFinancieroResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarCatalogoEtapaEstadoFinancieroSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarCatalogoEtapaEstadoFinanciero" />
+  </wsdl:message>
+  <wsdl:message name="EliminarCatalogoEtapaEstadoFinancieroSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarCatalogoEtapaEstadoFinancieroResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertarCatalogoEtapaEstadoFinancieroSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertarCatalogoEtapaEstadoFinanciero" />
+  </wsdl:message>
+  <wsdl:message name="InsertarCatalogoEtapaEstadoFinancieroSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertarCatalogoEtapaEstadoFinancieroResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModificarCatalogoEtapaEstadoFinancieroSoapIn">
+    <wsdl:part name="parameters" element="tns:ModificarCatalogoEtapaEstadoFinanciero" />
+  </wsdl:message>
+  <wsdl:message name="ModificarCatalogoEtapaEstadoFinancieroSoapOut">
+    <wsdl:part name="parameters" element="tns:ModificarCatalogoEtapaEstadoFinancieroResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscarCatalogoUnidadesTiempoPeriodoSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscarCatalogoUnidadesTiempoPeriodo" />
+  </wsdl:message>
+  <wsdl:message name="BuscarCatalogoUnidadesTiempoPeriodoSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscarCatalogoUnidadesTiempoPeriodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarCatalogoUnidadesTiempoPeriodoSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarCatalogoUnidadesTiempoPeriodo" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarCatalogoUnidadesTiempoPeriodoSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarCatalogoUnidadesTiempoPeriodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="uwsEjecutarDTSXSoapIn">
+    <wsdl:part name="parameters" element="tns:uwsEjecutarDTSX" />
+  </wsdl:message>
+  <wsdl:message name="uwsEjecutarDTSXSoapOut">
+    <wsdl:part name="parameters" element="tns:uwsEjecutarDTSXResponse" />
+  </wsdl:message>
+  <wsdl:message name="uwsEjecutarDTSXBDSoapIn">
+    <wsdl:part name="parameters" element="tns:uwsEjecutarDTSXBD" />
+  </wsdl:message>
+  <wsdl:message name="uwsEjecutarDTSXBDSoapOut">
+    <wsdl:part name="parameters" element="tns:uwsEjecutarDTSXBDResponse" />
+  </wsdl:message>
+  <wsdl:message name="uwsPruebaSoapIn">
+    <wsdl:part name="parameters" element="tns:uwsPrueba" />
+  </wsdl:message>
+  <wsdl:message name="uwsPruebaSoapOut">
+    <wsdl:part name="parameters" element="tns:uwsPruebaResponse" />
+  </wsdl:message>
+  <wsdl:message name="uwsPrueba2SoapIn">
+    <wsdl:part name="parameters" element="tns:uwsPrueba2" />
+  </wsdl:message>
+  <wsdl:message name="uwsPrueba2SoapOut">
+    <wsdl:part name="parameters" element="tns:uwsPrueba2Response" />
+  </wsdl:message>
+  <wsdl:message name="uwsEliminarArchivoSoapIn">
+    <wsdl:part name="parameters" element="tns:uwsEliminarArchivo" />
+  </wsdl:message>
+  <wsdl:message name="uwsEliminarArchivoSoapOut">
+    <wsdl:part name="parameters" element="tns:uwsEliminarArchivoResponse" />
+  </wsdl:message>
+  <wsdl:message name="uwsBuscarEntidadesDeUnAmbitoSoapIn">
+    <wsdl:part name="parameters" element="tns:uwsBuscarEntidadesDeUnAmbito" />
+  </wsdl:message>
+  <wsdl:message name="uwsBuscarEntidadesDeUnAmbitoSoapOut">
+    <wsdl:part name="parameters" element="tns:uwsBuscarEntidadesDeUnAmbitoResponse" />
+  </wsdl:message>
+  <wsdl:message name="uwsBuscarEstadoFinancieroSoapIn">
+    <wsdl:part name="parameters" element="tns:uwsBuscarEstadoFinanciero" />
+  </wsdl:message>
+  <wsdl:message name="uwsBuscarEstadoFinancieroSoapOut">
+    <wsdl:part name="parameters" element="tns:uwsBuscarEstadoFinancieroResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarEstadoFinancieroSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarEstadoFinanciero" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarEstadoFinancieroSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarEstadoFinancieroResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarEstadoFinancieroSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarEstadoFinanciero" />
+  </wsdl:message>
+  <wsdl:message name="EliminarEstadoFinancieroSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarEstadoFinancieroResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertarEstadoFinancieroSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertarEstadoFinanciero" />
+  </wsdl:message>
+  <wsdl:message name="InsertarEstadoFinancieroSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertarEstadoFinancieroResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModificarEstadoFinancieroSoapIn">
+    <wsdl:part name="parameters" element="tns:ModificarEstadoFinanciero" />
+  </wsdl:message>
+  <wsdl:message name="ModificarEstadoFinancieroSoapOut">
+    <wsdl:part name="parameters" element="tns:ModificarEstadoFinancieroResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscarEstadoFinancieroBalanceComprobacionSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscarEstadoFinancieroBalanceComprobacion" />
+  </wsdl:message>
+  <wsdl:message name="BuscarEstadoFinancieroBalanceComprobacionSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscarEstadoFinancieroBalanceComprobacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarEstadoFinancieroBalanceComprobacionSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarEstadoFinancieroBalanceComprobacion" />
+  </wsdl:message>
+  <wsdl:message name="EliminarEstadoFinancieroBalanceComprobacionSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarEstadoFinancieroBalanceComprobacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidarEstadoFinancieroBalanceComprobacionSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidarEstadoFinancieroBalanceComprobacion" />
+  </wsdl:message>
+  <wsdl:message name="ValidarEstadoFinancieroBalanceComprobacionSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidarEstadoFinancieroBalanceComprobacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscarEstadoFinancieroBalanceComprobacionParaSIGAFSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscarEstadoFinancieroBalanceComprobacionParaSIGAF" />
+  </wsdl:message>
+  <wsdl:message name="BuscarEstadoFinancieroBalanceComprobacionParaSIGAFSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscarEstadoFinancieroBalanceComprobacionParaSIGAFResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarEstadoFinancieroCambioPatrimonioNetoSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarEstadoFinancieroCambioPatrimonioNeto" />
+  </wsdl:message>
+  <wsdl:message name="EliminarEstadoFinancieroCambioPatrimonioNetoSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarEstadoFinancieroCambioPatrimonioNetoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidarEstadoFinancieroCambioPatrimonioNetoSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidarEstadoFinancieroCambioPatrimonioNeto" />
+  </wsdl:message>
+  <wsdl:message name="ValidarEstadoFinancieroCambioPatrimonioNetoSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidarEstadoFinancieroCambioPatrimonioNetoResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscarEstadoFinancieroDeudaPublicaSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscarEstadoFinancieroDeudaPublica" />
+  </wsdl:message>
+  <wsdl:message name="BuscarEstadoFinancieroDeudaPublicaSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscarEstadoFinancieroDeudaPublicaResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarEstadoFinancieroDeudaPublicaSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarEstadoFinancieroDeudaPublica" />
+  </wsdl:message>
+  <wsdl:message name="EliminarEstadoFinancieroDeudaPublicaSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarEstadoFinancieroDeudaPublicaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidarEstadoFinancieroDeudaPublicaSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidarEstadoFinancieroDeudaPublica" />
+  </wsdl:message>
+  <wsdl:message name="ValidarEstadoFinancieroDeudaPublicaSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidarEstadoFinancieroDeudaPublicaResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarEstadoFinancieroFlujoEfectivoSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarEstadoFinancieroFlujoEfectivo" />
+  </wsdl:message>
+  <wsdl:message name="EliminarEstadoFinancieroFlujoEfectivoSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarEstadoFinancieroFlujoEfectivoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidarEstadoFinancieroFlujoEfectivoSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidarEstadoFinancieroFlujoEfectivo" />
+  </wsdl:message>
+  <wsdl:message name="ValidarEstadoFinancieroFlujoEfectivoSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidarEstadoFinancieroFlujoEfectivoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarEstadoFinancierosCargadosSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarEstadoFinancierosCargados" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarEstadoFinancierosCargadosSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarEstadoFinancierosCargadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarCorreosAutorizacionEstadosFinancierosCargadosSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarCorreosAutorizacionEstadosFinancierosCargados" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarCorreosAutorizacionEstadosFinancierosCargadosSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarCorreosAutorizacionEstadosFinancierosCargadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscarEtapaEstadoFinancieroSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscarEtapaEstadoFinanciero" />
+  </wsdl:message>
+  <wsdl:message name="BuscarEtapaEstadoFinancieroSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscarEtapaEstadoFinancieroResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarEtapaEstadoFinancieroSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarEtapaEstadoFinanciero" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarEtapaEstadoFinancieroSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarEtapaEstadoFinancieroResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarEtapaEstadoFinancieroSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarEtapaEstadoFinanciero" />
+  </wsdl:message>
+  <wsdl:message name="EliminarEtapaEstadoFinancieroSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarEtapaEstadoFinancieroResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertarEtapaEstadoFinancieroSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertarEtapaEstadoFinanciero" />
+  </wsdl:message>
+  <wsdl:message name="InsertarEtapaEstadoFinancieroSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertarEtapaEstadoFinancieroResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModificarEtapaEstadoFinancieroSoapIn">
+    <wsdl:part name="parameters" element="tns:ModificarEtapaEstadoFinanciero" />
+  </wsdl:message>
+  <wsdl:message name="ModificarEtapaEstadoFinancieroSoapOut">
+    <wsdl:part name="parameters" element="tns:ModificarEtapaEstadoFinancieroResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidarUnidadTiempoPeriodoCorrectoCorreoAutorizacionSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidarUnidadTiempoPeriodoCorrectoCorreoAutorizacion" />
+  </wsdl:message>
+  <wsdl:message name="ValidarUnidadTiempoPeriodoCorrectoCorreoAutorizacionSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidarUnidadTiempoPeriodoCorrectoCorreoAutorizacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscarUnidadesTiempoPeriodoEnCursoPorFechaSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscarUnidadesTiempoPeriodoEnCursoPorFecha" />
+  </wsdl:message>
+  <wsdl:message name="BuscarUnidadesTiempoPeriodoEnCursoPorFechaSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscarUnidadesTiempoPeriodoEnCursoPorFechaResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscarUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="BuscarUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscarUsuariosPorRolSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscarUsuariosPorRol" />
+  </wsdl:message>
+  <wsdl:message name="BuscarUsuariosPorRolSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscarUsuariosPorRolResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarCorreoPCSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarCorreoPC" />
+  </wsdl:message>
+  <wsdl:message name="EnviarCorreoPCSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarCorreoPCResponse" />
+  </wsdl:message>
+  <wsdl:message name="uwsPruebaHttpGetIn" />
+  <wsdl:message name="uwsPruebaHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="uwsPrueba2HttpGetIn">
+    <wsdl:part name="str_Estado" type="s:string" />
+    <wsdl:part name="str_UsrCreacion" type="s:string" />
+    <wsdl:part name="str_prueba" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="uwsPrueba2HttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="uwsEliminarArchivoHttpGetIn">
+    <wsdl:part name="str_DTSXPaqueteURL" type="s:string" />
+    <wsdl:part name="str_DTSXPaqueteVariable" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="uwsEliminarArchivoHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="EnviarCorreoPCHttpGetIn">
+    <wsdl:part name="CorreoClientePort" type="s:string" />
+    <wsdl:part name="CorreoClienteHost" type="s:string" />
+    <wsdl:part name="CorreoNetworkCredentialUsuario" type="s:string" />
+    <wsdl:part name="CorreoNetworkCredentialPassWord" type="s:string" />
+    <wsdl:part name="str_CorreoFrom" type="s:string" />
+    <wsdl:part name="str_CorreoTo" type="s:string" />
+    <wsdl:part name="str_CorreoCC" type="s:string" />
+    <wsdl:part name="str_Mensaje" type="s:string" />
+    <wsdl:part name="str_Asunto" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="EnviarCorreoPCHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="uwsPruebaHttpPostIn" />
+  <wsdl:message name="uwsPruebaHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="uwsPrueba2HttpPostIn">
+    <wsdl:part name="str_Estado" type="s:string" />
+    <wsdl:part name="str_UsrCreacion" type="s:string" />
+    <wsdl:part name="str_prueba" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="uwsPrueba2HttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="uwsEliminarArchivoHttpPostIn">
+    <wsdl:part name="str_DTSXPaqueteURL" type="s:string" />
+    <wsdl:part name="str_DTSXPaqueteVariable" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="uwsEliminarArchivoHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="EnviarCorreoPCHttpPostIn">
+    <wsdl:part name="CorreoClientePort" type="s:string" />
+    <wsdl:part name="CorreoClienteHost" type="s:string" />
+    <wsdl:part name="CorreoNetworkCredentialUsuario" type="s:string" />
+    <wsdl:part name="CorreoNetworkCredentialPassWord" type="s:string" />
+    <wsdl:part name="str_CorreoFrom" type="s:string" />
+    <wsdl:part name="str_CorreoTo" type="s:string" />
+    <wsdl:part name="str_CorreoCC" type="s:string" />
+    <wsdl:part name="str_Mensaje" type="s:string" />
+    <wsdl:part name="str_Asunto" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="EnviarCorreoPCHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:portType name="wsPlantillasConsolidacionSoap">
+    <wsdl:operation name="uwsBalanceComprobacion">
+      <wsdl:input message="tns:uwsBalanceComprobacionSoapIn" />
+      <wsdl:output message="tns:uwsBalanceComprobacionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarArchivoAnexoEstadoFinanciero">
+      <wsdl:input message="tns:BuscarArchivoAnexoEstadoFinancieroSoapIn" />
+      <wsdl:output message="tns:BuscarArchivoAnexoEstadoFinancieroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarArchivoAnexoEstadoFinanciero">
+      <wsdl:input message="tns:EliminarArchivoAnexoEstadoFinancieroSoapIn" />
+      <wsdl:output message="tns:EliminarArchivoAnexoEstadoFinancieroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarArchivoAnexoEstadoFinanciero">
+      <wsdl:input message="tns:InsertarArchivoAnexoEstadoFinancieroSoapIn" />
+      <wsdl:output message="tns:InsertarArchivoAnexoEstadoFinancieroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarArchivoAnexoEstadoFinancieroFilestream">
+      <wsdl:input message="tns:InsertarArchivoAnexoEstadoFinancieroFilestreamSoapIn" />
+      <wsdl:output message="tns:InsertarArchivoAnexoEstadoFinancieroFilestreamSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarArchivosAnexosEstadosFinancierosCargados">
+      <wsdl:input message="tns:ConsultarArchivosAnexosEstadosFinancierosCargadosSoapIn" />
+      <wsdl:output message="tns:ConsultarArchivosAnexosEstadosFinancierosCargadosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarArchivoAnexoEstadoFinancieroFilestream">
+      <wsdl:input message="tns:BuscarArchivoAnexoEstadoFinancieroFilestreamSoapIn" />
+      <wsdl:output message="tns:BuscarArchivoAnexoEstadoFinancieroFilestreamSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarArchivoEstadoFinanciero">
+      <wsdl:input message="tns:BuscarArchivoEstadoFinancieroSoapIn" />
+      <wsdl:output message="tns:BuscarArchivoEstadoFinancieroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarArchivoEstadoFinanciero">
+      <wsdl:input message="tns:EliminarArchivoEstadoFinancieroSoapIn" />
+      <wsdl:output message="tns:EliminarArchivoEstadoFinancieroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarArchivoEstadoFinanciero">
+      <wsdl:input message="tns:InsertarArchivoEstadoFinancieroSoapIn" />
+      <wsdl:output message="tns:InsertarArchivoEstadoFinancieroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarArchivoEstadoFinancieroFileStream">
+      <wsdl:input message="tns:InsertarArchivoEstadoFinancieroFileStreamSoapIn" />
+      <wsdl:output message="tns:InsertarArchivoEstadoFinancieroFileStreamSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarArchivoEstadoFinancieroFilestream">
+      <wsdl:input message="tns:BuscarArchivoEstadoFinancieroFilestreamSoapIn" />
+      <wsdl:output message="tns:BuscarArchivoEstadoFinancieroFilestreamSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarArchivoEstadoFinancieroTamanoByte">
+      <wsdl:input message="tns:BuscarArchivoEstadoFinancieroTamanoByteSoapIn" />
+      <wsdl:output message="tns:BuscarArchivoEstadoFinancieroTamanoByteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarArchivoPlantillaEstadoFinanciero">
+      <wsdl:input message="tns:BuscarArchivoPlantillaEstadoFinancieroSoapIn" />
+      <wsdl:output message="tns:BuscarArchivoPlantillaEstadoFinancieroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarArchivoPlantillaEstadoFinanciero">
+      <wsdl:input message="tns:EliminarArchivoPlantillaEstadoFinancieroSoapIn" />
+      <wsdl:output message="tns:EliminarArchivoPlantillaEstadoFinancieroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarArchivoPlantillaEstadoFinanciero">
+      <wsdl:input message="tns:InsertarArchivoPlantillaEstadoFinancieroSoapIn" />
+      <wsdl:output message="tns:InsertarArchivoPlantillaEstadoFinancieroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarArchivoPlantillaEstadoFinancieroFilestream">
+      <wsdl:input message="tns:InsertarArchivoPlantillaEstadoFinancieroFilestreamSoapIn" />
+      <wsdl:output message="tns:InsertarArchivoPlantillaEstadoFinancieroFilestreamSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarArchivoPlantillaEstadoFinancieroFilestreamS">
+      <wsdl:input message="tns:InsertarArchivoPlantillaEstadoFinancieroFilestreamSSoapIn" />
+      <wsdl:output message="tns:InsertarArchivoPlantillaEstadoFinancieroFilestreamSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarArchivosPlantillasEstadosFinancierosCargados">
+      <wsdl:input message="tns:ConsultarArchivosPlantillasEstadosFinancierosCargadosSoapIn" />
+      <wsdl:output message="tns:ConsultarArchivosPlantillasEstadosFinancierosCargadosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarBitacoraFlujoErroresDTSX">
+      <wsdl:input message="tns:BuscarBitacoraFlujoErroresDTSXSoapIn" />
+      <wsdl:output message="tns:BuscarBitacoraFlujoErroresDTSXSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarBitacoraFlujoErroresDTSX">
+      <wsdl:input message="tns:ConsultarBitacoraFlujoErroresDTSXSoapIn" />
+      <wsdl:output message="tns:ConsultarBitacoraFlujoErroresDTSXSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarCatalogoEtapaEstadoFinanciero">
+      <wsdl:input message="tns:BuscarCatalogoEtapaEstadoFinancieroSoapIn" />
+      <wsdl:output message="tns:BuscarCatalogoEtapaEstadoFinancieroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCatalogoEtapaEstadoFinanciero">
+      <wsdl:input message="tns:ConsultarCatalogoEtapaEstadoFinancieroSoapIn" />
+      <wsdl:output message="tns:ConsultarCatalogoEtapaEstadoFinancieroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarCatalogoEtapaEstadoFinanciero">
+      <wsdl:input message="tns:EliminarCatalogoEtapaEstadoFinancieroSoapIn" />
+      <wsdl:output message="tns:EliminarCatalogoEtapaEstadoFinancieroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarCatalogoEtapaEstadoFinanciero">
+      <wsdl:input message="tns:InsertarCatalogoEtapaEstadoFinancieroSoapIn" />
+      <wsdl:output message="tns:InsertarCatalogoEtapaEstadoFinancieroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarCatalogoEtapaEstadoFinanciero">
+      <wsdl:input message="tns:ModificarCatalogoEtapaEstadoFinancieroSoapIn" />
+      <wsdl:output message="tns:ModificarCatalogoEtapaEstadoFinancieroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarCatalogoUnidadesTiempoPeriodo">
+      <wsdl:input message="tns:BuscarCatalogoUnidadesTiempoPeriodoSoapIn" />
+      <wsdl:output message="tns:BuscarCatalogoUnidadesTiempoPeriodoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCatalogoUnidadesTiempoPeriodo">
+      <wsdl:input message="tns:ConsultarCatalogoUnidadesTiempoPeriodoSoapIn" />
+      <wsdl:output message="tns:ConsultarCatalogoUnidadesTiempoPeriodoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="uwsEjecutarDTSX">
+      <wsdl:input message="tns:uwsEjecutarDTSXSoapIn" />
+      <wsdl:output message="tns:uwsEjecutarDTSXSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="uwsEjecutarDTSXBD">
+      <wsdl:input message="tns:uwsEjecutarDTSXBDSoapIn" />
+      <wsdl:output message="tns:uwsEjecutarDTSXBDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="uwsPrueba">
+      <wsdl:input message="tns:uwsPruebaSoapIn" />
+      <wsdl:output message="tns:uwsPruebaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="uwsPrueba2">
+      <wsdl:input message="tns:uwsPrueba2SoapIn" />
+      <wsdl:output message="tns:uwsPrueba2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="uwsEliminarArchivo">
+      <wsdl:input message="tns:uwsEliminarArchivoSoapIn" />
+      <wsdl:output message="tns:uwsEliminarArchivoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="uwsBuscarEntidadesDeUnAmbito">
+      <wsdl:input message="tns:uwsBuscarEntidadesDeUnAmbitoSoapIn" />
+      <wsdl:output message="tns:uwsBuscarEntidadesDeUnAmbitoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="uwsBuscarEstadoFinanciero">
+      <wsdl:input message="tns:uwsBuscarEstadoFinancieroSoapIn" />
+      <wsdl:output message="tns:uwsBuscarEstadoFinancieroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarEstadoFinanciero">
+      <wsdl:input message="tns:ConsultarEstadoFinancieroSoapIn" />
+      <wsdl:output message="tns:ConsultarEstadoFinancieroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarEstadoFinanciero">
+      <wsdl:input message="tns:EliminarEstadoFinancieroSoapIn" />
+      <wsdl:output message="tns:EliminarEstadoFinancieroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarEstadoFinanciero">
+      <wsdl:input message="tns:InsertarEstadoFinancieroSoapIn" />
+      <wsdl:output message="tns:InsertarEstadoFinancieroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarEstadoFinanciero">
+      <wsdl:input message="tns:ModificarEstadoFinancieroSoapIn" />
+      <wsdl:output message="tns:ModificarEstadoFinancieroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarEstadoFinancieroBalanceComprobacion">
+      <wsdl:input message="tns:BuscarEstadoFinancieroBalanceComprobacionSoapIn" />
+      <wsdl:output message="tns:BuscarEstadoFinancieroBalanceComprobacionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarEstadoFinancieroBalanceComprobacion">
+      <wsdl:input message="tns:EliminarEstadoFinancieroBalanceComprobacionSoapIn" />
+      <wsdl:output message="tns:EliminarEstadoFinancieroBalanceComprobacionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarEstadoFinancieroBalanceComprobacion">
+      <wsdl:input message="tns:ValidarEstadoFinancieroBalanceComprobacionSoapIn" />
+      <wsdl:output message="tns:ValidarEstadoFinancieroBalanceComprobacionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarEstadoFinancieroBalanceComprobacionParaSIGAF">
+      <wsdl:input message="tns:BuscarEstadoFinancieroBalanceComprobacionParaSIGAFSoapIn" />
+      <wsdl:output message="tns:BuscarEstadoFinancieroBalanceComprobacionParaSIGAFSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarEstadoFinancieroCambioPatrimonioNeto">
+      <wsdl:input message="tns:EliminarEstadoFinancieroCambioPatrimonioNetoSoapIn" />
+      <wsdl:output message="tns:EliminarEstadoFinancieroCambioPatrimonioNetoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarEstadoFinancieroCambioPatrimonioNeto">
+      <wsdl:input message="tns:ValidarEstadoFinancieroCambioPatrimonioNetoSoapIn" />
+      <wsdl:output message="tns:ValidarEstadoFinancieroCambioPatrimonioNetoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarEstadoFinancieroDeudaPublica">
+      <wsdl:input message="tns:BuscarEstadoFinancieroDeudaPublicaSoapIn" />
+      <wsdl:output message="tns:BuscarEstadoFinancieroDeudaPublicaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarEstadoFinancieroDeudaPublica">
+      <wsdl:input message="tns:EliminarEstadoFinancieroDeudaPublicaSoapIn" />
+      <wsdl:output message="tns:EliminarEstadoFinancieroDeudaPublicaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarEstadoFinancieroDeudaPublica">
+      <wsdl:input message="tns:ValidarEstadoFinancieroDeudaPublicaSoapIn" />
+      <wsdl:output message="tns:ValidarEstadoFinancieroDeudaPublicaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarEstadoFinancieroFlujoEfectivo">
+      <wsdl:input message="tns:EliminarEstadoFinancieroFlujoEfectivoSoapIn" />
+      <wsdl:output message="tns:EliminarEstadoFinancieroFlujoEfectivoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarEstadoFinancieroFlujoEfectivo">
+      <wsdl:input message="tns:ValidarEstadoFinancieroFlujoEfectivoSoapIn" />
+      <wsdl:output message="tns:ValidarEstadoFinancieroFlujoEfectivoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarEstadoFinancierosCargados">
+      <wsdl:input message="tns:ConsultarEstadoFinancierosCargadosSoapIn" />
+      <wsdl:output message="tns:ConsultarEstadoFinancierosCargadosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCorreosAutorizacionEstadosFinancierosCargados">
+      <wsdl:input message="tns:ConsultarCorreosAutorizacionEstadosFinancierosCargadosSoapIn" />
+      <wsdl:output message="tns:ConsultarCorreosAutorizacionEstadosFinancierosCargadosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarEtapaEstadoFinanciero">
+      <wsdl:input message="tns:BuscarEtapaEstadoFinancieroSoapIn" />
+      <wsdl:output message="tns:BuscarEtapaEstadoFinancieroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarEtapaEstadoFinanciero">
+      <wsdl:input message="tns:ConsultarEtapaEstadoFinancieroSoapIn" />
+      <wsdl:output message="tns:ConsultarEtapaEstadoFinancieroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarEtapaEstadoFinanciero">
+      <wsdl:input message="tns:EliminarEtapaEstadoFinancieroSoapIn" />
+      <wsdl:output message="tns:EliminarEtapaEstadoFinancieroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarEtapaEstadoFinanciero">
+      <wsdl:input message="tns:InsertarEtapaEstadoFinancieroSoapIn" />
+      <wsdl:output message="tns:InsertarEtapaEstadoFinancieroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarEtapaEstadoFinanciero">
+      <wsdl:input message="tns:ModificarEtapaEstadoFinancieroSoapIn" />
+      <wsdl:output message="tns:ModificarEtapaEstadoFinancieroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarUnidadTiempoPeriodoCorrectoCorreoAutorizacion">
+      <wsdl:input message="tns:ValidarUnidadTiempoPeriodoCorrectoCorreoAutorizacionSoapIn" />
+      <wsdl:output message="tns:ValidarUnidadTiempoPeriodoCorrectoCorreoAutorizacionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarUnidadesTiempoPeriodoEnCursoPorFecha">
+      <wsdl:input message="tns:BuscarUnidadesTiempoPeriodoEnCursoPorFechaSoapIn" />
+      <wsdl:output message="tns:BuscarUnidadesTiempoPeriodoEnCursoPorFechaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarUsuario">
+      <wsdl:input message="tns:BuscarUsuarioSoapIn" />
+      <wsdl:output message="tns:BuscarUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarUsuariosPorRol">
+      <wsdl:input message="tns:BuscarUsuariosPorRolSoapIn" />
+      <wsdl:output message="tns:BuscarUsuariosPorRolSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarCorreoPC">
+      <wsdl:input message="tns:EnviarCorreoPCSoapIn" />
+      <wsdl:output message="tns:EnviarCorreoPCSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="wsPlantillasConsolidacionHttpGet">
+    <wsdl:operation name="uwsPrueba">
+      <wsdl:input message="tns:uwsPruebaHttpGetIn" />
+      <wsdl:output message="tns:uwsPruebaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="uwsPrueba2">
+      <wsdl:input message="tns:uwsPrueba2HttpGetIn" />
+      <wsdl:output message="tns:uwsPrueba2HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="uwsEliminarArchivo">
+      <wsdl:input message="tns:uwsEliminarArchivoHttpGetIn" />
+      <wsdl:output message="tns:uwsEliminarArchivoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarCorreoPC">
+      <wsdl:input message="tns:EnviarCorreoPCHttpGetIn" />
+      <wsdl:output message="tns:EnviarCorreoPCHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="wsPlantillasConsolidacionHttpPost">
+    <wsdl:operation name="uwsPrueba">
+      <wsdl:input message="tns:uwsPruebaHttpPostIn" />
+      <wsdl:output message="tns:uwsPruebaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="uwsPrueba2">
+      <wsdl:input message="tns:uwsPrueba2HttpPostIn" />
+      <wsdl:output message="tns:uwsPrueba2HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="uwsEliminarArchivo">
+      <wsdl:input message="tns:uwsEliminarArchivoHttpPostIn" />
+      <wsdl:output message="tns:uwsEliminarArchivoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarCorreoPC">
+      <wsdl:input message="tns:EnviarCorreoPCHttpPostIn" />
+      <wsdl:output message="tns:EnviarCorreoPCHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsPlantillasConsolidacionSoap" type="tns:wsPlantillasConsolidacionSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="uwsBalanceComprobacion">
+      <soap:operation soapAction="http://tempuri.org/uwsBalanceComprobacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarArchivoAnexoEstadoFinanciero">
+      <soap:operation soapAction="http://tempuri.org/BuscarArchivoAnexoEstadoFinanciero" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarArchivoAnexoEstadoFinanciero">
+      <soap:operation soapAction="http://tempuri.org/EliminarArchivoAnexoEstadoFinanciero" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarArchivoAnexoEstadoFinanciero">
+      <soap:operation soapAction="http://tempuri.org/InsertarArchivoAnexoEstadoFinanciero" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarArchivoAnexoEstadoFinancieroFilestream">
+      <soap:operation soapAction="http://tempuri.org/InsertarArchivoAnexoEstadoFinancieroFilestream" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarArchivosAnexosEstadosFinancierosCargados">
+      <soap:operation soapAction="http://tempuri.org/ConsultarArchivosAnexosEstadosFinancierosCargados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarArchivoAnexoEstadoFinancieroFilestream">
+      <soap:operation soapAction="http://tempuri.org/BuscarArchivoAnexoEstadoFinancieroFilestream" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarArchivoEstadoFinanciero">
+      <soap:operation soapAction="http://tempuri.org/BuscarArchivoEstadoFinanciero" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarArchivoEstadoFinanciero">
+      <soap:operation soapAction="http://tempuri.org/EliminarArchivoEstadoFinanciero" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarArchivoEstadoFinanciero">
+      <soap:operation soapAction="http://tempuri.org/InsertarArchivoEstadoFinanciero" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarArchivoEstadoFinancieroFileStream">
+      <soap:operation soapAction="http://tempuri.org/InsertarArchivoEstadoFinancieroFileStream" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarArchivoEstadoFinancieroFilestream">
+      <soap:operation soapAction="http://tempuri.org/BuscarArchivoEstadoFinancieroFilestream" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarArchivoEstadoFinancieroTamanoByte">
+      <soap:operation soapAction="http://tempuri.org/BuscarArchivoEstadoFinancieroTamanoByte" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarArchivoPlantillaEstadoFinanciero">
+      <soap:operation soapAction="http://tempuri.org/BuscarArchivoPlantillaEstadoFinanciero" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarArchivoPlantillaEstadoFinanciero">
+      <soap:operation soapAction="http://tempuri.org/EliminarArchivoPlantillaEstadoFinanciero" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarArchivoPlantillaEstadoFinanciero">
+      <soap:operation soapAction="http://tempuri.org/InsertarArchivoPlantillaEstadoFinanciero" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarArchivoPlantillaEstadoFinancieroFilestream">
+      <soap:operation soapAction="http://tempuri.org/InsertarArchivoPlantillaEstadoFinancieroFilestream" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarArchivoPlantillaEstadoFinancieroFilestreamS">
+      <soap:operation soapAction="http://tempuri.org/InsertarArchivoPlantillaEstadoFinancieroFilestreamS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarArchivosPlantillasEstadosFinancierosCargados">
+      <soap:operation soapAction="http://tempuri.org/ConsultarArchivosPlantillasEstadosFinancierosCargados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarBitacoraFlujoErroresDTSX">
+      <soap:operation soapAction="http://tempuri.org/BuscarBitacoraFlujoErroresDTSX" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarBitacoraFlujoErroresDTSX">
+      <soap:operation soapAction="http://tempuri.org/ConsultarBitacoraFlujoErroresDTSX" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarCatalogoEtapaEstadoFinanciero">
+      <soap:operation soapAction="http://tempuri.org/BuscarCatalogoEtapaEstadoFinanciero" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCatalogoEtapaEstadoFinanciero">
+      <soap:operation soapAction="http://tempuri.org/ConsultarCatalogoEtapaEstadoFinanciero" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarCatalogoEtapaEstadoFinanciero">
+      <soap:operation soapAction="http://tempuri.org/EliminarCatalogoEtapaEstadoFinanciero" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarCatalogoEtapaEstadoFinanciero">
+      <soap:operation soapAction="http://tempuri.org/InsertarCatalogoEtapaEstadoFinanciero" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarCatalogoEtapaEstadoFinanciero">
+      <soap:operation soapAction="http://tempuri.org/ModificarCatalogoEtapaEstadoFinanciero" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarCatalogoUnidadesTiempoPeriodo">
+      <soap:operation soapAction="http://tempuri.org/BuscarCatalogoUnidadesTiempoPeriodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCatalogoUnidadesTiempoPeriodo">
+      <soap:operation soapAction="http://tempuri.org/ConsultarCatalogoUnidadesTiempoPeriodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uwsEjecutarDTSX">
+      <soap:operation soapAction="http://tempuri.org/uwsEjecutarDTSX" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uwsEjecutarDTSXBD">
+      <soap:operation soapAction="http://tempuri.org/uwsEjecutarDTSXBD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uwsPrueba">
+      <soap:operation soapAction="http://tempuri.org/uwsPrueba" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uwsPrueba2">
+      <soap:operation soapAction="http://tempuri.org/uwsPrueba2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uwsEliminarArchivo">
+      <soap:operation soapAction="http://tempuri.org/uwsEliminarArchivo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uwsBuscarEntidadesDeUnAmbito">
+      <soap:operation soapAction="http://tempuri.org/uwsBuscarEntidadesDeUnAmbito" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uwsBuscarEstadoFinanciero">
+      <soap:operation soapAction="http://tempuri.org/uwsBuscarEstadoFinanciero" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarEstadoFinanciero">
+      <soap:operation soapAction="http://tempuri.org/ConsultarEstadoFinanciero" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarEstadoFinanciero">
+      <soap:operation soapAction="http://tempuri.org/EliminarEstadoFinanciero" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarEstadoFinanciero">
+      <soap:operation soapAction="http://tempuri.org/InsertarEstadoFinanciero" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarEstadoFinanciero">
+      <soap:operation soapAction="http://tempuri.org/ModificarEstadoFinanciero" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarEstadoFinancieroBalanceComprobacion">
+      <soap:operation soapAction="http://tempuri.org/BuscarEstadoFinancieroBalanceComprobacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarEstadoFinancieroBalanceComprobacion">
+      <soap:operation soapAction="http://tempuri.org/EliminarEstadoFinancieroBalanceComprobacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarEstadoFinancieroBalanceComprobacion">
+      <soap:operation soapAction="http://tempuri.org/ValidarEstadoFinancieroBalanceComprobacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarEstadoFinancieroBalanceComprobacionParaSIGAF">
+      <soap:operation soapAction="http://tempuri.org/BuscarEstadoFinancieroBalanceComprobacionParaSIGAF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarEstadoFinancieroCambioPatrimonioNeto">
+      <soap:operation soapAction="http://tempuri.org/EliminarEstadoFinancieroCambioPatrimonioNeto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarEstadoFinancieroCambioPatrimonioNeto">
+      <soap:operation soapAction="http://tempuri.org/ValidarEstadoFinancieroCambioPatrimonioNeto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarEstadoFinancieroDeudaPublica">
+      <soap:operation soapAction="http://tempuri.org/BuscarEstadoFinancieroDeudaPublica" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarEstadoFinancieroDeudaPublica">
+      <soap:operation soapAction="http://tempuri.org/EliminarEstadoFinancieroDeudaPublica" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarEstadoFinancieroDeudaPublica">
+      <soap:operation soapAction="http://tempuri.org/ValidarEstadoFinancieroDeudaPublica" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarEstadoFinancieroFlujoEfectivo">
+      <soap:operation soapAction="http://tempuri.org/EliminarEstadoFinancieroFlujoEfectivo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarEstadoFinancieroFlujoEfectivo">
+      <soap:operation soapAction="http://tempuri.org/ValidarEstadoFinancieroFlujoEfectivo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarEstadoFinancierosCargados">
+      <soap:operation soapAction="http://tempuri.org/ConsultarEstadoFinancierosCargados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCorreosAutorizacionEstadosFinancierosCargados">
+      <soap:operation soapAction="http://tempuri.org/ConsultarCorreosAutorizacionEstadosFinancierosCargados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarEtapaEstadoFinanciero">
+      <soap:operation soapAction="http://tempuri.org/BuscarEtapaEstadoFinanciero" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarEtapaEstadoFinanciero">
+      <soap:operation soapAction="http://tempuri.org/ConsultarEtapaEstadoFinanciero" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarEtapaEstadoFinanciero">
+      <soap:operation soapAction="http://tempuri.org/EliminarEtapaEstadoFinanciero" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarEtapaEstadoFinanciero">
+      <soap:operation soapAction="http://tempuri.org/InsertarEtapaEstadoFinanciero" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarEtapaEstadoFinanciero">
+      <soap:operation soapAction="http://tempuri.org/ModificarEtapaEstadoFinanciero" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarUnidadTiempoPeriodoCorrectoCorreoAutorizacion">
+      <soap:operation soapAction="http://tempuri.org/ValidarUnidadTiempoPeriodoCorrectoCorreoAutorizacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarUnidadesTiempoPeriodoEnCursoPorFecha">
+      <soap:operation soapAction="http://tempuri.org/BuscarUnidadesTiempoPeriodoEnCursoPorFecha" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarUsuario">
+      <soap:operation soapAction="http://tempuri.org/BuscarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarUsuariosPorRol">
+      <soap:operation soapAction="http://tempuri.org/BuscarUsuariosPorRol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarCorreoPC">
+      <soap:operation soapAction="http://tempuri.org/EnviarCorreoPC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsPlantillasConsolidacionSoap12" type="tns:wsPlantillasConsolidacionSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="uwsBalanceComprobacion">
+      <soap12:operation soapAction="http://tempuri.org/uwsBalanceComprobacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarArchivoAnexoEstadoFinanciero">
+      <soap12:operation soapAction="http://tempuri.org/BuscarArchivoAnexoEstadoFinanciero" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarArchivoAnexoEstadoFinanciero">
+      <soap12:operation soapAction="http://tempuri.org/EliminarArchivoAnexoEstadoFinanciero" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarArchivoAnexoEstadoFinanciero">
+      <soap12:operation soapAction="http://tempuri.org/InsertarArchivoAnexoEstadoFinanciero" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarArchivoAnexoEstadoFinancieroFilestream">
+      <soap12:operation soapAction="http://tempuri.org/InsertarArchivoAnexoEstadoFinancieroFilestream" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarArchivosAnexosEstadosFinancierosCargados">
+      <soap12:operation soapAction="http://tempuri.org/ConsultarArchivosAnexosEstadosFinancierosCargados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarArchivoAnexoEstadoFinancieroFilestream">
+      <soap12:operation soapAction="http://tempuri.org/BuscarArchivoAnexoEstadoFinancieroFilestream" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarArchivoEstadoFinanciero">
+      <soap12:operation soapAction="http://tempuri.org/BuscarArchivoEstadoFinanciero" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarArchivoEstadoFinanciero">
+      <soap12:operation soapAction="http://tempuri.org/EliminarArchivoEstadoFinanciero" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarArchivoEstadoFinanciero">
+      <soap12:operation soapAction="http://tempuri.org/InsertarArchivoEstadoFinanciero" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarArchivoEstadoFinancieroFileStream">
+      <soap12:operation soapAction="http://tempuri.org/InsertarArchivoEstadoFinancieroFileStream" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarArchivoEstadoFinancieroFilestream">
+      <soap12:operation soapAction="http://tempuri.org/BuscarArchivoEstadoFinancieroFilestream" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarArchivoEstadoFinancieroTamanoByte">
+      <soap12:operation soapAction="http://tempuri.org/BuscarArchivoEstadoFinancieroTamanoByte" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarArchivoPlantillaEstadoFinanciero">
+      <soap12:operation soapAction="http://tempuri.org/BuscarArchivoPlantillaEstadoFinanciero" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarArchivoPlantillaEstadoFinanciero">
+      <soap12:operation soapAction="http://tempuri.org/EliminarArchivoPlantillaEstadoFinanciero" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarArchivoPlantillaEstadoFinanciero">
+      <soap12:operation soapAction="http://tempuri.org/InsertarArchivoPlantillaEstadoFinanciero" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarArchivoPlantillaEstadoFinancieroFilestream">
+      <soap12:operation soapAction="http://tempuri.org/InsertarArchivoPlantillaEstadoFinancieroFilestream" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarArchivoPlantillaEstadoFinancieroFilestreamS">
+      <soap12:operation soapAction="http://tempuri.org/InsertarArchivoPlantillaEstadoFinancieroFilestreamS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarArchivosPlantillasEstadosFinancierosCargados">
+      <soap12:operation soapAction="http://tempuri.org/ConsultarArchivosPlantillasEstadosFinancierosCargados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarBitacoraFlujoErroresDTSX">
+      <soap12:operation soapAction="http://tempuri.org/BuscarBitacoraFlujoErroresDTSX" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarBitacoraFlujoErroresDTSX">
+      <soap12:operation soapAction="http://tempuri.org/ConsultarBitacoraFlujoErroresDTSX" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarCatalogoEtapaEstadoFinanciero">
+      <soap12:operation soapAction="http://tempuri.org/BuscarCatalogoEtapaEstadoFinanciero" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCatalogoEtapaEstadoFinanciero">
+      <soap12:operation soapAction="http://tempuri.org/ConsultarCatalogoEtapaEstadoFinanciero" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarCatalogoEtapaEstadoFinanciero">
+      <soap12:operation soapAction="http://tempuri.org/EliminarCatalogoEtapaEstadoFinanciero" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarCatalogoEtapaEstadoFinanciero">
+      <soap12:operation soapAction="http://tempuri.org/InsertarCatalogoEtapaEstadoFinanciero" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarCatalogoEtapaEstadoFinanciero">
+      <soap12:operation soapAction="http://tempuri.org/ModificarCatalogoEtapaEstadoFinanciero" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarCatalogoUnidadesTiempoPeriodo">
+      <soap12:operation soapAction="http://tempuri.org/BuscarCatalogoUnidadesTiempoPeriodo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCatalogoUnidadesTiempoPeriodo">
+      <soap12:operation soapAction="http://tempuri.org/ConsultarCatalogoUnidadesTiempoPeriodo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uwsEjecutarDTSX">
+      <soap12:operation soapAction="http://tempuri.org/uwsEjecutarDTSX" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uwsEjecutarDTSXBD">
+      <soap12:operation soapAction="http://tempuri.org/uwsEjecutarDTSXBD" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uwsPrueba">
+      <soap12:operation soapAction="http://tempuri.org/uwsPrueba" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uwsPrueba2">
+      <soap12:operation soapAction="http://tempuri.org/uwsPrueba2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uwsEliminarArchivo">
+      <soap12:operation soapAction="http://tempuri.org/uwsEliminarArchivo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uwsBuscarEntidadesDeUnAmbito">
+      <soap12:operation soapAction="http://tempuri.org/uwsBuscarEntidadesDeUnAmbito" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uwsBuscarEstadoFinanciero">
+      <soap12:operation soapAction="http://tempuri.org/uwsBuscarEstadoFinanciero" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarEstadoFinanciero">
+      <soap12:operation soapAction="http://tempuri.org/ConsultarEstadoFinanciero" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarEstadoFinanciero">
+      <soap12:operation soapAction="http://tempuri.org/EliminarEstadoFinanciero" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarEstadoFinanciero">
+      <soap12:operation soapAction="http://tempuri.org/InsertarEstadoFinanciero" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarEstadoFinanciero">
+      <soap12:operation soapAction="http://tempuri.org/ModificarEstadoFinanciero" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarEstadoFinancieroBalanceComprobacion">
+      <soap12:operation soapAction="http://tempuri.org/BuscarEstadoFinancieroBalanceComprobacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarEstadoFinancieroBalanceComprobacion">
+      <soap12:operation soapAction="http://tempuri.org/EliminarEstadoFinancieroBalanceComprobacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarEstadoFinancieroBalanceComprobacion">
+      <soap12:operation soapAction="http://tempuri.org/ValidarEstadoFinancieroBalanceComprobacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarEstadoFinancieroBalanceComprobacionParaSIGAF">
+      <soap12:operation soapAction="http://tempuri.org/BuscarEstadoFinancieroBalanceComprobacionParaSIGAF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarEstadoFinancieroCambioPatrimonioNeto">
+      <soap12:operation soapAction="http://tempuri.org/EliminarEstadoFinancieroCambioPatrimonioNeto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarEstadoFinancieroCambioPatrimonioNeto">
+      <soap12:operation soapAction="http://tempuri.org/ValidarEstadoFinancieroCambioPatrimonioNeto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarEstadoFinancieroDeudaPublica">
+      <soap12:operation soapAction="http://tempuri.org/BuscarEstadoFinancieroDeudaPublica" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarEstadoFinancieroDeudaPublica">
+      <soap12:operation soapAction="http://tempuri.org/EliminarEstadoFinancieroDeudaPublica" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarEstadoFinancieroDeudaPublica">
+      <soap12:operation soapAction="http://tempuri.org/ValidarEstadoFinancieroDeudaPublica" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarEstadoFinancieroFlujoEfectivo">
+      <soap12:operation soapAction="http://tempuri.org/EliminarEstadoFinancieroFlujoEfectivo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarEstadoFinancieroFlujoEfectivo">
+      <soap12:operation soapAction="http://tempuri.org/ValidarEstadoFinancieroFlujoEfectivo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarEstadoFinancierosCargados">
+      <soap12:operation soapAction="http://tempuri.org/ConsultarEstadoFinancierosCargados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCorreosAutorizacionEstadosFinancierosCargados">
+      <soap12:operation soapAction="http://tempuri.org/ConsultarCorreosAutorizacionEstadosFinancierosCargados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarEtapaEstadoFinanciero">
+      <soap12:operation soapAction="http://tempuri.org/BuscarEtapaEstadoFinanciero" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarEtapaEstadoFinanciero">
+      <soap12:operation soapAction="http://tempuri.org/ConsultarEtapaEstadoFinanciero" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarEtapaEstadoFinanciero">
+      <soap12:operation soapAction="http://tempuri.org/EliminarEtapaEstadoFinanciero" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarEtapaEstadoFinanciero">
+      <soap12:operation soapAction="http://tempuri.org/InsertarEtapaEstadoFinanciero" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarEtapaEstadoFinanciero">
+      <soap12:operation soapAction="http://tempuri.org/ModificarEtapaEstadoFinanciero" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarUnidadTiempoPeriodoCorrectoCorreoAutorizacion">
+      <soap12:operation soapAction="http://tempuri.org/ValidarUnidadTiempoPeriodoCorrectoCorreoAutorizacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarUnidadesTiempoPeriodoEnCursoPorFecha">
+      <soap12:operation soapAction="http://tempuri.org/BuscarUnidadesTiempoPeriodoEnCursoPorFecha" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarUsuario">
+      <soap12:operation soapAction="http://tempuri.org/BuscarUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarUsuariosPorRol">
+      <soap12:operation soapAction="http://tempuri.org/BuscarUsuariosPorRol" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarCorreoPC">
+      <soap12:operation soapAction="http://tempuri.org/EnviarCorreoPC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsPlantillasConsolidacionHttpGet" type="tns:wsPlantillasConsolidacionHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="uwsPrueba">
+      <http:operation location="/uwsPrueba" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uwsPrueba2">
+      <http:operation location="/uwsPrueba2" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uwsEliminarArchivo">
+      <http:operation location="/uwsEliminarArchivo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarCorreoPC">
+      <http:operation location="/EnviarCorreoPC" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsPlantillasConsolidacionHttpPost" type="tns:wsPlantillasConsolidacionHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="uwsPrueba">
+      <http:operation location="/uwsPrueba" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uwsPrueba2">
+      <http:operation location="/uwsPrueba2" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uwsEliminarArchivo">
+      <http:operation location="/uwsEliminarArchivo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarCorreoPC">
+      <http:operation location="/EnviarCorreoPC" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsPlantillasConsolidacion">
+    <wsdl:port name="wsPlantillasConsolidacionSoap" binding="tns:wsPlantillasConsolidacionSoap">
+      <soap:address location="http://mh-cpd-dnspap1:89/wsPlantillasConsolidacion.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsPlantillasConsolidacionSoap12" binding="tns:wsPlantillasConsolidacionSoap12">
+      <soap12:address location="http://mh-cpd-dnspap1:89/wsPlantillasConsolidacion.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsPlantillasConsolidacionHttpGet" binding="tns:wsPlantillasConsolidacionHttpGet">
+      <http:address location="http://mh-cpd-dnspap1:89/wsPlantillasConsolidacion.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsPlantillasConsolidacionHttpPost" binding="tns:wsPlantillasConsolidacionHttpPost">
+      <http:address location="http://mh-cpd-dnspap1:89/wsPlantillasConsolidacion.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

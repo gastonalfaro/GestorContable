@@ -1,0 +1,106 @@
+﻿<?xml version="1.0"?>
+<!--
+  Descripción: Archivo de configuración del conector de 
+	Enterprise Library v1.0.0
+	Autor: Jose Gomez Silva
+-->
+<CommandDef>
+  <Command>
+    <BaseDatos>MSSQL</BaseDatos>
+    <DbInstance>ConexionBD</DbInstance>
+    <Type>CommandType.StoredProcedure</Type>
+    <Text>co.uspModificarCodigosAsiento</Text>
+    <NumberOfParameters>10</NumberOfParameters>
+    <ReturnType>procedure</ReturnType>
+    <CommandTimeout>6000</CommandTimeout>
+  </Command>
+  <Parameters>
+
+    <Parameter>
+      <Name>@pIdRes</Name>
+      <VariableMapeo>Lint_IdRes</VariableMapeo>
+      <Type>Int32</Type>
+      <Size>32</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pIdCobroPagoResolucion</Name>
+      <VariableMapeo>Lint_IdCobroPagoResolucion</VariableMapeo>
+      <Type>Int32</Type>
+      <Size>32</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pIdResolucion</Name>
+      <VariableMapeo>Lstr_IdResolucion</VariableMapeo>
+      <Type>String</Type>
+      <Size>30</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pIdExpediente</Name>
+      <VariableMapeo>Lstr_IdExpediente</VariableMapeo>
+      <Type>String</Type>
+      <Size>30</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pIdSociedadGL</Name>
+      <VariableMapeo>Lstr_IdSociedadGL</VariableMapeo>
+      <Type>String</Type>
+      <Size>10</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pTabla</Name>
+      <VariableMapeo>Lstr_Tabla</VariableMapeo>
+      <Type>String</Type>
+      <Size>30</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pCodAsiento</Name>
+      <VariableMapeo>Lstr_CodAsiento</VariableMapeo>
+      <Type>String</Type>
+      <Size>50</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pUsrModifica</Name>
+      <VariableMapeo>Lstr_UsrModifica</VariableMapeo>
+      <Type>String</Type>
+      <Size>15</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pResultado</Name>
+      <Type>String</Type>
+      <Size>2</Size>
+      <Direction>Output</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pMensaje</Name>
+      <Type>String</Type>
+      <Size>500</Size>
+      <Direction>Output</Direction>
+    </Parameter>
+
+  </Parameters>
+</CommandDef>

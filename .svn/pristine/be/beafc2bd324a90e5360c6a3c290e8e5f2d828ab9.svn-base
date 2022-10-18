@@ -1,0 +1,1580 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="1/29/2016 9:33:47 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="ATESA-ULTIMUS"
+  DTS:CreatorName="ATESA-ULTIMUS\Steven"
+  DTS:DTSID="{38AB9222-76B3-4ED4-827A-3E388BF4A5C2}"
+  DTS:EnableConfig="True"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="12.0.2430.0"
+  DTS:LocaleID="5130"
+  DTS:ObjectName="CargaEstadosFinancierosDeudaPublica"
+  DTS:PackageType="5"
+  DTS:ProtectionLevel="0"
+  DTS:VersionBuild="32"
+  DTS:VersionGUID="{AD9A29E7-7BD0-431C-9F6E-E4FC3A9659A5}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{7E07DB79-86F8-4A9A-BE77-AF77C0BBDEE0}"
+      DTS:ObjectName="Excel Connection Manager">
+      <DTS:PropertyExpression
+        DTS:Name="ExcelFilePath">@[User::PathExcelFile]+ @[User::NameExcelFile]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\ClusterStorage\SistemaGestor\Archivos_SistemaGestor\14110T12016_ESTADO_DEUDA_PUBLICA.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SistemaGestor_OLEDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{98DA10C4-3D48-4583-8496-EC8779E9D8C1}"
+      DTS:ObjectName="SistemaGestor_OLEDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=172.26.30.21\DMSS2014E01;User ID=garciagg;Initial Catalog=GestNICSPDEV;Provider=SQLOLEDB.1;Persist Security Info=True;application auto translate=False;Application Name=SSIS-CargaEstadosFinancierosDeudaPublica-{98DA10C4-3D48-4583-8496-EC8779E9D8C1}SistemaGestor_OLEDB;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"></DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Configurations>
+    <DTS:Configuration
+      DTS:ConfigurationString="C:\ClusterStorage\SistemaGestor\Config_DTSX\SistemaGestor_OLEDB.dtsConfig"
+      DTS:ConfigurationType="1"
+      DTS:CreationName=""
+      DTS:DTSID="{9338A188-58B4-4370-BB5A-DE6E7F6313F4}"
+      DTS:ObjectName="SistemaGestor_OLEDB" />
+  </DTS:Configurations>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{26141123-DB02-434A-885A-4AD0F4E68016}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="IdEstadoFinanciero">
+      <DTS:VariableValue
+        DTS:DataType="8">8</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{4C7F0016-E121-4E9E-BE8D-9100E83D72BF}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="NameExcelFile">
+      <DTS:VariableValue
+        DTS:DataType="8">14110T12016_ESTADO_DEUDA_PUBLICA.xlsx</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{87C65054-3359-4718-87A8-039C1C30DF24}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="PathExcelFile">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\ClusterStorage\SistemaGestor\Archivos_SistemaGestor\</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{9EE758A6-24B6-4677-AD8C-BFA583114CA1}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="@[User::PathExcelFile]+ @[User::NameExcelFile]"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="RutaCompleta">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\ClusterStorage\SistemaGestor\Archivos_SistemaGestor\14110T12016_ESTADO_DEUDA_PUBLICA.xlsx</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{F14EAF24-509D-428A-9D11-0C43FC00CBC4}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="&quot;SELECT&#xA; &quot; + @[User::IdEstadoFinanciero] + &quot; AS IdEstadoFinanciero, &#xA;IDEntidad,&#xA;UnidadTiempoPeriodo,&#xA;Periodo,&#xA;NumConsecutivo,&#xA;Obligaciones,&#xA;ImputContRelac,&#xA;SaldoCapitIniEjerInfo_SaldoCierPerioAnter,&#xA;SaldoCapitIniEjerInfo_AjusSaldoIni,&#xA;SaldoCapitIniEjerInfo_SaldoAjusPerioActu,&#xA;MovEjer_Increm_MovPresupuest,&#xA;MovEjer_Increm_MovSinImpacPresupuest,&#xA;MovEjer_Increm_Total,&#xA;MovEjer_Disminuc_MovPresupuest,&#xA;MovEjer_Disminuc_MovSinImpacPresupuest,&#xA;MovEjer_Disminuc_Total,&#xA;InterVenci_Pagados,&#xA;InterVenci_Impagos,&#xA;GastComisEjer,&#xA;SaldoCapitColonCierPerio,&#xA;ElaboradoPor,&#xA;RevisadoPor,&#xA;AprobadoPor,&#xA;'&quot; + @[User::UsuarioCarga] +&quot;' AS UsuarioCarga,&#xA;NOW() AS FechaDeCarga &#xA;FROM [Data$]&#xA;WHERE&#xA;Obligaciones IS NOT NULL&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="SQL_Carga">
+      <DTS:VariableValue
+        DTS:DataType="8">SELECT
+ 8 AS IdEstadoFinanciero, 
+IDEntidad,
+UnidadTiempoPeriodo,
+Periodo,
+NumConsecutivo,
+Obligaciones,
+ImputContRelac,
+SaldoCapitIniEjerInfo_SaldoCierPerioAnter,
+SaldoCapitIniEjerInfo_AjusSaldoIni,
+SaldoCapitIniEjerInfo_SaldoAjusPerioActu,
+MovEjer_Increm_MovPresupuest,
+MovEjer_Increm_MovSinImpacPresupuest,
+MovEjer_Increm_Total,
+MovEjer_Disminuc_MovPresupuest,
+MovEjer_Disminuc_MovSinImpacPresupuest,
+MovEjer_Disminuc_Total,
+InterVenci_Pagados,
+InterVenci_Impagos,
+GastComisEjer,
+SaldoCapitColonCierPerio,
+ElaboradoPor,
+RevisadoPor,
+AprobadoPor,
+'SistemaCargaDTSX' AS UsuarioCarga,
+NOW() AS FechaDeCarga 
+FROM [Data$]
+WHERE
+Obligaciones IS NOT NULL</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{E69EC3A8-5B17-4DF3-A327-EA65E304A9ED}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="UsuarioCarga">
+      <DTS:VariableValue
+        DTS:DataType="8">SistemaCargaDTSX</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Borra Excel"
+      DTS:CreationName="Microsoft.FileSystemTask"
+      DTS:Description="File System Task"
+      DTS:DTSID="{e98e22be-5d37-4abd-8180-5d6641351e78}"
+      DTS:ExecutableType="Microsoft.FileSystemTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Borra Excel"
+      DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2014; © 2014 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <FileSystemData
+          TaskOperationType="DeleteFile"
+          TaskSourcePath="User::RutaCompleta"
+          TaskIsSourceVariable="True" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{C09AC47A-A799-4E75-89F8-3F8D3E1BD917}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[IDEntidad]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="IDEntidad"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[IDEntidad]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[UnidadTiempoPeriodo]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="UnidadTiempoPeriodo"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[UnidadTiempoPeriodo]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Periodo]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Periodo"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[Periodo]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Obligaciones]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Obligaciones"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[Obligaciones]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[ElaboradoPor]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="ElaboradoPor"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[ElaboradoPor]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[RevisadoPor]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="RevisadoPor"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[RevisadoPor]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[AprobadoPor]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="AprobadoPor"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[AprobadoPor]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[UsuarioCarga]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="UsuarioCarga"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[UsuarioCarga]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ConvIDEntidad]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ConvIDEntidad]"
+                      name="ConvIDEntidad"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[IDEntidad]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ConvUnidadTiempoPeriodo]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="2"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ConvUnidadTiempoPeriodo]"
+                      name="ConvUnidadTiempoPeriodo"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[UnidadTiempoPeriodo]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ConvPeriodo]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ConvPeriodo]"
+                      name="ConvPeriodo"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[Periodo]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ConvObligaciones]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ConvObligaciones]"
+                      name="ConvObligaciones"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[Obligaciones]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ConvElaboradoPor]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="100"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ConvElaboradoPor]"
+                      name="ConvElaboradoPor"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[ElaboradoPor]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ConvRevisadoPor]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="100"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ConvRevisadoPor]"
+                      name="ConvRevisadoPor"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[RevisadoPor]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ConvAprobadoPor]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="100"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ConvAprobadoPor]"
+                      name="ConvAprobadoPor"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[AprobadoPor]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ConvUsuarioCarga]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ConvUsuarioCarga]"
+                      name="ConvUsuarioCarga"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[UsuarioCarga]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\EstadosFinancierosDeudaPublica"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="EstadosFinancierosDeudaPublica"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[pc].[EstadosFinancierosDeudaPublica]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SistemaGestor_OLEDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[SistemaGestor_OLEDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].Columns[IdEstadoFinanciero]"
+                      cachedDataType="i4"
+                      cachedName="IdEstadoFinanciero"
+                      externalMetadataColumnId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].ExternalColumns[IdEstadoFinanciero]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[IdEstadoFinanciero]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].Columns[NumConsecutivo]"
+                      cachedDataType="r8"
+                      cachedName="NumConsecutivo"
+                      externalMetadataColumnId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].ExternalColumns[NumConsecutivo]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[NumConsecutivo]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].Columns[ImputContRelac]"
+                      cachedDataType="r8"
+                      cachedName="ImputContRelac"
+                      externalMetadataColumnId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].ExternalColumns[ImputContRelac]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[ImputContRelac]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].Columns[SaldoCapitIniEjerInfo_SaldoCierPerioAnter]"
+                      cachedDataType="r8"
+                      cachedName="SaldoCapitIniEjerInfo_SaldoCierPerioAnter"
+                      externalMetadataColumnId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].ExternalColumns[SaldoCapitIniEjerInfo_SaldoCierPerioAnter]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[SaldoCapitIniEjerInfo_SaldoCierPerioAnter]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].Columns[SaldoCapitIniEjerInfo_AjusSaldoIni]"
+                      cachedDataType="r8"
+                      cachedName="SaldoCapitIniEjerInfo_AjusSaldoIni"
+                      externalMetadataColumnId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].ExternalColumns[SaldoCapitIniEjerInfo_AjusSaldoIni]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[SaldoCapitIniEjerInfo_AjusSaldoIni]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].Columns[SaldoCapitIniEjerInfo_SaldoAjusPerioActu]"
+                      cachedDataType="r8"
+                      cachedName="SaldoCapitIniEjerInfo_SaldoAjusPerioActu"
+                      externalMetadataColumnId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].ExternalColumns[SaldoCapitIniEjerInfo_SaldoAjusPerioActu]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[SaldoCapitIniEjerInfo_SaldoAjusPerioActu]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].Columns[MovEjer_Increm_MovPresupuest]"
+                      cachedDataType="r8"
+                      cachedName="MovEjer_Increm_MovPresupuest"
+                      externalMetadataColumnId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].ExternalColumns[MovEjer_Increm_MovPresupuest]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[MovEjer_Increm_MovPresupuest]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].Columns[MovEjer_Increm_MovSinImpacPresupuest]"
+                      cachedDataType="r8"
+                      cachedName="MovEjer_Increm_MovSinImpacPresupuest"
+                      externalMetadataColumnId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].ExternalColumns[MovEjer_Increm_MovSinImpacPresupuest]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[MovEjer_Increm_MovSinImpacPresupuest]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].Columns[MovEjer_Increm_Total]"
+                      cachedDataType="r8"
+                      cachedName="MovEjer_Increm_Total"
+                      externalMetadataColumnId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].ExternalColumns[MovEjer_Increm_Total]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[MovEjer_Increm_Total]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].Columns[MovEjer_Disminuc_MovPresupuest]"
+                      cachedDataType="r8"
+                      cachedName="MovEjer_Disminuc_MovPresupuest"
+                      externalMetadataColumnId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].ExternalColumns[MovEjer_Disminuc_MovPresupuest]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[MovEjer_Disminuc_MovPresupuest]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].Columns[MovEjer_Disminuc_MovSinImpacPresupuest]"
+                      cachedDataType="r8"
+                      cachedName="MovEjer_Disminuc_MovSinImpacPresupuest"
+                      externalMetadataColumnId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].ExternalColumns[MovEjer_Disminuc_MovSinImpacPresupuest]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[MovEjer_Disminuc_MovSinImpacPresupuest]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].Columns[MovEjer_Disminuc_Total]"
+                      cachedDataType="r8"
+                      cachedName="MovEjer_Disminuc_Total"
+                      externalMetadataColumnId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].ExternalColumns[MovEjer_Disminuc_Total]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[MovEjer_Disminuc_Total]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].Columns[InterVenci_Pagados]"
+                      cachedDataType="r8"
+                      cachedName="InterVenci_Pagados"
+                      externalMetadataColumnId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].ExternalColumns[InterVenci_Pagados]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[InterVenci_Pagados]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].Columns[InterVenci_Impagos]"
+                      cachedDataType="r8"
+                      cachedName="InterVenci_Impagos"
+                      externalMetadataColumnId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].ExternalColumns[InterVenci_Impagos]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[InterVenci_Impagos]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].Columns[GastComisEjer]"
+                      cachedDataType="r8"
+                      cachedName="GastComisEjer"
+                      externalMetadataColumnId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].ExternalColumns[GastComisEjer]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[GastComisEjer]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].Columns[SaldoCapitColonCierPerio]"
+                      cachedDataType="r8"
+                      cachedName="SaldoCapitColonCierPerio"
+                      externalMetadataColumnId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].ExternalColumns[SaldoCapitColonCierPerio]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[SaldoCapitColonCierPerio]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].Columns[ConvIDEntidad]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="ConvIDEntidad"
+                      externalMetadataColumnId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].ExternalColumns[IdEntidad]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ConvIDEntidad]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].Columns[ConvUnidadTiempoPeriodo]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="2"
+                      cachedName="ConvUnidadTiempoPeriodo"
+                      externalMetadataColumnId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].ExternalColumns[UnidadTiempoPeriodo]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ConvUnidadTiempoPeriodo]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].Columns[ConvPeriodo]"
+                      cachedDataType="i4"
+                      cachedName="ConvPeriodo"
+                      externalMetadataColumnId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].ExternalColumns[Periodo]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ConvPeriodo]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].Columns[ConvObligaciones]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ConvObligaciones"
+                      externalMetadataColumnId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].ExternalColumns[Obligaciones]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ConvObligaciones]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].Columns[ConvElaboradoPor]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="ConvElaboradoPor"
+                      externalMetadataColumnId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].ExternalColumns[ElaboradoPor]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ConvElaboradoPor]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].Columns[ConvRevisadoPor]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="ConvRevisadoPor"
+                      externalMetadataColumnId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].ExternalColumns[RevisadoPor]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ConvRevisadoPor]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].Columns[ConvAprobadoPor]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="ConvAprobadoPor"
+                      externalMetadataColumnId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].ExternalColumns[AprobadoPor]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ConvAprobadoPor]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].Columns[ConvUsuarioCarga]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ConvUsuarioCarga"
+                      externalMetadataColumnId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].ExternalColumns[usrIngreso]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ConvUsuarioCarga]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].Columns[FechaDeCarga]"
+                      cachedDataType="date"
+                      cachedName="FechaDeCarga"
+                      externalMetadataColumnId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].ExternalColumns[FchIngreso]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[FechaDeCarga]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].ExternalColumns[IdEstadoFinanciero]"
+                      dataType="ui1"
+                      name="IdEstadoFinanciero" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].ExternalColumns[IdEntidad]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="IdEntidad" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].ExternalColumns[Periodo]"
+                      dataType="i4"
+                      name="Periodo" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].ExternalColumns[UnidadTiempoPeriodo]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="UnidadTiempoPeriodo" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].ExternalColumns[NumConsecutivo]"
+                      dataType="i4"
+                      name="NumConsecutivo" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].ExternalColumns[Obligaciones]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Obligaciones" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].ExternalColumns[ImputContRelac]"
+                      dataType="numeric"
+                      name="ImputContRelac"
+                      precision="20"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].ExternalColumns[SaldoCapitIniEjerInfo_SaldoCierPerioAnter]"
+                      dataType="numeric"
+                      name="SaldoCapitIniEjerInfo_SaldoCierPerioAnter"
+                      precision="20"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].ExternalColumns[SaldoCapitIniEjerInfo_AjusSaldoIni]"
+                      dataType="numeric"
+                      name="SaldoCapitIniEjerInfo_AjusSaldoIni"
+                      precision="20"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].ExternalColumns[SaldoCapitIniEjerInfo_SaldoAjusPerioActu]"
+                      dataType="numeric"
+                      name="SaldoCapitIniEjerInfo_SaldoAjusPerioActu"
+                      precision="20"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].ExternalColumns[MovEjer_Increm_MovPresupuest]"
+                      dataType="numeric"
+                      name="MovEjer_Increm_MovPresupuest"
+                      precision="20"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].ExternalColumns[MovEjer_Increm_MovSinImpacPresupuest]"
+                      dataType="numeric"
+                      name="MovEjer_Increm_MovSinImpacPresupuest"
+                      precision="20"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].ExternalColumns[MovEjer_Increm_Total]"
+                      dataType="numeric"
+                      name="MovEjer_Increm_Total"
+                      precision="20"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].ExternalColumns[MovEjer_Disminuc_MovPresupuest]"
+                      dataType="numeric"
+                      name="MovEjer_Disminuc_MovPresupuest"
+                      precision="20"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].ExternalColumns[MovEjer_Disminuc_MovSinImpacPresupuest]"
+                      dataType="numeric"
+                      name="MovEjer_Disminuc_MovSinImpacPresupuest"
+                      precision="20"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].ExternalColumns[MovEjer_Disminuc_Total]"
+                      dataType="numeric"
+                      name="MovEjer_Disminuc_Total"
+                      precision="20"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].ExternalColumns[InterVenci_Pagados]"
+                      dataType="numeric"
+                      name="InterVenci_Pagados"
+                      precision="20"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].ExternalColumns[InterVenci_Impagos]"
+                      dataType="numeric"
+                      name="InterVenci_Impagos"
+                      precision="20"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].ExternalColumns[GastComisEjer]"
+                      dataType="numeric"
+                      name="GastComisEjer"
+                      precision="20"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].ExternalColumns[SaldoCapitColonCierPerio]"
+                      dataType="numeric"
+                      name="SaldoCapitColonCierPerio"
+                      precision="20"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].ExternalColumns[ElaboradoPor]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="ElaboradoPor" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].ExternalColumns[RevisadoPor]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="RevisadoPor" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].ExternalColumns[AprobadoPor]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="AprobadoPor" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].ExternalColumns[usrIngreso]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="usrIngreso" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].ExternalColumns[FchIngreso]"
+                      dataType="dbTimeStamp"
+                      name="FchIngreso" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].ExternalColumns[usrModificacion]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="usrModificacion" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input].ExternalColumns[FchModificacion]"
+                      dataType="dbTimeStamp"
+                      name="FchModificacion" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Excel Source"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Excel Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable">User::SQL_Carga</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Excel Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[IdEstadoFinanciero]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[IdEstadoFinanciero]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[IdEstadoFinanciero]"
+                      name="IdEstadoFinanciero"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[IDEntidad]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[IDEntidad]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[IDEntidad]"
+                      name="IDEntidad"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[UnidadTiempoPeriodo]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[UnidadTiempoPeriodo]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[UnidadTiempoPeriodo]"
+                      name="UnidadTiempoPeriodo"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[Periodo]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[Periodo]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[Periodo]"
+                      name="Periodo"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[NumConsecutivo]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[NumConsecutivo]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[NumConsecutivo]"
+                      name="NumConsecutivo"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[Obligaciones]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[Obligaciones]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[Obligaciones]"
+                      name="Obligaciones"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[ImputContRelac]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[ImputContRelac]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[ImputContRelac]"
+                      name="ImputContRelac"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[SaldoCapitIniEjerInfo_SaldoCierPerioAnter]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[SaldoCapitIniEjerInfo_SaldoCierPerioAnter]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[SaldoCapitIniEjerInfo_SaldoCierPerioAnter]"
+                      name="SaldoCapitIniEjerInfo_SaldoCierPerioAnter"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[SaldoCapitIniEjerInfo_AjusSaldoIni]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[SaldoCapitIniEjerInfo_AjusSaldoIni]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[SaldoCapitIniEjerInfo_AjusSaldoIni]"
+                      name="SaldoCapitIniEjerInfo_AjusSaldoIni"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[SaldoCapitIniEjerInfo_SaldoAjusPerioActu]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[SaldoCapitIniEjerInfo_SaldoAjusPerioActu]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[SaldoCapitIniEjerInfo_SaldoAjusPerioActu]"
+                      name="SaldoCapitIniEjerInfo_SaldoAjusPerioActu"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[MovEjer_Increm_MovPresupuest]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[MovEjer_Increm_MovPresupuest]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[MovEjer_Increm_MovPresupuest]"
+                      name="MovEjer_Increm_MovPresupuest"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[MovEjer_Increm_MovSinImpacPresupuest]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[MovEjer_Increm_MovSinImpacPresupuest]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[MovEjer_Increm_MovSinImpacPresupuest]"
+                      name="MovEjer_Increm_MovSinImpacPresupuest"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[MovEjer_Increm_Total]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[MovEjer_Increm_Total]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[MovEjer_Increm_Total]"
+                      name="MovEjer_Increm_Total"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[MovEjer_Disminuc_MovPresupuest]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[MovEjer_Disminuc_MovPresupuest]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[MovEjer_Disminuc_MovPresupuest]"
+                      name="MovEjer_Disminuc_MovPresupuest"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[MovEjer_Disminuc_MovSinImpacPresupuest]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[MovEjer_Disminuc_MovSinImpacPresupuest]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[MovEjer_Disminuc_MovSinImpacPresupuest]"
+                      name="MovEjer_Disminuc_MovSinImpacPresupuest"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[MovEjer_Disminuc_Total]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[MovEjer_Disminuc_Total]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[MovEjer_Disminuc_Total]"
+                      name="MovEjer_Disminuc_Total"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[InterVenci_Pagados]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[InterVenci_Pagados]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[InterVenci_Pagados]"
+                      name="InterVenci_Pagados"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[InterVenci_Impagos]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[InterVenci_Impagos]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[InterVenci_Impagos]"
+                      name="InterVenci_Impagos"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[GastComisEjer]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[GastComisEjer]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[GastComisEjer]"
+                      name="GastComisEjer"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[SaldoCapitColonCierPerio]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[SaldoCapitColonCierPerio]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[SaldoCapitColonCierPerio]"
+                      name="SaldoCapitColonCierPerio"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[ElaboradoPor]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[ElaboradoPor]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[ElaboradoPor]"
+                      name="ElaboradoPor"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[RevisadoPor]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[RevisadoPor]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[RevisadoPor]"
+                      name="RevisadoPor"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[AprobadoPor]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[AprobadoPor]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[AprobadoPor]"
+                      name="AprobadoPor"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[UsuarioCarga]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[UsuarioCarga]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[UsuarioCarga]"
+                      name="UsuarioCarga"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[FechaDeCarga]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[FechaDeCarga]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[FechaDeCarga]"
+                      name="FechaDeCarga"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[IdEstadoFinanciero]"
+                      dataType="i4"
+                      name="IdEstadoFinanciero" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[IDEntidad]"
+                      dataType="wstr"
+                      length="255"
+                      name="IDEntidad" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[UnidadTiempoPeriodo]"
+                      dataType="wstr"
+                      length="255"
+                      name="UnidadTiempoPeriodo" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[Periodo]"
+                      dataType="wstr"
+                      length="255"
+                      name="Periodo" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[NumConsecutivo]"
+                      dataType="r8"
+                      name="NumConsecutivo" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[Obligaciones]"
+                      dataType="wstr"
+                      length="255"
+                      name="Obligaciones" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[ImputContRelac]"
+                      dataType="r8"
+                      name="ImputContRelac" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[SaldoCapitIniEjerInfo_SaldoCierPerioAnter]"
+                      dataType="r8"
+                      name="SaldoCapitIniEjerInfo_SaldoCierPerioAnter" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[SaldoCapitIniEjerInfo_AjusSaldoIni]"
+                      dataType="r8"
+                      name="SaldoCapitIniEjerInfo_AjusSaldoIni" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[SaldoCapitIniEjerInfo_SaldoAjusPerioActu]"
+                      dataType="r8"
+                      name="SaldoCapitIniEjerInfo_SaldoAjusPerioActu" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[MovEjer_Increm_MovPresupuest]"
+                      dataType="r8"
+                      name="MovEjer_Increm_MovPresupuest" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[MovEjer_Increm_MovSinImpacPresupuest]"
+                      dataType="r8"
+                      name="MovEjer_Increm_MovSinImpacPresupuest" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[MovEjer_Increm_Total]"
+                      dataType="r8"
+                      name="MovEjer_Increm_Total" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[MovEjer_Disminuc_MovPresupuest]"
+                      dataType="r8"
+                      name="MovEjer_Disminuc_MovPresupuest" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[MovEjer_Disminuc_MovSinImpacPresupuest]"
+                      dataType="r8"
+                      name="MovEjer_Disminuc_MovSinImpacPresupuest" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[MovEjer_Disminuc_Total]"
+                      dataType="r8"
+                      name="MovEjer_Disminuc_Total" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[InterVenci_Pagados]"
+                      dataType="r8"
+                      name="InterVenci_Pagados" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[InterVenci_Impagos]"
+                      dataType="r8"
+                      name="InterVenci_Impagos" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[GastComisEjer]"
+                      dataType="r8"
+                      name="GastComisEjer" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[SaldoCapitColonCierPerio]"
+                      dataType="r8"
+                      name="SaldoCapitColonCierPerio" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[ElaboradoPor]"
+                      dataType="wstr"
+                      length="255"
+                      name="ElaboradoPor" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[RevisadoPor]"
+                      dataType="wstr"
+                      length="255"
+                      name="RevisadoPor" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[AprobadoPor]"
+                      dataType="wstr"
+                      length="255"
+                      name="AprobadoPor" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[UsuarioCarga]"
+                      dataType="wstr"
+                      length="255"
+                      name="UsuarioCarga" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[FechaDeCarga]"
+                      dataType="date"
+                      name="FechaDeCarga" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[IdEstadoFinanciero]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[IdEstadoFinanciero]"
+                      name="IdEstadoFinanciero" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[IDEntidad]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[IDEntidad]"
+                      name="IDEntidad" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[UnidadTiempoPeriodo]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[UnidadTiempoPeriodo]"
+                      name="UnidadTiempoPeriodo" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[Periodo]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[Periodo]"
+                      name="Periodo" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[NumConsecutivo]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[NumConsecutivo]"
+                      name="NumConsecutivo" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[Obligaciones]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[Obligaciones]"
+                      name="Obligaciones" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[ImputContRelac]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[ImputContRelac]"
+                      name="ImputContRelac" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[SaldoCapitIniEjerInfo_SaldoCierPerioAnter]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[SaldoCapitIniEjerInfo_SaldoCierPerioAnter]"
+                      name="SaldoCapitIniEjerInfo_SaldoCierPerioAnter" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[SaldoCapitIniEjerInfo_AjusSaldoIni]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[SaldoCapitIniEjerInfo_AjusSaldoIni]"
+                      name="SaldoCapitIniEjerInfo_AjusSaldoIni" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[SaldoCapitIniEjerInfo_SaldoAjusPerioActu]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[SaldoCapitIniEjerInfo_SaldoAjusPerioActu]"
+                      name="SaldoCapitIniEjerInfo_SaldoAjusPerioActu" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[MovEjer_Increm_MovPresupuest]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[MovEjer_Increm_MovPresupuest]"
+                      name="MovEjer_Increm_MovPresupuest" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[MovEjer_Increm_MovSinImpacPresupuest]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[MovEjer_Increm_MovSinImpacPresupuest]"
+                      name="MovEjer_Increm_MovSinImpacPresupuest" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[MovEjer_Increm_Total]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[MovEjer_Increm_Total]"
+                      name="MovEjer_Increm_Total" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[MovEjer_Disminuc_MovPresupuest]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[MovEjer_Disminuc_MovPresupuest]"
+                      name="MovEjer_Disminuc_MovPresupuest" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[MovEjer_Disminuc_MovSinImpacPresupuest]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[MovEjer_Disminuc_MovSinImpacPresupuest]"
+                      name="MovEjer_Disminuc_MovSinImpacPresupuest" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[MovEjer_Disminuc_Total]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[MovEjer_Disminuc_Total]"
+                      name="MovEjer_Disminuc_Total" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[InterVenci_Pagados]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[InterVenci_Pagados]"
+                      name="InterVenci_Pagados" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[InterVenci_Impagos]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[InterVenci_Impagos]"
+                      name="InterVenci_Impagos" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[GastComisEjer]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[GastComisEjer]"
+                      name="GastComisEjer" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[SaldoCapitColonCierPerio]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[SaldoCapitColonCierPerio]"
+                      name="SaldoCapitColonCierPerio" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[ElaboradoPor]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[ElaboradoPor]"
+                      name="ElaboradoPor" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[RevisadoPor]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[RevisadoPor]"
+                      name="RevisadoPor" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[AprobadoPor]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[AprobadoPor]"
+                      name="AprobadoPor" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[UsuarioCarga]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[UsuarioCarga]"
+                      name="UsuarioCarga" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[FechaDeCarga]"
+                      dataType="date"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[FechaDeCarga]"
+                      name="FechaDeCarga" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[Data Conversion Output]"
+              endId="Package\Data Flow Task\EstadosFinancierosDeudaPublica.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Excel Source Output]"
+              endId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
+              name="Excel Source Output"
+              startId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{E52D6E67-5A76-4E03-AC5C-808823B2C5C2}"
+      DTS:From="Package\Data Flow Task"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Borra Excel" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="sql12">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="132,42"
+          Id="Package\Borra Excel"
+          TopLeft="378,66" />
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Data Flow Task"
+          TopLeft="149,67" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="300,87.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="78,0"
+              Start="0,0"
+              End="70.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="70.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="232,42"
+          Id="Package\Data Flow Task\EstadosFinancierosDeudaPublica"
+          TopLeft="488,44" />
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Data Flow Task\Excel Source"
+          TopLeft="107,43" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Data Flow Task\Data Conversion"
+          TopLeft="287,43" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Excel Source Output]"
+          TopLeft="246,64">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="41,0"
+              Start="0,0"
+              End="33.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="33.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Data Conversion Output]"
+          TopLeft="443,64.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="45,0"
+              Start="0,0"
+              End="37.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="37.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\EstadosFinancierosDeudaPublica">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

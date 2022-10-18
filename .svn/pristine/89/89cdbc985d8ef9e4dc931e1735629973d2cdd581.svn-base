@@ -1,0 +1,133 @@
+annotation.processing.enabled=true
+annotation.processing.enabled.in.editor=false
+annotation.processing.run.all.processors=true
+annotation.processing.source.output=${build.generated.sources.dir}/ap-source-output
+ant.customtasks.libs=JWSAntTasks
+application.title=FirmaDigitalApplet
+application.vendor=gtsadmin
+build.classes.dir=${build.dir}/classes
+build.classes.excludes=**/*.java,**/*.form
+# This directory is removed when the project is cleaned:
+build.dir=build
+build.generated.dir=${build.dir}/generated
+build.generated.sources.dir=${build.dir}/generated-sources
+# Only compile against the classpath explicitly listed here:
+build.sysclasspath=ignore
+build.test.classes.dir=${build.dir}/test/classes
+build.test.results.dir=${build.dir}/test/results
+# Uncomment to specify the preferred debugger connection transport:
+#debug.transport=dt_socket
+debug.classpath=\
+    ${run.classpath}
+debug.test.classpath=\
+    ${run.test.classpath}
+# This directory is removed when the project is cleaned:
+dist.dir=dist
+dist.jar=${dist.dir}/FirmaDigitalApplet.jar
+dist.javadoc.dir=${dist.dir}/javadoc
+endorsed.classpath=
+excludes=
+file.reference.bcmail-jdk15on-150.jar=src\\lib\\bcmail-jdk15on-150.jar
+file.reference.bcpg-jdk15on-150.jar=src\\lib\\bcpg-jdk15on-150.jar
+file.reference.bcpkix-jdk15on-150.jar=src\\lib\\bcpkix-jdk15on-150.jar
+file.reference.bcprov-jdk15on-150.jar=src\\lib\\bcprov-jdk15on-150.jar
+file.reference.bctest-jdk15on-150.jar=src\\lib\\bctest-jdk15on-150.jar
+file.reference.beansbinding-1.2.1.jar=src\\lib\\beansbinding-1.2.1.jar
+file.reference.chilkat.jar=src\\lib\\chilkat.jar
+file.reference.dnieprov.jar=src\\lib\\dnieprov.jar
+file.reference.eid-applet-service-spi-1.1.2-SNAPSHOT-sources.jar=src\\lib\\eid-applet-service-spi-1.1.2-SNAPSHOT-sources.jar
+file.reference.eid-applet-service-spi-1.1.2-SNAPSHOT.jar=src\\lib\\eid-applet-service-spi-1.1.2-SNAPSHOT.jar
+file.reference.iaik.jar=src\\lib\\iaik.jar
+file.reference.itext-4.2.0.jar=src\\lib\\itext-4.2.0.jar
+file.reference.itext-pdfa-5.4.5-sources.jar=src\\lib\\itext-pdfa-5.4.5-sources.jar
+file.reference.itext-pdfa-5.4.5.jar=src\\lib\\itext-pdfa-5.4.5.jar
+file.reference.itext-xtra-5.4.5-javadoc.jar=src\\lib\\itext-xtra-5.4.5-javadoc.jar
+file.reference.itext-xtra-5.4.5-sources.jar=src\\lib\\itext-xtra-5.4.5-sources.jar
+file.reference.itext-xtra-5.4.5.jar=src\\lib\\itext-xtra-5.4.5.jar
+file.reference.itextpdf-5.4.5-javadoc.jar=src\\lib\\itextpdf-5.4.5-javadoc.jar
+file.reference.itextpdf-5.4.5-sources.jar=src\\lib\\itextpdf-5.4.5-sources.jar
+file.reference.itextpdf-5.4.5.jar=src\\lib\\itextpdf-5.4.5.jar
+file.reference.java-plugin-1.6.0.23.jar=src\\lib\\java-plugin-1.6.0.23.jar
+file.reference.javaws.jar=C:\\Program Files\\Java\\jdk1.7.0_17\\jre\\lib\\javaws.jar
+file.reference.log4j-1.2.17.jar=src\\lib\\log4j-1.2.17.jar
+file.reference.plugin.jar=C:\\Program Files\\Java\\jdk1.7.0_17\\jre\\lib\\plugin.jar
+file.reference.sunpkcs11.jar=src\\lib\\sunpkcs11.jar
+includes=**
+jar.archive.disabled=${jnlp.enabled}
+jar.compress=false
+jar.index=${jnlp.enabled}
+javac.classpath=\
+    ${file.reference.bcmail-jdk15on-150.jar}:\
+    ${file.reference.bcpg-jdk15on-150.jar}:\
+    ${file.reference.bcpkix-jdk15on-150.jar}:\
+    ${file.reference.bcprov-jdk15on-150.jar}:\
+    ${file.reference.bctest-jdk15on-150.jar}:\
+    ${file.reference.beansbinding-1.2.1.jar}:\
+    ${file.reference.chilkat.jar}:\
+    ${file.reference.dnieprov.jar}:\
+    ${file.reference.eid-applet-service-spi-1.1.2-SNAPSHOT-sources.jar}:\
+    ${file.reference.eid-applet-service-spi-1.1.2-SNAPSHOT.jar}:\
+    ${file.reference.iaik.jar}:\
+    ${file.reference.itext-4.2.0.jar}:\
+    ${file.reference.itext-pdfa-5.4.5-sources.jar}:\
+    ${file.reference.itext-pdfa-5.4.5.jar}:\
+    ${file.reference.itext-xtra-5.4.5-javadoc.jar}:\
+    ${file.reference.itext-xtra-5.4.5-sources.jar}:\
+    ${file.reference.itext-xtra-5.4.5.jar}:\
+    ${file.reference.itextpdf-5.4.5-javadoc.jar}:\
+    ${file.reference.itextpdf-5.4.5-sources.jar}:\
+    ${file.reference.itextpdf-5.4.5.jar}:\
+    ${file.reference.java-plugin-1.6.0.23.jar}:\
+    ${file.reference.log4j-1.2.17.jar}:\
+    ${file.reference.sunpkcs11.jar}:\
+    ${libs.beans-binding.classpath}
+# Space-separated list of extra javac options
+javac.compilerargs=
+javac.deprecation=false
+javac.processorpath=\
+    ${javac.classpath}
+javac.source=1.6
+javac.target=1.6
+javac.test.classpath=\
+    ${javac.classpath}:\
+    ${build.classes.dir}:\
+    ${libs.junit.classpath}:\
+    ${libs.junit_4.classpath}
+javac.test.processorpath=\
+    ${javac.test.classpath}
+javadoc.additionalparam=
+javadoc.author=false
+javadoc.encoding=${source.encoding}
+javadoc.noindex=false
+javadoc.nonavbar=false
+javadoc.notree=false
+javadoc.private=false
+javadoc.splitindex=true
+javadoc.use=true
+javadoc.version=false
+javadoc.windowtitle=
+jnlp.applet.class=Panels.AppletLogin
+jnlp.applet.height=300
+jnlp.applet.width=300
+jnlp.codebase.type=no.codebase
+jnlp.descriptor=application
+jnlp.enabled=false
+jnlp.mixed.code=defaut
+jnlp.offline-allowed=true
+jnlp.signed=true
+main.class=Panels.AppletLogin
+meta.inf.dir=${src.dir}/META-INF
+platform.active=default_platform
+run.classpath=\
+    ${javac.classpath}:\
+    ${build.classes.dir}
+# Space-separated list of JVM arguments used when running the project
+# (you may also define separate properties like run-sys-prop.name=value instead of -Dname=value
+# or test-sys-prop.name=value to set system properties for unit tests):
+run.jvmargs=-Djava.security.policy=applet.policy
+run.test.classpath=\
+    ${javac.test.classpath}:\
+    ${build.test.classes.dir}
+source.encoding=UTF-8
+src.dir=src
+test.src.dir=test

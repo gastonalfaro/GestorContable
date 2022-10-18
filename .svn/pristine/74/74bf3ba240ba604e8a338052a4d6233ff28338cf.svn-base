@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<!--
+  Descripción: Archivo de configuración del conector de 
+	Enterprise Library v1.0.0
+	Autor: Fabian SolAnno Redondo
+	Fecha: 26-08-2015
+-->
+<CommandDef>
+	<Command>
+		<BaseDatos>MSSQL</BaseDatos>
+		<DbInstance>ConexionBD</DbInstance>
+		<Type>CommandType.StoredProcedure</Type>
+		<Text>sg.uspActualizarPerfilUsuario</Text>
+		<NumberOfParameters>7</NumberOfParameters>
+		<ReturnType>procedure</ReturnType>
+		<CommandTimeout>6000</CommandTimeout>
+	</Command>
+	<Parameters>
+		<Parameter>
+			<Name>@pCedUsuario</Name>
+			<VariableMapeo>Lstr_CedUsuario</VariableMapeo>
+			<Type>String</Type>
+			<Size>32</Size>
+      <Nullable>False</Nullable>
+			<Direction>Input</Direction>
+		</Parameter>
+		<Parameter>
+			<Name>@pClaveActual</Name>
+			<VariableMapeo>Lstr_ClaveActual</VariableMapeo>
+			<Type>String</Type>
+			<Size>100</Size>
+      <Nullable>False</Nullable>
+			<Direction>Input</Direction>
+		</Parameter>
+		<Parameter>
+			<Name>@pNuevaClave</Name>
+			<VariableMapeo>Lstr_NuevaClave</VariableMapeo>
+			<Type>String</Type>
+			<Size>100</Size>
+      <Nullable>False</Nullable>
+			<Direction>Input</Direction>
+		</Parameter>
+		<Parameter>
+			<Name>@pUsuario</Name>
+			<VariableMapeo>Lstr_Usuario</VariableMapeo>
+			<Type>String</Type>
+			<Size>32</Size>
+      <Nullable>False</Nullable>
+			<Direction>Input</Direction>
+		</Parameter>
+		<Parameter>
+			<Name>@pFchModifica</Name>
+			<VariableMapeo>Ldat_FchModifica</VariableMapeo>
+			<Type>DateTime</Type>
+			<Size>32</Size>
+      <Nullable>False</Nullable>
+			<Direction>Input</Direction>
+		</Parameter>
+		<Parameter>
+			<Name>@pResultado</Name>
+			<Type>String</Type>
+			<Size>2</Size>
+			<Direction>Output</Direction>
+		</Parameter>
+		<Parameter>
+			<Name>@pMensaje</Name>
+			<Type>String</Type>
+			<Size>500</Size>
+			<Direction>Output</Direction>
+		</Parameter>
+	</Parameters>
+</CommandDef>

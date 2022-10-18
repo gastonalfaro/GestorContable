@@ -1,0 +1,920 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.prosoft.cr/CGPCanalesIBAN/DTR/" elementFormDefault="qualified" targetNamespace="http://www.prosoft.cr/CGPCanalesIBAN/DTR/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ServicioDisponible">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ServicioDisponibleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ServicioDisponibleResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="AutorizarRequestBody">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Rastro" nillable="true" type="tns:Rastro">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ComprobanteTransaccion" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AutorizarRequestBody" nillable="true" type="tns:AutorizarRequestBody" />
+  <xs:complexType name="Rastro">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IP" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Canal" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Rastro" nillable="true" type="tns:Rastro" />
+  <xs:element name="Autorizar" nillable="true" type="tns:AutorizarRequestBody" />
+  <xs:complexType name="AutorizarResponseBody">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AutorizarResult" type="tns:E_RespuestaAccion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AutorizarResponseBody" nillable="true" type="tns:AutorizarResponseBody" />
+  <xs:simpleType name="E_RespuestaAccion">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Exitoso" />
+      <xs:enumeration value="NoEncontrada" />
+      <xs:enumeration value="NoPermitido" />
+      <xs:enumeration value="ErrorDesconocido" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="E_RespuestaAccion" nillable="true" type="tns:E_RespuestaAccion" />
+  <xs:element name="AutorizarResponse" nillable="true" type="tns:AutorizarResponseBody" />
+  <xs:complexType name="EliminarRequestBody">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Rastro" nillable="true" type="tns:Rastro">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ComprobanteTransaccion" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EliminarRequestBody" nillable="true" type="tns:EliminarRequestBody" />
+  <xs:element name="Eliminar" nillable="true" type="tns:EliminarRequestBody" />
+  <xs:complexType name="EliminarResponseBody">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EliminarResult" type="tns:E_RespuestaAccion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EliminarResponseBody" nillable="true" type="tns:EliminarResponseBody" />
+  <xs:element name="EliminarResponse" nillable="true" type="tns:EliminarResponseBody" />
+  <xs:complexType name="EnviarRequestBody">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Rastro" nillable="true" type="tns:Rastro">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ComprobanteTransaccion" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EnviarRequestBody" nillable="true" type="tns:EnviarRequestBody" />
+  <xs:element name="Enviar" nillable="true" type="tns:EnviarRequestBody" />
+  <xs:complexType name="EnviarResponseBody">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EnviarResult" nillable="true" type="tns:RespuestaEnvio">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EnviarResponseBody" nillable="true" type="tns:EnviarResponseBody" />
+  <xs:complexType name="RespuestaEnvio">
+    <xs:sequence>
+      <xs:element name="Estado" type="xs:boolean" />
+      <xs:element name="MotivoError" type="xs:int" />
+      <xs:element name="ComprobanteTransaccion" type="xs:int" />
+      <xs:element minOccurs="0" name="CodigoReferencia" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RespuestaEnvio" nillable="true" type="tns:RespuestaEnvio" />
+  <xs:element name="EnviarResponse" nillable="true" type="tns:EnviarResponseBody" />
+  <xs:complexType name="ObtenerInformacionCuentaRequestBody">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IBAN" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Identificacion" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ObtenerInformacionCuentaRequestBody" nillable="true" type="tns:ObtenerInformacionCuentaRequestBody" />
+  <xs:element name="ObtenerInformacionCuenta" nillable="true" type="tns:ObtenerInformacionCuentaRequestBody" />
+  <xs:complexType name="ObtenerInformacionCuentaResponseBody">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ObtenerInformacionCuentaResult" nillable="true" type="tns:InformacionCuenta">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ObtenerInformacionCuentaResponseBody" nillable="true" type="tns:ObtenerInformacionCuentaResponseBody" />
+  <xs:complexType name="InformacionCuenta">
+    <xs:sequence>
+      <xs:element name="CodigoMoneda" type="tns:E_Monedas" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="MotivoRechazo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InformacionCuenta" nillable="true" type="tns:InformacionCuenta" />
+  <xs:simpleType name="E_Monedas">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Colones" />
+      <xs:enumeration value="Dolares" />
+      <xs:enumeration value="Euros" />
+      <xs:enumeration value="Todas" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="E_Monedas" nillable="true" type="tns:E_Monedas" />
+  <xs:element name="ObtenerInformacionCuentaResponse" nillable="true" type="tns:ObtenerInformacionCuentaResponseBody" />
+  <xs:complexType name="EnvioDirectoRequestBody">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Rastro" nillable="true" type="tns:Rastro">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Transacciones" nillable="true" type="tns:ArrayOfTransferenciaDirecta">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EnvioDirectoRequestBody" nillable="true" type="tns:EnvioDirectoRequestBody" />
+  <xs:complexType name="ArrayOfTransferenciaDirecta">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TransferenciaDirecta" nillable="true" type="tns:TransferenciaDirecta" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTransferenciaDirecta" nillable="true" type="tns:ArrayOfTransferenciaDirecta" />
+  <xs:complexType name="TransferenciaDirecta">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DatosDebito" nillable="true" type="tns:Transaccion">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ClienteDestino" nillable="true" type="tns:Cliente">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Documento" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TransferenciaDirecta" nillable="true" type="tns:TransferenciaDirecta" />
+  <xs:complexType name="Transaccion">
+    <xs:sequence>
+      <xs:element name="Moneda" type="tns:E_Monedas" />
+      <xs:element name="Monto" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="EntidadOrigen" type="xs:int" />
+      <xs:element name="CentroCosto" type="xs:int" />
+      <xs:element minOccurs="0" name="Servicio" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PuntoIntegracion" type="xs:int" />
+      <xs:element name="CodigoConcepto" type="xs:int" />
+      <xs:element name="FirmaDigital" type="xs:boolean" />
+      <xs:element minOccurs="0" name="eMAIL" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="IDCorrelation" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Transaccion" nillable="true" type="tns:Transaccion" />
+  <xs:complexType name="Cliente">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Identificacion" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="IBAN" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Cliente" nillable="true" type="tns:Cliente" />
+  <xs:element name="EnvioDirecto" nillable="true" type="tns:EnvioDirectoRequestBody" />
+  <xs:complexType name="EnvioDirectoResponseBody">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EnvioDirectoResult" nillable="true" type="tns:ArrayOfRespuestaEnvio">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EnvioDirectoResponseBody" nillable="true" type="tns:EnvioDirectoResponseBody" />
+  <xs:complexType name="ArrayOfRespuestaEnvio">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RespuestaEnvio" nillable="true" type="tns:RespuestaEnvio" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRespuestaEnvio" nillable="true" type="tns:ArrayOfRespuestaEnvio" />
+  <xs:element name="EnvioDirectoResponse" nillable="true" type="tns:EnvioDirectoResponseBody" />
+  <xs:complexType name="RegistrarRequestBody">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Rastro" nillable="true" type="tns:Rastro">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Transacciones" nillable="true" type="tns:ArrayOfTransferenciaDirecta">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RegistrarRequestBody" nillable="true" type="tns:RegistrarRequestBody" />
+  <xs:element name="Registrar" nillable="true" type="tns:RegistrarRequestBody" />
+  <xs:complexType name="RegistrarResponseBody">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="RegistrarResult" nillable="true" type="tns:ArrayOfRespuesta">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RegistrarResponseBody" nillable="true" type="tns:RegistrarResponseBody" />
+  <xs:complexType name="ArrayOfRespuesta">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Respuesta" nillable="true" type="tns:Respuesta" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRespuesta" nillable="true" type="tns:ArrayOfRespuesta" />
+  <xs:complexType name="Respuesta">
+    <xs:sequence>
+      <xs:element name="Estado" type="xs:boolean" />
+      <xs:element name="MotivoError" type="xs:int" />
+      <xs:element minOccurs="0" name="MotivoErrorInterno" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ComprobanteTransaccion" type="xs:int" />
+      <xs:element minOccurs="0" name="IDCorrelation" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Respuesta" nillable="true" type="tns:Respuesta" />
+  <xs:complexType name="RespuestaRegistro">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Respuesta">
+        <xs:sequence>
+          <xs:element name="ReferenciaBanco" type="xs:int" />
+          <xs:element minOccurs="0" name="ReferenciaSistemaInterno" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="MontoDebito" type="xs:decimal" />
+          <xs:element name="MontoComision" type="xs:decimal" />
+          <xs:element name="TipoCambio" type="xs:decimal" />
+          <xs:element name="MontoTotal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="RequestId" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="CodigoReferencia" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RespuestaRegistro" nillable="true" type="tns:RespuestaRegistro" />
+  <xs:complexType name="RespuestaTransaccion">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RespuestaRegistro">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RespuestaTransaccion" nillable="true" type="tns:RespuestaTransaccion" />
+  <xs:element name="RegistrarResponse" nillable="true" type="tns:RegistrarResponseBody" />
+  <xs:complexType name="EnvioDirectoCreditoCuentaRequestBody">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Rastro" nillable="true" type="tns:Rastro">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Transacciones" nillable="true" type="tns:ArrayOfTransferencia">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EnvioDirectoCreditoCuentaRequestBody" nillable="true" type="tns:EnvioDirectoCreditoCuentaRequestBody" />
+  <xs:complexType name="ArrayOfTransferencia">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Transferencia" nillable="true" type="tns:Transferencia" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTransferencia" nillable="true" type="tns:ArrayOfTransferencia" />
+  <xs:complexType name="Transferencia">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DatosDebito" nillable="true" type="tns:Transaccion">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ClienteDestino" nillable="true" type="tns:Cliente">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ClienteOrigen" nillable="true" type="tns:Cliente">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Transferencia" nillable="true" type="tns:Transferencia" />
+  <xs:complexType name="TransaccionCalendarizada">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Transferencia">
+        <xs:sequence>
+          <xs:element name="ComprobanteCalendarizacion" type="xs:int" />
+          <xs:element name="FechaInicio" type="xs:dateTime" />
+          <xs:element name="Fechafin" type="xs:dateTime" />
+          <xs:element name="UltimaFechaEjecucion" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Tipo" nillable="true" type="tns:TipoCalendarizacion">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="Estado" type="tns:E_EstadoCalendarizada" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TransaccionCalendarizada" nillable="true" type="tns:TransaccionCalendarizada" />
+  <xs:complexType name="TipoCalendarizacion">
+    <xs:sequence>
+      <xs:element name="periodicidad" type="tns:E_TipoPeriodicidad" />
+      <xs:element name="primerTramite" type="xs:int" />
+      <xs:element name="segundoTramite" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TipoCalendarizacion" nillable="true" type="tns:TipoCalendarizacion" />
+  <xs:simpleType name="E_TipoPeriodicidad">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unica" />
+      <xs:enumeration value="Semanal" />
+      <xs:enumeration value="Quincenal" />
+      <xs:enumeration value="Mensual" />
+      <xs:enumeration value="Trimestral" />
+      <xs:enumeration value="Semestral" />
+      <xs:enumeration value="Anual" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="E_TipoPeriodicidad" nillable="true" type="tns:E_TipoPeriodicidad" />
+  <xs:simpleType name="E_EstadoCalendarizada">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Activa" />
+      <xs:enumeration value="Inactiva" />
+      <xs:enumeration value="Cancelada" />
+      <xs:enumeration value="Finalizada" />
+      <xs:enumeration value="Todos" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="E_EstadoCalendarizada" nillable="true" type="tns:E_EstadoCalendarizada" />
+  <xs:element name="EnvioDirectoCreditoCuenta" nillable="true" type="tns:EnvioDirectoCreditoCuentaRequestBody" />
+  <xs:complexType name="EnvioDirectoCreditoCuentaResponseBody">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EnvioDirectoCreditoCuentaResult" nillable="true" type="tns:ArrayOfRespuestaTransaccion">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EnvioDirectoCreditoCuentaResponseBody" nillable="true" type="tns:EnvioDirectoCreditoCuentaResponseBody" />
+  <xs:complexType name="ArrayOfRespuestaTransaccion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RespuestaTransaccion" nillable="true" type="tns:RespuestaTransaccion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRespuestaTransaccion" nillable="true" type="tns:ArrayOfRespuestaTransaccion" />
+  <xs:element name="EnvioDirectoCreditoCuentaResponse" nillable="true" type="tns:EnvioDirectoCreditoCuentaResponseBody" />
+  <xs:complexType name="EnvioDirectoCreditoCuentaCalendarizadoRequestBody">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Rastro" nillable="true" type="tns:Rastro">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Transacciones" nillable="true" type="tns:ArrayOfTransaccionCalendarizada">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="FechaInicio" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaFin" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Tipo" nillable="true" type="tns:TipoCalendarizacion">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EnvioDirectoCreditoCuentaCalendarizadoRequestBody" nillable="true" type="tns:EnvioDirectoCreditoCuentaCalendarizadoRequestBody" />
+  <xs:complexType name="ArrayOfTransaccionCalendarizada">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TransaccionCalendarizada" nillable="true" type="tns:TransaccionCalendarizada" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTransaccionCalendarizada" nillable="true" type="tns:ArrayOfTransaccionCalendarizada" />
+  <xs:element name="EnvioDirectoCreditoCuentaCalendarizado" nillable="true" type="tns:EnvioDirectoCreditoCuentaCalendarizadoRequestBody" />
+  <xs:complexType name="EnvioDirectoCreditoCuentaCalendarizadoResponseBody">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EnvioDirectoCreditoCuentaCalendarizadoResult" nillable="true" type="tns:ArrayOfRespuestaCalendarizada">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EnvioDirectoCreditoCuentaCalendarizadoResponseBody" nillable="true" type="tns:EnvioDirectoCreditoCuentaCalendarizadoResponseBody" />
+  <xs:complexType name="ArrayOfRespuestaCalendarizada">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RespuestaCalendarizada" nillable="true" type="tns:RespuestaCalendarizada" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRespuestaCalendarizada" nillable="true" type="tns:ArrayOfRespuestaCalendarizada" />
+  <xs:complexType name="RespuestaCalendarizada">
+    <xs:sequence>
+      <xs:element name="Estado" type="xs:boolean" />
+      <xs:element name="MotivoError" type="xs:int" />
+      <xs:element name="ComprobanteTransaccion" type="xs:int" />
+      <xs:element name="FechaEjecucion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IDCorrelation" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RespuestaCalendarizada" nillable="true" type="tns:RespuestaCalendarizada" />
+  <xs:element name="EnvioDirectoCreditoCuentaCalendarizadoResponse" nillable="true" type="tns:EnvioDirectoCreditoCuentaCalendarizadoResponseBody" />
+  <xs:complexType name="RegistrarCreditoCuentaRequestBody">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Rastro" nillable="true" type="tns:Rastro">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Transacciones" nillable="true" type="tns:ArrayOfTransferencia">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RegistrarCreditoCuentaRequestBody" nillable="true" type="tns:RegistrarCreditoCuentaRequestBody" />
+  <xs:element name="RegistrarCreditoCuenta" nillable="true" type="tns:RegistrarCreditoCuentaRequestBody" />
+  <xs:complexType name="RegistrarCreditoCuentaResponseBody">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="RegistrarCreditoCuentaResult" nillable="true" type="tns:ArrayOfRespuestaRegistro">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RegistrarCreditoCuentaResponseBody" nillable="true" type="tns:RegistrarCreditoCuentaResponseBody" />
+  <xs:complexType name="ArrayOfRespuestaRegistro">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RespuestaRegistro" nillable="true" type="tns:RespuestaRegistro" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRespuestaRegistro" nillable="true" type="tns:ArrayOfRespuestaRegistro" />
+  <xs:element name="RegistrarCreditoCuentaResponse" nillable="true" type="tns:RegistrarCreditoCuentaResponseBody" />
+  <xs:complexType name="ConsultarRequestBody">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="rastro" nillable="true" type="tns:Rastro">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Comprobante" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="estado" type="tns:E_Estado" />
+      <xs:element minOccurs="0" name="FechaRegistroInicial" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaRegistroFinal" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UsuarioRegistra" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="CentroCosto" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Documento" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ReferenciaSINPE" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Moneda" type="tns:E_Monedas" />
+      <xs:element minOccurs="0" name="Modalidad" type="tns:E_Modalidad" />
+      <xs:element minOccurs="0" name="IBANOrigen" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="IBANDestino" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="IdOrigen" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="IDDestino" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="EntidadOrigen" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="EntidadDestino" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConsultarRequestBody" nillable="true" type="tns:ConsultarRequestBody" />
+  <xs:simpleType name="E_Estado">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Registrada" />
+      <xs:enumeration value="Autorizada" />
+      <xs:enumeration value="Rechazada" />
+      <xs:enumeration value="Eliminada" />
+      <xs:enumeration value="Aprobada" />
+      <xs:enumeration value="Enviada" />
+      <xs:enumeration value="Aplazada" />
+      <xs:enumeration value="Excluida" />
+      <xs:enumeration value="Todos" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="E_Estado" nillable="true" type="tns:E_Estado" />
+  <xs:simpleType name="E_Modalidad">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Entrante" />
+      <xs:enumeration value="Saliente" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="E_Modalidad" nillable="true" type="tns:E_Modalidad" />
+  <xs:element name="Consultar" nillable="true" type="tns:ConsultarRequestBody" />
+  <xs:complexType name="ConsultarResponseBody">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ConsultarResult" nillable="true" type="tns:ArrayOfDetalleTransaccion">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConsultarResponseBody" nillable="true" type="tns:ConsultarResponseBody" />
+  <xs:complexType name="ArrayOfDetalleTransaccion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DetalleTransaccion" nillable="true" type="tns:DetalleTransaccion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDetalleTransaccion" nillable="true" type="tns:ArrayOfDetalleTransaccion" />
+  <xs:complexType name="DetalleTransaccion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DatosDebito" nillable="true" type="tns:Transaccion">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ClienteDestino" nillable="true" type="tns:Cliente">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ClienteOrigen" nillable="true" type="tns:Cliente">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Comprobante" type="xs:int" />
+      <xs:element name="Estado" type="tns:E_Estado" />
+      <xs:element name="FechaRegistro" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UsuarioRegistra" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Documento" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ReferenciaSINPE" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Modalidad" type="tns:E_Modalidad" />
+      <xs:element name="MotivoRechazo" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DetalleTransaccion" nillable="true" type="tns:DetalleTransaccion" />
+  <xs:element name="ConsultarResponse" nillable="true" type="tns:ConsultarResponseBody" />
+  <xs:complexType name="ConsultarCalendarizadasRequestBody">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CuentaIban" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="IDOrigen" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ComprobanteCalendarizacion" type="xs:int" />
+      <xs:element minOccurs="0" name="FechaInicial" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaFinal" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="moneda" type="tns:E_Monedas" />
+      <xs:element minOccurs="0" name="Estado" type="tns:E_EstadoCalendarizada" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConsultarCalendarizadasRequestBody" nillable="true" type="tns:ConsultarCalendarizadasRequestBody" />
+  <xs:element name="ConsultarCalendarizadas" nillable="true" type="tns:ConsultarCalendarizadasRequestBody" />
+  <xs:complexType name="ConsultarCalendarizadasResponseBody">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ConsultarCalendarizadasResult" nillable="true" type="tns:ArrayOfTransaccionCalendarizada">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConsultarCalendarizadasResponseBody" nillable="true" type="tns:ConsultarCalendarizadasResponseBody" />
+  <xs:element name="ConsultarCalendarizadasResponse" nillable="true" type="tns:ConsultarCalendarizadasResponseBody" />
+  <xs:complexType name="InactivarCalendarizacionRequestBody">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="rastro" nillable="true" type="tns:Rastro">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ComprobanteCalendarizacion" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InactivarCalendarizacionRequestBody" nillable="true" type="tns:InactivarCalendarizacionRequestBody" />
+  <xs:element name="InactivarCalendarizacion" nillable="true" type="tns:InactivarCalendarizacionRequestBody" />
+  <xs:complexType name="InactivarCalendarizacionResponseBody">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="InactivarCalendarizacionResult" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InactivarCalendarizacionResponseBody" nillable="true" type="tns:InactivarCalendarizacionResponseBody" />
+  <xs:element name="InactivarCalendarizacionResponse" nillable="true" type="tns:InactivarCalendarizacionResponseBody" />
+  <xs:complexType name="ActivarCalendarizacionRequestBody">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="rastro" nillable="true" type="tns:Rastro">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ComprobanteCalendarizacion" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ActivarCalendarizacionRequestBody" nillable="true" type="tns:ActivarCalendarizacionRequestBody" />
+  <xs:element name="ActivarCalendarizacion" nillable="true" type="tns:ActivarCalendarizacionRequestBody" />
+  <xs:complexType name="ActivarCalendarizacionResponseBody">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActivarCalendarizacionResult" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ActivarCalendarizacionResponseBody" nillable="true" type="tns:ActivarCalendarizacionResponseBody" />
+  <xs:element name="ActivarCalendarizacionResponse" nillable="true" type="tns:ActivarCalendarizacionResponseBody" />
+  <xs:complexType name="CancelarCalendarizacionRequestBody">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="rastro" nillable="true" type="tns:Rastro">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ComprobanteCalendarizacion" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CancelarCalendarizacionRequestBody" nillable="true" type="tns:CancelarCalendarizacionRequestBody" />
+  <xs:element name="CancelarCalendarizacion" nillable="true" type="tns:CancelarCalendarizacionRequestBody" />
+  <xs:complexType name="CancelarCalendarizacionResponseBody">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CancelarCalendarizacionResult" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CancelarCalendarizacionResponseBody" nillable="true" type="tns:CancelarCalendarizacionResponseBody" />
+  <xs:element name="CancelarCalendarizacionResponse" nillable="true" type="tns:CancelarCalendarizacionResponseBody" />
+</xs:schema>

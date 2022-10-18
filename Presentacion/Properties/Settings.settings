@@ -1,0 +1,45 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Presentacion.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Presentacion_wsObtenerDatos_Service1" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://172.19.20.113/WSSICxHACIENDA/Service1.asmx</Value>
+    </Setting>
+    <Setting Name="Presentacion_wrTributa_Service1" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://sic_interno.hacienda.go.cr/wsInformativasSICWEB/Service2.asmx</Value>
+    </Setting>
+    <Setting Name="Presentacion_wsDTR_DTR" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://tndigitalwcfv3:90/WB_CGPCanales/DTR.asmx</Value>
+    </Setting>
+    <Setting Name="Presentacion_wsCaptura_wsCapturaIngreso" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://mh-app-nicsp1:83/wsCapturaIngreso.asmx</Value>
+    </Setting>
+    <Setting Name="Presentacion_wsDeudaExterna_wsDeudaExterna" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://mh-app-nicsp1:82/wsDeudaExterna.asmx</Value>
+    </Setting>
+    <Setting Name="Presentacion_wsDeudaInterna_wsDeudaInterna" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://mh-app-nicsp1:82/wsDeudaInterna.asmx</Value>
+    </Setting>
+    <Setting Name="Presentacion_wsAsientos_ServicioContable" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://mh-app-nicsp1:86/ServicioContable.asmx</Value>
+    </Setting>
+    <Setting Name="Presentacion_wsSG_wsSistemaGestor" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://mh-app-nicsp1:81/wsSistemaGestor.asmx</Value>
+    </Setting>
+    <Setting Name="Presentacion_wsDI_wsDeudaInterna" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://mh-app-nicsp1:82/wsDeudaInterna.asmx</Value>
+    </Setting>
+    <Setting Name="Presentacion_wsPC_wsPlantillasConsolidacion" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://mh-app-nicsp1:89/wsPlantillasConsolidacion.asmx</Value>
+    </Setting>
+    <Setting Name="Presentacion_wsBC_wsBalanceComprobacion" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://mh-app-nicsp1:88/wsBalanceComprobacion.asmx</Value>
+    </Setting>
+    <Setting Name="Presentacion_wsMontoReservasSAP_ZWS_MONTO_RESERVA" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://APP-SIGAF1.mh.hacienda.go.cr:8000/sap/bc/srt/rfc/sap/zws_zint_conf_monto_reserva/500/zws_monto_reserva/binding</Value>
+    </Setting>
+    <Setting Name="Presentacion_wsDTR1_DTR" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://tndigitalwcfv3:90/CGPCanalesWCF/DTR.svc</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

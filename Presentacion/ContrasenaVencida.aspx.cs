@@ -1,0 +1,121 @@
+﻿using Presentacion.Compartidas;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Globalization;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace Presentacion
+{
+    public partial class ContrasenaVencida : System.Web.UI.Page
+    {
+        private Presentacion.wsSG.wsSistemaGestor ws_SGService = new Presentacion.wsSG.wsSistemaGestor();
+        private string str_Usuario = String.Empty;
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            clsSesion.Current.LoginUsuario = "1221";
+            str_Usuario = clsSesion.Current.LoginUsuario;
+            if (String.IsNullOrEmpty(str_Usuario))
+            {
+
+                Response.Redirect("~/Login.aspx", true);
+            }
+            else
+            {
+                if (!IsPostBack)
+                {
+                    ConsultarUsuario(str_Usuario);
+                }
+            }
+        }
+        private void ConsultarUsuario(string str_IdUsuario)
+        {
+            try
+            {
+
+                DataSet lds_Usuarios = ws_SGService.uwsConsultarUsuarios(str_IdUsuario, "", "");
+                DataTable ldt_Usuario = lds_Usuarios.Tables["Table"];
+                if (ldt_Usuario.Rows.Count > 0)
+                {
+                    clsSesion.Current.FechaUltimaConsulta = ldt_Usuario.Rows[0]["FchModifica"].ToString();
+                }
+
+            }
+            catch
+            { }
+        }
+        protected void btnAceptar_Click(object sender, EventArgs e)
+        {
+            string lstr_ContrasenaActual = txtContrasenaActual.Text.Trim();
+            string lstr_NuevaContrasena = txtNuevaContrasena.Text.Trim();
+            string lstr_Confirmacion = txtConfirmacion.Text.Trim();
+            if (lstr_NuevaContrasena == lstr_Confirmacion)
+            {
+                CambiarContrasenaUsuario(lstr_ContrasenaActual, lstr_NuevaContrasena);
+            }
+        }
+
+        private void CambiarContrasenaUsuario(string str_ContrasenaActual, string str_NuevaContrasena)
+        {
+            string[] lstr_ResCambio = new string[2];
+            if (ContrasenaCumplePoliticas(str_NuevaContrasena))
+            {
+                try
+                {
+                    string lstr_FchModifica = clsSesion.Current.FechaUltimaConsulta;
+                    DateTime lstr_FechaModificado = Convert.ToDateTime(lstr_FchModifica);
+                    string lstr_fecha = lstr_FechaModificado.ToString("yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture);
+                    lstr_ResCambio = ws_SGService.uwsActualizarPerfilUsuario(clsSesion.Current.LoginUsuario, str_ContrasenaActual, str_NuevaContrasena,
+                                        clsSesion.Current.LoginUsuario, lstr_fecha);
+                    if (lstr_ResCambio[0] == "00")
+                    {
+                        MessageBox.Show("Se han guardado los cambios");
+                    }
+                    else if (lstr_ResCambio[0] == "99")
+                    {
+                        MessageBox.Show("Error al guardar los cambios");
+                    }
+                    else
+                    {
+                        MessageBox.Show(lstr_ResCambio[1]);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al guardar los cambios");
+                }
+            }
+            else
+            {
+                string str_MsjError = String.Format("La contraseña debe contener {0} letras, {1} números y {2} símbolos.",
+                        Convert.ToString(clsSesion.Current.gint_CantLetrasContrasena),
+                        Convert.ToString(clsSesion.Current.gint_CantNumContrasena),
+                        Convert.ToString(clsSesion.Current.gint_CantSimbolosContrasena));
+                MessageBox.Show(str_MsjError);
+            }
+        }
+
+        private bool ContrasenaCumplePoliticas(string str_Contrasena)
+        {
+            bool lboo_Resultado = false;
+            int lint_Largo = 8;
+            int lint_CantLetras = clsSesion.Current.gint_CantLetrasContrasena;
+            int lint_CantNumeros = clsSesion.Current.gint_CantNumContrasena;
+            int lint_CantSimbolos = clsSesion.Current.gint_CantCaracteresClave;
+
+            int lint_LargoContrasena = str_Contrasena.Count();
+            int lint_CantLetrasContrasena = str_Contrasena.Count(Char.IsLetter);
+            int lint_CantNumerosContrasena = str_Contrasena.Count(Char.IsNumber);
+            int lint_CantSimbolosContrasena = str_Contrasena.Count(Char.IsPunctuation);
+            if (lint_CantLetrasContrasena >= lint_CantLetras && lint_CantNumerosContrasena >= lint_CantNumeros &&
+                lint_CantSimbolosContrasena >= lint_CantSimbolos && lint_LargoContrasena >= lint_Largo)
+            {
+                lboo_Resultado = true;
+            }
+            return lboo_Resultado;
+        }
+    }
+}

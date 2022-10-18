@@ -1,0 +1,42 @@
+﻿<?xml version="1.0"?>
+<!--
+  For more information on how to configure your ASP.NET application, please visit
+  http://go.microsoft.com/fwlink/?LinkId=169433
+  -->
+<configuration>
+  <!--
+    For a description of web.config changes see http://go.microsoft.com/fwlink/?LinkId=235367.
+
+    The following attributes can be set on the <httpRuntime> tag.
+      <system.Web>
+        <httpRuntime targetFramework="4.5.1" />
+      </system.Web>
+  -->
+  <system.web>
+    <compilation debug="true" targetFramework="4.5.1"/>
+    <httpRuntime targetFramework="4.5"/>
+    <globalization requestEncoding="utf-8" responseEncoding="utf-8" culture="es-MX" fileEncoding="utf-8" uiCulture="es"/>
+    <webServices>
+      <protocols>
+        <add name="HttpGet"/>
+        <add name="HttpPost"/>
+      </protocols>
+    </webServices>
+  </system.web>
+  <appSettings>
+    <add key="USER_SAP" value="WS_USER_INT"/>
+    <add key="PASS_SAP" value="Hacienda2016"/>
+    <!-- Correo -->
+    <add key="Puerto" value="25"/>
+    <add key="Host" value="172.18.100.11"/>
+    <add key="UsuarioSistema" value="scan@hacienda.go.cr"/>
+    <add key="CredencialUsuario" value="hacienda\scan"/>
+    <add key="CredencialContrasena" value="hacienda01*"/>
+    <add key="DireccionConfigs" value="C:\inetpub\wwwroot\SistemaGestor\Configs\"/>
+    <!--<add key="DireccionConfigs" value="C:\Users\jgomezs\Documents\Visual Studio 2013\Projects\Tortoise\SistemaGestorLocal5\Datos\ConexionSQL\Configs\"/>-->
+  </appSettings>
+  <connectionStrings>
+    <clear/>
+    <add name="ConexionBD" connectionString="Server=172.26.30.21\DMSS2014E01; Database=GestNICSPDEV; User Id=jimenezzl; password=GestNICSP2014" providerName="System.Data.SqlClient"/>
+  </connectionStrings>
+</configuration>

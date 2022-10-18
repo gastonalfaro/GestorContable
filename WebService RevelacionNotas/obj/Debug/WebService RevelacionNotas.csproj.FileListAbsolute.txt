@@ -1,0 +1,97 @@
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\WebService\bin\WebService.dll.config
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\WebService\bin\WebService.dll
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\WebService\bin\WebService.pdb
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\WebService\obj\Debug\WebService.dll
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\WebService\obj\Debug\WebService.pdb
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\WebService\obj\Debug\WebService RevelacionNotas.csprojResolveAssemblyReference.cache
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebService\bin\WebService.dll.config
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebService\bin\WebService.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebService\bin\WebService.pdb
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebService\bin\log4net.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebService\bin\log4net.xml
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebService\obj\Debug\WebService RevelacionNotas.csprojResolveAssemblyReference.cache
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebService\obj\Debug\WebService.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebService\obj\Debug\WebService.pdb
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebService RevelacionNotas\bin\WebService.dll.config
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebService RevelacionNotas\bin\WebService.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebService RevelacionNotas\bin\WebService.pdb
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebService RevelacionNotas\bin\log4net.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebService RevelacionNotas\bin\log4net.xml
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebService RevelacionNotas\obj\Debug\WebService.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebService RevelacionNotas\obj\Debug\WebService.pdb
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebService RevelacionNotas\bin\WebService.dll.config
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebService RevelacionNotas\bin\WebService.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebService RevelacionNotas\bin\WebService.pdb
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebService RevelacionNotas\bin\log4net.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebService RevelacionNotas\bin\log4net.xml
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebService RevelacionNotas\obj\Debug\WebService.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebService RevelacionNotas\obj\Debug\WebService.pdb
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebService RevelacionNotas\obj\Debug\WebService RevelacionNotas.csprojResolveAssemblyReference.cache
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebService RevelacionNotas\bin\WebService.dll.config
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebService RevelacionNotas\bin\WebService.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebService RevelacionNotas\bin\WebService.pdb
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebService RevelacionNotas\bin\log4net.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebService RevelacionNotas\bin\log4net.xml
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebService RevelacionNotas\obj\Debug\WebService RevelacionNotas.csproj.CoreCompileInputs.cache
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebService RevelacionNotas\obj\Debug\WebService RevelacionNotas.csproj.CopyComplete
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebService RevelacionNotas\obj\Debug\WebService.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebService RevelacionNotas\obj\Debug\WebService.pdb
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\WebService RevelacionNotas\bin\WebService.dll.config
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\WebService RevelacionNotas\bin\WebService.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\WebService RevelacionNotas\bin\WebService.pdb
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\WebService RevelacionNotas\bin\log4net.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\WebService RevelacionNotas\bin\log4net.xml
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\WebService RevelacionNotas\obj\Debug\WebService RevelacionNotas.csproj.CoreCompileInputs.cache
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\WebService RevelacionNotas\obj\Debug\WebService RevelacionNotas.csproj.CopyComplete
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\WebService RevelacionNotas\obj\Debug\WebService.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\WebService RevelacionNotas\obj\Debug\WebService.pdb
+D:\PaqueteGestorEmergencia\Fuente\WebService RevelacionNotas\bin\WebService.dll.config
+D:\PaqueteGestorEmergencia\Fuente\WebService RevelacionNotas\bin\WebService.dll
+D:\PaqueteGestorEmergencia\Fuente\WebService RevelacionNotas\bin\WebService.pdb
+D:\PaqueteGestorEmergencia\Fuente\WebService RevelacionNotas\bin\log4net.dll
+D:\PaqueteGestorEmergencia\Fuente\WebService RevelacionNotas\bin\log4net.xml
+D:\PaqueteGestorEmergencia\Fuente\WebService RevelacionNotas\obj\Debug\WebService RevelacionNotas.csprojAssemblyReference.cache
+D:\PaqueteGestorEmergencia\Fuente\WebService RevelacionNotas\obj\Debug\WebService RevelacionNotas.csproj.CoreCompileInputs.cache
+D:\PaqueteGestorEmergencia\Fuente\WebService RevelacionNotas\obj\Debug\WebService RevelacionNotas.csproj.CopyComplete
+D:\PaqueteGestorEmergencia\Fuente\WebService RevelacionNotas\obj\Debug\WebService.dll
+D:\PaqueteGestorEmergencia\Fuente\WebService RevelacionNotas\obj\Debug\WebService.pdb
+D:\CODIGOFUENTEGESTOR\PR\Fuente\WebService RevelacionNotas\bin\WebService.dll.config
+D:\CODIGOFUENTEGESTOR\PR\Fuente\WebService RevelacionNotas\bin\WebService.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\WebService RevelacionNotas\bin\WebService.pdb
+D:\CODIGOFUENTEGESTOR\PR\Fuente\WebService RevelacionNotas\bin\log4net.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\WebService RevelacionNotas\bin\log4net.xml
+D:\CODIGOFUENTEGESTOR\PR\Fuente\WebService RevelacionNotas\obj\Debug\WebService RevelacionNotas.csproj.CoreCompileInputs.cache
+D:\CODIGOFUENTEGESTOR\PR\Fuente\WebService RevelacionNotas\obj\Debug\WebService RevelacionNotas.csproj.CopyComplete
+D:\CODIGOFUENTEGESTOR\PR\Fuente\WebService RevelacionNotas\obj\Debug\WebService.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\WebService RevelacionNotas\obj\Debug\WebService.pdb
+D:\CODIGOFUENTEGESTOR\PR\Fuente\WebService RevelacionNotas\obj\Debug\WebService RevelacionNotas.csprojAssemblyReference.cache
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\WebService RevelacionNotas\bin\WebService.dll.config
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\WebService RevelacionNotas\bin\WebService.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\WebService RevelacionNotas\bin\WebService.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\WebService RevelacionNotas\bin\log4net.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\WebService RevelacionNotas\bin\log4net.xml
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\WebService RevelacionNotas\obj\Debug\WebService RevelacionNotas.csprojAssemblyReference.cache
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\WebService RevelacionNotas\obj\Debug\WebService RevelacionNotas.csproj.CoreCompileInputs.cache
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\WebService RevelacionNotas\obj\Debug\WebService RevelacionNotas.csproj.CopyComplete
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\WebService RevelacionNotas\obj\Debug\WebService.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\WebService RevelacionNotas\obj\Debug\WebService.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebService RevelacionNotas\bin\WebService.dll.config
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebService RevelacionNotas\bin\WebService.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebService RevelacionNotas\bin\WebService.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebService RevelacionNotas\bin\log4net.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebService RevelacionNotas\bin\log4net.xml
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebService RevelacionNotas\obj\Debug\WebService RevelacionNotas.csproj.CoreCompileInputs.cache
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebService RevelacionNotas\obj\Debug\WebService RevelacionNotas.csproj.CopyComplete
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebService RevelacionNotas\obj\Debug\WebService.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebService RevelacionNotas\obj\Debug\WebService.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebService RevelacionNotas\obj\Debug\WebService RevelacionNotas.csprojAssemblyReference.cache
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebService RevelacionNotas\bin\WebService.dll.config
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebService RevelacionNotas\bin\WebService.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebService RevelacionNotas\bin\WebService.pdb
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebService RevelacionNotas\bin\log4net.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebService RevelacionNotas\bin\log4net.xml
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebService RevelacionNotas\obj\Debug\WebService RevelacionNotas.csproj.CoreCompileInputs.cache
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebService RevelacionNotas\obj\Debug\WebService RevelacionNotas.csproj.CopyComplete
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebService RevelacionNotas\obj\Debug\WebService.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebService RevelacionNotas\obj\Debug\WebService.pdb
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebService RevelacionNotas\obj\Debug\WebService RevelacionNotas.csproj.AssemblyReference.cache

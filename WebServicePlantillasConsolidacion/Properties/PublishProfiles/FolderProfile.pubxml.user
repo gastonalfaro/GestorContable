@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\PublicacionesGestor\PC</_PublishTargetUrl>
+    <History>True|2022-10-11T16:41:14.5329951Z;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Datos.dll">
+      <publishTime>10/11/2022 10:21:00</publishTime>
+    </File>
+    <File Include="bin/Datos.dll.config">
+      <publishTime>10/03/2022 15:40:06</publishTime>
+    </File>
+    <File Include="bin/Datos.pdb">
+      <publishTime>10/11/2022 10:21:00</publishTime>
+    </File>
+    <File Include="bin/log4net.dll">
+      <publishTime>09/18/2018 15:56:33</publishTime>
+    </File>
+    <File Include="bin/LogicaNegocio.dll">
+      <publishTime>10/11/2022 10:21:04</publishTime>
+    </File>
+    <File Include="bin/LogicaNegocio.dll.config">
+      <publishTime>10/05/2022 19:45:55</publishTime>
+    </File>
+    <File Include="bin/LogicaNegocio.pdb">
+      <publishTime>10/11/2022 10:21:04</publishTime>
+    </File>
+    <File Include="bin/LogicaNegocio.XmlSerializers.dll">
+      <publishTime>10/11/2022 10:21:10</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Practices.EnterpriseLibrary.Common.dll">
+      <publishTime>09/11/2018 10:21:56</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Practices.EnterpriseLibrary.Data.dll">
+      <publishTime>09/11/2018 10:21:56</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Practices.ServiceLocation.dll">
+      <publishTime>09/11/2018 10:21:56</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Practices.Unity.dll">
+      <publishTime>09/11/2018 10:21:56</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Practices.Unity.Interception.dll">
+      <publishTime>09/11/2018 10:21:56</publishTime>
+    </File>
+    <File Include="bin/stdole.dll">
+      <publishTime>05/16/2022 14:02:18</publishTime>
+    </File>
+    <File Include="bin/WebServicePlantillasConsolidacion.dll">
+      <publishTime>10/11/2022 10:41:11</publishTime>
+    </File>
+    <File Include="bin/WebServicePlantillasConsolidacion.pdb">
+      <publishTime>10/11/2022 10:41:11</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>06/05/2019 14:10:11</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>10/11/2022 10:41:12</publishTime>
+    </File>
+    <File Include="wsPlantillasConsolidacion.asmx">
+      <publishTime>09/11/2018 10:19:02</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

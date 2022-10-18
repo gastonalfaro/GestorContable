@@ -1,0 +1,114 @@
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServicePlantillasConsolidacion\bin\WebServicePlantillasConsolidacion.dll.config
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServicePlantillasConsolidacion\bin\WebServicePlantillasConsolidacion.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServicePlantillasConsolidacion\bin\WebServicePlantillasConsolidacion.pdb
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServicePlantillasConsolidacion\bin\Datos.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServicePlantillasConsolidacion\bin\LogicaNegocio.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServicePlantillasConsolidacion\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServicePlantillasConsolidacion\bin\Microsoft.Office.Interop.Excel.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServicePlantillasConsolidacion\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServicePlantillasConsolidacion\bin\Microsoft.Practices.ServiceLocation.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServicePlantillasConsolidacion\bin\Microsoft.Practices.Unity.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServicePlantillasConsolidacion\bin\Microsoft.Practices.Unity.Interception.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServicePlantillasConsolidacion\bin\Datos.pdb
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServicePlantillasConsolidacion\bin\LogicaNegocio.pdb
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServicePlantillasConsolidacion\bin\Microsoft.Office.Interop.Excel.xml
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServicePlantillasConsolidacion\bin\LogicaNegocio.XmlSerializers.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServicePlantillasConsolidacion\obj\Release\WebServicePlantillasConsolidacion.csprojResolveAssemblyReference.cache
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServicePlantillasConsolidacion\obj\Release\WebServicePlantillasConsolidacion.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServicePlantillasConsolidacion\obj\Release\WebServicePlantillasConsolidacion.pdb
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServicePlantillasConsolidacion\bin\log4net.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServicePlantillasConsolidacion\bin\log4net.xml
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServicePlantillasConsolidacion\bin\WebServicePlantillasConsolidacion.dll.config
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServicePlantillasConsolidacion\bin\WebServicePlantillasConsolidacion.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServicePlantillasConsolidacion\bin\WebServicePlantillasConsolidacion.pdb
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServicePlantillasConsolidacion\bin\Datos.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServicePlantillasConsolidacion\bin\log4net.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServicePlantillasConsolidacion\bin\LogicaNegocio.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServicePlantillasConsolidacion\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServicePlantillasConsolidacion\bin\Microsoft.Office.Interop.Excel.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServicePlantillasConsolidacion\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServicePlantillasConsolidacion\bin\Microsoft.Practices.ServiceLocation.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServicePlantillasConsolidacion\bin\Microsoft.Practices.Unity.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServicePlantillasConsolidacion\bin\Microsoft.Practices.Unity.Interception.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServicePlantillasConsolidacion\bin\Datos.pdb
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServicePlantillasConsolidacion\bin\LogicaNegocio.pdb
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServicePlantillasConsolidacion\bin\log4net.xml
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServicePlantillasConsolidacion\bin\Microsoft.Office.Interop.Excel.xml
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServicePlantillasConsolidacion\bin\LogicaNegocio.XmlSerializers.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServicePlantillasConsolidacion\obj\Release\WebServicePlantillasConsolidacion.csprojResolveAssemblyReference.cache
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServicePlantillasConsolidacion\obj\Release\WebServicePlantillasConsolidacion.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServicePlantillasConsolidacion\obj\Release\WebServicePlantillasConsolidacion.pdb
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServicePlantillasConsolidacion\bin\WebServicePlantillasConsolidacion.dll.config
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServicePlantillasConsolidacion\bin\WebServicePlantillasConsolidacion.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServicePlantillasConsolidacion\bin\WebServicePlantillasConsolidacion.pdb
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServicePlantillasConsolidacion\bin\Datos.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServicePlantillasConsolidacion\bin\log4net.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServicePlantillasConsolidacion\bin\LogicaNegocio.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServicePlantillasConsolidacion\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServicePlantillasConsolidacion\bin\Microsoft.Office.Interop.Excel.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServicePlantillasConsolidacion\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServicePlantillasConsolidacion\bin\Microsoft.Practices.ServiceLocation.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServicePlantillasConsolidacion\bin\Microsoft.Practices.Unity.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServicePlantillasConsolidacion\bin\office.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServicePlantillasConsolidacion\bin\Microsoft.Vbe.Interop.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServicePlantillasConsolidacion\bin\Microsoft.Practices.Unity.Interception.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServicePlantillasConsolidacion\bin\stdole.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServicePlantillasConsolidacion\bin\Datos.pdb
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServicePlantillasConsolidacion\bin\Datos.dll.config
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServicePlantillasConsolidacion\bin\LogicaNegocio.pdb
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServicePlantillasConsolidacion\bin\LogicaNegocio.dll.config
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServicePlantillasConsolidacion\bin\log4net.xml
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServicePlantillasConsolidacion\bin\Microsoft.Office.Interop.Excel.xml
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServicePlantillasConsolidacion\bin\office.xml
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServicePlantillasConsolidacion\bin\LogicaNegocio.XmlSerializers.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServicePlantillasConsolidacion\obj\Release\WebServicePlantillasConsolidacion.csprojAssemblyReference.cache
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServicePlantillasConsolidacion\obj\Release\WebServicePlantillasConsolidacion.csproj.CoreCompileInputs.cache
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServicePlantillasConsolidacion\obj\Release\WebServicePlantillasConsolidacion.csproj.CopyComplete
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServicePlantillasConsolidacion\obj\Release\WebServicePlantillasConsolidacion.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServicePlantillasConsolidacion\obj\Release\WebServicePlantillasConsolidacion.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServicePlantillasConsolidacion\bin\WebServicePlantillasConsolidacion.dll.config
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServicePlantillasConsolidacion\bin\WebServicePlantillasConsolidacion.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServicePlantillasConsolidacion\bin\WebServicePlantillasConsolidacion.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServicePlantillasConsolidacion\bin\Datos.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServicePlantillasConsolidacion\bin\log4net.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServicePlantillasConsolidacion\bin\LogicaNegocio.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServicePlantillasConsolidacion\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServicePlantillasConsolidacion\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServicePlantillasConsolidacion\bin\Microsoft.Practices.ServiceLocation.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServicePlantillasConsolidacion\bin\Microsoft.Practices.Unity.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServicePlantillasConsolidacion\bin\Microsoft.Practices.Unity.Interception.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServicePlantillasConsolidacion\bin\stdole.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServicePlantillasConsolidacion\bin\Datos.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServicePlantillasConsolidacion\bin\Datos.dll.config
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServicePlantillasConsolidacion\bin\LogicaNegocio.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServicePlantillasConsolidacion\bin\LogicaNegocio.dll.config
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServicePlantillasConsolidacion\bin\log4net.xml
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServicePlantillasConsolidacion\bin\LogicaNegocio.XmlSerializers.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServicePlantillasConsolidacion\obj\Release\WebServicePlantillasConsolidacion.csprojAssemblyReference.cache
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServicePlantillasConsolidacion\obj\Release\WebServicePlantillasConsolidacion.csproj.CoreCompileInputs.cache
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServicePlantillasConsolidacion\obj\Release\WebServicePlantillasConsolidacion.csproj.CopyComplete
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServicePlantillasConsolidacion\obj\Release\WebServicePlantillasConsolidacion.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServicePlantillasConsolidacion\obj\Release\WebServicePlantillasConsolidacion.pdb
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServicePlantillasConsolidacion\bin\WebServicePlantillasConsolidacion.dll.config
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServicePlantillasConsolidacion\bin\WebServicePlantillasConsolidacion.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServicePlantillasConsolidacion\bin\WebServicePlantillasConsolidacion.pdb
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServicePlantillasConsolidacion\bin\Datos.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServicePlantillasConsolidacion\bin\log4net.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServicePlantillasConsolidacion\bin\LogicaNegocio.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServicePlantillasConsolidacion\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServicePlantillasConsolidacion\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServicePlantillasConsolidacion\bin\Microsoft.Practices.ServiceLocation.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServicePlantillasConsolidacion\bin\Microsoft.Practices.Unity.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServicePlantillasConsolidacion\bin\Microsoft.Practices.Unity.Interception.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServicePlantillasConsolidacion\bin\stdole.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServicePlantillasConsolidacion\bin\Datos.pdb
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServicePlantillasConsolidacion\bin\Datos.dll.config
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServicePlantillasConsolidacion\bin\LogicaNegocio.pdb
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServicePlantillasConsolidacion\bin\LogicaNegocio.dll.config
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServicePlantillasConsolidacion\bin\log4net.xml
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServicePlantillasConsolidacion\bin\LogicaNegocio.XmlSerializers.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServicePlantillasConsolidacion\obj\Release\WebServicePlantillasConsolidacion.csproj.AssemblyReference.cache
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServicePlantillasConsolidacion\obj\Release\WebServicePlantillasConsolidacion.csproj.CoreCompileInputs.cache
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServicePlantillasConsolidacion\obj\Release\WebServicePlantillasConsolidacion.csproj.CopyComplete
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServicePlantillasConsolidacion\obj\Release\WebServicePlantillasConsolidacion.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServicePlantillasConsolidacion\obj\Release\WebServicePlantillasConsolidacion.pdb

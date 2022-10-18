@@ -1,0 +1,393 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.Script.Serialization;
+using Presentacion.Compartidas;
+using System.Globalization;
+
+namespace Presentacion.Seguridad.GestionUsuarios
+{
+    public partial class EdicionUsuario : BASE
+    {
+
+        //Variable reference de servicio web 
+        private Presentacion.wsSG.wsSistemaGestor ws_SGService = new Presentacion.wsSG.wsSistemaGestor();
+        private string lst_idUsuario = String.Empty;
+        private string str_Usuario = String.Empty;
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            str_Usuario = clsSesion.Current.LoginUsuario;
+
+            if (!IsPostBack)
+            {
+                if (!string.IsNullOrEmpty(str_Usuario))
+                {
+                    if (!clsSeguridadVistas.MostrarElementos(str_Usuario, Master, "OBJ_SG"))
+                    {
+                        MessageBox.Show("No tiene suficientes permisos.");
+                        Response.Redirect("~/Principal.aspx", true);
+                    }
+                    else
+                    {
+                        if (Request.QueryString["ID"] != null)
+                        {
+                            lst_idUsuario = Request.QueryString["ID"];                     
+                            CargarDDLs();
+                            ConsultarUsuario(lst_idUsuario);
+                            ConsultarRolesUsuario(lst_idUsuario);
+                        }
+                    }
+
+                }
+                else
+                {
+                    Response.Redirect("~/Login.aspx", true);
+                }
+
+            }
+            else
+            {
+                if (string.IsNullOrEmpty(str_Usuario))
+                    Response.Redirect("~/Login.aspx", true);
+
+            }
+            
+        }
+
+        /// <summary>
+        /// Alimenta los dropdownlist de la pagina con los datos necesarios
+        /// </summary>
+        private void CargarDDLs()
+        {
+            ddlInstitucion.Items.Clear();
+            DataSet lds_SociedadesGL = ws_SGService.uwsConsultarSociedadesGL("", "", "", "", "");
+            //la consulta generó resultados
+            if (lds_SociedadesGL.Tables.Count > 0 && lds_SociedadesGL.Tables[0].Rows.Count > 0)
+            {
+                DataTable ldt_SociedadesGL = lds_SociedadesGL.Tables["Table"];
+                DataRow ldr_nuevaFila = ldt_SociedadesGL.NewRow();
+                ldr_nuevaFila["NomSociedad"] = "Ciudadano"; //["Denominacion"]
+                ldr_nuevaFila["IdSociedadGL"] = "0";
+                ldt_SociedadesGL.Rows.InsertAt(ldr_nuevaFila, 0);
+                ddlInstitucion.DataSource = ldt_SociedadesGL;
+                ddlInstitucion.DataTextField = "NomSociedad";
+                ddlInstitucion.DataValueField = "IdSociedadGL";
+                ddlInstitucion.DataBind();
+            }//if
+        }
+
+        /// <summary>
+        /// Consulta la informacion d un usuario especifico
+        /// </summary>
+        /// <param name="str_IdUsuario"></param>
+        private void ConsultarUsuario (string str_IdUsuario)
+        {
+           
+            DataSet lds_Usuarios = ws_SGService.uwsConsultarUsuarios(str_IdUsuario,"","");
+            DataTable ldt_Usuario = lds_Usuarios.Tables["Table"];
+            if (ldt_Usuario.Rows.Count > 0)
+            {
+                string lstr_TipoID = ldt_Usuario.Rows[0]["TipoIdUsuario"].ToString();
+                switch(lstr_TipoID.Trim())
+                {
+                    case "F":
+                        {
+                            lstr_TipoID = "Físico";
+                            break;
+                        }
+                    case "J":
+                        {
+                            lstr_TipoID = "Jurídico";
+                            break;
+                        }
+                    default:
+                        {
+                            lstr_TipoID = "DIMEX";
+                            break;
+                        }
+                }
+                txtIdUsuario.Text = str_IdUsuario;
+                txtCorreoUsr.Text = ldt_Usuario.Rows[0]["CorreoUsuario"].ToString();
+                txtNombreUsuario.Text = ldt_Usuario.Rows[0]["NomUsuario"].ToString();
+                txtFchRegistro.Text = ldt_Usuario.Rows[0]["FchCreacion"].ToString();
+                txtFchCambioClave.Text = ldt_Usuario.Rows[0]["FchUltimoCambioClave"].ToString();
+                txtFchUltimaSesion.Text = ldt_Usuario.Rows[0]["FchUltimaSesion"].ToString();
+                txtTipoIDentificacion.Text = lstr_TipoID;
+                ddlInstitucion.SelectedValue = (ldt_Usuario.Rows[0]["IdSociedadGL"].ToString().Trim().Equals("0") || ldt_Usuario.Rows[0]["IdSociedadGL"].ToString().Trim().Equals(""))? "0":ldt_Usuario.Rows[0]["IdSociedadGL"].ToString();
+                chkActivo.Checked = Convert.ToBoolean(ldt_Usuario.Rows[0]["Activo"].ToString());
+                chkAdmin.Checked = Convert.ToBoolean(ldt_Usuario.Rows[0]["Administrador"].ToString());
+                chkCtaHabilitada.Checked = Convert.ToBoolean(ldt_Usuario.Rows[0]["CtaHabilitada"].ToString());
+                hdnFchModificacion.Value = ldt_Usuario.Rows[0]["FchModifica"].ToString();
+                //ddlInstitucion.SelectedValue = ldt_Usuario.Rows[0]["IdSociedadGL"].ToString();
+            }
+
+ 
+        }
+
+        /// <summary>
+        /// Consulta los roles de un usuario
+        /// </summary>
+        /// <param name="str_IdUsuario"></param>
+        private void ConsultarRolesUsuario(string str_IdUsuario)
+        {
+            DataSet lds_RolesUsuario = ws_SGService.uwsConsultarRolesUsuario("", str_IdUsuario);
+            if (lds_RolesUsuario.Tables.Count > 0)
+            {
+                DataTable ldt_RolesUsuario = lds_RolesUsuario.Tables["Table"];
+                if (ldt_RolesUsuario.Rows.Count > 0)
+                {
+                    gvRolesUsuario.DataSource = ldt_RolesUsuario;
+                    gvRolesUsuario.DataBind();
+                    List<string> lstr_RolesUsr = new List<string>();
+                    for (int numfila = 0; numfila < ldt_RolesUsuario.Rows.Count; numfila++)
+                    {
+                        lstr_RolesUsr.Add(ldt_RolesUsuario.Rows[numfila]["IdRol"].ToString());
+                    }
+                    String[] last_RolesUsr = lstr_RolesUsr.ToArray();
+                    string lstr_Roles = String.Join("|||", last_RolesUsr);
+                    hdnRoles.Value = lstr_Roles;
+
+                }
+                else
+                {
+                    /// ShowNoResultFound(ldt_RolesUsuario, gvRolesUsuario);
+                    gvRolesUsuario.DataSource = this.LlenarTablaVacia();
+                    gvRolesUsuario.Columns[1].Visible = false;
+                    gvRolesUsuario.DataBind();
+                    gvRolesUsuario.Rows[0].Visible = false;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Evento que se dispara al presionar el boton de cancelar
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        protected void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Seguridad/Usuarios.aspx"); 
+        }
+
+        protected void gvRolesUsuarioDataBound(object sender, EventArgs e)
+        {               
+            DataSet lds_RolesUsuario = ws_SGService.uwsConsultarRoles("");
+            DropDownList lddl_Roles = gvRolesUsuario.FooterRow.FindControl("ddlRoles") as DropDownList;
+            lddl_Roles.DataSource = lds_RolesUsuario.Tables["Table"];
+            lddl_Roles.DataTextField = "DescRol";
+            lddl_Roles.DataValueField = "IdRol";
+            lddl_Roles.DataBind();
+            lddl_Roles.Items.Insert(0, new ListItem("Seleccione un rol", "0"));
+    
+        }
+
+        /// <summary>
+        /// Crea una nueva tabla de roles sin filas
+        /// </summary>
+        /// <returns></returns>
+        public DataTable LlenarTablaVacia()
+        {
+            DataTable ldt_TablaVacia = new DataTable();
+            ldt_TablaVacia.Columns.Add("FchModifica", typeof(string));
+            ldt_TablaVacia.Columns.Add("IdRol", typeof(string));
+            ldt_TablaVacia.Columns.Add("DescRol", typeof(string));
+            //ldt_TablaVacia.Columns.Add("Habilitado", typeof(Boolean));
+            DataRow ldr_FilaTabla = ldt_TablaVacia.NewRow();
+            
+            ldt_TablaVacia.Rows.Add(ldr_FilaTabla);
+            return ldt_TablaVacia;
+        }
+
+        private void ShowNoResultFound(DataTable source, GridView gv)
+        {
+            source.Rows.Add(source.NewRow()); // create a new blank row to the DataTable
+            // Bind the DataTable which contain a blank row to the GridView
+            gv.DataSource = source;
+            gv.DataBind();
+            // Get the total number of columns in the GridView to know what the Column Span should be
+            int columnsCount = gv.Columns.Count;
+            gv.Rows[0].Cells.Clear();// clear all the cells in the row
+            gv.Rows[0].Cells.Add(new TableCell()); //add a new blank cell
+            gv.Rows[0].Cells[0].ColumnSpan = columnsCount; //set the column span to the new added cell
+
+            //You can set the styles here
+            gv.Rows[0].Cells[0].HorizontalAlign = HorizontalAlign.Center;
+            gv.Rows[0].Cells[0].ForeColor = System.Drawing.Color.Red;
+            gv.Rows[0].Cells[0].Font.Bold = true;
+            //set No Results found to the new added cell
+            gv.Rows[0].Cells[0].Text = "NO RESULT FOUND!";
+        }
+
+        /// <summary>
+        /// Guarda los cambios realizados en la informacion del usuario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        protected void btnGuardarCambios_Click(object sender, EventArgs e)
+        {
+            lst_idUsuario = Request.QueryString["ID"];
+            string[] ResultadoActualizacion = new string[2];
+            ResultadoActualizacion[0] = "99";
+            ResultadoActualizacion[1] = "Error al realizar la actualizacion";
+            string lstr_IdUsuario = txtIdUsuario.Text;
+            string lstr_NomUsuario = txtNombreUsuario.Text;
+            string lstr_CorreoUsuario = txtCorreoUsr.Text;
+            string lstr_Activo = Convert.ToString(chkActivo.Checked);
+            string lstr_Administrador = Convert.ToString(chkAdmin.Checked);
+            string lst_CtaHabilitada = Convert.ToString(chkCtaHabilitada.Checked);
+            string lstr_FchModifica = hdnFchModificacion.Value.ToString();
+            string lstr_TipoID = txtTipoIDentificacion.Text;
+            string lstr_Institucion = ddlInstitucion.SelectedValue;
+            DateTime lstr_FechaModificado = Convert.ToDateTime(lstr_FchModifica);
+            string lstr_fecha = String.Empty;
+            bool lboo_CamposCompletos = ValidacionCambios(lstr_IdUsuario, lstr_TipoID, lstr_NomUsuario, lstr_CorreoUsuario,
+                lstr_Activo, lstr_Administrador, lst_CtaHabilitada, lstr_Institucion);
+            switch (lstr_TipoID.Trim())
+            {
+                case "Físico":
+                    {
+                        lstr_TipoID = "F";
+                        break;
+                    }
+                case "Jurídico":
+                    {
+                        lstr_TipoID = "J";
+                        break;
+                    }
+                default:
+                    {
+                        lstr_TipoID = "DI";
+                        break;
+                    }
+            }
+            if (lboo_CamposCompletos)
+            {
+                lstr_fecha = lstr_FechaModificado.ToString("yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture);
+                ResultadoActualizacion = ws_SGService.uwsActualizarUsuario(lstr_IdUsuario, lstr_TipoID, lstr_NomUsuario, lstr_CorreoUsuario,
+                    lstr_Activo, lstr_Administrador, lst_CtaHabilitada, lstr_Institucion, clsSesion.Current.LoginUsuario, lstr_fecha);
+                if (ResultadoActualizacion[0] == "00")
+                {
+                    MessageBox.Show("Se han guardado los cambios.");
+                    ConsultarUsuario(lst_idUsuario);
+                }
+                
+                //El correo esta siendo utilizado por otro usuario
+                else if (ResultadoActualizacion[0] == "-2")
+                {
+                    MessageBox.Show(ResultadoActualizacion[1]);
+
+                    ConsultarUsuario(lst_idUsuario);
+
+                }
+                else
+                {
+                    MessageBox.Show("Error al realizar los cambios.");
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Debe ingresar todos los datos solicitados.");
+            }
+        }
+
+        /// <summary>
+        /// Valida que los campos necesarios sean correctos
+        /// </summary>
+        /// <param name="str_IdUSuario"></param>
+        /// <param name="str_TipoID"></param>
+        /// <param name="str_NomUsuario"></param>
+        /// <param name="str_CorreoUsuario"></param>
+        /// <param name="str_Activo"></param>
+        /// <param name="str_Administrador"></param>
+        /// <param name="str_CtaHabilitada"></param>
+        /// <param name="str_Institucion"></param>
+        /// <returns></returns>
+        private bool ValidacionCambios(string str_IdUSuario, string str_TipoID, string str_NomUsuario,
+            string str_CorreoUsuario, string str_Activo, string str_Administrador, string str_CtaHabilitada, string str_Institucion)
+        {
+            bool lboo_ResValidacion = false;
+            if (!String.IsNullOrEmpty(str_IdUSuario) && !String.IsNullOrEmpty(str_TipoID)
+                && !String.IsNullOrEmpty(str_NomUsuario) && !String.IsNullOrEmpty(str_CorreoUsuario)
+                && !String.IsNullOrEmpty(str_Activo) && !String.IsNullOrEmpty(str_Administrador)
+                && !String.IsNullOrEmpty(str_CtaHabilitada) && !String.IsNullOrEmpty(str_Institucion))
+            {
+                    lboo_ResValidacion = true;
+            }
+            return lboo_ResValidacion;
+        }
+
+        /// <summary>
+        /// Asigna un nuevo rol al usuario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        protected void gvRolesUsuario_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lblMensaje.Visible = false;
+           
+            string lstr_Roles = hdnRoles.Value.ToString();
+            String[] last_RolesUsr = lstr_Roles.Split(new string[] { "|||" }, StringSplitOptions.RemoveEmptyEntries);
+            string lstr_IdRol = (gvRolesUsuario.FooterRow.FindControl("ddlRoles") as DropDownList).SelectedItem.Value;
+            if (last_RolesUsr.Contains(lstr_IdRol)) 
+            {
+                lblMensaje.Text = "El usuario ya posee este rol.";
+                lblMensaje.Visible = true;
+            }
+            else if(lstr_IdRol == "0")
+            {
+                lblMensaje.Text = "Debe seleccionar un rol.";
+                lblMensaje.Visible = true;
+            }
+            else
+            {
+                if (!String.IsNullOrEmpty(clsSesion.Current.IdSesion))
+                {
+                    bool lbool_Resul = ws_SGService.uwsCrearRolUsuario(clsSesion.Current.IdSesion,lstr_IdRol, Request.QueryString["ID"], str_Usuario);
+                    if (lbool_Resul) lblMensaje.Text = "El rol ha sido asignado al usuario.";
+                    else lblMensaje.Text = "El rol no ha sido asignado al usuario.";
+
+                    lblMensaje.Visible = true;
+                    ConsultarRolesUsuario(Request.QueryString["ID"]);
+                    
+                }
+            }
+        }
+
+        /// <summary>
+        /// Evento que se dispara al seleccionar la opcion de eliminar rol
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        protected void gvRolesUsuario_EliminarRol(object sender, GridViewDeleteEventArgs e)
+        {
+            lblMensaje.Visible = false;
+           
+            if (gvRolesUsuario.Rows.Count > 1)
+            {
+                lst_idUsuario = Request.QueryString["ID"];
+                int int_indice = Convert.ToInt32(e.RowIndex);
+                Label lblFchModificacion = (Label)gvRolesUsuario.Rows[int_indice].Cells[0].FindControl("lblFchModifica");
+                Label lblIdRol = (Label)gvRolesUsuario.Rows[int_indice].Cells[1].FindControl("lblIdRol");
+                DateTime lstr_FechaModificado = Convert.ToDateTime(lblFchModificacion.Text);
+                string lstr_fecha = String.Empty;
+                lstr_fecha = lstr_FechaModificado.ToString("yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture);
+                bool lboo_ResEliminacion = ws_SGService.uwsEliminarRolUsuario(lst_idUsuario, lblIdRol.Text, lstr_fecha);
+                ConsultarRolesUsuario(lst_idUsuario);
+                lblMensaje.Text = "El usuario ha perdido los permisos asignados al rol.";
+                lblMensaje.Visible = true;
+            }
+            else
+            {
+                lblMensaje.Text = "El usuario debe poseer al menos un rol.";
+                lblMensaje.Visible = true;
+            }
+        }
+               
+    }
+}

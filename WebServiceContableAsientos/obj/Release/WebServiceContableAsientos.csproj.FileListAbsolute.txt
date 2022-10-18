@@ -1,0 +1,54 @@
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServiceContableAsientos\bin\WebServiceContableAsientos.dll.config
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServiceContableAsientos\bin\WebServiceContableAsientos.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServiceContableAsientos\bin\WebServiceContableAsientos.XmlSerializers.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServiceContableAsientos\bin\WebServiceContableAsientos.pdb
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServiceContableAsientos\obj\Release\WebServiceContableAsientos.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServiceContableAsientos\obj\Release\WebServiceContableAsientos.pdb
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServiceContableAsientos\obj\Release\WebServiceContableAsientos.XmlSerializers.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServiceContableAsientos\bin\log4net.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServiceContableAsientos\bin\log4net.xml
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServiceContableAsientos\bin\WebServiceContableAsientos.dll.config
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServiceContableAsientos\bin\WebServiceContableAsientos.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServiceContableAsientos\bin\WebServiceContableAsientos.XmlSerializers.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServiceContableAsientos\bin\WebServiceContableAsientos.pdb
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServiceContableAsientos\bin\log4net.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServiceContableAsientos\bin\log4net.xml
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServiceContableAsientos\obj\Release\WebServiceContableAsientos.csprojResolveAssemblyReference.cache
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServiceContableAsientos\obj\Release\WebServiceContableAsientos.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServiceContableAsientos\obj\Release\WebServiceContableAsientos.pdb
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServiceContableAsientos\obj\Release\WebServiceContableAsientos.XmlSerializers.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServiceContableAsientos\bin\WebServiceContableAsientos.dll.config
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServiceContableAsientos\bin\WebServiceContableAsientos.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServiceContableAsientos\bin\WebServiceContableAsientos.XmlSerializers.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServiceContableAsientos\bin\WebServiceContableAsientos.pdb
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServiceContableAsientos\bin\log4net.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServiceContableAsientos\bin\log4net.xml
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServiceContableAsientos\obj\Release\WebServiceContableAsientos.csproj.CoreCompileInputs.cache
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServiceContableAsientos\obj\Release\WebServiceContableAsientos.csproj.CopyComplete
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServiceContableAsientos\obj\Release\WebServiceContableAsientos.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServiceContableAsientos\obj\Release\WebServiceContableAsientos.pdb
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServiceContableAsientos\obj\Release\WebServiceContableAsientos.XmlSerializers.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServiceContableAsientos\bin\WebServiceContableAsientos.dll.config
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServiceContableAsientos\bin\WebServiceContableAsientos.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServiceContableAsientos\bin\WebServiceContableAsientos.XmlSerializers.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServiceContableAsientos\bin\WebServiceContableAsientos.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServiceContableAsientos\bin\log4net.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServiceContableAsientos\bin\log4net.xml
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServiceContableAsientos\obj\Release\WebServiceContableAsientos.csprojAssemblyReference.cache
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServiceContableAsientos\obj\Release\WebServiceContableAsientos.csproj.CoreCompileInputs.cache
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServiceContableAsientos\obj\Release\WebServiceContableAsientos.csproj.CopyComplete
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServiceContableAsientos\obj\Release\WebServiceContableAsientos.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServiceContableAsientos\obj\Release\WebServiceContableAsientos.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServiceContableAsientos\obj\Release\WebServiceContableAsientos.XmlSerializers.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServiceContableAsientos\bin\WebServiceContableAsientos.dll.config
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServiceContableAsientos\bin\WebServiceContableAsientos.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServiceContableAsientos\bin\WebServiceContableAsientos.XmlSerializers.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServiceContableAsientos\bin\WebServiceContableAsientos.pdb
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServiceContableAsientos\bin\log4net.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServiceContableAsientos\bin\log4net.xml
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServiceContableAsientos\obj\Release\WebServiceContableAsientos.csproj.AssemblyReference.cache
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServiceContableAsientos\obj\Release\WebServiceContableAsientos.csproj.CoreCompileInputs.cache
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServiceContableAsientos\obj\Release\WebServiceContableAsientos.csproj.CopyComplete
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServiceContableAsientos\obj\Release\WebServiceContableAsientos.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServiceContableAsientos\obj\Release\WebServiceContableAsientos.pdb
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServiceContableAsientos\obj\Release\WebServiceContableAsientos.XmlSerializers.dll

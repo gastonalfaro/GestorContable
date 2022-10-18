@@ -1,0 +1,53 @@
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\Seguridad\bin\Seguridad.dll
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\Seguridad\bin\Seguridad.pdb
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\Seguridad\obj\Debug\Seguridad.dll
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\Seguridad\obj\Debug\Seguridad.pdb
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\Seguridad\obj\Debug\Seguridad.csprojResolveAssemblyReference.cache
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\Seguridad\bin\Seguridad.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\Seguridad\bin\Seguridad.pdb
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\Seguridad\obj\Debug\Seguridad.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\Seguridad\obj\Debug\Seguridad.pdb
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\Seguridad\bin\Seguridad.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\Seguridad\bin\Seguridad.pdb
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\Seguridad\obj\Debug\Seguridad.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\Seguridad\obj\Debug\Seguridad.pdb
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\Seguridad\obj\Debug\Seguridad.csprojResolveAssemblyReference.cache
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\Seguridad\bin\Seguridad.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\Seguridad\bin\Seguridad.pdb
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\Seguridad\obj\Debug\Seguridad.csproj.CoreCompileInputs.cache
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\Seguridad\obj\Debug\Seguridad.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\Seguridad\obj\Debug\Seguridad.pdb
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\Seguridad\obj\Debug\Seguridad.csprojAssemblyReference.cache
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\Seguridad\bin\Seguridad.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\Seguridad\bin\Seguridad.pdb
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\Seguridad\obj\Debug\Seguridad.csproj.CoreCompileInputs.cache
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\Seguridad\obj\Debug\Seguridad.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\Seguridad\obj\Debug\Seguridad.pdb
+D:\PaqueteGestorEmergencia\Fuente\Seguridad\bin\Seguridad.dll
+D:\PaqueteGestorEmergencia\Fuente\Seguridad\bin\Seguridad.pdb
+D:\PaqueteGestorEmergencia\Fuente\Seguridad\obj\Debug\Seguridad.csproj.CoreCompileInputs.cache
+D:\PaqueteGestorEmergencia\Fuente\Seguridad\obj\Debug\Seguridad.dll
+D:\PaqueteGestorEmergencia\Fuente\Seguridad\obj\Debug\Seguridad.pdb
+D:\CODIGOFUENTEGESTOR\PR\Fuente\Seguridad\bin\Seguridad.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\Seguridad\bin\Seguridad.pdb
+D:\CODIGOFUENTEGESTOR\PR\Fuente\Seguridad\obj\Debug\Seguridad.csproj.CoreCompileInputs.cache
+D:\CODIGOFUENTEGESTOR\PR\Fuente\Seguridad\obj\Debug\Seguridad.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\Seguridad\obj\Debug\Seguridad.pdb
+D:\CODIGOFUENTEGESTOR\PR\Fuente\Seguridad\obj\Debug\Seguridad.csprojAssemblyReference.cache
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\Seguridad\bin\Seguridad.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\Seguridad\bin\Seguridad.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\Seguridad\obj\Debug\Seguridad.csprojAssemblyReference.cache
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\Seguridad\obj\Debug\Seguridad.csproj.CoreCompileInputs.cache
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\Seguridad\obj\Debug\Seguridad.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\Seguridad\obj\Debug\Seguridad.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\Seguridad\bin\Seguridad.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\Seguridad\bin\Seguridad.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\Seguridad\obj\Debug\Seguridad.csproj.CoreCompileInputs.cache
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\Seguridad\obj\Debug\Seguridad.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\Seguridad\obj\Debug\Seguridad.pdb
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\Seguridad\bin\Seguridad.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\Seguridad\bin\Seguridad.pdb
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\Seguridad\obj\Debug\Seguridad.csproj.CoreCompileInputs.cache
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\Seguridad\obj\Debug\Seguridad.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\Seguridad\obj\Debug\Seguridad.pdb
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\Seguridad\obj\Debug\Seguridad.csproj.AssemblyReference.cache

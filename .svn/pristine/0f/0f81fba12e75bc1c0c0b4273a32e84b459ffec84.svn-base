@@ -1,0 +1,338 @@
+<?xml version="1.0"?>
+<!--
+  For more information on how to configure your ASP.NET application, please visit
+  http://go.microsoft.com/fwlink/?LinkId=169433
+  -->
+<configuration>
+  <configSections>
+    <!-- Logg4Net Configuration -->
+    <section name="log4net" type="log4net.Config.Log4NetConfigurationSectionHandler, log4net"/>
+    <sectionGroup name="applicationSettings" type="System.Configuration.ApplicationSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <section name="Presentacion.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false"/>
+    </sectionGroup>
+  </configSections>
+  <connectionStrings>
+    <add name="GestNICSPDEVConnectionString" connectionString="Data Source=172.26.30.21\DMSS2014E01;Initial Catalog=GestNICSPDEV;User ID=jimenezzl; password=GestNICSP2014" providerName="System.Data.SqlClient"/>
+    <add name="GestNICSPDEVConnectionString2" connectionString="Data Source=172.26.30.21\DMSS2014E01;Initial Catalog=GestNICSPDEV;User ID=jimenezzl; password=GestNICSP2014" providerName="System.Data.SqlClient"/>
+  </connectionStrings>
+  <system.web>
+    <customErrors mode="Off"/>
+    <!--<globalization requestEncoding="utf-8" responseEncoding="utf-8" culture="es-CR"/>-->
+    <!--<globalization requestEncoding="utf-8" responseEncoding="utf-8" culture="es-MX"/>-->
+    <!--RAMSES-->
+    <globalization requestEncoding="utf-8" responseEncoding="utf-8" culture="es-MX" fileEncoding="utf-8" uiCulture="es"/>
+    <httpHandlers>
+      <add path="Reserved.ReportViewerWebControl.axd" verb="*" type="Microsoft.Reporting.WebForms.HttpHandler, Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" validate="false"/>
+    </httpHandlers>
+    <compilation debug="true" targetFramework="4.5">
+      <assemblies>
+        <add assembly="System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A"/>
+        <add assembly="System.Web.Extensions.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+        <add assembly="System.Web.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089"/>
+        <add assembly="System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089"/>
+      </assemblies>
+      <buildProviders>
+        <add extension=".rdlc" type="Microsoft.Reporting.RdlBuildProvider, Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"/>
+      </buildProviders>
+    </compilation>
+    <httpRuntime targetFramework="4.5" maxRequestLength="5242880" executionTimeout="10000"/>
+    <authentication mode="Forms">
+      <forms defaultUrl="~/Principal.aspx" loginUrl="~/Login.aspx" slidingExpiration="true" timeout="20000"/>
+    </authentication>
+    <sessionState mode="InProc" timeout="20000"/>
+    <pages>
+      <controls>
+        <add tagPrefix="ajaxToolkit" assembly="AjaxControlToolkit" namespace="AjaxControlToolkit"/>
+      </controls>
+    </pages>
+  </system.web>
+  
+  <appSettings>
+    <add key="DireccionConfigs" value="C:\inetpub\wwwroot\SistemaGestor\Configs\"/>
+    <add key="ValidationSettings:UnobtrusiveValidationMode" value="None"/>
+    <add key="PlanCuentas" value="OPER"/>
+    <add key="SizeByteMaxTotalArchivos" value="5342880"/>
+    <!-- 5242880 bites = 5 megas -->
+    <add key="ErrorSizeByteMaxTotalArchivos" value="No se puede cargar el archivo porque sobrepasa junto con los ya cargados el límite permitido de X MB."/>
+    <add key="TotalAnnosEnConsultas" value="7"/>
+    <add key="UnidadesTiempoPeriodoPermitido" value="T"/>
+    <!-- value="BTCSA" Bimestre, Trimestre, Cuatrimestre, Semestre y Anual-->
+    <!-- DTSX -->
+    <!-- <add key="DTSX_RutaDescargaArchivo" value="L:\\SistemaGestor\\Archivos_SistemaGestor\\" /> -->
+    <add key="DTSX_RutaDescargaArchivo" value="C:/ClusterStorage/SistemaGestor/Archivos_SistemaGestor/"/>
+    <add key="DTSX_PaqueteURL" value="C:/ClusterStorage/SistemaGestor/DTSX_SistemaGestor/"/>
+    <!--<add key="DTSX_RutaDescargaArchivo" value="C:/SistemaGestor/Archivos_SistemaGestor/" />
+    <add key="DTSX_PaqueteURL" value="C:/SistemaGestor/DTSX_SistemaGestor/" />-->
+    <add key="DTSX_Ruta32Bit" value="C://&quot;Program Files (x86)&quot;//&quot;Microsoft SQL Server&quot;//120//DTS//Binn//"/>
+    <add key="DTSX_DescargaArchivoEnServer" value="DescargaArchivoEnServer.dtsx"/>
+    <add key="Run64BitRuntime_DTSX_DescargaArchivoEnServer" value="false"/>
+    <add key="DTSX_EjecucionJob" value="true"/>
+    <add key="DTSX_JobFolder" value="SistemaGestor"/>
+    <add key="DTSX_JobProjectBalance" value="BalanceComprobacion"/>
+    <add key="DTSX_JobProjectPatrimonio" value="CambioPatrimonio"/>
+    <add key="DTSX_JobProjectDescarga" value="DescargaArchivo"/>
+    <add key="DTSX_JobProjectDeuda" value="DeudaPublica"/>
+    <add key="DTSX_JobProjectFlujo" value="FlujoEfectivo"/>
+    <add key="DTSX_CargaEstadoFinancieroFlujoEfectivo" value="CargaEstadoFinancieroFlujoEfectivo.dtsx"/>
+    <add key="Run64BitRuntime_DTSX_CargaEstadoFinancieroFlujoEfectivo" value="false"/>
+    <add key="DTSX_CargaEstadoFinancieroCambioPatrimonioNeto" value="CargaEstadoFinancieroCambioPatrimonioNeto.dtsx"/>
+    <add key="Run64BitRuntime_DTSX_CargaEstadoFinancieroCambioPatrimonioNeto" value="false"/>
+    <add key="DTSX_CargaEstadoFinancieroBalanceComprobacion" value="CargaEstadoFinancieroBalanceComprobacion.dtsx"/>
+    <add key="Run64BitRuntime_DTSX_CargaEstadoFinancieroBalanceComprobacion" value="false"/>
+    <add key="DTSX_CargaEstadosFinancierosDeudaPublica" value="CargaEstadosFinancierosDeudaPublica.dtsx"/>
+    <add key="Run64BitRuntime_DTSX_CargaEstadosFinancierosDeudaPublica" value="false"/>
+    <add key="CodigoEstadosFinancieros_EstadoFlujoEfectivo" value="1"/>
+    <add key="CodigoEstadosFinancieros_EstadoSituacionEvolucionBienes" value="2"/>
+    <add key="CodigoEstadosFinancieros_EstadoCambioPatrimonioNeto" value="3"/>
+    <add key="CodigoEstadosFinancieros_ConsolidacionNotas" value="4"/>
+    <add key="CodigoEstadosFinancieros_EstadoBalanceComprobacion" value="5"/>
+    <add key="CodigoEstadosFinancieros_EstadoEjecucionPresupuestaria" value="6"/>
+    <add key="CodigoEstadosFinancieros_EstadoFinancieroSegmentos" value="7"/>
+    <add key="CodigoEstadosFinancieros_EstadoDeudaPublica" value="8"/>
+    <add key="CodigoEstadosFinancieros_BalanceGeneral" value="9"/>
+    <add key="CodigoEstadosFinancieros_EstadoRendimientoFinanciera" value="10"/>
+    <add key="CodigoEstadosFinancieros_EstadoVarios" value="11"/>
+    <add key="CodigoEstadosFinancieros_CorreoAutorizacion" value="12"/>
+    <add key="CodigoCatalogoEtapasEstadoFinanciero_UsuarioInstitucion" value="1"/>
+    <add key="CodigoCatalogoEtapasEstadoFinanciero_EnTramiteRevisionInstitucion" value="2"/>
+    <add key="CodigoCatalogoEtapasEstadoFinanciero_AprobadoInstitucion" value="3"/>
+    <add key="CodigoCatalogoEtapasEstadoFinanciero_RechazadoInstitucion" value="4"/>
+    <add key="CodigoCatalogoEtapasEstadoFinanciero_EnTramiteRevisionAnalista" value="5"/>
+    <add key="CodigoCatalogoEtapasEstadoFinanciero_AprobadoAnalista" value="6"/>
+    <add key="CodigoCatalogoEtapasEstadoFinanciero_RechazadoAnalista" value="7"/>
+    <add key="EventLogSource" value="NICSP"/>
+    <!-- Info para los reportes -->
+
+    <add key="ReportUser" value="nicspde"/>
+    <add key="ReportPassword" value="ZABFAG4AcwBwADIAMAAxADUALgA="/>
+    <add key="ReportDomain" value="hacienda"/>
+    <add key="ServidorReportes" value="http://mh-cpd-dnspbd1/ReportServer_NICSPD"/>
+    <add key="IdRolCargaEntidad" value="39"/>
+    <add key="IdRolRevisionEntidad" value="40"/>
+    <add key="IdRolRevisionAnalista" value="41"/>
+    
+    <!-- Correo -->
+    <add key="CorreoClientePort" value="25"/>
+    <add key="CorreoClienteHost" value="172.18.100.11"/>
+    <add key="UsuarioSistemaConsolidacion" value="scan@hacienda.go.cr"/>
+    <add key="CorreoNetworkCredentialUsuario" value="hacienda\scan"/>
+    <add key="CorreoNetworkCredentialPassWord" value="hacienda01*"/>
+    <add key="CorreoAsuntoRevisionInstitucion" value="Revisión estados financieros (Institución)"/>
+    <add key="CorreoAsuntoRechazoInstitucion" value="Rechazo estados financieros (Institución)"/>
+    <add key="CorreoAsuntoRevisionContabilidad" value="Revisión estados financieros (Institución)"/>
+    <add key="CorreoAsuntoRechazoContabilidad" value="Rechazo estados financieros (Contabilidad Nacional)"/>
+    <add key="CorreoAsuntoAprobacionContabilidad" value="Aprobación estados financieros (Contabilidad Nacional)"/>
+    <!-- Usuario - Revisión  dentro de la institución  -->
+    <add key="CorreoRevision_Usuario_RevisionInstitucion" value="Estimado usuario: &lt;br/&gt; Le comunicamos que los Estados Financieros y sus anexos han sido cargados satisfactoriamente al Módulo Gestor de Contabilidad Nacional. &lt;br/&gt; Queda sujeto a la revisión y aprobación de su parte para que sean enviados al ente rector dentro de Contabilidad Nacional."/>
+    <!--Revisión  dentro de la institución  - Usuario -->
+    <add key="CorreoRechazo_RevisionInstitucion_Usuario" value="Estimado usuario: &lt;br/&gt; La institución “XXXXXXX” le informa que los estados financieros y sus auxiliares han sido rechazados. &lt;br/&gt; Favor revisar las observaciones realizadas."/>
+    <!--Revisión  dentro de la institución  - Revisión  contabilidad  -->
+    <add key="CorreoRevision_RevisionInstitucion_RevisionContabilidad" value="Estimado usuario: &lt;br/&gt; Le comunicamos que los Estados Financieros y sus anexos han sido cargados satisfactoriamente al Módulo Gestor de Contabilidad Nacional por parte de la Institución “XXXXXXX”. &lt;br/&gt; Dichos estados se encuentran habilitados para la revisión y aprobación respectiva dentro de Contabilidad Nacional."/>
+    <!--Revisión  contabilidad - Aprobado -->
+    <add key="CorreoRechazo_RevisionContabilidad_Usuario" value="Estimado usuario: &lt;br/&gt; La Contabilidad Nacional le informa que los estados financieros y sus auxiliares han sido rechazados. &lt;br/&gt; Favor revisar las observaciones realizadas."/>
+    <!--Revisión  contabilidad - Aprobado -->
+    <add key="CorreoAprobado_RevisionContabilidad_Usuario" value="Estimado usuario: &lt;br/&gt; La Contabilidad Nacional le informa que los estados financieros y sus auxiliares han sido aprobados."/>
+    <add key="Anexo_UsuarioCorreo" value="&lt;br/&gt; &lt;br/&gt; Usuario del sistema Gestor: XXXXX &lt;br/&gt; Correo Usuario: YYYYY"/>
+    <!-- Nombres Reportes -->
+    <add key="ReporteBitacoraFlowError" value="/NICSP/rptpcBitacoraFlujoErroresDTSX"/>
+    <add key="ReporteEntidadesEntregaATiempoEstadosFinancieros" value="/NICSP/rptpcEntidadesEntregaATiempoEstadosFinancieros"/>
+    <add key="ReporteEntidadesEntregaRechazadaEstadosFinancieros" value="/NICSP/rptpcEntidadesEntregaRechazadaEstadosFinancieros"/>
+    <add key="ReporteEntidadesEntregaTardeEstadosFinancieros" value="/NICSP/rptpcEntidadesEntregaTardeEstadosFinancieros"/>
+    <add key="ReporteEstadoFinancieroCambioPatrimonioNetoAgregado" value="/NICSP/rptpcEstadoFinancieroCambioPatrimonioNetoAgregado"/>
+    <add key="ReporteEstadoFinancieroFlujoEfectivoAgregado" value="/NICSP/rptpcEstadoFinancieroFlujoEfectivoAgregado"/>
+    <add key="ReporteEstadoFinancieroFlujoEfectivoDesagregadoPorAmbitoConsolidacionNumCuenta" value="/NICSP/rptpcEstadoFinancieroFlujoEfectivoDesagregadoPorAmbitoConsolidacionNumCuenta"/>
+    <add key="ReporteActivosContigentes" value="/NICSP/rptcoInformeActivosContigentes"/>
+    <add key="ReportePasivosContigentes" value="/NICSP/rptcoInformePasivosContigentes"/>
+    <add key="ReporteProvisiones" value="/NICSP/rptcoInformeProvisiones"/>
+    <add key="ReporteCruceVariables" value="/NICSP/rptInformeProvCruceVariables"/>
+    <add key="ReporteCXCxP" value="/NICSP/rptcoInformeCuentasCobrar"/>
+    <add key="ReporteCXP" value="/NICSP/rptcoInformeCuentasPagar"/>
+    <add key="ReporteCXC" value="/NICSP/rptcoInformeCuentasCobrar"/>
+    <add key="ReporteCanjeEmision" value="/NICSP/repCanjeEmision"/>
+    <add key="ReporteSubastaEmision" value="/NICSP/repSubastaEmision"/>
+    <add key="InformeCuentasCobrar" value="/NICSP/rptcoBitacoraCuentasCobrar"/>
+    
+    <add key="ReportePrevisiones" value="/NICSP/rptcoInformeAntiguedadDeSaldosPrevisionIncobrables"/>
+    <add key="ReporteValoracionMoneda" value="/NICSP/repValoracionMoneda"/>
+    <add key="ReportePrevisionesMinisterios" value="/NICSP/rptcoInformeAntiguedadDeSaldosPrevisionIncobrablesMinisterio"/>
+
+    <add key="ReporteReversionDevengo" value="/NICSP/repReversionDevengo"/>
+    <add key="ReporteCuponesPagados" value="/NICSP/repCuponesPagados"/>
+    <add key="ReporteTituloReclasificado" value="/NICSP/repTituloReclasificado"/>
+    
+    <add key="InformeCuentasPagar" value="/NICSP/rptcoBitacoraCuentasPagar"/>
+    <add key="ReporteAnulados" value="/NICSP/rptcoInformeExpedientesAnulados"/>
+    <add key="ReporteDuplicados" value="/NICSP/rptcoInformeExpedientesDuplicados"/>
+    <add key="ReporteCapturaIngresosPeriodico" value="/NICSP/rptciConsultarPagosPorFormulario"/>
+    <add key="ReporteCapturaIngresosPeriodicoUPR" value="/NICSP/rptciConsultarPagosPorFormularioUPR"/>
+    <add key="ReporteRevelacion" value="/NICSP/rptrnImpresionRevelacion"/>
+    <add key="ReporteRevelacionPendiente" value="/NICSP/rptrnImpresionRevPendiente"/>
+    <add key="ReporteRevelacionContingente" value="/NICSP/rptReporteRevCont"/>
+    <add key="ReporteConciliacionSaldosDeudas" value="/NICSP/rptConciliacionSaldosDeudas"/>
+    <add key="ReporteNemotecnicosCPLP" value="/NICSP/repNemotecnicosCPLP"/>
+    <add key="ReporteColocaciones" value="/NICSP/repColocaciones"/>
+    <add key="ReporteCancelaciones" value="/NICSP/repCancelaciones"/>
+    <add key="ReporteSaldosDI" value="/NICSP/repSaldosDeudaInterna"/>
+    <add key="ReporteDevengo" value="/NICSP/repFlujoEfectivo"/>
+    <add key="ReporteDevengoDE" value="/NICSP/repDevengoDeudaExterna"/>
+    <add key="ReporteSaldosDeudaExterna" value="/NICSP/repSaldosDeudaExterna"/>
+    
+    <add key="ReporteNuevoFormulario" value="/NICSP/repNuevoFormulario"/>
+    <add key="ReporteConsolidacion" value="/NICSP/repConsolidacion"/>
+    <add key="ReporteGeneralDE" value="/NICSP/repDevengoGeneralDeudaExterna"/>
+
+    <add key="ReporteSaldosDE" value="/NICSP/repSaldosDeudaExterna"/>
+    <add key="ReporteMovimientosDE" value="/NICSP/repMovimientosDE"/>
+    <add key="ReporteOperacionesEspeciales" value="/NICSP/repOperacionesEspeciales"/>
+    <add key="ReportePagosExpedientesCI" value="/NICSP/rptPagosExpedientesCI"/>
+    <add key="ReportePagosExpedientesCISedeJudicial" value="/NICSP/rptPagosExpedientesCISedeJudicial"/>
+    <add key="ReporteHistorialTitulo" value="/NICSP/repHistorialTituloValor"/>
+    <add key="ReporteDevengoCuponCanje" value="/NICSP/repFlujoEfectivoCuponCanje"/>
+    <add key="ReporteTitulosReclasificados" value="/NICSP/repTitulosReclasificados"/>
+    <add key="ReporteTitulosGarantia" value="/NICSP/repTitulosGarantía"/>
+    <add key="ReporteDevengoGeneral" value="/NICSP/repDevengoTitulos"/>
+    <add key="ReporteBitacora" value="/NICSP/rptBitacoraAsientos"/>
+    <add key="ReporteAuxiliar" value="/NICSP/repAuxiliarContable"/>
+    <add key="ReporteEstadoFinancieroDeudaPublicaAgregado" value="/NICSP/rptpcEstadosFinancierosDeudaPublicaAgregado"/>
+    <add key="ReporteEstadoFinancieroDeudaPublicaDesagregado" value="/NICSP/rptpcEstadosFinancierosDeudaPublicaDesagregado"/>
+    <add key="ReporteEstadoFinancieroCambioPatrimonioNetoDesagregado" value="/NICSP/rptpcEstadoFinancieroCambioPatrimonioNetoDesagregado"/>
+    <add key="ReporteEstadoFinancieroCambioPatrimonioNetoDesagregadoPorAmbitoConsolidacionNumCuenta" value="/NICSP/rptpcEstadoFinancieroCambioPatrimonioNetoDesagregadoPorAmbitoConsolidacionNumCuenta"/>
+    <add key="ReporteEstadoFinancieroFlujoEfectivoDesagregado" value="/NICSP/rptpcEstadoFinancieroFlujoEfectivoDesagregado"/>
+    <add key="EstadoFinancieroDeudaPublicaDesagregadoPorAmbitoConsolidacionNumConsecutivo" value="/NICSP/rptpcEstadosFinancierosDeudaPublicaDesagregadoPorAmbitoConsolidacionNumConsecutivo"/>
+    <!--Mensajes de Error-->
+    <add key="strErrorRetornoNulo" value="No existen datos que suministrar para esta consulta."/>
+    <add key="strErrorParametros" value="Faltan parámetros para ejecutar el proceso."/>
+    <add key="strErrorDatosWebContraExcel" value="Los datos suministrados no concuerdan con la información del archivo, verificar el Id Entidad, Periodo y la Unidad de Tiempo del Periodo."/>
+    <add key="strErrorValidaPeriodoActual" value="Error en la validación del periodo, no se pudo procesar."/>
+    <add key="strErrorValidaPeriodoActual2" value="Validar que la carga se haga entre los rangos de tiempo indicados de acuerdo a la Unidad de Tiempo del Periodo."/>
+    <add key="strErrorBorrarArchivo" value="Error al borrar archivo."/>
+    <add key="strErrorBorrarArchivoEtapaNovalida" value="Error al borrar archivo. No se puede eliminar el archivo, ya no se encuentra en fase de carga, los archivos se encuentran en revisión."/>
+    <add key="strErrorBorrarArchivoEtapaNovalida2" value="Error al borrar archivo. No se puede eliminar el archivo, se encuentra en fase de carga o revisión por parte de la institución."/>
+    <add key="strErrorCargaArchivo" value="No se pudo cargar el archivo "/>
+    <add key="strErrorNoExisteArchivoFlujoEfectivo" value="Se debe cargar el archivo de Flujo de Efectivo."/>
+    <add key="strErrorNoExisteArchivoCambioPatrimonioNeto" value="Se debe cargar el archivo de Cambio Patrimonio Neto."/>
+    <add key="strErrorNoExisteArchivoBalanceComprobacion" value="Se debe cargar el archivo de Balance de Comprobación."/>
+    <add key="strErrorNoExisteArchivoDeudaPublica" value="Se debe cargar el archivo de Deuda Pública."/>
+    <add key="strErrorNoExisteArchivoEstadoVarios" value="Se debe cargar el archivo de Estado Varios."/>
+    <add key="strErrorNoExisteArchivoNotasEstadosFinancieros" value="Se debe cargar el archivo de Notas Estados Financieros."/>
+    <add key="strErrorNoExisteArchivoAnexosEstadosFinancieros" value="Se debe cargar el Archivo Anexo."/>
+    <add key="strErrorCambioEstado" value="Error, no se puede procesar el cambio de estado del proceso."/>
+    <add key="strErrorConsultaEtapaEstadoFinanciero" value="Error al consultar las etapas del estado financiero."/>
+    <add key="strErrorNoExisteArchivoPlantillasEstadosFinancieros" value="Se debe cargar el Archivo de Plantilla."/>
+    <add key="strErrorCorreo" value="Error al tratar de enviar el correo para informar que la información cambio de etapa."/>
+    <add key="strErrorNoConcuerdaIdInstitucion" value="Error: Su Usuario está ligado a una institución y este no concuerda con el parámetro que esta seleccionado para esta operación."/>
+    <add key="ErrorLog" value="C:\Logs\ErrorLog.txt"/>
+    <add key="ContrasenaReporting" value="Contrasena"/>
+  </appSettings>
+  <system.webServer>
+    <httpProtocol>
+      <customHeaders>
+        <clear/>
+        <add name="X-UA-Compatible" value="IE=EmulateIE10"/>
+      </customHeaders>
+    </httpProtocol>
+    <directoryBrowse enabled="true"/>
+    <validation validateIntegratedModeConfiguration="false"/>
+    <handlers>
+      <add name="ReportViewerWebControlHandler" preCondition="integratedMode" verb="*" path="Reserved.ReportViewerWebControl.axd" type="Microsoft.Reporting.WebForms.HttpHandler, Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"/>
+    </handlers>
+  </system.webServer>
+  <applicationSettings>
+    <Presentacion.Properties.Settings>
+      <setting name="Presentacion_wsObtenerDatos_Service1" serializeAs="String">
+        <value>http://172.16.56.119/WSSICxHACIENDA/Service1.asmx</value>
+      </setting>
+      <setting name="Presentacion_wsDTR_DTR" serializeAs="String">
+        <value>http://172.18.67.223:86/CGPCanales/DTR.asmx</value>
+      </setting>
+      <setting name="Presentacion_wrTributa_Service1" serializeAs="String">
+        <value>http://172.16.56.119/WSSICxHACIENDA/Service1.asmx</value>
+      </setting>
+      <setting name="Presentacion_wsCaptura_wsCapturaIngreso" serializeAs="String">
+        <value>http://mh-cpd-dnspap1:83/wsCapturaIngreso.asmx</value>
+      </setting>
+      <setting name="Presentacion_wsPC_wsPlantillasConsolidacion" serializeAs="String">
+        <value>http://mh-cpd-dnspap1:89/wsPlantillasConsolidacion.asmx</value>
+      </setting>
+      <setting name="Presentacion_wsDeudaExterna_wsDeudaExterna" serializeAs="String">
+        <value>http://mh-cpd-dnspap1:82/wsDeudaExterna.asmx</value>
+      </setting>
+      <setting name="Presentacion_wsDeudaInterna_wsDeudaInterna" serializeAs="String">
+        <value>http://mh-cpd-dnspap1:82/wsDeudaInterna.asmx</value>
+      </setting>
+      <setting name="Presentacion_wsAsientos_ServicioContable" serializeAs="String">
+        <value>http://mh-cpd-dnspap1:86/ServicioContable.asmx</value>
+      </setting>
+      <setting name="Presentacion_wsBC_wsBalanceComprobacion" serializeAs="String">
+        <value>http://mh-cpd-dnspap1:88/wsBalanceComprobacion.asmx</value>
+      </setting>
+      <setting name="Presentacion_wsMontoReservasSAP_ZWS_MONTO_RESERVA"
+        serializeAs="String">
+        <value>http://cpd-qasg1.mh.hacienda.go.cr:8000/sap/bc/srt/rfc/sap/zws_zint_conf_monto_reserva/350/zws_monto_reserva/binding</value>
+      </setting>
+      <setting name="Presentacion_wsSG_wsSistemaGestor" serializeAs="String">
+        <value>http://mh-cpd-dnspap1:81/wsSistemaGestor.asmx</value>
+      </setting>
+      <setting name="Presentacion_wsDI_wsDeudaInterna" serializeAs="String">
+        <value>http://mh-cpd-dnspap1:82/wsDeudaInterna.asmx</value>
+      </setting>
+    </Presentacion.Properties.Settings>
+  </applicationSettings>
+  <system.serviceModel>
+    <bindings>
+      <basicHttpBinding>
+        <binding name="ExtractosSoap" maxReceivedMessageSize="2147483647" />
+      </basicHttpBinding>
+      <customBinding>
+        <binding name="binding">
+          <mtomMessageEncoding messageVersion="Soap11WSAddressing10" />
+          <httpsTransport authenticationScheme="Basic" />
+        </binding>
+        <binding name="binding_soap12">
+          <mtomMessageEncoding />
+          <httpsTransport authenticationScheme="Basic" />
+        </binding>
+      </customBinding>
+    </bindings>
+    <client>
+      <endpoint address="http://172.18.4.96/servicios/extractos.asmx"
+        binding="basicHttpBinding" bindingConfiguration="ExtractosSoap"
+        contract="sr_rdi_rde.ExtractosSoap" name="ExtractosSoap" />
+    </client>
+  </system.serviceModel>
+  <!-- <log4net configSource="log4net.config" /> -->
+  <log4net>
+    <appender name="Contingentes" type="log4net.Appender.FileAppender">
+      <file value="SGContigentes_LOG.log"/>
+      <appendToFile value="true"/>
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="%date [%thread] %-5level %logger [%property{NDC}] - %message%newline"/>
+      </layout>
+    </appender>
+    <appender name="ConsoleAppender" type="log4net.Appender.ConsoleAppender">
+      <layout type="log4net.Layout.PatternLayout">
+        <param name="Header" value="[Header]\r\n"/>
+        <param name="Footer" value="[Footer]\r\n"/>
+        <param name="ConversionPattern" value="%date [%thread] %-5level %logger [%property{NDC}] - %message%newline"/>
+      </layout>
+    </appender>
+    <appender name="ContingentesRollingFileAppender" type="log4net.Appender.RollingFileAppender">
+      <file value="Log4NetApplicationRollingLog.log"/>
+      <appendToFile value="true"/>
+      <rollingStyle value="Size"/>
+      <maxSizeRollBackups value="10"/>
+      <maximumFileSize value="1MB"/>
+      <staticLogFileName value="true"/>
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="%date [%thread] %level %logger - %message%newline"/>
+      </layout>
+    </appender>
+    <root>
+      <level value="ALL"/>
+      <appender-ref ref="Contingentes"/>
+      <appender-ref ref="ConsoleAppender"/>
+      <appender-ref ref="ContingentesRollingFileAppender"/>
+    </root>
+  </log4net>
+
+</configuration>

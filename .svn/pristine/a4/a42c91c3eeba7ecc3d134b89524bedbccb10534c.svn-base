@@ -1,0 +1,101 @@
+﻿<?xml version="1.0"?>
+<!--
+  Descripción: Archivo de configuración del conector de 
+	Enterprise Library v1.0.0
+	Autor: Fabian SolAnno Redondo
+	Fecha: 26-08-2015
+-->
+<CommandDef>
+  <Command>
+    <BaseDatos>MSSQL</BaseDatos>
+    <DbInstance>ConexionBD</DbInstance>
+    <Type>CommandType.StoredProcedure</Type>
+    <Text>rn.uspActualizarRevContTotalPasivos</Text>
+    <NumberOfParameters>8</NumberOfParameters>
+    <ReturnType>procedure</ReturnType>
+    <CommandTimeout>6000</CommandTimeout>
+  </Command>
+  <Parameters>
+    <Parameter>
+      <Name>@pIdRevCont</Name>
+      <VariableMapeo>Lstr_IdRevCont</VariableMapeo>
+      <Type>Int64</Type>
+      <Size>64</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+    <Parameter>
+      <Name>@pIdSociedadGL</Name>
+      <VariableMapeo>Lstr_IdSociedadGL</VariableMapeo>
+      <Type>String</Type>
+      <Size>10</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+    <Parameter>
+      <Name>@pTipoProceso</Name>
+      <VariableMapeo>Lstr_TipoProceso</VariableMapeo>
+      <Type>Int32</Type>
+      <Size>32</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+    <Parameter>
+      <Name>@pMontoPasivos</Name>
+      <VariableMapeo>Ldec_MontoPasivos</VariableMapeo>
+      <Type>Decimal</Type>
+      <Size>32</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+    <Parameter>
+      <Name>@pCantExpPasivos</Name>
+      <VariableMapeo>Lstr_CantExpPasivos</VariableMapeo>
+      <Type>Int32</Type>
+      <Size>32</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pMontoActivos</Name>
+      <VariableMapeo>Ldec_MontoActivos</VariableMapeo>
+      <Type>Decimal</Type>
+      <Size>32</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+    
+    <Parameter>
+      <Name>@pFchModifica</Name>
+      <VariableMapeo>Lstr_FchModifica</VariableMapeo>
+      <Type>DateTime</Type>
+      <Size>32</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+    <Parameter>
+      <Name>@pProceso</Name>
+      <VariableMapeo>Lint_Proceso</VariableMapeo>
+      <Type>Int32</Type>
+      <Size>32</Size>
+      <Nullable>False</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+    <Parameter>
+      <Name>@pResultado</Name>
+      <Type>String</Type>
+      <Size>2</Size>
+      <Direction>Output</Direction>
+    </Parameter>
+    <Parameter>
+      <Name>@pMensaje</Name>
+      <Type>String</Type>
+      <Size>500</Size>
+      <Direction>Output</Direction>
+    </Parameter>
+  </Parameters>
+</CommandDef>
+
+
+

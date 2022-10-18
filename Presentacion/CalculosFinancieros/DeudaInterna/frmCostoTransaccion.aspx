@@ -1,0 +1,159 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PaginaMaestra/PortalPrincipal.Master" AutoEventWireup="true" CodeBehind="frmCostoTransaccion.aspx.cs" Inherits="Presentacion.CalculosFinancieros.DeudaInterna.frmCostoTransaccion" %>
+<%@ Register Assembly="eWorld.UI.Compatibility, Version=2.0.6.2393, Culture=neutral, PublicKeyToken=24d65337282035f2"
+    Namespace="eWorld.UI.Compatibility" TagPrefix="cc1" %>
+<%@ Register Assembly="eWorld.UI, Version=2.0.6.2393, Culture=neutral, PublicKeyToken=24d65337282035f2"
+    Namespace="eWorld.UI" TagPrefix="ew" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="ContenidoJS" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ScriptContent" runat="server">
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="encabezado" runat="server"></asp:Content>
+
+<asp:Content ID="Content4" ContentPlaceHolderID="Enlaces" runat="server"></asp:Content>
+
+<asp:Content ID="Content5" ContentPlaceHolderID="Contenido" runat="server">
+    <h3>Ingreso de Costos por Transacción: </h3>
+    <div class="col-md-12" style="background-color:lightgray;">
+        <div class="col-md-6">
+            <p>&nbsp;</p>
+            <%--<p><strong>Dolares Gaston:</strong><asp:Label ID="dolGas" runat="server" Text="0.0"></asp:Label>&nbsp;Colones</p>--%>
+            <p><strong>Compra Colones:</strong><asp:Label ID="lblCompCol" runat="server" Text="0.0"></asp:Label>&nbsp;Colones</p>
+            <p><strong>Venta Colones:</strong><asp:Label ID="lblVentCol" runat="server" Text="0.0"></asp:Label>&nbsp;Colones</p>
+            <p><strong>Euro Colones:</strong> <asp:Label ID="lblEuroCol" runat="server" Text="0.0"></asp:Label> &nbsp;Colones</p>
+            <p>&nbsp;</p>
+        </div>
+        <div class="col-md-6">
+            <p>&nbsp;</p>
+            <p><strong>Yenes Colones:</strong><asp:Label ID="lblYenCol" runat="server" Text="0.0"></asp:Label>&nbsp;Colones</p>
+            <p><strong>UDE Colones:</strong><asp:Label ID="lblUdesCol" runat="server" Text="0.0"></asp:Label>&nbsp;Colones</p>
+            <p>&nbsp;</p>
+        </div>
+    </div>
+   <div>
+       <br />
+        <h4><strong>Ingrese los valores para generar un costo por transacción en el sistema:<br /></strong></h4> 
+        <asp:TextBox ID="txtIdCostoTransaccion" runat="server" Visible="false"></asp:TextBox>
+        <asp:TextBox ID="txtEstado" runat="server" Visible="false"></asp:TextBox>
+        <asp:TextBox ID="txtFechaModifica" runat="server" Visible="false"></asp:TextBox>
+
+        <div class="col-md-6">
+            <div class="col-md-5">Nemotécnico:</div>
+            <div class="col-md-7">
+                <asp:DropDownList runat="server" ID="ddlNemotecnico" AppendDataBoundItems="True"  CssClass="chzn-select FormatoDropDownList" AutoPostBack="True" OnSelectedIndexChanged="ddlNemotecnico_SelectedIndexChanged1">
+                    <asp:ListItem Value="">-- Seleccione Opción --</asp:ListItem>
+                    <asp:ListItem Value="">Sin Valor</asp:ListItem>
+                </asp:DropDownList>
+            </div>
+        
+            <div class="col-md-5">Número Valor:</div>
+            <div class="col-md-7">
+                 <asp:DropDownList ID="ddlNumValor" runat="server" CssClass="FormatoDropDownList" AppendDataBoundItems="True" AutoPostBack="True" OnSelectedIndexChanged="ddlNumValor_SelectedIndexChanged">
+                    <asp:ListItem Value="00">-- Seleccione Opción --</asp:ListItem>
+                    <asp:ListItem Value="01">Insertar Valor</asp:ListItem>
+                </asp:DropDownList>
+                <br />
+                <asp:TextBox ID="txtNroValor" runat="server" Visible="False"  CssClass="FormatoTextBox"></asp:TextBox>
+            </div>
+       
+            <div class="col-md-5">Módulo SINPE:</div>
+            <div class="col-md-7">
+                <asp:DropDownList ID="ddlModSinpe" runat="server" CssClass="chzn-select FormatoDropDownList">
+                    <asp:ListItem>RDI</asp:ListItem>
+                    <asp:ListItem>RDE</asp:ListItem>
+                </asp:DropDownList>
+            </div>
+       
+            <div class="col-md-5">Fecha:</div>
+            <div class="col-md-7"><asp:TextBox ID="txtFecha" runat="server" CssClass="js-date-picker FormatoTextBox" AutoPostBack="true" OnTextChanged="calFecha_DateChanged"></asp:TextBox></div>
+        </div>
+        <div class="col-md-6">
+            <div class="col-md-5">Moneda:</div>
+            <div class="col-md-7">
+                <asp:DropDownList ID="ddlMoneda" runat="server" AppendDataBoundItems="True" CssClass="chzn-select FormatoDropDownList" AutoPostBack="True" OnSelectedIndexChanged="ddlMoneda_SelectedIndexChanged">                    
+                </asp:DropDownList>
+<%--                <asp:ListItem Value="0">-- Seleccione Opcion --</asp:ListItem> DataSourceID="Monedas"   DataTextField="NomMoneda" DataValueField="IdMoneda" --%>
+                <asp:TextBox ID="txtIdMonedaNemotecnico" runat="server" Visible="false" CssClass="FormatoTextBox"></asp:TextBox>
+            </div>
+       
+            <div class="col-md-5">Monto:</div>
+            <div class="col-md-7"><asp:TextBox ID="txtMonto" runat="server"  onkeypress="return AceptarSoloNumerosMonto(event)"  onclick="Formateo_Monto(this)"  CssClass="FormatoTextBox" onchange="Formateo_Monto(this)" OnTextChanged="txtMonto_TextChanged" AutoPostBack="True">0.00</asp:TextBox>
+                <%--<asp:TextBox ID="txtMonto" runat="server" CausesValidation ="true" OnTextChanged="txtMonto_TextChanged" AutoPostBack="True"  CssClass="FormatoTextBox" onkeypress="return AceptarSoloNumeros(event)"></asp:TextBox>--%></div>
+       
+            <div class="col-md-5">Monto en Colones:</div>
+            <div class="col-md-7"><asp:TextBox ID="txtColones" runat="server" OnTextChanged="TextBox1_TextChanged" ReadOnly="True" CssClass="FormatoTextBox"></asp:TextBox></div>
+        </div>
+       <div class="col-md-12">
+           <div class="col-md-5">Detalle:</div>
+           <div class="col-md-10" style="width:100%;padding-left:10px;"><asp:TextBox ID="txtDetalle" runat="server" TextMode="MultiLine" Height="75px"  CssClass="FormatoTextBox"></asp:TextBox></div>
+       </div>
+   </div>
+   <div class="col-md-12" style="text-align:center;">
+       <asp:Button ID="btnAnadirCosto" runat="server" Text="Añadir Costo" OnClick="Button1_Click" CssClass="ButtonNeutro" Width="200px"/>
+        <br />
+        <br />
+        <asp:Button ID="btnActualizarCosto" runat="server" Text="Actualizar Costo" OnClick="btnActualizar_Click" CssClass="ButtonNeutro" Width="200px" Visible="false"/>
+        <br />
+        <br />
+        <asp:Label ID="lblMensaje" runat="server" Text="Estado de la transacción: "></asp:Label>
+        <asp:Label ID="lblMensajeTran" runat="server" Text="Actualizando Datos" Style="color:green;" Visible="false"></asp:Label>
+                  
+   </div>
+   <%--<asp:SqlDataSource ID="Monedas" runat="server" ConnectionString="<%$ ConnectionStrings:GestNICSPDEVConnectionString %>" SelectCommand="SELECT [NomMoneda], rtrim(ltrim([IdMoneda])) as IdMoneda FROM [ma].[Monedas]
+                    where [IdMoneda] in ('JPY', 'CRCN', 'USD', 'EUR','UDE')
+                    order by [NomMoneda]"></asp:SqlDataSource>--%>
+
+
+    <!-- Filtrado por estado -->
+    <div class="col-md-12">
+      <asp:CheckBox ID="chkEstadoCostoTransaccion" runat="server" Text=" Costos por Transacción Activos" AutoPostBack="true" OnCheckedChanged="chkEstadoCostoTransaccion_CheckedChanged" checked="true" />
+    </div>
+
+    <div style="width: auto" align="center">
+    <asp:GridView ID="grvCostoTransaccion" runat="server" AllowPaging="True" AutoGenerateColumns="False" OnPageIndexChanging="grvCostoTransaccion_PageIndexChanging" PageSize="15"
+         datakeynames="IdCostoTransaccion" CssClass="FormatoGrid" AlternatingRowStyle-CssClass="alt" PagerStyle-CssClass="pgr"  OnRowCommand="grvCostoTransaccion_RowCommand" OnRowDataBound="grvCostoTransaccion_OnRowDataBound">
+        <AlternatingRowStyle CssClass="alt"></AlternatingRowStyle>
+        <Columns>
+            <asp:TemplateField HeaderText="IdCostoTransaccion" Visible="false" >
+                <ItemTemplate>
+                    <asp:Label ID="lblIdCostoTransaccion" runat="server" Text='<%# Bind("IdCostoTransaccion") %>'>
+                    </asp:Label>
+                </ItemTemplate>
+            </asp:TemplateField>
+             <asp:TemplateField HeaderText="FchaModifica" Visible="false" >
+                <ItemTemplate>
+                    <asp:Label ID="lblFchModifica" runat="server" Text='<%# Bind("FchModifica") %>'>
+                    </asp:Label>
+                </ItemTemplate>
+            </asp:TemplateField>
+            <asp:BoundField DataField="NroValor" HeaderText="Número Valor" />
+            <asp:BoundField DataField="Nemotecnico" HeaderText="Nemotécnico" />
+            <asp:BoundField DataField="Fecha" DataFormatString="{0:d}" HeaderText="Fecha" />
+            <asp:BoundField DataField="NomMoneda" HeaderText="Moneda" />
+            <asp:BoundField DataField="Monto" DataFormatString="{0:N}" HeaderText="Monto" />
+            <asp:BoundField DataField="MontoColones" DataFormatString="{0:N}" HeaderText="Monto Colones" />
+            <asp:BoundField DataField="Detalle" HeaderText="Detalle" />
+            <asp:BoundField DataField="ModuloSINPE" HeaderText="Modulo SINPE" />
+            <asp:BoundField DataField="Estado" HeaderText="Estado" />
+            <asp:TemplateField HeaderText="" ShowHeader="False" HeaderStyle-HorizontalAlign="Left">
+                <ItemTemplate>
+                    <asp:LinkButton ID="lbtEliminar" runat="server" CausesValidation="False" Text="Eliminar" CommandName="Elimina" ></asp:LinkButton>
+                </ItemTemplate>
+            </asp:TemplateField>
+            <asp:TemplateField HeaderText="" ShowHeader="False" HeaderStyle-HorizontalAlign="Left">
+                <ItemTemplate>
+                    <asp:LinkButton ID="lbtEditarCosto" runat="server" CausesValidation="False" Text="Editar" CommandName="Seleccionar" ></asp:LinkButton>
+                </ItemTemplate>
+            </asp:TemplateField>
+        </Columns>
+        <EditRowStyle BackColor="#999999" />
+
+<PagerStyle CssClass="pgr"></PagerStyle>
+    </asp:GridView>
+    </div>
+    <br />
+
+    <br />
+    <div style="background-color:lightgray;width:100%;text-align:center;height:50px;">
+        <asp:Button ID="btnContabilizar" runat="server" CssClass="ButtonNeutro" Text="Contabilizar" Style="margin-top:5px;" OnClick="btnContabilizar_Click"/>
+    </div>
+</asp:Content>

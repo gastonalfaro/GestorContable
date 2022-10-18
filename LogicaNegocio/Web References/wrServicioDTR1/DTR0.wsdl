@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://www.prosoft.cr/CGPCanalesIBAN/DTR/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="DTR" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://www.prosoft.cr/CGPCanalesIBAN/DTR/" location="http://tndigitalwcfv3:90/CGPCanalesWCF/DTR.svc?wsdl=wsdl0" />
+  <wsdl:types />
+  <wsdl:binding name="BasicHttpBinding_DTRIBANSoap" type="i0:DTRIBANSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ServicioDisponible">
+      <soap:operation soapAction="http://www.prosoft.cr/CGPCanalesIBAN/DTR/ServicioDisponible" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Autorizar">
+      <soap:operation soapAction="http://www.prosoft.cr/CGPCanalesIBAN/DTR/Autorizar" style="document" />
+      <wsdl:input name="AutorizarRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="AutorizarResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar">
+      <soap:operation soapAction="http://www.prosoft.cr/CGPCanalesIBAN/DTR/Eliminar" style="document" />
+      <wsdl:input name="EliminarRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="EliminarResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Enviar">
+      <soap:operation soapAction="http://www.prosoft.cr/CGPCanalesIBAN/DTR/Enviar" style="document" />
+      <wsdl:input name="EnviarRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="EnviarResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerInformacionCuenta">
+      <soap:operation soapAction="http://www.prosoft.cr/CGPCanalesIBAN/DTR/ObtenerInformacionCuenta" style="document" />
+      <wsdl:input name="ObtenerInformacionCuentaRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ObtenerInformacionCuentaResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnvioDirecto">
+      <soap:operation soapAction="http://www.prosoft.cr/CGPCanalesIBAN/DTR/EnvioDirecto" style="document" />
+      <wsdl:input name="EnvioDirectoRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="EnvioDirectoResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Registrar">
+      <soap:operation soapAction="http://www.prosoft.cr/CGPCanalesIBAN/DTR/Registrar" style="document" />
+      <wsdl:input name="RegistrarRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="RegistrarResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnvioDirectoCreditoCuenta">
+      <soap:operation soapAction="http://www.prosoft.cr/CGPCanalesIBAN/DTR/EnvioDirectoCreditoCuenta" style="document" />
+      <wsdl:input name="EnvioDirectoCreditoCuentaRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="EnvioDirectoCreditoCuentaResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnvioDirectoCreditoCuentaCalendarizado">
+      <soap:operation soapAction="http://www.prosoft.cr/CGPCanalesIBAN/DTR/EnvioDirectoCreditoCuentaCalendarizado" style="document" />
+      <wsdl:input name="EnvioDirectoCreditoCuentaCalendarizadoRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="EnvioDirectoCreditoCuentaCalendarizadoResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarCreditoCuenta">
+      <soap:operation soapAction="http://www.prosoft.cr/CGPCanalesIBAN/DTR/RegistrarCreditoCuenta" style="document" />
+      <wsdl:input name="RegistrarCreditoCuentaRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="RegistrarCreditoCuentaResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Consultar">
+      <soap:operation soapAction="http://www.prosoft.cr/CGPCanalesIBAN/DTR/Consultar" style="document" />
+      <wsdl:input name="ConsultarRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ConsultarResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCalendarizadas">
+      <soap:operation soapAction="http://www.prosoft.cr/CGPCanalesIBAN/DTR/ConsultarCalendarizadas" style="document" />
+      <wsdl:input name="ConsultarCalendarizadasRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ConsultarCalendarizadasResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InactivarCalendarizacion">
+      <soap:operation soapAction="http://www.prosoft.cr/CGPCanalesIBAN/DTR/InactivarCalendarizacion" style="document" />
+      <wsdl:input name="InactivarCalendarizacionRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="InactivarCalendarizacionResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActivarCalendarizacion">
+      <soap:operation soapAction="http://www.prosoft.cr/CGPCanalesIBAN/DTR/ActivarCalendarizacion" style="document" />
+      <wsdl:input name="ActivarCalendarizacionRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ActivarCalendarizacionResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelarCalendarizacion">
+      <soap:operation soapAction="http://www.prosoft.cr/CGPCanalesIBAN/DTR/CancelarCalendarizacion" style="document" />
+      <wsdl:input name="CancelarCalendarizacionRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="CancelarCalendarizacionResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DTR">
+    <wsdl:port name="BasicHttpBinding_DTRIBANSoap" binding="tns:BasicHttpBinding_DTRIBANSoap">
+      <soap:address location="http://tndigitalwcfv3:90/CGPCanalesWCF/DTR.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,259 @@
+﻿<?xml version="1.0"?>
+<!--
+  Descripción: Archivo de configuración del conector de 
+	Enterprise Library v1.0.0
+	Autor: Jose Gomez Silva
+-->
+<CommandDef>
+  <Command>
+    <BaseDatos>MSSQL</BaseDatos>
+    <DbInstance>ConexionBD</DbInstance>
+    <Type>CommandType.StoredProcedure</Type>
+    <Text>cf.uspRegistrarPagoCCSS</Text>
+    <NumberOfParameters>26</NumberOfParameters>
+    <ReturnType>procedure</ReturnType>
+    <CommandTimeout>6000</CommandTimeout>
+  </Command>
+  <Parameters>
+  
+	<Parameter>
+      <Name>@pEstadoValor</Name>
+      <VariableMapeo>Lstr_EstadoValor</VariableMapeo>
+      <Type>String</Type>
+      <Size>30</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+	
+	<Parameter>
+      <Name>@pNemoTecnico</Name>
+      <VariableMapeo>Lstr_Nemotecnico</VariableMapeo>
+      <Type>String</Type>
+      <Size>30</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+	<Parameter>
+      <Name>@pTipo</Name>
+      <VariableMapeo>Lstr_Tipo</VariableMapeo>
+      <Type>String</Type>
+      <Size>30</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+	
+	<Parameter>
+      <Name>@pTipoNegociacion</Name>
+      <VariableMapeo>Lstr_TipoNegociacion</VariableMapeo>
+      <Type>String</Type>
+      <Size>15</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+	
+	<Parameter>
+      <Name>@pNumValor</Name>
+      <VariableMapeo>Lint_NumValor</VariableMapeo>
+      <Type>Int32</Type>
+      <Size>20</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+	
+    <Parameter>
+      <Name>@pMoneda</Name>
+      <VariableMapeo>Lstr_Moneda</VariableMapeo>
+      <Type>String</Type>
+      <Size>30</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+	
+	<Parameter>
+      <Name>@pValorFacial</Name>
+      <VariableMapeo>Ldec_ValorFacial</VariableMapeo>
+      <Type>Decimal</Type>
+      <Size>20</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+	<Parameter>
+      <Name>@pFchValor</Name>
+      <VariableMapeo>Ldt_FchValor</VariableMapeo>
+      <Type>Date</Type>
+      <Size>20</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+	
+	<Parameter>
+      <Name>@pPlazoValor</Name>
+      <VariableMapeo>Lstr_PlazoValor</VariableMapeo>
+      <Type>String</Type>
+      <Size>30</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+	
+	<Parameter>
+      <Name>@pFchCancelacion</Name>
+      <VariableMapeo>Ldt_FchCancelacion</VariableMapeo>
+      <Type>Date</Type>
+      <Size>20</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+	
+	<Parameter>
+      <Name>@pFchVencimiento</Name>
+      <VariableMapeo>Ldt_FchVencimiento</VariableMapeo>
+      <Type>Date</Type>
+      <Size>20</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+	
+	<Parameter>
+      <Name>@pValorTransadoBruto</Name>
+      <VariableMapeo>Ldec_ValorTransadoBruto</VariableMapeo>
+      <Type>Decimal</Type>
+      <Size>20</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+	
+	<Parameter>
+      <Name>@pValorTransadoNeto</Name>
+      <VariableMapeo>Ldec_ValorTransadoNeto</VariableMapeo>
+      <Type>Decimal</Type>
+      <Size>20</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+	
+    <Parameter>
+      <Name>@pTasaBruta</Name>
+      <VariableMapeo>Ldec_TasaBruta</VariableMapeo>
+      <Type>Decimal</Type>
+      <Size>30</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+	
+	<Parameter>
+      <Name>@pTasaNeta</Name>
+      <VariableMapeo>Ldec_TasaNeta</VariableMapeo>
+      <Type>Decimal</Type>
+      <Size>30</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+	
+	<Parameter>
+      <Name>@pNroEmisionSerie</Name>
+      <VariableMapeo>Lstr_NroEmisionSerie</VariableMapeo>
+      <Type>String</Type>
+      <Size>50</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+	
+	<Parameter>
+      <Name>@pFchCreacionT</Name>
+      <VariableMapeo>Ldt_FchCreacionT</VariableMapeo>
+      <Type>Date</Type>
+      <Size>20</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pMotivoAnulacion</Name>
+      <VariableMapeo>Lstr_MotivoAnulacion</VariableMapeo>
+      <Type>String</Type>
+      <Size>4000</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>	
+	
+	<Parameter>
+      <Name>@pSistemaNegociacion</Name>
+      <VariableMapeo>Lstr_SistemaNegociacion</VariableMapeo>
+      <Type>String</Type>
+      <Size>100</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+	
+	<Parameter>
+      <Name>@pRendimientoPorDescuento</Name>
+      <VariableMapeo>Ldec_RendimientoPorDescuento</VariableMapeo>
+      <Type>Decimal</Type>
+      <Size>30</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+	<Parameter>
+      <Name>@pPremio</Name>
+      <VariableMapeo>Ldec_Premio</VariableMapeo>
+      <Type>Decimal</Type>
+      <Size>30</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+	
+    <Parameter>
+      <Name>@pImpuestoPagado</Name>
+      <VariableMapeo>Ldec_ImpuestoPagado</VariableMapeo>
+      <Type>Decimal</Type>
+      <Size>30</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+	
+    <Parameter>
+      <Name>@pEstado</Name>
+      <VariableMapeo>Lstr_Estado</VariableMapeo>
+      <Type>String</Type>
+      <Size>5</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pModuloSINPE</Name>
+      <VariableMapeo>Lstr_ModuloSINPE</VariableMapeo>
+      <Type>String</Type>
+      <Size>5</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pUsrCreacion</Name>
+      <VariableMapeo>Lstr_UsrCreacion</VariableMapeo>
+      <Type>String</Type>
+      <Size>15</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pResultado</Name>
+      <Type>String</Type>
+      <Size>2</Size>
+      <Direction>Output</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pMensaje</Name>
+      <Type>String</Type>
+      <Size>500</Size>
+      <Direction>Output</Direction>
+    </Parameter>
+
+  </Parameters>
+</CommandDef>

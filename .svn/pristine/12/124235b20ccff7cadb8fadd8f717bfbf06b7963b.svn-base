@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="CrearFormulario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="lint_IdFormulario" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lint_AnnoFormulario" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_TipoIdPersona" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_IdentificacionPersona" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_CorreoPersona" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_ElementoPEP" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_ReservaPresupuestaria" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lsrt_NumExpediente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Descripcion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_CtaCliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Direccion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_EdoFormulario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Usuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CrearFormularioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CrearFormularioResult" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="int_TmpIdFormulario" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificarFormulario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="lint_IdFormulario" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lint_AnnoFormulario" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_TipoIdPersona" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_IdentificacionPersona" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_CorreoPersona" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_ElementoPEP" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_ReservaPresupuestaria" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lsrt_NumExpediente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Descripcion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_CtaCliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Direccion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_EdoFormulario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Usuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificarFormularioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ModificarFormularioResult" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="int_TmpIdFormulario" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarFormulario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_IdPersona" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_TipoPersona" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Estado" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarFormularioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarFormularioResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CrearPago">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="lint_IdFormulario" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lint_Anno" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lint_IdPago" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldt_FchIngreso" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldt_FchPago" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_IdInstitucion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_IdServicio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_CtaMayor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_IdOficina" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_IdPosPre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_IdMoneda" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldec_Monto" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Periodo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Usuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CrearPagoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CrearPagoResult" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="int_TmpIdPago" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificarPago">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="lint_IdFormulario" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lint_Anno" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lint_IdPago" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldt_FchIngreso" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldt_FchPago" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_IdInstitucion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_IdServicio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_CtaMayor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_IdOficina" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_IdPosPre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_IdMoneda" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ldec_Monto" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Periodo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lstr_Usuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificarPagoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ModificarPagoResult" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="int_TmpIdPago" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarPago">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="lint_IdFormulario" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lint_Anno" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarPagoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarPagoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="uwsConvertirMontoLetras">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="letras" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="uwsConvertirMontoLetrasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uwsConvertirMontoLetrasResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="uwsCalcularDígitoVerificador">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cuentacliente" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="uwsCalcularDígitoVerificadorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="uwsCalcularDígitoVerificadorResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CrearFormularioSoapIn">
+    <wsdl:part name="parameters" element="tns:CrearFormulario" />
+  </wsdl:message>
+  <wsdl:message name="CrearFormularioSoapOut">
+    <wsdl:part name="parameters" element="tns:CrearFormularioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModificarFormularioSoapIn">
+    <wsdl:part name="parameters" element="tns:ModificarFormulario" />
+  </wsdl:message>
+  <wsdl:message name="ModificarFormularioSoapOut">
+    <wsdl:part name="parameters" element="tns:ModificarFormularioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarFormularioSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarFormulario" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarFormularioSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarFormularioResponse" />
+  </wsdl:message>
+  <wsdl:message name="CrearPagoSoapIn">
+    <wsdl:part name="parameters" element="tns:CrearPago" />
+  </wsdl:message>
+  <wsdl:message name="CrearPagoSoapOut">
+    <wsdl:part name="parameters" element="tns:CrearPagoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModificarPagoSoapIn">
+    <wsdl:part name="parameters" element="tns:ModificarPago" />
+  </wsdl:message>
+  <wsdl:message name="ModificarPagoSoapOut">
+    <wsdl:part name="parameters" element="tns:ModificarPagoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarPagoSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarPago" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarPagoSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarPagoResponse" />
+  </wsdl:message>
+  <wsdl:message name="uwsConvertirMontoLetrasSoapIn">
+    <wsdl:part name="parameters" element="tns:uwsConvertirMontoLetras" />
+  </wsdl:message>
+  <wsdl:message name="uwsConvertirMontoLetrasSoapOut">
+    <wsdl:part name="parameters" element="tns:uwsConvertirMontoLetrasResponse" />
+  </wsdl:message>
+  <wsdl:message name="uwsCalcularDígitoVerificadorSoapIn">
+    <wsdl:part name="parameters" element="tns:uwsCalcularDígitoVerificador" />
+  </wsdl:message>
+  <wsdl:message name="uwsCalcularDígitoVerificadorSoapOut">
+    <wsdl:part name="parameters" element="tns:uwsCalcularDígitoVerificadorResponse" />
+  </wsdl:message>
+  <wsdl:portType name="wsCapturaIngresoSoap">
+    <wsdl:operation name="CrearFormulario">
+      <wsdl:input message="tns:CrearFormularioSoapIn" />
+      <wsdl:output message="tns:CrearFormularioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarFormulario">
+      <wsdl:input message="tns:ModificarFormularioSoapIn" />
+      <wsdl:output message="tns:ModificarFormularioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarFormulario">
+      <wsdl:input message="tns:ConsultarFormularioSoapIn" />
+      <wsdl:output message="tns:ConsultarFormularioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearPago">
+      <wsdl:input message="tns:CrearPagoSoapIn" />
+      <wsdl:output message="tns:CrearPagoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarPago">
+      <wsdl:input message="tns:ModificarPagoSoapIn" />
+      <wsdl:output message="tns:ModificarPagoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPago">
+      <wsdl:input message="tns:ConsultarPagoSoapIn" />
+      <wsdl:output message="tns:ConsultarPagoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="uwsConvertirMontoLetras">
+      <wsdl:input message="tns:uwsConvertirMontoLetrasSoapIn" />
+      <wsdl:output message="tns:uwsConvertirMontoLetrasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="uwsCalcularDígitoVerificador">
+      <wsdl:input message="tns:uwsCalcularDígitoVerificadorSoapIn" />
+      <wsdl:output message="tns:uwsCalcularDígitoVerificadorSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsCapturaIngresoSoap" type="tns:wsCapturaIngresoSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CrearFormulario">
+      <soap:operation soapAction="http://tempuri.org/CrearFormulario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarFormulario">
+      <soap:operation soapAction="http://tempuri.org/ModificarFormulario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarFormulario">
+      <soap:operation soapAction="http://tempuri.org/ConsultarFormulario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearPago">
+      <soap:operation soapAction="http://tempuri.org/CrearPago" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarPago">
+      <soap:operation soapAction="http://tempuri.org/ModificarPago" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPago">
+      <soap:operation soapAction="http://tempuri.org/ConsultarPago" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uwsConvertirMontoLetras">
+      <soap:operation soapAction="http://tempuri.org/uwsConvertirMontoLetras" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uwsCalcularDígitoVerificador">
+      <soap:operation soapAction="http://tempuri.org/uwsCalcularDígitoVerificador" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsCapturaIngresoSoap12" type="tns:wsCapturaIngresoSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CrearFormulario">
+      <soap12:operation soapAction="http://tempuri.org/CrearFormulario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarFormulario">
+      <soap12:operation soapAction="http://tempuri.org/ModificarFormulario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarFormulario">
+      <soap12:operation soapAction="http://tempuri.org/ConsultarFormulario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearPago">
+      <soap12:operation soapAction="http://tempuri.org/CrearPago" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarPago">
+      <soap12:operation soapAction="http://tempuri.org/ModificarPago" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPago">
+      <soap12:operation soapAction="http://tempuri.org/ConsultarPago" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uwsConvertirMontoLetras">
+      <soap12:operation soapAction="http://tempuri.org/uwsConvertirMontoLetras" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uwsCalcularDígitoVerificador">
+      <soap12:operation soapAction="http://tempuri.org/uwsCalcularDígitoVerificador" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsCapturaIngreso">
+    <wsdl:port name="wsCapturaIngresoSoap" binding="tns:wsCapturaIngresoSoap">
+      <soap:address location="http://mh-cpd-dnspfs1:83/wsCapturaIngreso.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsCapturaIngresoSoap12" binding="tns:wsCapturaIngresoSoap12">
+      <soap12:address location="http://mh-cpd-dnspfs1:83/wsCapturaIngreso.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

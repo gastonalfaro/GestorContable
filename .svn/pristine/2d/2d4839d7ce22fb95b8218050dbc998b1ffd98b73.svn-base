@@ -1,0 +1,35 @@
+﻿<?xml version="1.0"?>
+<configuration>
+
+    <configSections>
+        <sectionGroup name="applicationSettings" type="System.Configuration.ApplicationSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" >
+            <section name="WebServiceBalanceComprobacion.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+        </sectionGroup>
+    </configSections>
+    <system.web>
+      <compilation debug="true" targetFramework="4.5" />
+      <httpRuntime targetFramework="4.5" />
+      <customErrors mode="Off"/>
+    </system.web>
+    <system.webServer>
+        <directoryBrowse enabled="true" />
+    </system.webServer>
+    <applicationSettings>
+        <WebServiceBalanceComprobacion.Properties.Settings>
+            <setting name="USER_SAP" serializeAs="String">
+                <value>WS_USER_INT</value>
+            </setting>
+            <setting name="PASS_SAP" serializeAs="String">
+                <value>Hacienda2016</value>
+            </setting>
+            <setting name="WebServiceBalanceComprobacion_wsSAPBCQAS_ZINT_RECIBE_BALANCE_COMPROBA"
+                serializeAs="String">
+                <value>http://cpd-qasg1.mh.hacienda.go.cr:8000/sap/bc/srt/rfc/sap/zint_recibe_balance_comproba/350/zint_recibe_balance_comproba/binding</value>
+            </setting>
+        </WebServiceBalanceComprobacion.Properties.Settings>
+    </applicationSettings>
+    <system.serviceModel>
+        <bindings />
+        <client />
+    </system.serviceModel>
+</configuration>

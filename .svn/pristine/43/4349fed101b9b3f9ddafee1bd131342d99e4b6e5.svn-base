@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition">
+  <Description />
+  <DataSet Name="dsCuentasPorCobrar">
+    <Query>
+      <DataSourceReference>GestNICSPDEV</DataSourceReference>
+      <DataSetParameters>
+        <DataSetParameter Name="@FechaInicio">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>DateTime</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="@FechaFin">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>DateTime</rd:DbType>
+        </DataSetParameter>
+      </DataSetParameters>
+      <CommandType>StoredProcedure</CommandType>
+      <CommandText>co.uspConsultarCuentasCobrar</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="DetalleTransaccion">
+        <DataField>DetalleTransaccion</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="CodAsiento">
+        <DataField>CodAsiento</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="FchCreacion">
+        <DataField>FchCreacion</DataField>
+        <rd:TypeName>System.DateTime</rd:TypeName>
+      </Field>
+      <Field Name="FechResolucion">
+        <DataField>FechResolucion</DataField>
+        <rd:TypeName>System.DateTime</rd:TypeName>
+      </Field>
+      <Field Name="IdExpedienteFK">
+        <DataField>IdExpedienteFK</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="IdSociedadGL">
+        <DataField>IdSociedadGL</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="MotivoDemanda">
+        <DataField>MotivoDemanda</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Moneda">
+        <DataField>Moneda</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="MontoPrincipalColones">
+        <DataField>MontoPrincipalColones</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="MontoInteresesColones">
+        <DataField>MontoInteresesColones</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="InteresesColones">
+        <DataField>InteresesColones</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="InteresesMoratoriosColones">
+        <DataField>InteresesMoratoriosColones</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="CostasColones">
+        <DataField>CostasColones</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="Debe">
+        <DataField>Debe</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Haber">
+        <DataField>Haber</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="DanoMoralColones">
+        <DataField>DanoMoralColones</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="SaldoAcumulado">
+        <DataField>SaldoAcumulado</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Monto">
+        <Value>=Fields!MontoPrincipal.Value+Fields!MontoIntereses.Value+Fields!InteresesMoratorios.Value+Fields!Costas.Value+Fields!DanoMoral.Value</Value>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

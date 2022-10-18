@@ -1,0 +1,139 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
+using System.Data.SqlTypes;
+using System.IO;
+using System.Linq;
+using System.Web;
+
+namespace Datos.ConexionSQL.Procedimientos.Consolidacion
+{
+    public class clsBuscarArchivoEstadoFinancieroFilestream : clsProcedimientoAlmacenado
+    {
+        #region variables
+        private string lstr_DireccionConfigs = String.Empty;
+
+        private string lstr_IdEstadoFinancieroArchivo;
+
+        private string lstr_Estado;
+        private string lstr_UsrCreacion;
+        #endregion
+
+        #region obtencion y asignacion
+        public string Lstr_IdEstadoFinancieroArchivo
+        {
+            get { return lstr_IdEstadoFinancieroArchivo; }
+            set { lstr_IdEstadoFinancieroArchivo = value; }
+        }
+
+        public string Lstr_Estado
+        {
+            get { return lstr_Estado; }
+            set { lstr_Estado = value; }
+        }
+
+        public string Lstr_UsrCreacion
+        {
+            get { return lstr_UsrCreacion; }
+            set { lstr_UsrCreacion = value; }
+        }
+        #endregion
+
+        #region procedimientos
+        public clsBuscarArchivoEstadoFinancieroFilestream(string str_IdEstadoFinancieroArchivo, string str_Estado, string str_UsrCreacion)
+        {
+            lstr_IdEstadoFinancieroArchivo = str_IdEstadoFinancieroArchivo;
+            lstr_Estado = str_Estado;
+            lstr_UsrCreacion = str_UsrCreacion;
+
+            string str_resultado = String.Empty;
+            SqlConnection objSqlCon = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);//"ConnectionString"
+            SqlFileStream objSqlFileStream = null;
+            try
+            {
+                objSqlCon.Open();
+
+                SqlTransaction objSqlTran = objSqlCon.BeginTransaction();
+
+                SqlCommand objSqlCmd = new SqlCommand("pc.uspBuscarArchivoEstadoFinanciero", objSqlCon, objSqlTran);
+                objSqlCmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter objSqlParamIdEstadoFinanciero = new SqlParameter("@pIdEstadoFinancieroArchivo", SqlDbType.VarChar);
+                objSqlParamIdEstadoFinanciero.Value = str_IdEstadoFinancieroArchivo;
+
+                SqlParameter objSqlParamStatus = new SqlParameter("@pResultado", SqlDbType.VarChar, 2);
+                objSqlParamStatus.Direction = ParameterDirection.Output;
+
+                SqlParameter objSqlParamMessage = new SqlParameter("@pMensaje", SqlDbType.VarChar, 500);
+                objSqlParamMessage.Direction = ParameterDirection.Output;
+
+                objSqlCmd.Parameters.Add(objSqlParamIdEstadoFinanciero);
+                objSqlCmd.Parameters.Add(objSqlParamStatus);
+                objSqlCmd.Parameters.Add(objSqlParamMessage);
+
+                DataSet Data = new DataSet();
+                DataTable table = new DataTable();
+                table.Load(objSqlCmd.ExecuteReader());
+                Data.Tables.Add(table);
+
+                string path = string.Empty;
+                string fileType = string.Empty;
+                string fileName = string.Empty;
+                
+                this.Lstr_CodigoResultado = objSqlCmd.Parameters["@pResultado"].Value.ToString();
+
+                DataRow drNew = Data.Tables["Table1"].NewRow();
+
+                if (objSqlCmd.Parameters["@pResultado"].Value.ToString() == "00")
+                {
+                    if (!Data.Tables["Table1"].Rows.Count.Equals(0))
+                    {
+                        for (int i = 0; i <= Data.Tables["Table1"].Rows.Count - 1; i++)
+                        {
+                            path = Data.Tables["Table1"].Rows[i]["RutaSistemaArchivo"].ToString();
+                            fileName = Data.Tables["Table1"].Rows[i]["NombreArchivo"].ToString();
+                            fileType = Data.Tables["Table1"].Rows[i]["TipoArchivo"].ToString();
+                        }
+                    }
+
+                    objSqlCmd = new SqlCommand("SELECT GET_FILESTREAM_TRANSACTION_CONTEXT()", objSqlCon, objSqlTran);
+
+          
+                    byte[] objContext = (byte[])objSqlCmd.ExecuteScalar();
+
+                    objSqlFileStream = new SqlFileStream(path, objContext, FileAccess.Read);
+
+                    byte[] buffer = new byte[(int)objSqlFileStream.Length];
+                    objSqlFileStream.Read(buffer, 0, buffer.Length);
+                    objSqlFileStream.Close();
+
+
+                    objSqlTran.Commit();
+
+                    
+                    Data.Tables["Table1"].Columns.Add("Buffer", typeof(byte[]));
+                    Data.Tables["Table1"].Rows[0]["Buffer"] = buffer;
+
+                    this.Lstr_RespuestaXML = Data.GetXml();
+                    this.Lstr_RespuestaSchema = Data.GetXmlSchema();
+
+                    this.Lstr_MensajeRespuesta = "Busqueda satisfactoria.";
+                    this.Lstr_CodigoResultado = "01";
+
+                }
+            }
+            catch (Exception ex)
+            {
+
+                this.Lstr_CodigoResultado = "89";
+                this.Lstr_MensajeRespuesta = str_resultado + " [Error] " + ex.ToString();
+                objSqlFileStream.Close();
+            }
+        }
+
+        #endregion
+
+    }
+}

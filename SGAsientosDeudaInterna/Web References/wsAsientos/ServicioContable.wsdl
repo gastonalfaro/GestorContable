@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s1="urn:sap-com:document:sap:soap:functions:mc-style" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="urn:sap-com:document:sap:soap:functions:mc-style" />
+      <s:element name="EnviarAsientos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tabla_asientos" type="tns:ArrayOfZfiAsiento" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_Test" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfZfiAsiento">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ZfiAsiento" nillable="true" type="s1:ZfiAsiento" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="EnviarAsientosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarAsientosResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="urn:sap-com:document:sap:soap:functions:mc-style">
+      <s:complexType name="ZfiAsiento">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mandt" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Bldat" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Blart" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Bukrs" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Budat" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Waers" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Kursf" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Xblnr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Xref1Hd" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Xref2Hd" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Buzei" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Bktxt" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Bschl" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Hkont" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Umskz" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Wrbtr" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Dmbe2" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mwskz" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Xmwst" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Zfbdt" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Zuonr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Sgtxt" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Hbkid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Zlsch" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Kostl" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Prctr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Aufnr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Projk" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Fipex" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Fistl" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Measure" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Geber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Werks" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Valut" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Kblnr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Kblpos" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Rcomp" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Xref2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Xref3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Fkber" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="EnviarAsientosSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarAsientos" />
+  </wsdl:message>
+  <wsdl:message name="EnviarAsientosSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarAsientosResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServicioContableSoap">
+    <wsdl:operation name="EnviarAsientos">
+      <wsdl:input message="tns:EnviarAsientosSoapIn" />
+      <wsdl:output message="tns:EnviarAsientosSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServicioContableSoap" type="tns:ServicioContableSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="EnviarAsientos">
+      <soap:operation soapAction="http://tempuri.org/EnviarAsientos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServicioContableSoap12" type="tns:ServicioContableSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="EnviarAsientos">
+      <soap12:operation soapAction="http://tempuri.org/EnviarAsientos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServicioContable">
+    <wsdl:port name="ServicioContableSoap" binding="tns:ServicioContableSoap">
+      <soap:address location="http://mh-cpd-qanspwb1:86/ServicioContable.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServicioContableSoap12" binding="tns:ServicioContableSoap12">
+      <soap12:address location="http://mh-cpd-qanspwb1:86/ServicioContable.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

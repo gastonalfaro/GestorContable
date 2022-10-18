@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  For more information on how to configure your ASP.NET application, please visit
+  http://go.microsoft.com/fwlink/?LinkId=169433
+  -->
+<configuration>
+  <appSettings>
+     <add key="USER_SAP" value="WS_USER_INT" />
+    <add key="PASS_SAP" value="Hacienda2015" />
+  </appSettings>
+  <system.web>
+    <compilation debug="true" targetFramework="4.5" />
+    <httpRuntime targetFramework="4.5" />
+  </system.web>
+  <system.serviceModel>
+    <bindings>
+      <customBinding>
+        <binding name="zcarga">
+          <!--    WsdlImporter encountered unrecognized policy assertions in ServiceDescription 'urn:sap-com:document:sap:soap:functions:mc-style':    -->
+          <!--    <wsdl:binding name='zcarga'>    -->
+          <!--        <sapattahnd:Enabled xmlns:sapattahnd="http://www.sap.com/710/features/attachment/">..</sapattahnd:Enabled>    -->
+          <mtomMessageEncoding messageVersion="Soap11WSAddressing10" />
+         <httpTransport authenticationScheme="Basic" bypassProxyOnLocal="false"  
+              hostNameComparisonMode="StrongWildcard" keepAliveEnabled="false"  
+              proxyAuthenticationScheme="Basic" realm="XISOAPApps" useDefaultWebProxy="true"/>
+        </binding>
+      </customBinding>
+    </bindings>
+    <client>
+      <endpoint address="http://CPD-DSGSBOX1.mh.hacienda.go.cr:8000/sap/bc/srt/rfc/sap/z_fi_carga_contable/300/z_fi_carga_contable/zcarga" binding="customBinding" bindingConfiguration="zcarga" contract="ServiceReference.Z_FI_CARGA_CONTABLE" name="ZCARGA" />
+    </client>
+  </system.serviceModel>
+    <system.webServer>
+        <directoryBrowse enabled="true" />
+    </system.webServer>
+</configuration>

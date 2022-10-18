@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.prosoft.cr/MinisterioHacienda/DTR/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.prosoft.cr/MinisterioHacienda/DTR/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.prosoft.cr/MinisterioHacienda/DTR/">
+      <s:element name="EnvioDirecto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rastro" type="tns:CL_Rastro" />
+            <s:element minOccurs="0" maxOccurs="1" name="transacciones" type="tns:ArrayOfCL_TransaccionDirecta" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CL_Rastro">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ExtensionData" type="tns:ExtensionDataObject" />
+          <s:element minOccurs="1" maxOccurs="1" name="Canal" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="IP" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ExtensionDataObject" />
+      <s:complexType name="ArrayOfCL_TransaccionDirecta">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CL_TransaccionDirecta" nillable="true" type="tns:CL_TransaccionDirecta" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CL_TransaccionDirecta">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:CL_Transaccion">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Documento" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="CL_Transaccion">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ExtensionData" type="tns:ExtensionDataObject" />
+          <s:element minOccurs="0" maxOccurs="1" name="Destino" type="tns:CL_Cliente" />
+          <s:element minOccurs="1" maxOccurs="1" name="CentroCosto" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CodigoMoneda" type="tns:Moneda" />
+          <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="EntidadOrigen" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Monto" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="NodoIntegracion" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Servicio" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CodigoConcepto" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CodigoReferencia" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IdRelacionCliente" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MontoComisionCliente" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="MontoComisionRepresentada" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CL_Cliente">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ExtensionData" type="tns:ExtensionDataObject" />
+          <s:element minOccurs="0" maxOccurs="1" name="CC" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Identificacion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="Moneda">
+        <s:restriction base="s:string">
+          <s:enumeration value="Colones" />
+          <s:enumeration value="Dolares" />
+          <s:enumeration value="Euros" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="EnvioDirectoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnvioDirectoResult" type="tns:ArrayOfCL_RespuestaTransaccion" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCL_RespuestaTransaccion">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CL_RespuestaTransaccion" nillable="true" type="tns:CL_RespuestaTransaccion" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CL_RespuestaTransaccion">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ExtensionData" type="tns:ExtensionDataObject" />
+          <s:element minOccurs="0" maxOccurs="1" name="CodigoReferencia" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Documento" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MotivoRechazo" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Resultado" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="IdRelacionCliente" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="EnvioDirectoContabilidad">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rastro" type="tns:CL_Rastro" />
+            <s:element minOccurs="0" maxOccurs="1" name="transacciones" type="tns:ArrayOfCL_TransaccionDirecta" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnvioDirectoContabilidadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnvioDirectoContabilidadResult" type="tns:ArrayOfCL_RespuestaTransaccion" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnvioDirectoCreditoCuenta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rastro" type="tns:CL_Rastro" />
+            <s:element minOccurs="0" maxOccurs="1" name="transacciones" type="tns:ArrayOfCL_TransaccionIntegracion" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCL_TransaccionIntegracion">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CL_TransaccionIntegracion" nillable="true" type="tns:CL_TransaccionIntegracion" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CL_TransaccionIntegracion">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:CL_Transaccion">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Origen" type="tns:CL_Cliente" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="EnvioDirectoCreditoCuentaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnvioDirectoCreditoCuentaResult" type="tns:ArrayOfCL_RespuestaTransaccion" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarCreditoCuenta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rastro" type="tns:CL_Rastro" />
+            <s:element minOccurs="0" maxOccurs="1" name="transacciones" type="tns:ArrayOfCL_TransaccionIntegracion" />
+            <s:element minOccurs="1" maxOccurs="1" name="congelarFondos" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarCreditoCuentaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RegistrarCreditoCuentaResult" type="tns:ArrayOfCL_RespuestaTransaccion" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Registrar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rastro" type="tns:CL_Rastro" />
+            <s:element minOccurs="0" maxOccurs="1" name="transacciones" type="tns:ArrayOfCL_TransaccionDirecta" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RegistrarResult" type="tns:ArrayOfCL_RespuestaTransaccion" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarCalendarizado">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rastro" type="tns:CL_Rastro" />
+            <s:element minOccurs="0" maxOccurs="1" name="transacciones" type="tns:ArrayOfCL_TransaccionIntegracion" />
+            <s:element minOccurs="1" maxOccurs="1" name="fechaCalendarizacion" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="congelaFondos" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarCalendarizadoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RegistrarCalendarizadoResult" type="tns:ArrayOfCL_RespuestaTransaccion" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Autorizar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rastro" type="tns:CL_Rastro" />
+            <s:element minOccurs="0" maxOccurs="1" name="comprobantes" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfInt">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="int" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AutorizarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AutorizarResult" type="tns:ArrayOfCL_RespuestaTransaccion" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Rechazar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rastro" type="tns:CL_Rastro" />
+            <s:element minOccurs="0" maxOccurs="1" name="comprobantes" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RechazarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RechazarResult" type="tns:ArrayOfCL_RespuestaTransaccion" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Enviar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rastro" type="tns:CL_Rastro" />
+            <s:element minOccurs="1" maxOccurs="1" name="comprobanteTransaccion" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarResult" type="tns:ArrayOfCL_RespuestaTransaccion" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServicioDisponible">
+        <s:complexType />
+      </s:element>
+      <s:element name="ServicioDisponibleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ServicioDisponibleResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerInformacionDestino">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cuentaCliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="identificacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerInformacionDestinoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerInformacionDestinoResult" type="tns:InformacionCuenta" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="InformacionCuenta">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ExtensionData" type="tns:ExtensionDataObject" />
+          <s:element minOccurs="1" maxOccurs="1" name="codMonedaField" type="tns:Moneda" />
+          <s:element minOccurs="1" maxOccurs="1" name="codMotivoRechazoField" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="nomClienteField" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ConsultarDebitoEnviadoASINPE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codigoReferencia" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarDebitoEnviadoASINPEResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarDebitoEnviadoASINPEResult" type="tns:DebitoEnviado" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DebitoEnviado">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Debito">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="codEntidadDestinoField" type="s:short" />
+              <s:element minOccurs="1" maxOccurs="1" name="codEstadoField" type="tns:EstadoOperacion" />
+              <s:element minOccurs="1" maxOccurs="1" name="codMotivoRechazoField" type="s:short" />
+              <s:element minOccurs="1" maxOccurs="1" name="fecEnvioField" type="s:dateTime" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Debito">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ExtensionData" type="tns:ExtensionDataObject" />
+          <s:element minOccurs="1" maxOccurs="1" name="centroCostoField" type="s:short" />
+          <s:element minOccurs="1" maxOccurs="1" name="codEntidadOrigenField" type="s:short" />
+          <s:element minOccurs="1" maxOccurs="1" name="codMonedaField" type="tns:Moneda" />
+          <s:element minOccurs="1" maxOccurs="1" name="codMotivoField" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="codReferenciaField" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cuentaClienteField" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="descripcionField" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="iDDestinoField" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="iDNegocioField" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="montoField" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="nomNegocioField" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="numDocumentoField" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="servicioField" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="titularServicioField" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="EstadoOperacion">
+        <s:list>
+          <s:simpleType>
+            <s:restriction base="s:string">
+              <s:enumeration value="NoExiste" />
+              <s:enumeration value="Rechazada" />
+              <s:enumeration value="Autorizada" />
+            </s:restriction>
+          </s:simpleType>
+        </s:list>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="EnvioDirectoSoapIn">
+    <wsdl:part name="parameters" element="tns:EnvioDirecto" />
+  </wsdl:message>
+  <wsdl:message name="EnvioDirectoSoapOut">
+    <wsdl:part name="parameters" element="tns:EnvioDirectoResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnvioDirectoContabilidadSoapIn">
+    <wsdl:part name="parameters" element="tns:EnvioDirectoContabilidad" />
+  </wsdl:message>
+  <wsdl:message name="EnvioDirectoContabilidadSoapOut">
+    <wsdl:part name="parameters" element="tns:EnvioDirectoContabilidadResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnvioDirectoCreditoCuentaSoapIn">
+    <wsdl:part name="parameters" element="tns:EnvioDirectoCreditoCuenta" />
+  </wsdl:message>
+  <wsdl:message name="EnvioDirectoCreditoCuentaSoapOut">
+    <wsdl:part name="parameters" element="tns:EnvioDirectoCreditoCuentaResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarCreditoCuentaSoapIn">
+    <wsdl:part name="parameters" element="tns:RegistrarCreditoCuenta" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarCreditoCuentaSoapOut">
+    <wsdl:part name="parameters" element="tns:RegistrarCreditoCuentaResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarSoapIn">
+    <wsdl:part name="parameters" element="tns:Registrar" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarSoapOut">
+    <wsdl:part name="parameters" element="tns:RegistrarResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarCalendarizadoSoapIn">
+    <wsdl:part name="parameters" element="tns:RegistrarCalendarizado" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarCalendarizadoSoapOut">
+    <wsdl:part name="parameters" element="tns:RegistrarCalendarizadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AutorizarSoapIn">
+    <wsdl:part name="parameters" element="tns:Autorizar" />
+  </wsdl:message>
+  <wsdl:message name="AutorizarSoapOut">
+    <wsdl:part name="parameters" element="tns:AutorizarResponse" />
+  </wsdl:message>
+  <wsdl:message name="RechazarSoapIn">
+    <wsdl:part name="parameters" element="tns:Rechazar" />
+  </wsdl:message>
+  <wsdl:message name="RechazarSoapOut">
+    <wsdl:part name="parameters" element="tns:RechazarResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarSoapIn">
+    <wsdl:part name="parameters" element="tns:Enviar" />
+  </wsdl:message>
+  <wsdl:message name="EnviarSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServicioDisponibleSoapIn">
+    <wsdl:part name="parameters" element="tns:ServicioDisponible" />
+  </wsdl:message>
+  <wsdl:message name="ServicioDisponibleSoapOut">
+    <wsdl:part name="parameters" element="tns:ServicioDisponibleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerInformacionDestinoSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerInformacionDestino" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerInformacionDestinoSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerInformacionDestinoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarDebitoEnviadoASINPESoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarDebitoEnviadoASINPE" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarDebitoEnviadoASINPESoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarDebitoEnviadoASINPEResponse" />
+  </wsdl:message>
+  <wsdl:portType name="DTRSoap">
+    <wsdl:operation name="EnvioDirecto">
+      <wsdl:input message="tns:EnvioDirectoSoapIn" />
+      <wsdl:output message="tns:EnvioDirectoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnvioDirectoContabilidad">
+      <wsdl:input message="tns:EnvioDirectoContabilidadSoapIn" />
+      <wsdl:output message="tns:EnvioDirectoContabilidadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnvioDirectoCreditoCuenta">
+      <wsdl:input message="tns:EnvioDirectoCreditoCuentaSoapIn" />
+      <wsdl:output message="tns:EnvioDirectoCreditoCuentaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarCreditoCuenta">
+      <wsdl:input message="tns:RegistrarCreditoCuentaSoapIn" />
+      <wsdl:output message="tns:RegistrarCreditoCuentaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Registrar">
+      <wsdl:input message="tns:RegistrarSoapIn" />
+      <wsdl:output message="tns:RegistrarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarCalendarizado">
+      <wsdl:input message="tns:RegistrarCalendarizadoSoapIn" />
+      <wsdl:output message="tns:RegistrarCalendarizadoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Autorizar">
+      <wsdl:input message="tns:AutorizarSoapIn" />
+      <wsdl:output message="tns:AutorizarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Rechazar">
+      <wsdl:input message="tns:RechazarSoapIn" />
+      <wsdl:output message="tns:RechazarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Enviar">
+      <wsdl:input message="tns:EnviarSoapIn" />
+      <wsdl:output message="tns:EnviarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServicioDisponible">
+      <wsdl:input message="tns:ServicioDisponibleSoapIn" />
+      <wsdl:output message="tns:ServicioDisponibleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerInformacionDestino">
+      <wsdl:input message="tns:ObtenerInformacionDestinoSoapIn" />
+      <wsdl:output message="tns:ObtenerInformacionDestinoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarDebitoEnviadoASINPE">
+      <wsdl:input message="tns:ConsultarDebitoEnviadoASINPESoapIn" />
+      <wsdl:output message="tns:ConsultarDebitoEnviadoASINPESoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DTRSoap" type="tns:DTRSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="EnvioDirecto">
+      <soap:operation soapAction="http://www.prosoft.cr/MinisterioHacienda/DTR/EnvioDirecto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnvioDirectoContabilidad">
+      <soap:operation soapAction="http://www.prosoft.cr/MinisterioHacienda/DTR/EnvioDirectoContabilidad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnvioDirectoCreditoCuenta">
+      <soap:operation soapAction="http://www.prosoft.cr/MinisterioHacienda/DTR/EnvioDirectoCreditoCuenta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarCreditoCuenta">
+      <soap:operation soapAction="http://www.prosoft.cr/MinisterioHacienda/DTR/RegistrarCreditoCuenta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Registrar">
+      <soap:operation soapAction="http://www.prosoft.cr/MinisterioHacienda/DTR/Registrar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarCalendarizado">
+      <soap:operation soapAction="http://www.prosoft.cr/MinisterioHacienda/DTR/RegistrarCalendarizado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Autorizar">
+      <soap:operation soapAction="http://www.prosoft.cr/MinisterioHacienda/DTR/Autorizar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Rechazar">
+      <soap:operation soapAction="http://www.prosoft.cr/MinisterioHacienda/DTR/Rechazar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Enviar">
+      <soap:operation soapAction="http://www.prosoft.cr/MinisterioHacienda/DTR/Enviar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServicioDisponible">
+      <soap:operation soapAction="http://www.prosoft.cr/MinisterioHacienda/DTR/ServicioDisponible" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerInformacionDestino">
+      <soap:operation soapAction="http://www.prosoft.cr/MinisterioHacienda/DTR/ObtenerInformacionDestino" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarDebitoEnviadoASINPE">
+      <soap:operation soapAction="http://www.prosoft.cr/MinisterioHacienda/DTR/ConsultarDebitoEnviadoASINPE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="DTRSoap12" type="tns:DTRSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="EnvioDirecto">
+      <soap12:operation soapAction="http://www.prosoft.cr/MinisterioHacienda/DTR/EnvioDirecto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnvioDirectoContabilidad">
+      <soap12:operation soapAction="http://www.prosoft.cr/MinisterioHacienda/DTR/EnvioDirectoContabilidad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnvioDirectoCreditoCuenta">
+      <soap12:operation soapAction="http://www.prosoft.cr/MinisterioHacienda/DTR/EnvioDirectoCreditoCuenta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarCreditoCuenta">
+      <soap12:operation soapAction="http://www.prosoft.cr/MinisterioHacienda/DTR/RegistrarCreditoCuenta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Registrar">
+      <soap12:operation soapAction="http://www.prosoft.cr/MinisterioHacienda/DTR/Registrar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarCalendarizado">
+      <soap12:operation soapAction="http://www.prosoft.cr/MinisterioHacienda/DTR/RegistrarCalendarizado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Autorizar">
+      <soap12:operation soapAction="http://www.prosoft.cr/MinisterioHacienda/DTR/Autorizar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Rechazar">
+      <soap12:operation soapAction="http://www.prosoft.cr/MinisterioHacienda/DTR/Rechazar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Enviar">
+      <soap12:operation soapAction="http://www.prosoft.cr/MinisterioHacienda/DTR/Enviar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServicioDisponible">
+      <soap12:operation soapAction="http://www.prosoft.cr/MinisterioHacienda/DTR/ServicioDisponible" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerInformacionDestino">
+      <soap12:operation soapAction="http://www.prosoft.cr/MinisterioHacienda/DTR/ObtenerInformacionDestino" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarDebitoEnviadoASINPE">
+      <soap12:operation soapAction="http://www.prosoft.cr/MinisterioHacienda/DTR/ConsultarDebitoEnviadoASINPE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DTR">
+    <wsdl:port name="DTRSoap" binding="tns:DTRSoap">
+      <soap:address location="http://172.18.67.223:86/CGPCanales/DTR.asmx" />
+    </wsdl:port>
+    <wsdl:port name="DTRSoap12" binding="tns:DTRSoap12">
+      <soap12:address location="http://172.18.67.223:86/CGPCanales/DTR.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

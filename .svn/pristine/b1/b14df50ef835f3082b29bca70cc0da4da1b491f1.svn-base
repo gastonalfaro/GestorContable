@@ -1,0 +1,80 @@
+﻿<?xml version="1.0"?>
+<!--
+  Descripción: Archivo de configuración del conector de 
+	Enterprise Library v1.0.0
+	Autor: Gabriel Garcia Granados
+	Fecha: 27-08-2015
+-->
+<CommandDef>
+  <Command>
+    <BaseDatos>MSSQL</BaseDatos>
+    <DbInstance>ConexionBD</DbInstance>
+    <Type>CommandType.StoredProcedure</Type>
+    <Text>ma.uspConsultarServicios</Text>
+    <NumberOfParameters>8</NumberOfParameters>
+    <ReturnType>procedure</ReturnType>
+    <CommandTimeout>6000</CommandTimeout>
+  </Command>
+  <Parameters>
+    <Parameter>
+      <Name>@pIdServicio</Name>
+      <VariableMapeo>Lstr_IdServicio</VariableMapeo>
+      <Type>String</Type>
+      <Size>10</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+    <Parameter>
+      <Name>@pIdSociedadGL</Name>
+      <VariableMapeo>Lstr_IdSociedadGL</VariableMapeo>
+      <Type>String</Type>
+      <Size>10</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+    <Parameter>
+      <Name>@pIdOficina</Name>
+      <VariableMapeo>Lstr_IdOficina</VariableMapeo>
+      <Type>String</Type>
+      <Size>10</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>    
+    <Parameter>
+      <Name>@pNomServicio</Name>
+      <VariableMapeo>Lstr_NomServicio</VariableMapeo>
+      <Type>String</Type>
+      <Size>200</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+    <Parameter>
+      <Name>@pIdCuentaContable</Name>
+      <VariableMapeo>Lstr_IdCuentaContable</VariableMapeo>
+      <Type>String</Type>
+      <Size>10</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+    <Parameter>
+      <Name>@pIdPosPre</Name>
+      <VariableMapeo>Lstr_IdPosPre</VariableMapeo>
+      <Type>String</Type>
+      <Size>30</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+    <Parameter>
+      <Name>@pResultado</Name>
+      <Type>String</Type>
+      <Size>2</Size>
+      <Direction>Output</Direction>
+    </Parameter>
+    <Parameter>
+      <Name>@pMensaje</Name>
+      <Type>String</Type>
+      <Size>500</Size>
+      <Direction>Output</Direction>
+    </Parameter>
+  </Parameters>
+</CommandDef>

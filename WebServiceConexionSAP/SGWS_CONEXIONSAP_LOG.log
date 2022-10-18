@@ -1,0 +1,2 @@
+2019-10-23 13:53:11,850 [19] INFO  clsProcedimientoAlmacenado [(null)] - ldbc_Comando parametro de entrada al ExecuteQuery de SQL: System.Data.SqlClient.SqlCommand
+2019-10-23 13:53:11,944 [19] INFO  clsProcedimientoAlmacenado [(null)] - MensajeRespuesta y CodigoResultado parametros de salida: 00 Transacción Procesada

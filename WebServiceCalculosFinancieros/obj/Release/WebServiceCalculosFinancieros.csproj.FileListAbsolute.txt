@@ -1,0 +1,142 @@
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServiceCalculosFinancieros\bin\WebServiceCalculosFinancieros.dll.config
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServiceCalculosFinancieros\bin\WebServiceCalculosFinancieros.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServiceCalculosFinancieros\bin\WebServiceCalculosFinancieros.XmlSerializers.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServiceCalculosFinancieros\bin\WebServiceCalculosFinancieros.pdb
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServiceCalculosFinancieros\bin\Datos.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServiceCalculosFinancieros\bin\LogicaNegocio.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServiceCalculosFinancieros\bin\SGAsientosDeudaInterna.exe
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServiceCalculosFinancieros\bin\log4net.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServiceCalculosFinancieros\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServiceCalculosFinancieros\bin\Microsoft.Office.Interop.Excel.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServiceCalculosFinancieros\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServiceCalculosFinancieros\bin\Microsoft.Practices.ServiceLocation.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServiceCalculosFinancieros\bin\Microsoft.Practices.Unity.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServiceCalculosFinancieros\bin\Microsoft.Practices.Unity.Interception.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServiceCalculosFinancieros\bin\Datos.pdb
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServiceCalculosFinancieros\bin\LogicaNegocio.pdb
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServiceCalculosFinancieros\bin\SGAsientosDeudaInterna.pdb
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServiceCalculosFinancieros\bin\log4net.xml
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServiceCalculosFinancieros\bin\Microsoft.Office.Interop.Excel.xml
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServiceCalculosFinancieros\bin\LogicaNegocio.XmlSerializers.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServiceCalculosFinancieros\bin\SGAsientosDeudaInterna.XmlSerializers.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServiceCalculosFinancieros\obj\Release\WebServiceCalculosFinancieros.csprojResolveAssemblyReference.cache
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServiceCalculosFinancieros\obj\Release\WebServiceCalculosFinancieros.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServiceCalculosFinancieros\obj\Release\WebServiceCalculosFinancieros.pdb
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServiceCalculosFinancieros\obj\Release\WebServiceCalculosFinancieros.XmlSerializers.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServiceCalculosFinancieros\bin\WebServiceCalculosFinancieros.dll.config
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServiceCalculosFinancieros\bin\WebServiceCalculosFinancieros.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServiceCalculosFinancieros\bin\WebServiceCalculosFinancieros.XmlSerializers.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServiceCalculosFinancieros\bin\WebServiceCalculosFinancieros.pdb
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServiceCalculosFinancieros\bin\Datos.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServiceCalculosFinancieros\bin\log4net.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServiceCalculosFinancieros\bin\LogicaNegocio.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServiceCalculosFinancieros\bin\SGAsientosDeudaInterna.exe
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServiceCalculosFinancieros\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServiceCalculosFinancieros\bin\Microsoft.Office.Interop.Excel.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServiceCalculosFinancieros\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServiceCalculosFinancieros\bin\Microsoft.Practices.ServiceLocation.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServiceCalculosFinancieros\bin\Microsoft.Practices.Unity.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServiceCalculosFinancieros\bin\Microsoft.Practices.Unity.Interception.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServiceCalculosFinancieros\bin\Datos.pdb
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServiceCalculosFinancieros\bin\LogicaNegocio.pdb
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServiceCalculosFinancieros\bin\SGAsientosDeudaInterna.pdb
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServiceCalculosFinancieros\bin\log4net.xml
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServiceCalculosFinancieros\bin\Microsoft.Office.Interop.Excel.xml
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServiceCalculosFinancieros\bin\LogicaNegocio.XmlSerializers.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServiceCalculosFinancieros\bin\SGAsientosDeudaInterna.XmlSerializers.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServiceCalculosFinancieros\obj\Release\WebServiceCalculosFinancieros.csprojResolveAssemblyReference.cache
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServiceCalculosFinancieros\obj\Release\WebServiceCalculosFinancieros.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServiceCalculosFinancieros\obj\Release\WebServiceCalculosFinancieros.pdb
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServiceCalculosFinancieros\obj\Release\WebServiceCalculosFinancieros.XmlSerializers.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServiceCalculosFinancieros\bin\WebServiceCalculosFinancieros.dll.config
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServiceCalculosFinancieros\bin\WebServiceCalculosFinancieros.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServiceCalculosFinancieros\bin\WebServiceCalculosFinancieros.XmlSerializers.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServiceCalculosFinancieros\bin\WebServiceCalculosFinancieros.pdb
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServiceCalculosFinancieros\bin\Datos.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServiceCalculosFinancieros\bin\log4net.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServiceCalculosFinancieros\bin\LogicaNegocio.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServiceCalculosFinancieros\bin\SGAsientosDeudaInterna.exe
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServiceCalculosFinancieros\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServiceCalculosFinancieros\bin\Microsoft.Office.Interop.Excel.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServiceCalculosFinancieros\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServiceCalculosFinancieros\bin\Microsoft.Practices.ServiceLocation.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServiceCalculosFinancieros\bin\Microsoft.Practices.Unity.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServiceCalculosFinancieros\bin\office.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServiceCalculosFinancieros\bin\Microsoft.Vbe.Interop.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServiceCalculosFinancieros\bin\Microsoft.Practices.Unity.Interception.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServiceCalculosFinancieros\bin\stdole.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServiceCalculosFinancieros\bin\Datos.pdb
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServiceCalculosFinancieros\bin\Datos.dll.config
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServiceCalculosFinancieros\bin\LogicaNegocio.pdb
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServiceCalculosFinancieros\bin\LogicaNegocio.dll.config
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServiceCalculosFinancieros\bin\SGAsientosDeudaInterna.pdb
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServiceCalculosFinancieros\bin\SGAsientosDeudaInterna.exe.config
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServiceCalculosFinancieros\bin\log4net.xml
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServiceCalculosFinancieros\bin\Microsoft.Office.Interop.Excel.xml
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServiceCalculosFinancieros\bin\office.xml
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServiceCalculosFinancieros\bin\LogicaNegocio.XmlSerializers.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServiceCalculosFinancieros\bin\SGAsientosDeudaInterna.XmlSerializers.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServiceCalculosFinancieros\obj\Release\WebServiceCalculosFinancieros.csprojAssemblyReference.cache
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServiceCalculosFinancieros\obj\Release\WebServiceCalculosFinancieros.csproj.CoreCompileInputs.cache
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServiceCalculosFinancieros\obj\Release\WebServiceCalculosFinancieros.csproj.CopyComplete
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServiceCalculosFinancieros\obj\Release\WebServiceCalculosFinancieros.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServiceCalculosFinancieros\obj\Release\WebServiceCalculosFinancieros.pdb
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServiceCalculosFinancieros\obj\Release\WebServiceCalculosFinancieros.XmlSerializers.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServiceCalculosFinancieros\bin\WebServiceCalculosFinancieros.dll.config
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServiceCalculosFinancieros\bin\WebServiceCalculosFinancieros.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServiceCalculosFinancieros\bin\WebServiceCalculosFinancieros.XmlSerializers.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServiceCalculosFinancieros\bin\WebServiceCalculosFinancieros.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServiceCalculosFinancieros\bin\Datos.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServiceCalculosFinancieros\bin\log4net.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServiceCalculosFinancieros\bin\LogicaNegocio.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServiceCalculosFinancieros\bin\SGAsientosDeudaInterna.exe
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServiceCalculosFinancieros\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServiceCalculosFinancieros\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServiceCalculosFinancieros\bin\Microsoft.Practices.ServiceLocation.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServiceCalculosFinancieros\bin\Microsoft.Practices.Unity.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServiceCalculosFinancieros\bin\Microsoft.Practices.Unity.Interception.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServiceCalculosFinancieros\bin\stdole.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServiceCalculosFinancieros\bin\Datos.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServiceCalculosFinancieros\bin\Datos.dll.config
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServiceCalculosFinancieros\bin\LogicaNegocio.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServiceCalculosFinancieros\bin\LogicaNegocio.dll.config
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServiceCalculosFinancieros\bin\SGAsientosDeudaInterna.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServiceCalculosFinancieros\bin\SGAsientosDeudaInterna.exe.config
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServiceCalculosFinancieros\bin\log4net.xml
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServiceCalculosFinancieros\bin\LogicaNegocio.XmlSerializers.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServiceCalculosFinancieros\bin\SGAsientosDeudaInterna.XmlSerializers.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServiceCalculosFinancieros\obj\Release\WebServiceCalculosFinancieros.csprojAssemblyReference.cache
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServiceCalculosFinancieros\obj\Release\WebServiceCalculosFinancieros.csproj.CoreCompileInputs.cache
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServiceCalculosFinancieros\obj\Release\WebServiceCalculosFinancieros.csproj.CopyComplete
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServiceCalculosFinancieros\obj\Release\WebServiceCalculosFinancieros.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServiceCalculosFinancieros\obj\Release\WebServiceCalculosFinancieros.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServiceCalculosFinancieros\obj\Release\WebServiceCalculosFinancieros.XmlSerializers.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServiceCalculosFinancieros\bin\WebServiceCalculosFinancieros.dll.config
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServiceCalculosFinancieros\bin\WebServiceCalculosFinancieros.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServiceCalculosFinancieros\bin\WebServiceCalculosFinancieros.XmlSerializers.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServiceCalculosFinancieros\bin\WebServiceCalculosFinancieros.pdb
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServiceCalculosFinancieros\bin\Datos.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServiceCalculosFinancieros\bin\log4net.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServiceCalculosFinancieros\bin\LogicaNegocio.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServiceCalculosFinancieros\bin\SGAsientosDeudaInterna.exe
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServiceCalculosFinancieros\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServiceCalculosFinancieros\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServiceCalculosFinancieros\bin\Microsoft.Practices.ServiceLocation.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServiceCalculosFinancieros\bin\Microsoft.Practices.Unity.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServiceCalculosFinancieros\bin\Microsoft.Practices.Unity.Interception.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServiceCalculosFinancieros\bin\stdole.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServiceCalculosFinancieros\bin\Datos.pdb
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServiceCalculosFinancieros\bin\Datos.dll.config
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServiceCalculosFinancieros\bin\LogicaNegocio.pdb
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServiceCalculosFinancieros\bin\LogicaNegocio.dll.config
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServiceCalculosFinancieros\bin\SGAsientosDeudaInterna.pdb
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServiceCalculosFinancieros\bin\SGAsientosDeudaInterna.exe.config
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServiceCalculosFinancieros\bin\log4net.xml
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServiceCalculosFinancieros\bin\LogicaNegocio.XmlSerializers.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServiceCalculosFinancieros\bin\SGAsientosDeudaInterna.XmlSerializers.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServiceCalculosFinancieros\obj\Release\WebServiceCalculosFinancieros.csproj.AssemblyReference.cache
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServiceCalculosFinancieros\obj\Release\WebServiceCalculosFinancieros.csproj.CoreCompileInputs.cache
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServiceCalculosFinancieros\obj\Release\WebServiceCalculosFinancieros.csproj.CopyComplete
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServiceCalculosFinancieros\obj\Release\WebServiceCalculosFinancieros.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServiceCalculosFinancieros\obj\Release\WebServiceCalculosFinancieros.pdb
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServiceCalculosFinancieros\obj\Release\WebServiceCalculosFinancieros.XmlSerializers.dll

@@ -1,0 +1,301 @@
+﻿* {
+    margin:0;
+    padding:0;
+}
+
+html, body, form {
+    height:100%;
+}
+
+
+.wrapper {
+    min-height: 100%;
+    position: relative;
+}
+
+.encabezado {
+    /*height: 100%;*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background: linear-gradient(#0175BE, #233072);
+    max-width: 95%;
+}
+
+.separador {
+    height: 30px;
+    background: #ffffff;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 95%;
+}
+
+.contenidoseparador {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    font: 12px arial;
+    text-align: end;
+}
+
+.push {
+    /*clear: both;
+    height: 124px;*/
+}
+.piepagina{
+    clear: both;
+    height: 124px;
+    background: linear-gradient(#0175BE, #233072);
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+.contacto {
+    margin-left: 40px;
+    display: block;
+    width: 50%;
+    float: left;
+    visibility: visible;
+    display: inline;
+    font: 10px arial;
+    color: #ffffff;
+    letter-spacing: 0.8px;
+    line-height: 14px;
+    padding: 10px;
+}
+
+.contenidopiepagina {
+    display: block;
+    padding-right: 40px;
+    height: inherit;
+    width: inherit;
+}
+
+.imagenencabezado {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    height: auto;
+    width: 95%;
+}
+
+.imagenpiepagina {
+    display: block;
+    margin-left: auto;
+    padding-top: 35px;
+    height: 85%;
+}
+
+.imagendinamica {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fondoprincipal {
+    background-image: url(../imagenes/fondo.png);
+    background-repeat: repeat;
+    margin: auto;
+}
+
+.fondosecundario {
+    background: #ffffff;
+    font: 12px arial;
+    width: 95%;
+    display: block;
+    /*margin-left: 33px;
+    margin-right: auto;*/
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    min-height:100%;
+    position:relative;
+
+    
+}
+
+.contenido {
+    width: 70%;
+    /*float: right;*/
+    margin-top: 20px;
+    margin-bottom: 124px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 124px;
+}
+
+/*.enlaces {
+    width: 25%;
+    float: left;
+ border: solid 1px;
+    border-color: #EBEBEB;
+    margin-left: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 30px;    
+    color: #0088CC;
+    letter-spacing: 0.8px;
+}*/
+
+.vinculoizquierda {
+    font: 14px arial;
+    text-decoration:none;
+    color: #0088CC;
+} 
+
+.enlaceprincipal {
+    font: 12px arial;
+}
+
+.enlaceencabezado {
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-left: 30px;
+    font: 16px arial;
+    color: #959595;
+}
+
+.titulo1 {
+    font: 12px arial;
+    text-align: end;
+}
+
+.titulo2 {
+    font: 12px arial;
+}
+
+.titulo3 {
+    font: 12px arial;
+}
+
+@media (max-width: 768px) {
+    .contacto {
+        visibility: hidden;
+        display: none;
+    }
+
+    .enlaces {
+        visibility: hidden;
+        display: none;
+    }
+
+    .piepagina {
+        height: 62px;
+    }
+
+    .imagenpiepagina {
+        padding-top: 17px;
+    }
+
+    .contenido {
+        width: 90%;
+        float: none;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .contenidoseparador {
+        font: 10px arial;
+        text-align: end;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 7px;
+        padding-top: 7px;
+    }
+
+    .separador {
+        height: 25px;
+    }
+}
+    .ButtonNeutro  { 
+        display: inline-block;       
+        cursor: pointer;
+        padding: 10px;
+        margin: 2px;
+        width:110px;
+        border: none;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        font: normal 12px/normal Arial, Helvetica, sans-serif;
+        color: rgba(255,255,255,0.9);
+      
+        -webkit-background-size: 24px auto, auto auto;
+        background-size: 24px auto, auto auto;      
+        text-transform: uppercase;
+        background: -webkit-linear-gradient(0deg, #436EB3 0, #071689 100%);
+        background: -moz-linear-gradient(90deg, #436EB3 0, #071689 100%);
+        background: linear-gradient(90deg, #436EB3 0, #071689 100%);
+        
+    }
+
+    .ButtonNeutro:hover {
+        background: #EBEBEB;
+        background: -webkit-gradient(linear, left top, left bottom, from(#602eff), to(#959595));
+        background: -moz-linear-gradient(top, #EBEBEB, #959595);
+        background: linear-gradient(to bottom, #EBEBEB, #959595);
+        color: #ffffff;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+               
+    .FormatoTextBox, .FormatoDropDownList {
+        border: 1px solid #436EB3;
+        padding: 3px;
+        width:100%;
+        min-height: 24px;
+    }
+
+    .FormatoBotones { text-align:right;
+    height: 45px;
+}
+    input[readonly] {background: lightgray;cursor:pointer;}
+    /*Formato para los dropdownlist que no esten enable*/
+    select:disabled
+    {
+        background: lightgray!important;
+        border: 1px solid #436EB3!important;
+        /*width:  100%;*/
+        min-height: 24px;
+    }
+    select { color: black!important; }   
+    gvRoles a { color: #010344!important;}
+
+    /*Formato para el gridview*/
+    .FormatoGrid {background-color: #fff; margin: 5px 0 10px 0; border: solid 1px #525252; border-collapse:collapse; color: #474747;}
+    .FormatoGrid td {
+        padding: 2px;
+        border: solid 1px #c1c1c1; }
+    .FormatoGrid th  {
+        padding : 4px 2px;
+        color: #fff;
+        background: #0A1A8B;
+        border-left: solid 1px #525252;
+        font-size: 0.9em; }
+        .FormatoGrid th a { color:white; }
+    .FormatoGrid .alt { background: #CCC9C9; }
+    .FormatoGrid .pgr { background: #144F94; }
+    .FormatoGrid .pgr table { margin: 3px 0; }
+    .FormatoGrid .pgr td { border-width: 0; padding: 0 6px; border-left: solid 1px #666; font-weight: bold; color: #fff; line-height: 12px; }  
+    .FormatoGrid .pgr a { color: Gray; text-decoration: none; }
+    .FormatoGrid .pgr a:hover { color: #000; text-decoration: none; }
+    /*Posicionarse sobre una linea del gridview*/
+    .FormatoGrid tr:hover, .FormatoGrid tr.AlternatingRowStyle:hover {cursor:pointer; background-color:#1D71B6;color:white; }
+    .FormatoGrid tr input, .FormatoGrid tr.AlternatingRowStyle input { color:black; }
+    .FormatoGrid tr:hover td a, .FormatoGrid tr.AlternatingRowStyle:hover td a { color:white; }
+
+    .col-md-2, 
+    .col-md-3, 
+    .col-md-4, 
+    .col-md-10 {
+        min-height:24px!important;
+    }
+

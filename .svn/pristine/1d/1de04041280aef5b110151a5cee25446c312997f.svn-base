@@ -1,0 +1,99 @@
+﻿<?xml version="1.0"?>
+<!--
+  Descripción: Archivo de configuración del conector de 
+	Enterprise Library v1.0.0
+	Autor: Gabriel García G.
+-->
+<CommandDef>
+  <Command>
+    <BaseDatos>MSSQL</BaseDatos>
+    <DbInstance>ConexionBD</DbInstance>
+    <Type>CommandType.StoredProcedure</Type>
+    <Text>cf.uspConsultarAsientos</Text>
+    <NumberOfParameters>9</NumberOfParameters>
+    <ReturnType>procedure</ReturnType>
+    <CommandTimeout>6000</CommandTimeout>
+  </Command>
+  <Parameters>
+
+    <Parameter>
+      <Name>@pConsecutivo</Name>
+      <VariableMapeo>Lint_Consecutivo</VariableMapeo>
+      <Type>Int32</Type>
+      <Size>32</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pIdModulo</Name>
+      <VariableMapeo>Lstr_IdModulo</VariableMapeo>
+      <Type>String</Type>
+      <Size>4</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pIdMovimiento</Name>
+      <VariableMapeo>Lstr_IdMovimiento</VariableMapeo>
+      <Type>String</Type>
+      <Size>40</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pIdOperacion</Name>
+      <VariableMapeo>Lstr_IdOperacion</VariableMapeo>
+      <Type>String</Type>
+      <Size>10</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pCodAsiento</Name>
+      <VariableMapeo>Lstr_CodAsiento</VariableMapeo>
+      <Type>String</Type>
+      <Size>50</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pFechaDesde</Name>
+      <VariableMapeo>Ldt_FchDesde</VariableMapeo>
+      <Type>Datetime</Type>
+      <Size>20</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+
+    <Parameter>
+      <Name>@pFechaHasta</Name>
+      <VariableMapeo>Ldt_FchHasta</VariableMapeo>
+      <Type>Datetime</Type>
+      <Size>20</Size>
+      <Nullable>True</Nullable>
+      <Direction>Input</Direction>
+    </Parameter>
+
+
+    <Parameter>
+      <Name>@pResultado</Name>
+      <Type>String</Type>
+      <Size>2</Size>
+      <Direction>Output</Direction>
+    </Parameter>
+
+    <Parameter>
+      <Name>@pMensaje</Name>
+      <Type>String</Type>
+      <Size>500</Size>
+      <Direction>Output</Direction>
+    </Parameter>
+
+  </Parameters>
+</CommandDef>

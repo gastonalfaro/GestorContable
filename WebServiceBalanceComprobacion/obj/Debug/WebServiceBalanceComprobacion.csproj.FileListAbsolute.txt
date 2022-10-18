@@ -1,0 +1,88 @@
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\WebServiceBalanceComprobacion\bin\WebServiceBalanceComprobacion.dll.config
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\WebServiceBalanceComprobacion\bin\WebServiceBalanceComprobacion.dll
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\WebServiceBalanceComprobacion\bin\WebServiceBalanceComprobacion.pdb
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\WebServiceBalanceComprobacion\obj\Debug\WebServiceBalanceComprobacion.dll
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\WebServiceBalanceComprobacion\obj\Debug\WebServiceBalanceComprobacion.pdb
+D:\FUENTES GESTOR CONTABLE\Ajustes-Gestor-Guatuso\Fuente\WebServiceBalanceComprobacion\obj\Debug\WebServiceBalanceComprobacion.csprojResolveAssemblyReference.cache
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServiceBalanceComprobacion\bin\WebServiceBalanceComprobacion.dll.config
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServiceBalanceComprobacion\bin\WebServiceBalanceComprobacion.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServiceBalanceComprobacion\bin\WebServiceBalanceComprobacion.pdb
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServiceBalanceComprobacion\bin\log4net.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServiceBalanceComprobacion\bin\log4net.xml
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServiceBalanceComprobacion\obj\Debug\WebServiceBalanceComprobacion.dll
+D:\FUENTES GESTOR CONTABLE\PruebasQA\Fuente\WebServiceBalanceComprobacion\obj\Debug\WebServiceBalanceComprobacion.pdb
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServiceBalanceComprobacion\bin\WebServiceBalanceComprobacion.dll.config
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServiceBalanceComprobacion\bin\WebServiceBalanceComprobacion.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServiceBalanceComprobacion\bin\WebServiceBalanceComprobacion.pdb
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServiceBalanceComprobacion\bin\log4net.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServiceBalanceComprobacion\bin\log4net.xml
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServiceBalanceComprobacion\obj\Debug\WebServiceBalanceComprobacion.dll
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServiceBalanceComprobacion\obj\Debug\WebServiceBalanceComprobacion.pdb
+D:\FUENTES GESTOR CONTABLE\produccionconsolidacion\PRODUCCION\Fuente\WebServiceBalanceComprobacion\obj\Debug\WebServiceBalanceComprobacion.csprojResolveAssemblyReference.cache
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServiceBalanceComprobacion\bin\WebServiceBalanceComprobacion.dll.config
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServiceBalanceComprobacion\bin\WebServiceBalanceComprobacion.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServiceBalanceComprobacion\bin\WebServiceBalanceComprobacion.pdb
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServiceBalanceComprobacion\bin\log4net.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServiceBalanceComprobacion\bin\log4net.xml
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServiceBalanceComprobacion\obj\Debug\WebServiceBalanceComprobacion.csproj.CoreCompileInputs.cache
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServiceBalanceComprobacion\obj\Debug\WebServiceBalanceComprobacion.csproj.CopyComplete
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServiceBalanceComprobacion\obj\Debug\WebServiceBalanceComprobacion.dll
+D:\FUENTES GESTOR CONTABLE\FuenteAmbientePRVS2019\Fuente\WebServiceBalanceComprobacion\obj\Debug\WebServiceBalanceComprobacion.pdb
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\WebServiceBalanceComprobacion\bin\WebServiceBalanceComprobacion.dll.config
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\WebServiceBalanceComprobacion\bin\WebServiceBalanceComprobacion.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\WebServiceBalanceComprobacion\bin\WebServiceBalanceComprobacion.pdb
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\WebServiceBalanceComprobacion\bin\log4net.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\WebServiceBalanceComprobacion\bin\log4net.xml
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\WebServiceBalanceComprobacion\obj\Debug\WebServiceBalanceComprobacion.csproj.CoreCompileInputs.cache
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\WebServiceBalanceComprobacion\obj\Debug\WebServiceBalanceComprobacion.csproj.CopyComplete
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\WebServiceBalanceComprobacion\obj\Debug\WebServiceBalanceComprobacion.dll
+D:\FuentesGestor\FuenteAmbientePRVS2019\Fuente\WebServiceBalanceComprobacion\obj\Debug\WebServiceBalanceComprobacion.pdb
+D:\PaqueteGestorEmergencia\Fuente\WebServiceBalanceComprobacion\bin\WebServiceBalanceComprobacion.dll.config
+D:\PaqueteGestorEmergencia\Fuente\WebServiceBalanceComprobacion\bin\WebServiceBalanceComprobacion.dll
+D:\PaqueteGestorEmergencia\Fuente\WebServiceBalanceComprobacion\bin\WebServiceBalanceComprobacion.pdb
+D:\PaqueteGestorEmergencia\Fuente\WebServiceBalanceComprobacion\bin\log4net.dll
+D:\PaqueteGestorEmergencia\Fuente\WebServiceBalanceComprobacion\bin\log4net.xml
+D:\PaqueteGestorEmergencia\Fuente\WebServiceBalanceComprobacion\obj\Debug\WebServiceBalanceComprobacion.csprojAssemblyReference.cache
+D:\PaqueteGestorEmergencia\Fuente\WebServiceBalanceComprobacion\obj\Debug\WebServiceBalanceComprobacion.csproj.CoreCompileInputs.cache
+D:\PaqueteGestorEmergencia\Fuente\WebServiceBalanceComprobacion\obj\Debug\WebServiceBalanceComprobacion.csproj.CopyComplete
+D:\PaqueteGestorEmergencia\Fuente\WebServiceBalanceComprobacion\obj\Debug\WebServiceBalanceComprobacion.dll
+D:\PaqueteGestorEmergencia\Fuente\WebServiceBalanceComprobacion\obj\Debug\WebServiceBalanceComprobacion.pdb
+D:\CODIGOFUENTEGESTOR\PR\Fuente\WebServiceBalanceComprobacion\bin\WebServiceBalanceComprobacion.dll.config
+D:\CODIGOFUENTEGESTOR\PR\Fuente\WebServiceBalanceComprobacion\bin\WebServiceBalanceComprobacion.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\WebServiceBalanceComprobacion\bin\WebServiceBalanceComprobacion.pdb
+D:\CODIGOFUENTEGESTOR\PR\Fuente\WebServiceBalanceComprobacion\bin\log4net.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\WebServiceBalanceComprobacion\bin\log4net.xml
+D:\CODIGOFUENTEGESTOR\PR\Fuente\WebServiceBalanceComprobacion\obj\Debug\WebServiceBalanceComprobacion.csproj.CoreCompileInputs.cache
+D:\CODIGOFUENTEGESTOR\PR\Fuente\WebServiceBalanceComprobacion\obj\Debug\WebServiceBalanceComprobacion.csproj.CopyComplete
+D:\CODIGOFUENTEGESTOR\PR\Fuente\WebServiceBalanceComprobacion\obj\Debug\WebServiceBalanceComprobacion.dll
+D:\CODIGOFUENTEGESTOR\PR\Fuente\WebServiceBalanceComprobacion\obj\Debug\WebServiceBalanceComprobacion.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\WebServiceBalanceComprobacion\bin\WebServiceBalanceComprobacion.dll.config
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\WebServiceBalanceComprobacion\bin\WebServiceBalanceComprobacion.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\WebServiceBalanceComprobacion\bin\WebServiceBalanceComprobacion.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\WebServiceBalanceComprobacion\bin\log4net.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\WebServiceBalanceComprobacion\bin\log4net.xml
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\WebServiceBalanceComprobacion\obj\Debug\WebServiceBalanceComprobacion.csprojAssemblyReference.cache
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\WebServiceBalanceComprobacion\obj\Debug\WebServiceBalanceComprobacion.csproj.CoreCompileInputs.cache
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\WebServiceBalanceComprobacion\obj\Debug\WebServiceBalanceComprobacion.csproj.CopyComplete
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\WebServiceBalanceComprobacion\obj\Debug\WebServiceBalanceComprobacion.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\PR\Fuente\WebServiceBalanceComprobacion\obj\Debug\WebServiceBalanceComprobacion.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServiceBalanceComprobacion\bin\WebServiceBalanceComprobacion.dll.config
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServiceBalanceComprobacion\bin\WebServiceBalanceComprobacion.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServiceBalanceComprobacion\bin\WebServiceBalanceComprobacion.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServiceBalanceComprobacion\bin\log4net.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServiceBalanceComprobacion\bin\log4net.xml
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServiceBalanceComprobacion\obj\Debug\WebServiceBalanceComprobacion.csproj.CoreCompileInputs.cache
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServiceBalanceComprobacion\obj\Debug\WebServiceBalanceComprobacion.csproj.CopyComplete
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServiceBalanceComprobacion\obj\Debug\WebServiceBalanceComprobacion.dll
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServiceBalanceComprobacion\obj\Debug\WebServiceBalanceComprobacion.pdb
+D:\CODIGOFUENTEGESTOR\PuestaPR-IBAN-Lentitud\Fuente\WebServiceBalanceComprobacion\obj\Debug\WebServiceBalanceComprobacion.csprojAssemblyReference.cache
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServiceBalanceComprobacion\bin\WebServiceBalanceComprobacion.dll.config
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServiceBalanceComprobacion\bin\WebServiceBalanceComprobacion.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServiceBalanceComprobacion\bin\WebServiceBalanceComprobacion.pdb
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServiceBalanceComprobacion\bin\log4net.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServiceBalanceComprobacion\bin\log4net.xml
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServiceBalanceComprobacion\obj\Debug\WebServiceBalanceComprobacion.csproj.CoreCompileInputs.cache
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServiceBalanceComprobacion\obj\Debug\WebServiceBalanceComprobacion.csproj.CopyComplete
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServiceBalanceComprobacion\obj\Debug\WebServiceBalanceComprobacion.dll
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServiceBalanceComprobacion\obj\Debug\WebServiceBalanceComprobacion.pdb
+C:\GestorContablePostHackeo\PuestaPR-IBAN-Lentitud\Fuente\WebServiceBalanceComprobacion\obj\Debug\WebServiceBalanceComprobacion.csproj.AssemblyReference.cache

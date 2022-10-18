@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Pruebas">
+  <ConnectionProperties>
+    <Extension>SQL</Extension>
+    <ConnectString>Provider=SQLOLEDB.1;Data Source=172.26.30.21\DMSS2014E01;Initial Catalog=GestNICSP-Pruebas</ConnectString>
+  </ConnectionProperties>
+  <DataSourceID>a88f90b2-d166-48a3-a7a2-ec90d5cce97a</DataSourceID>
+</RptDataSource>
